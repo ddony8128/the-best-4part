@@ -130,7 +130,9 @@ const ME={emp:'EMP-011',name:'이한결',company:'가온에너지',team:'데이�
  evidence:['근거 EMP-011-EV-P1: 월간 리포트 자동화 수행확인서 / 2026-09-30 / 시연용 확인완료','근거 EMP-011-EV-C1: SQLD 자격 확인 / 2023-06-16 / 시연용 확인완료']};
 
 const AXES=['직무경험','업무 역량','업무 성과','성장 가능성','커리어 적합성'];
-const FALLBACK_JOBS=[['JD-001','경영지표·매출 분석'],['JD-002','설비 이상징후 분석'],['JD-003','사내 지식검색 서비스'],['JD-004','보안관제 운영'],['JD-005','수요예측·재고 운영'],['JD-006','재무 대사 자동화'],['JD-007','탄소배출 데이터 관리'],['JD-008','인재 모집 서비스 UX'],['JD-009','클라우드 배포 표준화'],['JD-010','그룹 통합 PMO']].map(([id,title])=>({id,title,org:'(확인필요)',status:'초안',tasks:'',required:'',preferred:'',conditions:'(확인필요)',deadline:''}));
+const FALLBACK_JOBS=[['JD-001','경영지표·매출 분석 TF'],['JD-002','설비 이상징후 분석'],['JD-003','사내 지식검색 서비스'],['JD-004','보안관제 운영'],['JD-005','수요예측·재고 운영'],['JD-006','재무 대사 자동화'],['JD-007','탄소배출 데이터 관리'],['JD-008','인재 모집 서비스 UX'],['JD-009','클라우드 배포 표준화'],['JD-010','그룹 통합 PMO']].map(([id,title])=>({id,title,org:'(확인필요)',status:'초안',tasks:'',required:'',preferred:'',conditions:'(확인필요)',deadline:''}));
+// 인사 콘솔을 아직 열지 않았을 때도 JD-001 본문은 보이게 한다 (콘솔의 공고와 같은 내용)
+Object.assign(FALLBACK_JOBS[0],{org:'그룹 경영기획실',status:'모집 중',tasks:'계열사별로 다른 매출·손익 지표 정의를 하나의 기준으로 통일하고, SQL로 매출 데이터를 집계·검증하며, 경영회의용 월간 실적 대시보드를 구축·운영합니다.',required:'SQL 기반 데이터 집계·검증 실무\n매출·손익 등 경영지표 분석 경험 2년 이상',preferred:'Power BI 등 경영지표 시각화·대시보드 구축 경험\n여러 부서와 지표 정의를 합의해 본 경험',conditions:'6개월 / 주 3일 참여 / 서울',deadline:'2026-11-15'});
 
 function hrState(){try{const s=JSON.parse(localStorage.getItem(HR_KEY));if(s&&Array.isArray(s.jobs))return s}catch{}return null}
 function jobs(){const s=hrState();return s&&s.jobs.length?s.jobs:FALLBACK_JOBS}
@@ -190,7 +192,7 @@ function renderDiag(){const j=jobs().find(x=>x.id===$('diagJob').value);if(!j){$
   <div class="card"><div class="card-head"><h2>잘 맞는 점</h2><span class="tiny">STRENGTHS</span></div>${strong.map(o=>`<div class="evidence"><strong>${esc(o.a)} · ${o.v}점</strong><br>${esc(STRENGTH[o.a])}</div>`).join('')}
    <div class="card-head" style="margin-top:26px"><h2>더 적합해지려면</h2><span class="tiny">WHAT TO ADD</span></div><ul class="gap">${weak.map(o=>`<li><span class="k">${esc(o.a)} · ${o.v}점</span><span><span class="act">${esc(GAP[o.a][0])}</span><br><span class="muted">${esc(GAP[o.a][1])}</span></span></li>`).join('')}</ul></div>
   <div class="card"><div class="card-head"><h2>이 직무에 지원</h2><span class="pill">${done?'지원 완료':'미지원'}</span></div>
-   <div class="fieldbox" style="margin-bottom:14px"><strong>JD 요약</strong>${esc(j.tasks||'담당 업무 미입력. 인사 담당자가 공고 관리에서 입력합니다.')}<br><span class="muted">필수: ${esc(j.required||'(확인필요)')} · 우대: ${esc(j.preferred||'(확인필요)')}</span></div>
+   <div class="fieldbox" style="margin-bottom:14px"><strong>JD 요약</strong>${esc(j.tasks||'담당 업무 미입력. 인사 담당자가 공고 관리에서 입력합니다.')}<br><span class="muted">필수: ${esc((j.required||'(확인필요)').split('\n').join(' / '))}<br>우대: ${esc((j.preferred||'(확인필요)').split('\n').join(' / '))}</span></div>
    <label for="applyMotive">지원 동기 · JD 요구사항과 연결해 작성</label><textarea id="applyMotive" ${done?'disabled':''} placeholder="예: 월간 리포트 자동화 경험을 ${esc(j.title)} 업무의 지표 표준화에 적용하고 싶습니다.">${done?esc(myApps().find(a=>a.jd===j.id)?.motive||''):''}</textarea>
    <label for="applyAvail" style="margin-top:14px">참여 가능 조건</label><p class="tiny" style="margin:-4px 0 8px">적합한 경험이 있다는 판단과 실제 이동할 수 있다는 판단은 따로 확인합니다. 소속 조직 협의는 지원 후 진행됩니다.</p><select id="applyAvail" ${done?'disabled':''}><option>2026-12-01부터 / 최대 100% / 서울 출근 가능</option><option>2027-01-01부터 / 최대 50% 겸임 / 원격 희망</option><option>조직장 협의 후 결정</option></select>
    <div class="form-foot"><span class="tiny">지원하면 인사 담당자 화면의 지원자 목록·운영 기록에 바로 표시됩니다.</span><button class="primary" ${done?'disabled':''} onclick="apply('${esc(j.id)}')">${done?'이미 지원함':'지원하기 →'}</button></div>

@@ -11,6 +11,17 @@
   "license": "ISC",
   "type": "module",
   "devDependencies": {
-    "playwright": "1.58"
+    "@types/react": "^19.2.2",
+    "playwright": "1.58",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.534",
+    "@remotion/google-fonts": "^4.0.534",
+    "@remotion/shapes": "^4.0.534",
+    "@remotion/transitions": "^4.0.534",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "remotion": "^4.0.534"
   }
 }

@@ -49,12 +49,28 @@ git push
 ## 폴더 구조
 ```
 public/      배포되는 웹 화면 (HTML/CSS/JS). 여기 파일이 그대로 사이트가 됩니다.
-  index.html            시작 페이지
-  talent_hr_admin.html  인사팀 채용 운영 콘솔 (참고 파일 기반)
-api/         Vercel 서버 함수 (LLM 호출 등). 키는 환경변수로 읽습니다.
-docs/        기획 기록 (project-notes.md)
+  index.html            시작 페이지 (인사 담당자 / 지원자 입구)
+  hr_matching.html      AI 인재 매칭: JD → 요건 확정 → 전수 스캔 → 상위 10명 → 추천서·제안서
+  talent_hr_admin.html  인사팀 채용 운영 콘솔 (팀원 참고 파일 기반)
+  employee.html         임직원: 받은 제안 · 적합도 진단 · 보충할 점 · 바로 지원
+api/         Vercel 서버 함수 자리 (LLM 호출 등). 키는 환경변수로 읽습니다.
+docs/        기획 기록 (project-notes.md, submission-draft.md)
 reference/   원본 참고 파일 (수정하지 않음)
+video/       과제 소개 영상 (Remotion) + 화면 녹화·브라우저 테스트 스크립트
 ```
+
+세 화면은 같은 브라우저 저장소(localStorage)로 연결됩니다. 인사 매칭에서 제안서를 보내면 임직원 화면에 "받은 제안"으로 뜨고, 임직원이 지원하면 인사 콘솔의 지원자 목록과 운영 기록에 나타납니다. 모든 데이터는 가상이고 AI 결과는 시연용 모의 생성입니다.
+
+## 영상 다시 만들기
+```bash
+cd video
+npm install
+node scripts/e2e.mjs          # 세 화면 연결 흐름 테스트 (15개 항목)
+node scripts/record.mjs       # 실제 화면 조작을 녹화 → public/rec/*.mp4, src/recordings.json
+npx remotion studio src/index.tsx                                   # 미리보기·수정
+npx remotion render src/index.tsx TalentLink out/talent-link.mp4   # 렌더
+```
+자막은 `video/src/Main.tsx`의 `HR_CAPTIONS` / `EMP_CAPTIONS`, 장면은 `video/src/scenes.tsx`에서 고칩니다.
 
 ## 로컬에서 보기
 빌드가 없습니다. `public/index.html`을 브라우저로 열면 됩니다.
