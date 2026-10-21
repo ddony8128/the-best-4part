@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TALENT LINK | AI 인재 매칭</title>
+<style>
+:root{--ink:#181818;--muted:#717171;--line:#e6e5e2;--bg:#f6f6f4;--accent:#f6995d;--soft:#fff1e7;--ok:#2f6b3a;--okbg:#e8f3ea}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,'Malgun Gothic',sans-serif;font-size:14px;line-height:1.65}
+button,input,select,textarea{font:inherit}button{cursor:pointer;border:1px solid var(--line);background:#fff;border-radius:7px;padding:10px 16px;color:var(--ink)}button:hover{border-color:#999}button:disabled{opacity:.45;cursor:default}
+.primary{background:var(--ink);border-color:var(--ink);color:#fff}.accent{background:var(--accent);border-color:var(--accent);color:#181818}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+a{color:inherit;text-decoration:none}
+aside{width:224px;position:fixed;inset:0 auto 0 0;background:#fff;border-right:1px solid var(--line);padding:31px 22px;display:flex;flex-direction:column;z-index:30}
+.brand{font-weight:900;letter-spacing:-1px;font-size:20px;display:flex;align-items:center;gap:10px}
+.logo{display:inline-block;background:var(--accent);width:28px;height:28px;border-radius:7px;position:relative}
+.logo:after{content:'';position:absolute;left:8px;top:6px;width:8px;height:12px;border-left:3px solid #171717;border-bottom:3px solid #171717;transform:rotate(-35deg)}
+.brand-sub{font-size:10px;letter-spacing:2px;color:var(--muted);margin:6px 0 47px 38px}
+.nav-label{color:#929292;font-size:10px;letter-spacing:1.8px;margin:0 14px 13px}
+nav a{display:flex;align-items:center;gap:13px;padding:13px 14px;margin:5px 0;border-radius:7px;color:#777;font-weight:600}nav a.active{background:var(--soft);color:#181818}nav a span{font:15px monospace;color:#777}nav a.active span{color:#a24c17}
+.aside-bottom{margin-top:auto;border-top:1px solid var(--line);padding:22px 8px 0}.tiny{font-size:11px;color:var(--muted)}.dot{width:6px;height:6px;display:inline-block;border-radius:50%;background:var(--accent);margin-right:6px}
+.person{display:flex;align-items:center;gap:10px}.avatar{background:#222;color:#fff;border-radius:50%;display:grid;place-items:center;width:31px;height:31px;font-size:10px;flex-shrink:0}
+main{margin-left:224px}
+header{height:76px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 42px;background:#ffffffd9;gap:12px}
+.breadcrumb{color:#888;font-size:12px}.breadcrumb b{color:#222;font-weight:500}.head-actions{display:flex;gap:14px;align-items:center}
+.pill{display:inline-block;border:1px solid var(--line);border-radius:5px;font-size:11px;padding:3px 8px;background:#fff}.text-btn{background:none;border:0;padding:0;font-size:12px;color:#777}
+.content{max-width:1500px;margin:auto;padding:32px 42px 55px}
+.eyebrow{font-size:10px;letter-spacing:2px;font-weight:bold;color:var(--muted)}h1{font-size:30px;letter-spacing:-1.6px;line-height:1.35;margin:9px 0 10px}h2{font-size:18px;letter-spacing:-.65px;margin:0}h3{font-size:14px;margin:0 0 8px}p{margin:0 0 12px}.muted{color:var(--muted)}
+.title-row{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:24px;margin-bottom:22px}.card-head{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:18px}
+.notice{font-size:12px;color:#6b503d;padding:13px 16px;background:var(--soft);border-radius:7px;margin-bottom:22px}
+.status{font-size:10px;display:inline-block;padding:3px 7px;border-radius:4px;background:#f1f1f1;white-space:nowrap}.status.check{background:var(--soft);color:#8b481e}.status.ok{background:var(--okbg);color:var(--ok)}.status.dark{background:#222;color:#fff}
+/* stepper */
+.stepper{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:24px}
+.step{background:#fff;border:1px solid var(--line);border-radius:9px;padding:13px 15px;font-size:12px;color:#999;transition:all .3s}
+.step b{display:block;font-size:10px;letter-spacing:1.6px;margin-bottom:2px}
+.step.on{border-color:var(--ink);color:var(--ink);box-shadow:0 6px 20px #0000000d}.step.on b{color:#a24c17}
+.step.done{color:var(--ink)}.step.done b:after{content:' ✓';color:var(--ok)}
+.panel{display:none;animation:appear .35s ease}.panel.active{display:block}@keyframes appear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+/* form */
+.form-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:20px}
+label{display:block;font-size:12px;font-weight:600;margin-bottom:7px}
+input,select,textarea{width:100%;background:#fff;border:1px solid #ddd;border-radius:6px;padding:10px 12px;color:#222}textarea{resize:vertical;min-height:85px}
+.chips{display:flex;gap:7px;flex-wrap:wrap}.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 12px;font-size:12px;cursor:pointer;user-select:none;transition:all .2s}.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.src{display:flex;gap:10px;align-items:flex-start;padding:12px 0;border-top:1px solid var(--line);font-size:12px}.src:first-of-type{border-top:0}.src input{width:16px;height:16px;margin-top:3px;accent-color:#222}.src small{display:block;color:#888}
+.form-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:20px}
+/* table */
+table{width:100%;border-collapse:collapse;font-size:12px;text-align:left}th{color:#888;font-size:11px;font-weight:500;background:#fafafa;white-space:nowrap}td,th{padding:12px;border-bottom:1px solid var(--line);vertical-align:middle}
+.need{border:1px solid var(--line);border-radius:5px;padding:3px 9px;font-size:11px;background:#fff}.need.must{background:#222;color:#fff;border-color:#222}
+.srctag{font-size:10px;background:#f4f4f2;border-radius:4px;padding:2px 6px;margin-right:4px;white-space:nowrap}
+.ai-line{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:#8b481e;background:var(--soft);border-radius:999px;padding:5px 12px}
+.spin{width:12px;height:12px;border:2px solid #f3c9ab;border-top-color:#a24c17;border-radius:50%;animation:sp 0.8s linear infinite}@keyframes sp{to{transform:rotate(360deg)}}
+.row-in{animation:rowin .45s ease both}@keyframes rowin{from{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:none}}
+/* weights */
+.weights{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.w{background:#f8f8f6;border-radius:8px;padding:13px}.w label{display:flex;justify-content:space-between;margin:0 0 6px;font-size:12px}.w label b{color:#a24c17}
+.w input[type=range]{padding:0;border:0;background:none;accent-color:#181818}
+/* scan */
+.scan{background:#1b1b1b;color:#fff;border-radius:12px;padding:34px;overflow:hidden;position:relative}
+.scan .eyebrow{color:var(--accent)}
+.scan h2{font-size:26px;letter-spacing:-1px;margin:8px 0 22px}
+.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:24px}
+.fn{border:1px solid #333;border-radius:9px;padding:18px;background:#222}.fn small{color:#999;font-size:11px}.fn strong{display:block;font-size:34px;letter-spacing:-1.5px;color:#fff;margin-top:4px;font-variant-numeric:tabular-nums}.fn.hot{border-color:var(--accent)}.fn.hot strong{color:var(--accent)}
+.grid-dots{display:grid;grid-template-columns:repeat(52,1fr);gap:4px;margin:6px 0 20px}.grid-dots i{display:block;aspect-ratio:1;border-radius:50%;background:#333;transition:background .25s,transform .25s}.grid-dots i.lit{background:#6b6158}.grid-dots i.pass{background:#c9a185}.grid-dots i.hot{background:var(--accent);transform:scale(1.35)}
+.scanlog{font:12px/1.8 Consolas,monospace;color:#9a9a9a;height:110px;overflow:hidden}.scanlog div{animation:rowin .3s ease both}.scanlog b{color:var(--accent);font-weight:400}
+.cos{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:18px}.co{font-size:11px;border:1px solid #3a3a3a;border-radius:999px;padding:4px 10px;color:#777;transition:all .3s}.co.on{border-color:var(--accent);color:#fff;background:#2c2520}
+/* candidates */
+.two{display:grid;grid-template-columns:1.15fr 1fr;gap:22px;align-items:start}
+.cand{display:grid;grid-template-columns:34px 1fr 130px 58px;gap:14px;align-items:center;padding:14px 12px;border-radius:9px;border:1px solid transparent;cursor:pointer;transition:background .2s,border-color .2s,transform .45s}
+.cand:hover{background:#fafaf8}.cand.sel{background:var(--soft);border-color:#f3c9ab}
+.rank{font-size:20px;font-weight:500;color:#bbb;text-align:center;font-variant-numeric:tabular-nums}.cand:nth-child(-n+3) .rank{color:var(--ink)}
+.cand .nm{font-weight:700}.cand .meta{font-size:11px;color:#888}
+.mini{display:flex;gap:3px;align-items:flex-end;height:26px}.mini span{flex:1;background:#d9d6d1;border-radius:2px 2px 0 0;transition:height .4s}.mini span.k{background:var(--accent)}
+.total{font-size:22px;font-weight:500;letter-spacing:-1px;text-align:right;font-variant-numeric:tabular-nums}
+.delta{font-size:10px;margin-left:6px}.delta.up{color:var(--ok)}.delta.down{color:#b0442a}
+.badge-hidden{font-size:10px;background:var(--accent);color:#181818;border-radius:4px;padding:2px 6px;margin-left:6px;font-weight:700}.badge-app{font-size:10px;background:#eee;border-radius:4px;padding:2px 6px;margin-left:6px}
+.legend-row{display:flex;gap:16px;font-size:11px;color:#888;margin:4px 0 8px;flex-wrap:wrap}
+.detail{position:sticky;top:20px}
+.bar-row{display:grid;grid-template-columns:100px 1fr 34px;align-items:center;gap:10px;margin:9px 0;font-size:12px}.bar-track{height:7px;background:#efefed;border-radius:2px;overflow:hidden}.bar-fill{height:100%;background:#252525;transition:width .4s}
+.evidence{border-left:2px solid var(--accent);padding:9px 14px;background:#fafaf9;margin:8px 0;font-size:12px}.evidence.warn{border-color:#c9c9c9}
+.qa{font-size:12px;padding:8px 0;border-top:1px solid var(--line)}.qa:first-child{border-top:0}
+.doc{background:#fff;border:1px solid var(--line);border-radius:10px;padding:34px 40px;font-size:13px;line-height:1.85;min-height:420px;white-space:pre-wrap;font-family:'Malgun Gothic',Arial,sans-serif}
+.doc .cursor{display:inline-block;width:7px;height:15px;background:var(--accent);vertical-align:-2px;animation:blink 1s steps(1) infinite}@keyframes blink{50%{opacity:0}}
+.tabs{display:flex;gap:6px;margin-bottom:16px}.tabs button.active{background:#222;color:#fff;border-color:#222}
+.toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%);background:#222;color:#fff;padding:12px 22px;border-radius:7px;z-index:99;font-size:12px;max-width:90vw}.hidden{display:none!important}
+.footer{font-size:10px;color:#999;display:flex;justify-content:space-between;gap:16px;margin-top:32px;border-top:1px solid var(--line);padding-top:17px}
+@media(max-width:1100px){aside{width:185px;padding:26px 14px}main{margin-left:185px}.content{padding:28px 25px}header{padding:0 25px}.two,.form-grid{grid-template-columns:1fr}.weights{grid-template-columns:repeat(3,1fr)}.funnel{grid-template-columns:1fr 1fr}.detail{position:static}}
+@media(max-width:700px){aside{position:sticky;top:0;width:100%;height:auto;padding:12px 16px;display:block;border-right:0;border-bottom:1px solid #ddd}.brand-sub,.nav-label,.aside-bottom{display:none}nav{display:flex;overflow:auto;margin-top:9px;gap:5px}nav a{font-size:11px;padding:7px 10px;margin:0;white-space:nowrap}nav a span{display:none}main{margin-left:0}header{height:54px;padding:0 18px}.content{padding:22px 16px}.stepper{grid-template-columns:repeat(5,minmax(90px,1fr));overflow:auto}.weights{grid-template-columns:1fr 1fr}.cand{grid-template-columns:26px 1fr 52px}.cand .mini{display:none}.grid-dots{grid-template-columns:repeat(26,1fr)}.doc{padding:22px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<aside>
+  <a class="brand" href="./index.html"><span class="logo"></span>TALENT LINK</a>
+  <div class="brand-sub">HR OPERATIONS</div>
+  <p class="nav-label">RECRUITMENT WORKSPACE</p>
+  <nav>
+    <a href="./talent_hr_admin.html#overview"><span>▦</span>채용 운영 현황</a>
+    <a href="./hr_matching.html" class="active"><span>✦</span>AI 인재 매칭</a>
+    <a href="./talent_hr_admin.html#jobs"><span>▤</span>공고 관리</a>
+    <a href="./talent_hr_admin.html#people"><span>⌕</span>지원자 관리</a>
+    <a href="./talent_hr_admin.html#offers"><span>↗</span>인재 참여 제안</a>
+    <a href="./talent_hr_admin.html#reports"><span>▤</span>상사 추천 보고</a>
+  </nav>
+  <div class="aside-bottom"><div class="person"><div class="avatar">HR</div><div style="font-size:11px">그룹 인사팀<br><span class="muted">운영 담당자 · 시연 모드</span></div></div><p class="tiny" style="margin-top:18px"><span class="dot"></span>가상 인재 풀 기반 시연</p></div>
+</aside>
+<main>
+<header><div class="breadcrumb">인사팀 워크스페이스 &nbsp; / &nbsp; <b>AI 인재 매칭</b></div><div class="head-actions"><span class="pill">LOCAL DEMO</span><button class="text-btn" onclick="resetAll()">처음부터</button><div class="avatar">HR</div></div></header>
+<div class="content">
+  <div class="title-row"><div><div class="eyebrow">AI TALENT MATCHING</div><h1>지원하지 않은 인재까지, 그룹 전체에서 찾습니다.</h1><p class="muted">JD를 올리면 AI가 요건을 정리하고, 확정된 기준으로 설정한 범위의 임직원을 전수 스캔합니다.</p></div></div>
+
+  <div class="stepper" id="stepper">
+    <div class="step" data-s="1"><b>STEP 1</b>JD · 자료 입력</div>
+    <div class="step" data-s="2"><b>STEP 2</b>요건 확정 (Gate)</div>
+    <div class="step" data-s="3"><b>STEP 3</b>그룹 전수 스캔</div>
+    <div class="step" data-s="4"><b>STEP 4</b>후보 추천 · 가중치</div>
+    <div class="step" data-s="5"><b>STEP 5</b>추천서 · 제안서</div>
+  </div>
+
+  <!-- STEP 1 -->
+  <section class="panel" id="p1">
+    <div class="form-grid">
+      <div class="card">
+        <div class="card-head"><h2>충원할 자리</h2><span class="pill">TF · 공석</span></div>
+        <label for="jdSelect">공고 선택</label>
+        <select id="jdSelect"></select>
+        <label for="jdText" style="margin-top:16px">업무 JD</label>
+        <textarea id="jdText" style="min-height:230px"></textarea>
+        <p class="tiny" style="margin-top:8px">JD 문서를 붙여넣거나 공고 관리에서 등록한 공고를 불러옵니다.</p>
+      </div>
+      <div>
+        <div class="card">
+          <div class="card-head"><h2>함께 참고할 자료</h2><span class="tiny">요건 도출 근거</span></div>
+          <label class="src"><input type="checkbox" checked><span><b>직무 적합 연구 요약</b><small>경영 데이터 분석 직무의 핵심 정성 특성 (학술 자료 3편 요약)</small></span></label>
+          <label class="src"><input type="checkbox" checked><span><b>유사 직무 고성과자 패턴</b><small>그룹 내 경영분석 직무 상위 평가자 12명의 공통 경험 (익명 집계)</small></span></label>
+          <label class="src"><input type="checkbox" checked><span><b>전임자 인수인계 메모</b><small>이전 TF 담당자의 업무 범위·어려웠던 점 (개인 식별 정보 제외)</small></span></label>
+        </div>
+        <div class="card">
+          <div class="card-head"><h2>스캔 범위</h2><span class="tiny" id="scopeCount"></span></div>
+          <div class="chips" id="scope"></div>
+          <p class="tiny" style="margin-top:12px">허용된 범위의 인재 정보만 사용합니다. 성별·나이 등 직무와 무관한 속성은 평가에서 제외됩니다.</p>
+        </div>
+      </div>
+    </div>
+    <div class="form-foot"><span class="tiny">AI가 JD와 참고 자료로 요구사항을 분해하고 가중치를 제안합니다.</span><button class="primary" id="btnAnalyze" onclick="analyze()">AI로 요건 정리하기 →</button></div>
+  </section>
+
+  <!-- STEP 2 -->
+  <section class="panel" id="p2">
+    <div class="card">
+      <div class="card-head"><h2>AI가 정리한 요구사항</h2><span class="ai-line" id="aiState"><span class="spin"></span>JD와 참고 자료를 분석하는 중</span></div>
+      <div style="overflow:auto"><table><thead><tr><th>요구사항</th><th>평가 축</th><th>유형</th><th>필수 / 우대</th><th>근거 출처</th></tr></thead><tbody id="reqRows"></tbody></table></div>
+      <p class="tiny" style="margin-top:12px">필수 / 우대를 눌러 바꿀 수 있습니다. 정량 요건은 규칙으로, 정성 요건은 LLM이 프로필 문장과 대조합니다.</p>
+    </div>
+    <div class="card" id="weightCard" style="opacity:.35;transition:opacity .4s">
+      <div class="card-head"><h2>평가 축 가중치 제안</h2><span class="tiny">합계 <b id="wSum">100</b>%</span></div>
+      <div class="weights" id="weightsGate"></div>
+    </div>
+    <div class="notice"><b>Gate</b> · 인사 담당자가 요건과 가중치를 확인해야 스캔이 시작됩니다. AI의 제안은 그대로 쓰지 않고 사람이 확정합니다.</div>
+    <div class="form-foot"><button onclick="show(1)">← JD 수정</button><button class="primary" id="btnGate" onclick="confirmGate()" disabled>요건 확정하고 스캔 시작 →</button></div>
+  </section>
+
+  <!-- STEP 3 -->
+  <section class="panel" id="p3">
+    <div class="scan">
+      <div class="eyebrow">GROUP-WIDE SCANNING</div>
+      <h2 id="scanTitle">그룹 전체 임직원 프로필을 스캔하고 있습니다</h2>
+      <div class="cos" id="scanCos"></div>
+      <div class="funnel">
+        <div class="fn"><small>스캔 범위</small><strong id="f1">0</strong><small>명 · 가상 인재 풀</small></div>
+        <div class="fn"><small>필수 요건 1차 통과 (규칙)</small><strong id="f2">0</strong><small>명</small></div>
+        <div class="fn"><small>정성 평가 (LLM 대조)</small><strong id="f3">0</strong><small>명</small></div>
+        <div class="fn hot"><small>추천 후보</small><strong id="f4">0</strong><small>명 · 상위 N</small></div>
+      </div>
+      <div class="grid-dots" id="dots"></div>
+      <div class="scanlog" id="scanlog"></div>
+    </div>
+  </section>
+
+  <!-- STEP 4 -->
+  <section class="panel" id="p4">
+    <div class="card">
+      <div class="card-head"><h2>가중치 조정</h2><span class="tiny">움직이면 순위가 즉시 다시 계산됩니다</span></div>
+      <div class="weights" id="weightsLive"></div>
+    </div>
+    <div class="two">
+      <div class="card">
+        <div class="card-head"><h2 id="listTitle">추천 후보 상위 10명</h2><span class="tiny" id="hiddenCount"></span></div>
+        <div class="legend-row"><span><span class="badge-hidden" style="margin:0 4px 0 0">숨은 후보</span>공모 미지원 · 스캔으로 발견</span><span><span class="badge-app" style="margin:0 4px 0 0">공모 지원</span>직접 지원</span><span>막대: 직무경험 · 업무 역량 · 업무 성과 · 성장 가능성 · 커리어 적합성</span></div>
+        <div id="candList"></div>
+        <p class="tiny" style="margin-top:12px">점수는 이 직무 안에서 후보를 비교하기 위한 참고 지표입니다. 성공 확률이나 전사 역량 순위가 아닙니다.</p>
+      </div>
+      <div class="card detail" id="detail"></div>
+    </div>
+  </section>
+
+  <!-- STEP 5 -->
+  <section class="panel" id="p5">
+    <div class="title-row" style="margin-bottom:14px"><div class="tabs" id="docTabs"><button data-doc="report" class="active">추천서 · 상부 보고용</button><button data-doc="offer">제안서 · 당사자 메일</button></div><button onclick="show(4)">← 후보 목록</button></div>
+    <div class="two" style="grid-template-columns:1.5fr 1fr">
+      <div><div class="doc" id="docBody"></div></div>
+      <div>
+        <div class="card"><div class="card-head"><h2>작성 근거</h2><span class="ai-line" id="docState">대기</span></div><div id="docSide"></div></div>
+        <div class="card"><div class="toolbar" style="display:flex;gap:8px;flex-wrap:wrap"><button class="primary" id="btnSend" onclick="sendDoc()" disabled>보내기</button><button onclick="downloadDoc()">TXT 다운로드 ↓</button></div><p class="tiny" style="margin-top:12px" id="sendHint"></p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"><span>TALENT LINK · AI TALENT MATCHING</span><span>시연용 가상 데이터 · AI 결과는 모의 생성 · 최종 판단은 인사·현업 담당자</span></footer>
+</div>
+</main>
+<div class="toast hidden" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const $=id=>document.getElementById(id),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const sleep=ms=>new Promise(r=>setTimeout(r,ms*SPEED));
+const SPEED=new URLSearchParams(location.search).has('fast')?0.25:1;
+const HR_KEY='talent-hr-admin-v1',OFFER_KEY='talent-link-offers';
+const AXES=['직무경험','업무 역량','업무 성과','성장 가능성','커리어 적합성'];
+const COMPANIES=[['가온유통',186],['가온에너지',164],['가온시스템',172],['가온생명',148],['가온케미칼',139],['가온에어로',161],['가온오션',158],['가온증권',120]];
+
+const JDS={
+ 'JD-001':{title:'경영지표·매출 분석 TF',org:'그룹 경영기획실',text:`[TF] 그룹 경영지표·매출 분석 TF (6개월, 주 3일 참여)
+
+담당 업무
+- 계열사별로 다른 매출·손익 지표 정의를 하나의 기준으로 통일
+- SQL로 계열사 매출 데이터를 집계하고 원장과 대조·검증
+- 경영회의용 월간 실적 대시보드 구축 및 운영
+
+필수 요건
+- SQL 기반 데이터 집계·검증 실무
+- 매출·손익 등 경영지표 분석 경험 2년 이상
+
+우대 요건
+- Power BI 등 경영지표 시각화·대시보드 구축 경험
+- 여러 부서와 지표 정의를 합의해 본 경험`},
+ 'JD-002':{title:'설비 이상징후 분석',org:'(확인필요)',text:'설비 센서 데이터로 이상징후를 조기에 감지하는 분석 모델 운영'},
+ 'JD-003':{title:'사내 지식검색 서비스',org:'(확인필요)',text:'사내 문서 기반 지식검색(RAG) 서비스 기획·운영'}
+};
+const REQS=[
+ {id:'r1',r:'SQL 기반 매출 데이터 집계·검증',axis:'업무 역량',type:'정량',need:'필수',src:['JD']},
+ {id:'r2',r:'매출·손익 등 경영지표 분석 경험 2년+',axis:'직무경험',type:'정량',need:'필수',src:['JD']},
+ {id:'r3',r:'경영지표 시각화·대시보드 구축',axis:'업무 역량',type:'정성',need:'우대',src:['JD','고성과자']},
+ {id:'r4',r:'유관 부서와 지표 정의 합의·조율',axis:'업무 성과',type:'정성',need:'우대',src:['연구자료','전임자']},
+ {id:'r5',r:'모호한 요구를 지표로 구조화하는 문제 해결력',axis:'성장 가능성',type:'정성',need:'우대',src:['연구자료']},
+ {id:'r6',r:'그룹 단위 데이터 표준화에 대한 관심',axis:'커리어 적합성',type:'정성',need:'우대',src:['전임자']}];
+const DEFAULT_W=[25,30,20,10,15];
+
+// 시연용 가상 임직원 — 실제 인물 아님
+const C=[
+ {name:'김서윤',emp:'EMP-001',company:'가온유통',team:'경영분석팀',role:'경영분석 담당',applied:true,ax:[88,86,82,70,74],checked:'2026-10-21',
+  req:{r1:['확인','수행확인서 — SQL로 매출 집계·원장 대조 직접 수행'],r2:['확인','2021-03 ~ 현재 월별 매출·손익 검증 (5년 7개월)'],r3:['확인','Power BI 매출·손익 대시보드 구축 — 수행확인서'],r4:['확인','재무·영업과 순매출 정의 합의 — 자기소개서·수행확인서'],r5:['확인 필요','지표 정의서 작성 경험은 있으나 문제 구조화 역할은 본인 기재만 확인'],r6:['확인','지원 동기: 그룹 공통 지표 반복 사용 체계에 관심']},
+  strengths:['매출 데이터 집계·대조부터 대시보드까지 전 과정을 직접 수행한 기록이 있습니다.','재무·영업과 지표 정의를 합의한 경험이 TF의 핵심 과제와 같습니다.'],
+  concerns:['그룹 전체 계열사의 회계 처리 방식은 아직 경험이 없다고 본인이 밝혔습니다.','현 소속 조직의 협의가 진행 전입니다.'],
+  questions:['계열사마다 매출 인식 기준이 다를 때 어떻게 합의를 이끌겠습니까?','현재 업무를 주 3일 비우는 것에 대해 조직장과 논의해 봤나요?'],avail:'2026-12-01부터 / 최대 100% / 서울 출근 가능 · 조직장 협의 전'},
+ {name:'이한결',emp:'EMP-011',company:'가온에너지',team:'데이터운영팀',role:'데이터 운영 담당',applied:false,ax:[72,78,82,90,92],checked:'2026-10-21',
+  req:{r1:['확인','수행확인서 — SQL 데이터 검증·리포트 자동화 직접 수행'],r2:['확인 필요','운영 데이터 분석 2년 8개월. 매출 데이터 분석 기록은 없음 → 전환 가능성 검토'],r3:['확인 필요','Power BI 대시보드 — 본인 기재만 있고 근거 문서 미첨부'],r4:['확인','3개 사업소 데이터 표준 통일 프로젝트 실무 리드'],r5:['확인','월간 리포트 6시간→40분 단축, 재보고 월 5건→1건'],r6:['확인','장기 목표: 그룹 차원의 경영 데이터 표준을 만드는 역할']},
+  strengths:['사업소 간 데이터 표준을 통일한 경험이 "계열사 지표 통일"과 같은 구조의 문제입니다.','리포트 자동화로 시간·오류를 수치로 줄인 성과가 확인됩니다.','커리어 목표가 이 TF 방향과 정확히 일치하지만, 공고를 보지 못해 지원하지 않았습니다.'],
+  concerns:['매출·손익 데이터를 직접 다룬 기록이 없습니다. 운영 지표 분석 경험의 전환 가능성을 확인해야 합니다.','대시보드 구축은 본인 기재만 있어 근거 확인이 필요합니다.'],
+  questions:['운영 지표 분석 방식을 매출·손익 지표에 적용한다면 무엇부터 하겠습니까?','Power BI 대시보드에서 본인이 맡은 범위는 어디까지였나요?'],avail:'본인 참여 의사·소속 조직 확인 필요'},
+ {name:'박지호',emp:'EMP-024',company:'가온생명',team:'영업기획팀',role:'영업 실적 관리',applied:false,ax:[84,70,86,72,68],checked:'2026-10-14',
+  req:{r1:['확인 필요','SQL 교육 이수만 확인, 실무 적용 기록 없음'],r2:['확인','채널별 매출 실적 분석 4년'],r3:['정보 미확인','관련 기록 없음 — 부족으로 단정하지 않음'],r4:['확인','영업·상품 부서 간 실적 기준 조율'],r5:['확인 필요','본인 기재만 확인'],r6:['정보 미확인','희망 직무 미입력']},
+  strengths:['매출 실적 분석 경험이 가장 깁니다.','부서 간 실적 기준을 조율한 경험이 있습니다.'],concerns:['SQL은 교육 이수만 확인되어 실무 확인이 필요합니다.','희망 직무가 입력되지 않아 본인 의사를 먼저 확인해야 합니다.'],
+  questions:['SQL을 실제 업무에 적용한 사례가 있나요?','데이터 분석 직무로의 이동에 관심이 있나요?'],avail:'본인 참여 의사·소속 조직 확인 필요'},
+ {name:'최예린',emp:'EMP-037',company:'가온케미칼',team:'재무팀',role:'손익 분석',applied:false,ax:[80,74,80,76,70],checked:'2026-10-09',
+  req:{r1:['확인','결산 데이터 SQL 추출·검증'],r2:['확인','사업부 손익 분석 3년'],r3:['정보 미확인','관련 기록 없음'],r4:['확인 필요','본인 기재만 확인'],r5:['확인','손익 차이 원인 분석 보고 체계화'],r6:['확인 필요','희망 직무: 재무 기획 (일부 일치)']},
+  strengths:['손익 분석과 SQL 검증을 함께 해 온 드문 이력입니다.'],concerns:['대시보드 구축 정보가 없습니다.','희망 직무가 재무 기획이라 이 TF와 일부만 일치합니다.'],
+  questions:['경영회의 보고용 시각화를 만들어 본 경험이 있나요?','이 TF가 커리어 방향과 어떻게 연결된다고 보나요?'],avail:'본인 참여 의사·소속 조직 확인 필요'},
+ {name:'정민호',emp:'EMP-052',company:'가온시스템',team:'데이터플랫폼팀',role:'데이터 엔지니어',applied:false,ax:[66,90,78,74,62],checked:'2026-10-18',
+  req:{r1:['확인','대용량 SQL 파이프라인 구축 — 수행확인서'],r2:['정보 미확인','매출 분석 기록 없음'],r3:['확인','운영 대시보드 구축'],r4:['확인 필요','본인 기재만 확인'],r5:['확인','데이터 품질 규칙 설계'],r6:['확인 필요','희망: 데이터 플랫폼 (일부 일치)']},
+  strengths:['SQL·데이터 처리 기술 숙련도가 가장 높습니다.'],concerns:['경영지표 도메인 경험이 확인되지 않습니다.'],questions:['재무·영업 담당자와 지표 정의를 논의해 본 경험은?'],avail:'본인 참여 의사·소속 조직 확인 필요'},
+ {name:'한다인',emp:'EMP-063',company:'가온증권',team:'리서치팀',role:'산업 분석',applied:false,ax:[74,72,80,82,66],checked:'2026-10-02',
+  req:{r1:['확인 필요','Python 중심, SQL은 본인 기재'],r2:['확인','기업 실적 분석 3년'],r3:['확인','리서치 대시보드 운영'],r4:['정보 미확인','관련 기록 없음'],r5:['확인','신규 산업 분석 프레임 설계'],r6:['정보 미확인','희망 직무 미입력']},
+  strengths:['외부 기업 실적을 구조적으로 분석해 온 경험이 있습니다.'],concerns:['사내 부서 간 조율 경험 정보가 없습니다.'],questions:['사내 데이터의 정의 차이를 맞춰 본 경험은?'],avail:'본인 참여 의사·소속 조직 확인 필요'},
+ {name:'오태경',emp:'EMP-078',company:'가온오션',team:'원가관리팀',role:'원가 분석',applied:true,ax:[78,68,76,70,80],checked:'2026-10-20',
+  req:{r1:['확인 필요','엑셀 중심, SQL 교육 이수'],r2:['확인','프로젝트 원가·손익 분석 4년'],r3:['정보 미확인','관련 기록 없음'],r4:['확인','설계·구매 부서와 원가 기준 합의'],r5:['확인 필요','본인 기재만 확인'],r6:['확인','지원 동기: 그룹 지표 표준화 참여 희망']},
+  strengths:['부서 간 원가 기준 합의 경험이 있습니다.'],concerns:['SQL 실무 근거가 부족합니다.'],questions:['SQL을 실제 업무에 적용한 사례는?'],avail:'2027-01-01부터 / 최대 60% · 조직장 협의 중'},
+ {name:'윤채원',emp:'EMP-085',company:'가온에어로',team:'사업관리팀',role:'사업 성과 관리',applied:false,ax:[76,70,74,78,72],checked:'2026-10-11',
+  req:{r1:['확인 필요','본인 기재만 확인'],r2:['확인','사업 성과 지표 관리 3년'],r3:['확인','성과 대시보드 운영'],r4:['확인','사업부 간 KPI 정의 협의'],r5:['확인 필요','본인 기재만 확인'],r6:['확인 필요','희망: 사업 기획']},
+  strengths:['사업부 간 KPI 정의를 협의한 경험이 있습니다.'],concerns:['SQL 실무 근거 확인이 필요합니다.'],questions:['데이터를 직접 집계해 본 범위는?'],avail:'본인 참여 의사·소속 조직 확인 필요'}];
+// 상위권 아래를 채우는 가상 인재 (점수만 생성)
+(function fill(){const sn='김이박최정강조윤장임한오서신권황안송류홍',gn=['민서','지안','도윤','하은','서진','예준','수아','시우','지유','건우','채은','현우','유나','태민','소율','준서','다은','윤호','서아','재원','나연','승현','하린','우진','지민','은호','가윤','성민','다인','주원','세아','동하'];const teams=[['기획팀','기획 담당'],['영업관리팀','영업 지원'],['재무팀','재무 담당'],['IT운영팀','시스템 운영'],['품질관리팀','품질 데이터'],['구매팀','구매 분석']];let h=11;const rnd=()=>{h=(h*1103515245+12345)%2147483648;return h/2147483648};
+ gn.forEach((g,i)=>{const co=COMPANIES[i%COMPANIES.length][0],t=teams[i%teams.length];const ax=AXES.map(()=>Math.round(52+rnd()*24));const st=()=>rnd()>.55?'확인':rnd()>.5?'확인 필요':'정보 미확인';
+  C.push({name:sn[i%sn.length]+g,emp:'EMP-'+String(100+i*7),company:co,team:t[0],role:t[1],applied:rnd()>.85,ax,checked:'2026-10-0'+(1+i%9),req:Object.fromEntries(REQS.map(r=>[r.id,[st(),'시연용 요약 근거']])),strengths:['관련 업무 경험 일부 확인'],concerns:['필수 요건 근거 확인 필요'],questions:['이 직무와 가장 가까운 경험은?'],avail:'본인 참여 의사·소속 조직 확인 필요'})})})();
+
+let W=[...DEFAULT_W],scope=new Set(COMPANIES.map(c=>c[0])),selected=null,prevRank={},docType='report',docText={report:'',offer:''},typing=null;
+const REQ_CLASS={'확인':'ok','확인 필요':'check','정보 미확인':''};
+
+function notify(m){$('toast').textContent=m;$('toast').classList.remove('hidden');clearTimeout(notify.t);notify.t=setTimeout(()=>$('toast').classList.add('hidden'),3000)}
+let maxStep=1;
+function show(n){maxStep=Math.max(maxStep,n);document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id==='p'+n));document.querySelectorAll('.step').forEach(s=>{const k=+s.dataset.s;s.classList.toggle('on',k===n);s.classList.toggle('done',k<maxStep&&k!==n)});window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('.step').forEach(s=>s.addEventListener('click',()=>{const k=+s.dataset.s;if(k<=maxStep&&k!==3)show(k)}));
+
+// STEP 1
+function initStep1(){$('jdSelect').innerHTML=Object.entries(JDS).map(([id,j])=>`<option value="${id}">${id} · ${esc(j.title)}</option>`).join('');$('jdText').value=JDS['JD-001'].text;$('jdSelect').onchange=()=>{$('jdText').value=JDS[$('jdSelect').value].text};renderScope()}
+function renderScope(){$('scope').innerHTML=COMPANIES.map(([c,n])=>`<span class="chip ${scope.has(c)?'on':''}" data-c="${c}">${c} · ${n}명</span>`).join('');$('scope').querySelectorAll('.chip').forEach(ch=>ch.onclick=()=>{const c=ch.dataset.c;scope.has(c)?scope.delete(c):scope.add(c);renderScope()});$('scopeCount').textContent=`${scope.size}개 계열사 · ${poolSize().toLocaleString()}명`}
+const poolSize=()=>COMPANIES.filter(c=>scope.has(c[0])).reduce((a,c)=>a+c[1],0);
+
+// STEP 2
+async function analyze(){if(!scope.size){notify('스캔할 계열사를 하나 이상 고르세요.');return}show(2);$('reqRows').innerHTML='';$('btnGate').disabled=true;$('weightCard').style.opacity=.35;$('aiState').innerHTML='<span class="spin"></span>JD와 참고 자료를 분석하는 중';renderWeights('weightsGate',false);
+ await sleep(900);for(const r of REQS){const tr=document.createElement('tr');tr.className='row-in';tr.innerHTML=reqRow(r);$('reqRows').appendChild(tr);bindNeed(tr,r);await sleep(380)}
+ await sleep(300);$('weightCard').style.opacity=1;$('aiState').innerHTML='✓ 요구사항 6개 · 필수 2 · 우대 4 제안 완료';$('btnGate').disabled=false}
+function reqRow(r){return`<td><strong>${esc(r.r)}</strong></td><td>${esc(r.axis)}</td><td>${esc(r.type)}</td><td><button class="need ${r.need==='필수'?'must':''}">${esc(r.need)}</button></td><td>${r.src.map(s=>`<span class="srctag">${esc(s)}</span>`).join('')}</td>`}
+function bindNeed(tr,r){tr.querySelector('.need').onclick=()=>{r.need=r.need==='필수'?'우대':'필수';tr.innerHTML=reqRow(r);bindNeed(tr,r)}}
+function renderWeights(target,live){$(target).innerHTML=AXES.map((a,i)=>`<div class="w"><label>${a}<b id="${target}v${i}">${W[i]}%</b></label><input type="range" min="0" max="50" step="5" value="${W[i]}" data-i="${i}" aria-label="${a} 가중치"></div>`).join('');$(target).querySelectorAll('input').forEach(inp=>inp.oninput=()=>{W[+inp.dataset.i]=+inp.value;$(target+'v'+inp.dataset.i).textContent=inp.value+'%';const s=W.reduce((a,b)=>a+b,0);if($('wSum'))$('wSum').textContent=s;if(live)renderList(true)})}
+function confirmGate(){scan()}
+
+// STEP 3
+async function scan(){show(3);const total=poolSize();const pass1=Math.round(total*.25),pass2=48,top=10;
+ $('scanCos').innerHTML=COMPANIES.filter(c=>scope.has(c[0])).map(c=>`<span class="co" data-c="${c[0]}">${c[0]}</span>`).join('');
+ const N=52*8;$('dots').innerHTML='<i></i>'.repeat(N);const dots=[...$('dots').children];$('scanlog').innerHTML='';['f1','f2','f3','f4'].forEach(f=>$(f).textContent='0');
+ const log=t=>{const d=document.createElement('div');d.innerHTML=t;$('scanlog').prepend(d)};
+ const count=(id,to,ms)=>new Promise(res=>{const t0=performance.now(),dur=ms*SPEED;(function f(t){const k=Math.min(1,(t-t0)/dur);$(id).textContent=Math.round(to*(1-Math.pow(1-k,3))).toLocaleString();k<1?requestAnimationFrame(f):res()})(t0)});
+ $('scanTitle').textContent='그룹 전체 임직원 프로필을 스캔하고 있습니다';
+ const cos=[...$('scanCos').children];
+ const lit=(cls,ratio)=>dots.forEach((d,i)=>{if(((i*2654435761)>>>0)%1000<ratio*1000)d.className=cls});
+ const p=count('f1',total,2200);for(const co of cos){co.classList.add('on');log(`<b>${co.dataset.c}</b> 프로필 ${COMPANIES.find(c=>c[0]===co.dataset.c)[1]}명 정리 · 직무·역량 용어 통일`);dots.forEach((d,i)=>{if(i%cos.length===cos.indexOf(co))d.className='lit'});await sleep(260)}
+ await p;log('필수 요건 규칙 확인 · SQL 실무 · 경영지표 분석 경력');lit('pass',.25);await count('f2',pass1,1100);
+ log('LLM 정성 대조 · 프로필 문장 ↔ 요구사항 6개 (표현이 달라도 같은 경험 연결)');log('예: “경영지표 시각화” ↔ “Power BI 월간 실적 대시보드”');lit('pass',.12);dots.forEach((d,i)=>{if(d.className==='pass'&&((i*2654435761)>>>0)%1000>=120)d.className='lit'});await count('f3',pass2,1300);
+ log('가중치 적용 · 종합 점수 산출 · 근거·미확인 요건·추가 질문 작성');dots.forEach((d,i)=>{if(((i*40503)>>>0)%N<top*2&&d.className==='pass')d.className='hot'});let hot=dots.filter(d=>d.className==='hot').length;dots.forEach((d,i)=>{if(hot<top&&d.className==='pass'){d.className='hot';hot++}});await count('f4',top,700);
+ $('scanTitle').textContent='스캔 완료 · 공모에 지원하지 않은 숨은 후보를 함께 찾았습니다';await sleep(1300);
+ show(4);renderWeights('weightsLive',true);prevRank={};renderList(false);select(ranked()[0].c.emp)}
+
+// STEP 4
+const score=c=>Math.round(c.ax.reduce((a,v,i)=>a+v*W[i],0)/Math.max(1,W.reduce((a,b)=>a+b,0))*10)/10;
+const ranked=()=>C.filter(c=>scope.has(c.company)).map(c=>({c,s:score(c)})).sort((a,b)=>b.s-a.s).slice(0,10);
+function renderList(animate){const list=ranked();const newRank={};list.forEach((x,i)=>newRank[x.c.emp]=i);const hidden=list.filter(x=>!x.c.applied).length;$('hiddenCount').innerHTML=`숨은 후보 <b style="color:#a24c17">${hidden}명</b> · 공모 지원 ${list.length-hidden}명`;
+ const old=animate?Object.fromEntries([...$('candList').children].map(el=>[el.dataset.emp,el.getBoundingClientRect().top])):{};
+ $('candList').innerHTML=list.map(({c,s},i)=>{const d=prevRank[c.emp]!==undefined?prevRank[c.emp]-i:0;const best=c.ax.indexOf(Math.max(...c.ax));return`<div class="cand ${selected===c.emp?'sel':''}" data-emp="${c.emp}"><div class="rank">${i+1}</div><div><span class="nm">${esc(c.name)}</span>${c.applied?'<span class="badge-app">공모 지원</span>':'<span class="badge-hidden">숨은 후보</span>'}${d?`<span class="delta ${d>0?'up':'down'}">${d>0?'▲':'▼'}${Math.abs(d)}</span>`:''}<div class="meta">${esc(c.company)} · ${esc(c.team)} · ${esc(c.role)}</div></div><div class="mini">${c.ax.map((v,k)=>`<span class="${k===best?'k':''}" style="height:${Math.max(8,(v-40)*1.6)}%"></span>`).join('')}</div><div class="total">${s.toFixed(1)}</div></div>`}).join('');
+ if(animate){[...$('candList').children].forEach(el=>{const o=old[el.dataset.emp];if(o===undefined)return;const dy=o-el.getBoundingClientRect().top;if(dy){el.style.transition='none';el.style.transform=`translateY(${dy}px)`;requestAnimationFrame(()=>{el.style.transition='transform .45s ease';el.style.transform=''})}})}
+ [...$('candList').children].forEach(el=>el.onclick=()=>select(el.dataset.emp));
+ if(!animate)prevRank=newRank;else{clearTimeout(renderList.t);renderList.t=setTimeout(()=>{prevRank=newRank},1600)}
+ if(selected)renderDetail()}
+function select(emp){selected=emp;document.querySelectorAll('.cand').forEach(el=>el.classList.toggle('sel',el.dataset.emp===emp));renderDetail()}
+function cand(){return C.find(c=>c.emp===selected)}
+function renderDetail(){const c=cand();if(!c)return;const s=score(c);const rk=ranked().findIndex(x=>x.c.emp===c.emp)+1;
+ $('detail').innerHTML=`<div class="card-head" style="margin-bottom:10px"><div><span class="tiny">${esc(c.emp)} · 프로필 확인일 ${esc(c.checked)}</span><h2>${esc(c.name)} ${c.applied?'<span class="badge-app">공모 지원</span>':'<span class="badge-hidden">숨은 후보</span>'}</h2><span class="muted" style="font-size:12px">${esc(c.company)} · ${esc(c.team)} · ${esc(c.role)}</span></div><div style="text-align:right"><div class="total" style="font-size:30px">${s.toFixed(1)}</div><span class="tiny">${rk?rk+'위 · ':''}참고 지표</span></div></div>
+ ${AXES.map((a,i)=>`<div class="bar-row"><span>${a}</span><div class="bar-track"><div class="bar-fill" style="width:${c.ax[i]}%"></div></div><b>${c.ax[i]}</b></div>`).join('')}
+ <h3 style="margin-top:20px">요건별 비교</h3><table><tbody>${REQS.map(r=>{const [st,ev]=c.req[r.id];return`<tr><td style="padding:8px 6px"><strong>${esc(r.r)}</strong><br><span class="tiny">${esc(r.need)} · ${esc(ev)}</span></td><td style="padding:8px 6px;text-align:right"><span class="status ${REQ_CLASS[st]}">${esc(st)}</span></td></tr>`}).join('')}</tbody></table>
+ <h3 style="margin-top:18px">잘 맞는 점</h3>${c.strengths.map(x=>`<div class="evidence">${esc(x)}</div>`).join('')}
+ <h3 style="margin-top:16px">우려되는 점</h3>${c.concerns.map(x=>`<div class="evidence warn">${esc(x)}</div>`).join('')}
+ <h3 style="margin-top:16px">면담 시 확인 질문</h3>${c.questions.map(x=>`<div class="qa">Q. ${esc(x)}</div>`).join('')}
+ <div class="notice" style="margin:16px 0 14px"><b>참여 여건</b> · ${esc(c.avail)}<br>적합한 경험과 실제 이동 가능 여부는 따로 확인합니다.</div>
+ <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="primary" onclick="openDoc('report')">추천서 작성 →</button><button class="accent" onclick="openDoc('offer')">제안서 작성 →</button></div>`}
+
+// STEP 5
+const today=()=>new Date().toLocaleDateString('ko-KR',{timeZone:'Asia/Seoul'});
+function buildReport(c){const j=JDS['JD-001'];const rq=REQS.map(r=>{const[st,ev]=c.req[r.id];return`  · ${r.r} (${r.need}) — ${st}\n    근거: ${ev}`}).join('\n');
+ return`[추천서] ${j.title} — ${c.name} (${c.company} ${c.team})
+
+작성일 ${today()} · 작성 그룹 인사팀 · 보고 대상 인사팀장
+
+1. 추천 요약
+${c.name} 님은 ${c.company} ${c.team}에서 ${c.role}을 맡고 있으며, ${c.applied?'이번 공모에 직접 지원했습니다':'이번 공모에 지원하지 않았으나 그룹 전수 스캔에서 발견된 후보입니다'}.
+확정된 요건 기준 종합 ${score(c).toFixed(1)}점(직무 내 비교용 참고 지표)이며, 핵심 근거는 다음과 같습니다.
+${c.strengths.map(s=>'  · '+s).join('\n')}
+
+2. 요건별 검토
+${rq}
+
+3. 우려 사항 · 확인 필요
+${c.concerns.map(s=>'  · '+s).join('\n')}
+
+4. 면담 시 확인 질문
+${c.questions.map((s,i)=>`  Q${i+1}. ${s}`).join('\n')}
+
+5. 참여 여건
+  ${c.avail}
+  적합성 판단과 실제 이동 가능 여부는 본인 의사와 소속 조직 협의로 별도 확인합니다.
+
+6. 판단 원칙
+  본 추천은 AI가 정리한 근거를 인사 담당자가 검토한 의견입니다. 최종 배치는 인터뷰·업무 검증 후 결정합니다.`}
+function buildOffer(c){const j=JDS['JD-001'];return`제목: [TALENT LINK] ${c.name} 님께 '${j.title}' 참여를 제안드립니다
+
+${c.name} 님, 안녕하세요. 그룹 인사팀입니다.
+
+${j.org}에서 '${j.title}'을 꾸리고 있어, ${c.name} 님께 참여를 먼저 제안드리고자 연락드립니다.
+
+■ 어떤 자리인가요
+계열사마다 다른 매출·손익 지표를 하나의 기준으로 통일하고, 경영회의용 월간 실적 대시보드를 만드는 TF입니다. (6개월, 주 3일 참여)
+
+■ 이 자리에 필요한 역량과 성향
+  · SQL로 데이터를 집계하고 검증하는 실무 역량
+  · 경영지표를 이해하고 숫자의 정의를 맞추는 꼼꼼함
+  · 여러 조직의 서로 다른 기준을 듣고 합의를 이끄는 조율 능력
+
+■ ${c.name} 님을 제안드리는 이유
+${c.strengths.map(s=>'  · '+s).join('\n')}
+
+■ 함께 확인하고 싶은 점
+${c.questions.map(s=>'  · '+s).join('\n')}
+
+관심이 있으시면 TALENT LINK 임직원 화면에서 이 직무에 대한 적합도와 보충할 점을 먼저 확인하신 뒤 바로 지원하실 수 있습니다.
+  → https://talent-link-seven.vercel.app/employee.html
+
+참여 여부는 전적으로 ${c.name} 님의 선택이며, 소속 조직과의 협의는 인사팀이 함께 진행합니다. 부담 없이 회신 주세요.
+
+그룹 인사팀 드림`}
+function openDoc(type){if(!cand())return;show(5);setTab(type)}
+document.querySelectorAll('#docTabs button').forEach(b=>b.onclick=()=>setTab(b.dataset.doc));
+function setTab(type){docType=type;document.querySelectorAll('#docTabs button').forEach(b=>b.classList.toggle('active',b.dataset.doc===type));const c=cand();const full=type==='report'?buildReport(c):buildOffer(c);
+ $('docSide').innerHTML=`<div class="tiny" style="margin-bottom:8px">${esc(c.name)} · ${esc(c.company)} ${esc(c.team)}</div>`+REQS.map(r=>{const[st]=c.req[r.id];return`<div class="qa" style="display:flex;justify-content:space-between;gap:8px"><span>${esc(r.r)}</span><span class="status ${REQ_CLASS[st]}">${esc(st)}</span></div>`}).join('')+`<p class="tiny" style="margin-top:12px">근거가 없는 역량은 문서에 쓰지 않습니다.</p>`;
+ $('sendHint').textContent=type==='report'?'보내기: 인사 콘솔 “상사 추천 보고”와 운영 기록에 저장됩니다.':'보내기: 당사자 임직원 화면에 “받은 제안”으로 도착하고 운영 기록에 남습니다.';
+ $('btnSend').textContent=type==='report'?'상사에게 보고 →':'당사자에게 제안 보내기 →';
+ if(docText[type+c.emp]){$('docBody').textContent=docText[type+c.emp];$('docState').textContent='✓ 작성 완료';$('btnSend').disabled=false;return}
+ typeDoc(full,type+c.emp)}
+function typeDoc(full,key){clearInterval(typing);$('btnSend').disabled=true;$('docState').innerHTML='<span class="spin"></span>근거를 바탕으로 작성하는 중';let i=0;const step=Math.max(3,Math.round(full.length/260));
+ typing=setInterval(()=>{i=Math.min(full.length,i+step);$('docBody').innerHTML=esc(full.slice(0,i))+'<span class="cursor"></span>';if(i>=full.length){clearInterval(typing);$('docBody').textContent=full;docText[key]=full;$('docState').textContent='✓ 작성 완료 · 검토 후 보내세요';$('btnSend').disabled=false}},Math.round(16*SPEED))}
+function hrState(){try{const s=JSON.parse(localStorage.getItem(HR_KEY));if(s&&Array.isArray(s.jobs))return s}catch{}return null}
+function sendDoc(){const c=cand();const text=$('docBody').textContent;const time=new Date().toLocaleString('ko-KR',{timeZone:'Asia/Seoul'});
+ const entry={time,action:docType==='report'?`AI 인재 매칭 · ${c.name}(${c.emp}) 추천서 상부 보고 — ${JDS['JD-001'].title}`:`AI 인재 매칭 · ${c.name}(${c.emp})에게 참여 제안 발송 — ${JDS['JD-001'].title}`};
+ // 인사 콘솔 상태가 있으면 바로 기록하고, 없으면 콘솔이 다음에 열릴 때 합친다
+ try{const s=hrState();if(s){s.audit=Array.isArray(s.audit)?s.audit:[];s.audit.unshift(entry);localStorage.setItem(HR_KEY,JSON.stringify(s))}else{const pend=JSON.parse(localStorage.getItem('talent-link-audit-pending')||'[]');pend.unshift(entry);localStorage.setItem('talent-link-audit-pending',JSON.stringify(pend))}}catch{}
+ if(docType==='offer'){try{const list=JSON.parse(localStorage.getItem(OFFER_KEY)||'[]');list.unshift({emp:c.emp,name:c.name,jd:'JD-001',title:JDS['JD-001'].title,subject:text.split('\n')[0].replace('제목: ',''),body:text,time});localStorage.setItem(OFFER_KEY,JSON.stringify(list))}catch{}notify(`${c.name} 님에게 제안을 보냈습니다. 임직원 화면에 도착했습니다.`)}
+ else notify('추천서를 상부에 보고했습니다. 운영 기록에 남았습니다.')}
+function downloadDoc(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([$('docBody').textContent],{type:'text/plain'}));a.download=(docType==='report'?'추천서_':'제안서_')+(cand()?.name||'')+'.txt';a.click()}
+function resetAll(){W=[...DEFAULT_W];REQS.forEach((r,i)=>r.need=i<2?'필수':'우대');selected=null;docText={};maxStep=1;scope=new Set(COMPANIES.map(c=>c[0]));initStep1();show(1)}
+initStep1();show(1);
+</script>
+</body>
+</html>

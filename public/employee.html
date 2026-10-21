@@ -78,6 +78,7 @@ label{display:block;font-size:12px;font-weight:600;margin-bottom:7px}textarea,se
   <section id="home" class="section active">
     <div class="title-row"><div><div class="eyebrow">MY OPPORTUNITIES</div><h1>열린 자리에 내가 얼마나 맞는지 먼저 확인하세요.</h1><p class="muted">지원 전에 적합도와 보충할 점을 보고, 준비된 상태로 지원합니다.</p></div><button class="primary" onclick="go('jobs')">열린 직무 보기</button></div>
     <div class="hero"><div class="hero-copy"><div class="eyebrow">KNOW BEFORE YOU APPLY</div><h2>지원 여부와 관계없이,<br>그룹의 열린 직무가 나를 찾을 수 있습니다.</h2><p>내 프로필은 인사 담당자의 인재 스캐닝 대상에 포함됩니다. 직접 지원하면 검토 단계로 바로 연결됩니다.</p><button class="accent" onclick="go('diagnose')">적합도 진단하기 →</button></div><div class="hero-side">진단 결과는 참고 자료<br>최종 판단은 인사·현업 담당자<br>지원 내용은 인사 담당자에게 전달</div></div>
+    <div id="offerBox"></div>
     <div class="stats" id="homeStats"></div>
     <div class="two">
       <div class="card"><div class="card-head"><h2>나와 가까운 직무</h2><button class="text-btn" onclick="go('jobs')">전체 보기 ↗</button></div><div id="homeTop"></div></div>
@@ -140,7 +141,9 @@ function stageOf(appId){const s=hrState();return s?.reviews?.[appId]?.stage||'�
 // 시연용 모의 적합도: 직무 ID와 축 이름으로 고정 점수를 만든다 (새로고침해도 같은 값)
 function hash(str){let h=7;for(const c of str)h=(h*31+c.charCodeAt(0))>>>0;return h}
 const BOOST={'JD-001':14,'JD-006':10,'JD-007':8,'JD-005':6};
-function scores(jobId){const b=BOOST[jobId]||0;const per=AXES.map(a=>Math.min(96,52+(hash(jobId+a)%30)+b));const total=Math.round(per.reduce((x,y)=>x+y,0)/per.length);return{per,total}}
+// JD-001은 인사 담당자 매칭 화면과 같은 값을 쓴다 (가중치 25/30/20/10/15)
+const FIXED={'JD-001':[72,78,82,90,92]};const FIXED_W=[25,30,20,10,15];
+function scores(jobId){if(FIXED[jobId]){const per=FIXED[jobId];return{per,total:Math.round(per.reduce((a,v,i)=>a+v*FIXED_W[i],0)/100)}}const b=BOOST[jobId]||0;const per=AXES.map(a=>Math.min(96,52+(hash(jobId+a)%30)+b));const total=Math.round(per.reduce((x,y)=>x+y,0)/per.length);return{per,total}}
 const STRENGTH={'직무경험':'데이터 운영·리포트 자동화 경험이 직무의 핵심 업무와 겹칩니다.','업무 역량':'SQL·Power BI 실무와 데이터 자격이 요구 역량과 맞습니다.','업무 성과':'리포트 시간 단축·오류 감소 등 수치로 확인되는 성과가 있습니다.','성장 가능성':'직무 전환 이력과 신규 도구 습득이 새 직무 적응 가능성을 뒷받침합니다.','커리어 적합성':'희망 직무와 장기 목표가 이 직무 방향과 일치합니다.'};
 const GAP={'직무경험':['해당 직무 영역의 프로젝트 참여 이력 1건 추가','현재 팀에서 유사 과제를 맡아 수행 범위 넓히기'],'업무 역량':['직무 관련 자격·교육 이수(예: 도메인 심화과정)','요구 도구 중 미보유 항목 학습 후 산출물로 증빙'],'업무 성과':['최근 성과를 수치(시간·건수·비용)로 정리해 프로필 갱신','성과의 질을 보여줄 산출물·확인서 등록'],'성장 가능성':['타 부서·계열사 협업 과제 자원 참여','새 역량 습득 기록을 프로필에 추가'],'커리어 적합성':['희망 직무와 장기 목표를 이 직무 기준으로 구체화','지원 동기를 JD 요구사항과 연결해 작성']};
 
@@ -162,7 +165,10 @@ document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',e=>{e.p
 function applied(jobId){return myApps().some(a=>a.jd===jobId)}
 function statusPill(j){const c=j.status==='모집 중'?'ok':j.status==='마감'?'':'check';return`<span class="status ${c}">${esc(j.status||'초안')}</span>`}
 
-function renderHome(){const js=jobs(),ranked=js.map(j=>({j,s:scores(j.id)})).sort((a,b)=>b.s.total-a.s.total);const open=js.filter(j=>j.status!=='마감').length;
+function offers(){try{return(JSON.parse(localStorage.getItem('talent-link-offers'))||[]).filter(o=>o.emp===ME.emp)}catch{return[]}}
+function renderOffers(){const list=offers();$('offerBox').innerHTML=list.map((o,i)=>`<div class="card" style="border-color:var(--accent);box-shadow:0 8px 30px #f6995d22"><div class="card-head"><div><span class="status check">인사팀에서 온 제안</span><h2 style="margin-top:8px">${esc(o.subject)}</h2><span class="tiny">${esc(o.time)} · 공모에 지원하지 않았지만 내 프로필이 이 자리와 맞다고 판단되었습니다</span></div><div style="display:flex;gap:6px;flex-shrink:0"><button onclick="toggleOffer(${i})">내용 보기</button><button class="primary" onclick="diagnose('${esc(o.jd)}')">적합도 확인 →</button></div></div><div id="offerBody${i}" class="fieldbox hidden" style="white-space:pre-wrap;line-height:1.8">${esc(o.body)}</div></div>`).join('')}
+function toggleOffer(i){$('offerBody'+i).classList.toggle('hidden')}
+function renderHome(){renderOffers();const js=jobs(),ranked=js.map(j=>({j,s:scores(j.id)})).sort((a,b)=>b.s.total-a.s.total);const open=js.filter(j=>j.status!=='마감').length;
  $('homeStats').innerHTML=[['열린 직무',open,'개 · 인사 담당자 등록'],['지원한 직무',myApps().length,'건'],['가장 가까운 직무',ranked[0]?ranked[0].s.total+'점':'-',ranked[0]?esc(ranked[0].j.title):''],['내 프로필 근거',ME.evidence.length,'건 · 확인완료']].map(([k,v,d])=>`<div class="stat"><small>${k}</small><strong>${v}</strong><small>${d}</small></div>`).join('');
  $('homeTop').innerHTML=ranked.slice(0,3).map(({j,s})=>`<div class="job"><div><strong>${esc(j.title)}</strong><p><span class="tag">${esc(j.id)}</span>적합도 ${s.total}점 · ${esc(j.org)}</p></div><button onclick="diagnose('${esc(j.id)}')">진단 보기</button></div>`).join('');
  const recent=myApps().slice(0,4).map(a=>`<div class="record">${esc(a.title)} 지원 · 검토 단계: ${esc(stageOf(a.id))}<small>${esc(a.time)}</small></div>`).join('');$('homeRecent').innerHTML=recent||'<p class="muted">아직 활동 기록이 없습니다. 적합도 진단부터 시작해 보세요.</p>'}
