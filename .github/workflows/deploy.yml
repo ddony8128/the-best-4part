@@ -1,0 +1,12 @@
+# main에 push되면 Vercel 배포를 요청한다 (Vercel GitHub 연동 웹훅이 빠질 때를 대비한 보조 경로)
+name: Deploy to Vercel
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel deploy hook
+        run: curl -fsS -X POST "${{ secrets.VERCEL_DEPLOY_HOOK }}"
