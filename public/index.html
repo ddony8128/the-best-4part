@@ -8,39 +8,74 @@
 :root{--ink:#181818;--muted:#717171;--line:#e6e5e2;--bg:#f6f6f4;--accent:#f6995d;--soft:#fff1e7}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,'Malgun Gothic',sans-serif;font-size:14px;line-height:1.65}
-main{max-width:760px;margin:0 auto;padding:64px 20px}
+main{max-width:980px;margin:0 auto;padding:56px 20px 64px}
 .brand{font-weight:900;letter-spacing:-1px;font-size:22px;display:flex;align-items:center;gap:10px}
 .logo{display:inline-block;background:var(--accent);width:28px;height:28px;border-radius:7px;position:relative}
 .logo:after{content:'';position:absolute;left:8px;top:6px;width:8px;height:12px;border-left:3px solid #171717;border-bottom:3px solid #171717;transform:rotate(-35deg)}
 .eyebrow{font-size:10px;letter-spacing:2px;font-weight:bold;color:var(--muted);margin-top:40px}
-h1{font-size:30px;letter-spacing:-1.4px;margin:8px 0 10px}
-p{color:var(--muted);margin:0 0 28px}
-a.card{display:block;background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 24px;margin-bottom:14px;color:inherit;text-decoration:none}
-a.card:hover{border-color:#999}
-a.card strong{display:block;font-size:16px;margin-bottom:4px}
-a.card span{color:var(--muted);font-size:12px}
-.pill{display:inline-block;border:1px solid var(--line);border-radius:5px;font-size:11px;padding:2px 8px;background:#fff;margin-left:8px;vertical-align:middle}
-.pill.soon{background:var(--soft);border-color:#f3c9ab;color:#8b481e}
-footer{margin-top:48px;font-size:11px;color:#999;border-top:1px solid var(--line);padding-top:16px}
+h1{font-size:32px;letter-spacing:-1.5px;line-height:1.3;margin:8px 0 10px}
+.lead{color:var(--muted);margin:0 0 34px;max-width:620px}
+.choose{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+a.door{display:block;background:#fff;border:1px solid var(--line);border-radius:12px;padding:30px 28px 26px;color:inherit;text-decoration:none;position:relative;min-height:300px;transition:border-color .15s,transform .15s}
+a.door:hover{border-color:#999;transform:translateY(-2px)}
+a.door.hr{background:#1b1b1b;color:#fff;border-color:#1b1b1b}
+a.door .who{font-size:10px;letter-spacing:2px;font-weight:bold;color:var(--muted)}
+a.door.hr .who{color:var(--accent)}
+a.door h2{font-size:24px;letter-spacing:-1px;margin:10px 0 8px}
+a.door p{margin:0 0 18px;font-size:13px;color:var(--muted)}
+a.door.hr p{color:#aaa}
+a.door ul{list-style:none;padding:0;margin:0 0 56px;font-size:12px;color:#555}
+a.door.hr ul{color:#ccc}
+a.door li{padding:5px 0;border-top:1px solid var(--line)}
+a.door.hr li{border-color:#333}
+a.door li:before{content:'→';margin-right:8px;color:var(--accent)}
+.btn{position:absolute;left:28px;bottom:26px;display:inline-block;border-radius:7px;padding:11px 18px;font-weight:600;font-size:13px;background:var(--ink);color:#fff}
+a.door.hr .btn{background:var(--accent);color:#181818}
+.pill{display:inline-block;border:1px solid var(--line);border-radius:5px;font-size:11px;padding:2px 8px;background:#fff;margin-left:8px;vertical-align:middle;color:var(--ink)}
+.link{margin-top:26px;font-size:12px;color:var(--muted)}
+.link span{display:inline-block;margin-right:14px}
+footer{margin-top:48px;font-size:11px;color:#999;border-top:1px solid var(--line);padding-top:16px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:700px){.choose{grid-template-columns:1fr}h1{font-size:26px}a.door{min-height:0;padding-bottom:84px}}
 </style>
 </head>
 <body>
 <main>
   <div class="brand"><span class="logo"></span>TALENT LINK</div>
   <div class="eyebrow">HANWHA AI SOLUTION CHALLENGE</div>
-  <h1>그룹 전체에서 적합한 인재를 찾습니다.</h1>
-  <p>TF·공석이 생기면 계열사를 넘어 후보를 탐색하고, 근거와 함께 추천합니다. 최종 판단은 인사팀이 합니다.</p>
+  <h1>그룹 전체에서 적합한 인재를 찾고,<br>임직원은 스스로 기회를 확인합니다.</h1>
+  <p class="lead">TF·공석이 생기면 계열사를 넘어 후보를 탐색하고 근거와 함께 추천합니다. 최종 판단은 사람이 합니다. 어느 쪽으로 들어갈지 선택하세요.</p>
 
-  <a class="card" href="./talent_hr_admin.html">
-    <strong>인사팀 채용 운영 콘솔 <span class="pill">시연 데이터</span></strong>
-    <span>공고 관리 · 지원자 검토 · 인재 참여 제안 · 상사 추천 보고</span>
-  </a>
-  <a class="card" href="#" onclick="return false">
-    <strong>AI 인재 매칭 <span class="pill soon">준비 중</span></strong>
-    <span>JD 구조화 → 그룹 전수 탐색 → 종합 점수 · 정성 보고서 → 인사팀 Gate</span>
-  </a>
+  <div class="choose">
+    <a class="door hr" href="./talent_hr_admin.html">
+      <div class="who">FOR HR · 인사 담당자</div>
+      <h2>인사 담당자</h2>
+      <p>JD를 올리고 그룹 전체에서 후보를 찾아 검토·추천·제안합니다.</p>
+      <ul>
+        <li>공고(JD) 등록·관리</li>
+        <li>인재 스캐닝 · 상위 N명 추천 <span class="pill">준비 중</span></li>
+        <li>지원자 검토 · 비교</li>
+        <li>추천서 · 제안서 초안 작성</li>
+      </ul>
+      <span class="btn">인사 담당자로 들어가기 →</span>
+    </a>
+    <a class="door" href="./employee.html">
+      <div class="who">FOR EMPLOYEE · 임직원</div>
+      <h2>지원자</h2>
+      <p>열린 직무에 내가 얼마나 맞는지 보고, 보충할 점을 확인한 뒤 바로 지원합니다.</p>
+      <ul>
+        <li>열린 직무(JD) 둘러보기</li>
+        <li>내 프로필 기준 적합도 진단</li>
+        <li>더 적합해지기 위한 보충 포인트</li>
+        <li>바로 지원 → 인사 담당자에게 전달</li>
+      </ul>
+      <span class="btn">지원자로 들어가기 →</span>
+    </a>
+  </div>
 
-  <footer>시연용 가상 데이터 · 실제 임직원 정보 없음</footer>
+  <p class="link" style="margin-bottom:0"><span><b style="color:var(--ink)">운영 원칙</b> AI는 후보 탐색과 검토를 돕고, 최종 배치는 현업 검증·본인 참여 의사·소속 조직 여건을 종합해 사람이 결정합니다.</span></p>
+  <p class="link"><span>두 화면은 같은 브라우저 저장소를 공유합니다.</span><span>지원자가 지원하면 인사 담당자 화면의 지원자 목록과 운영 기록에 바로 나타납니다.</span></p>
+
+  <footer><span>TALENT LINK · HANWHA AI SOLUTION CHALLENGE</span><span>시연용 가상 데이터 · 실제 임직원 정보 없음</span></footer>
 </main>
 </body>
 </html>
