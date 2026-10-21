@@ -3,7 +3,7 @@
 TF·공석이 생기면 그룹 전체(계열사 불문)에서 적합한 인재를 찾아 근거와 함께 추천하는 서비스.
 기획 기록은 [`docs/project-notes.md`](docs/project-notes.md)에 있습니다.
 
-- 배포 주소: (Vercel 연결 후 여기에 기록)
+- 배포 주소: https://talent-link-seven.vercel.app (main에 push하면 1~2분 내 자동 반영)
 - 저장소: https://github.com/ddony8128/the-best-4part
 
 ---
