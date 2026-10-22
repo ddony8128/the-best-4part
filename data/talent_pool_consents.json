@@ -1,0 +1,398 @@
+[
+  {
+    "emp_id": "EMP-001",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-011",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-024",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-037",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-100",
+    "consented": false,
+    "scope": null,
+    "consented_at": null,
+    "expires_at": null,
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-107",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-114",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-121",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-128",
+    "consented": false,
+    "scope": null,
+    "consented_at": null,
+    "expires_at": null,
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-135",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-142",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-149",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-156",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-163",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-170",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-177",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-184",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-191",
+    "consented": false,
+    "scope": null,
+    "consented_at": null,
+    "expires_at": null,
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-198",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-205",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-212",
+    "consented": false,
+    "scope": null,
+    "consented_at": null,
+    "expires_at": null,
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-219",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-226",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-233",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-240",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-247",
+    "consented": false,
+    "scope": null,
+    "consented_at": null,
+    "expires_at": null,
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-254",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-261",
+    "consented": false,
+    "scope": null,
+    "consented_at": null,
+    "expires_at": null,
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-268",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-275",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-282",
+    "consented": false,
+    "scope": null,
+    "consented_at": null,
+    "expires_at": null,
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-289",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-296",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-303",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-310",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-317",
+    "consented": false,
+    "scope": null,
+    "consented_at": null,
+    "expires_at": null,
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-324",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-331",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-338",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-345",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-352",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-359",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-366",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  },
+  {
+    "emp_id": "EMP-373",
+    "consented": true,
+    "scope": "그룹 전체",
+    "consented_at": "2026-03-02",
+    "expires_at": "2027-03-01",
+    "_source": "그룹 인재풀 등록",
+    "_note": "동의한 임직원만 계열사 간 스캔 대상"
+  }
+]

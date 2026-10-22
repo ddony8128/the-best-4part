@@ -1,0 +1,292 @@
+[
+  {
+    "emp_id": "EMP-001",
+    "course": "SQL 실무 심화",
+    "category": "데이터",
+    "hours": 16,
+    "completed_at": "2022-09-30",
+    "_source": "LMS",
+    "_tier": "시스템 확정",
+    "_note": "이수는 숙련을 뜻하지 않음"
+  },
+  {
+    "emp_id": "EMP-011",
+    "course": "사내 데이터분석 심화과정",
+    "category": "데이터",
+    "hours": 40,
+    "completed_at": "2024-06-28",
+    "_source": "LMS",
+    "_tier": "시스템 확정",
+    "_note": "이수는 숙련을 뜻하지 않음"
+  },
+  {
+    "emp_id": "EMP-011",
+    "course": "Python 업무 자동화",
+    "category": "데이터",
+    "hours": 12,
+    "completed_at": "2025-03-14",
+    "_source": "LMS",
+    "_tier": "시스템 확정",
+    "_note": "이수는 숙련을 뜻하지 않음"
+  },
+  {
+    "emp_id": "EMP-024",
+    "course": "SQL 기초",
+    "category": "데이터",
+    "hours": 8,
+    "completed_at": "2023-04-07",
+    "_source": "LMS",
+    "_tier": "시스템 확정",
+    "_note": "이수는 숙련을 뜻하지 않음"
+  },
+  {
+    "emp_id": "EMP-107",
+    "course": "데이터 리터러시",
+    "category": "리더십",
+    "hours": 4,
+    "completed_at": "2024-06-20",
+    "_source": "LMS",
+    "_tier": "시스템 확정",
+    "_note": "이수는 숙련을 뜻하지 않음"
+  },
+  {
+    "emp_id": "EMP-121",
+    "course": "데이터 리터러시",
+    "category": "리더십",
+    "hours": 20,
+    "completed_at": "2023-03-20",
+    "_source": "LMS",
+    "_tier": "시스템 확정",
+    "_note": "이수는 숙련을 뜻하지 않음"
+  },
+  {
+    "emp_id": "EMP-135",
+    "course": "SQL 기초",
+    "category": "리더십",
+    "hours": 13,
+    "completed_at": "2024-03-20",
+    "_source": "LMS",
+    "_tier": "시스템 확정",
+    "_note": "이수는 숙련을 뜻하지 않음"
+  },
+  {
+    "emp_id": "EMP-156",
+    "course": "프로젝트 관리",
+    "category": "데이터",
+    "hours": 11,
+    "completed_at": "2024-08-20",
+    "_source": "LMS",
+    "_tier": "시스템 확정",
+    "_note": "이수는 숙련을 뜻하지 않음"
+  },
+  {
+    "emp_id": "EMP-163",
+    "course": "SQL 기초",
+    "category": "데이터",
+    "hours": 20,
+    "completed_at": "2026-04-20",
+    "_source": "LMS",
+    "_tier": "시스템 확정",
+    "_note": "이수는 숙련을 뜻하지 않음"
+  },
+  {
+    "emp_id": "EMP-170",
+    "course": "SQL 기초",
+    "category": "리더십",
+    "hours": 21,
+    "completed_at": "2026-03-20",
+    "_source": "LMS",
+    "_tier": "시스템 확정",
+    "_note": "이수는 숙련을 뜻하지 않음"
+  },
+  {
+    "emp_id": "EMP-177",
+    "course": "SQL 기초",
+    "category": "리더십",
+    "hours": 23,
+    "completed_at": "2023-03-20",
+    "_source": "LMS",
+    "_tier": "시스템 확정",
+    "_note": "이수는 숙련을 뜻하지 않음"
+  },
+  {
+    "emp_id": "EMP-184",
+    "course": "재무제표 이해",
+    "category": "경영",
+    "hours": 13,
+    "completed_at": "2022-08-20",
+    "_source": "LMS",
+    "_tier": "시스템 확정",
+    "_note": "이수는 숙련을 뜻하지 않음"
+  },
+  {
+    "emp_id": "EMP-191",
+    "course": "SQL 기초",
+    "category": "경영",
+    "hours": 6,
+    "completed_at": "2025-08-20",
+    "_source": "LMS",
+    "_tier": "시스템 확정",
+    "_note": "이수는 숙련을 뜻하지 않음"
+  },
+  {
+    "emp_id": "EMP-198",
+    "course": "SQL 기초",
+    "category": "데이터",
+    "hours": 9,
+    "completed_at": "2022-03-20",
+    "_source": "LMS",
+    "_tier": "시스템 확정",
+    "_note": "이수는 숙련을 뜻하지 않음"
+  },
+  {
+    "emp_id": "EMP-212",
+    "course": "SQL 기초",
+    "category": "경영",
+    "hours": 19,
+    "completed_at": "2023-03-20",
+    "_source": "LMS",
+    "_tier": "시스템 확정",
+    "_note": "이수는 숙련을 뜻하지 않음"
+  },
+  {
+    "emp_id": "EMP-226",
+    "course": "SQL 기초",
+    "category": "경영",
+    "hours": 22,
+    "completed_at": "2025-01-20",
+    "_source": "LMS",
+    "_tier": "시스템 확정",
+    "_note": "이수는 숙련을 뜻하지 않음"
+  },
+  {
+    "emp_id": "EMP-233",
+    "course": "SQL 기초",
+    "category": "리더십",
+    "hours": 9,
+    "completed_at": "2023-06-20",
+    "_source": "LMS",
+    "_tier": "시스템 확정",
+    "_note": "이수는 숙련을 뜻하지 않음"
+  },
+  {
+    "emp_id": "EMP-247",
+    "course": "프로젝트 관리",
+    "category": "데이터",
+    "hours": 20,
+    "completed_at": "2024-04-20",
+    "_source": "LMS",
+    "_tier": "시스템 확정",
+    "_note": "이수는 숙련을 뜻하지 않음"
+  },
+  {
+    "emp_id": "EMP-268",
+    "course": "SQL 기초",
+    "category": "리더십",
+    "hours": 11,
+    "completed_at": "2022-09-20",
+    "_source": "LMS",
+    "_tier": "시스템 확정",
+    "_note": "이수는 숙련을 뜻하지 않음"
+  },
+  {
+    "emp_id": "EMP-275",
+    "course": "데이터 리터러시",
+    "category": "리더십",
+    "hours": 5,
+    "completed_at": "2026-05-20",
+    "_source": "LMS",
+    "_tier": "시스템 확정",
+    "_note": "이수는 숙련을 뜻하지 않음"
+  },
+  {
+    "emp_id": "EMP-282",
+    "course": "SQL 기초",
+    "category": "데이터",
+    "hours": 7,
+    "completed_at": "2022-03-20",
+    "_source": "LMS",
+    "_tier": "시스템 확정",
+    "_note": "이수는 숙련을 뜻하지 않음"
+  },
+  {
+    "emp_id": "EMP-289",
+    "course": "데이터 리터러시",
+    "category": "데이터",
+    "hours": 24,
+    "completed_at": "2024-06-20",
+    "_source": "LMS",
+    "_tier": "시스템 확정",
+    "_note": "이수는 숙련을 뜻하지 않음"
+  },
+  {
+    "emp_id": "EMP-296",
+    "course": "SQL 기초",
+    "category": "경영",
+    "hours": 18,
+    "completed_at": "2025-01-20",
+    "_source": "LMS",
+    "_tier": "시스템 확정",
+    "_note": "이수는 숙련을 뜻하지 않음"
+  },
+  {
+    "emp_id": "EMP-303",
+    "course": "프로젝트 관리",
+    "category": "데이터",
+    "hours": 21,
+    "completed_at": "2023-09-20",
+    "_source": "LMS",
+    "_tier": "시스템 확정",
+    "_note": "이수는 숙련을 뜻하지 않음"
+  },
+  {
+    "emp_id": "EMP-317",
+    "course": "SQL 기초",
+    "category": "리더십",
+    "hours": 24,
+    "completed_at": "2026-02-20",
+    "_source": "LMS",
+    "_tier": "시스템 확정",
+    "_note": "이수는 숙련을 뜻하지 않음"
+  },
+  {
+    "emp_id": "EMP-331",
+    "course": "프로젝트 관리",
+    "category": "경영",
+    "hours": 10,
+    "completed_at": "2024-08-20",
+    "_source": "LMS",
+    "_tier": "시스템 확정",
+    "_note": "이수는 숙련을 뜻하지 않음"
+  },
+  {
+    "emp_id": "EMP-338",
+    "course": "SQL 기초",
+    "category": "데이터",
+    "hours": 19,
+    "completed_at": "2024-04-20",
+    "_source": "LMS",
+    "_tier": "시스템 확정",
+    "_note": "이수는 숙련을 뜻하지 않음"
+  },
+  {
+    "emp_id": "EMP-352",
+    "course": "SQL 기초",
+    "category": "경영",
+    "hours": 16,
+    "completed_at": "2023-07-20",
+    "_source": "LMS",
+    "_tier": "시스템 확정",
+    "_note": "이수는 숙련을 뜻하지 않음"
+  },
+  {
+    "emp_id": "EMP-359",
+    "course": "프로젝트 관리",
+    "category": "경영",
+    "hours": 20,
+    "completed_at": "2025-08-20",
+    "_source": "LMS",
+    "_tier": "시스템 확정",
+    "_note": "이수는 숙련을 뜻하지 않음"
+  }
+]

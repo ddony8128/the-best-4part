@@ -1,0 +1,24 @@
+[
+  {
+    "job_family": "경영분석",
+    "sample_n": 12,
+    "min_sample_rule": 10,
+    "period": "2023~2025 상위 평가자 익명 집계",
+    "patterns": [
+      {
+        "pattern": "타 부서와 지표 정의를 합의한 프로젝트 경험",
+        "share_pct": 75
+      },
+      {
+        "pattern": "SQL로 원천 데이터를 직접 검증한 경험",
+        "share_pct": 83
+      },
+      {
+        "pattern": "BI 대시보드를 직접 구축·운영",
+        "share_pct": 58
+      }
+    ],
+    "_source": "인사 시스템(평가+경력) 익명 집계",
+    "_note": "표본 10명 미만이면 사용하지 않음"
+  }
+]

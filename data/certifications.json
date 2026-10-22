@@ -1,0 +1,202 @@
+[
+  {
+    "emp_id": "EMP-001",
+    "name": "SQLD",
+    "issuer": "한국데이터산업진흥원",
+    "acquired_at": "2023-06-16",
+    "_source": "자격 등록",
+    "_tier": "시스템 확정"
+  },
+  {
+    "emp_id": "EMP-011",
+    "name": "SQLD",
+    "issuer": "한국데이터산업진흥원",
+    "acquired_at": "2023-06-16",
+    "_source": "자격 등록",
+    "_tier": "시스템 확정"
+  },
+  {
+    "emp_id": "EMP-011",
+    "name": "ADsP",
+    "issuer": "한국데이터산업진흥원",
+    "acquired_at": "2024-11-22",
+    "_source": "자격 등록",
+    "_tier": "시스템 확정"
+  },
+  {
+    "emp_id": "EMP-037",
+    "name": "재경관리사",
+    "issuer": "삼일회계법인",
+    "acquired_at": "2022-05-20",
+    "_source": "자격 등록",
+    "_tier": "시스템 확정"
+  },
+  {
+    "emp_id": "EMP-114",
+    "name": "정보처리기사",
+    "issuer": "PMI",
+    "acquired_at": "2024-03-15",
+    "_source": "자격 등록",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-128",
+    "name": "정보처리기사",
+    "issuer": "PMI",
+    "acquired_at": "2020-06-15",
+    "_source": "자격 등록",
+    "_tier": "시스템 확정"
+  },
+  {
+    "emp_id": "EMP-135",
+    "name": "PMP",
+    "issuer": "한국산업인력공단",
+    "acquired_at": "2021-07-15",
+    "_source": "자격 등록",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-142",
+    "name": "재경관리사",
+    "issuer": "PMI",
+    "acquired_at": "2023-02-15",
+    "_source": "자격 등록",
+    "_tier": "시스템 확정"
+  },
+  {
+    "emp_id": "EMP-198",
+    "name": "정보처리기사",
+    "issuer": "PMI",
+    "acquired_at": "2020-03-15",
+    "_source": "자격 등록",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-205",
+    "name": "SQLD",
+    "issuer": "한국산업인력공단",
+    "acquired_at": "2024-08-15",
+    "_source": "자격 등록",
+    "_tier": "시스템 확정"
+  },
+  {
+    "emp_id": "EMP-219",
+    "name": "SQLD",
+    "issuer": "한국데이터산업진흥원",
+    "acquired_at": "2025-01-15",
+    "_source": "자격 등록",
+    "_tier": "시스템 확정"
+  },
+  {
+    "emp_id": "EMP-226",
+    "name": "정보처리기사",
+    "issuer": "PMI",
+    "acquired_at": "2022-06-15",
+    "_source": "자격 등록",
+    "_tier": "시스템 확정"
+  },
+  {
+    "emp_id": "EMP-233",
+    "name": "ADsP",
+    "issuer": "PMI",
+    "acquired_at": "2021-06-15",
+    "_source": "자격 등록",
+    "_tier": "시스템 확정"
+  },
+  {
+    "emp_id": "EMP-254",
+    "name": "SQLD",
+    "issuer": "한국데이터산업진흥원",
+    "acquired_at": "2020-08-15",
+    "_source": "자격 등록",
+    "_tier": "시스템 확정"
+  },
+  {
+    "emp_id": "EMP-261",
+    "name": "PMP",
+    "issuer": "한국산업인력공단",
+    "acquired_at": "2021-06-15",
+    "_source": "자격 등록",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-268",
+    "name": "PMP",
+    "issuer": "한국산업인력공단",
+    "acquired_at": "2023-11-15",
+    "_source": "자격 등록",
+    "_tier": "시스템 확정"
+  },
+  {
+    "emp_id": "EMP-275",
+    "name": "재경관리사",
+    "issuer": "PMI",
+    "acquired_at": "2022-01-15",
+    "_source": "자격 등록",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-289",
+    "name": "재경관리사",
+    "issuer": "한국데이터산업진흥원",
+    "acquired_at": "2021-05-15",
+    "_source": "자격 등록",
+    "_tier": "시스템 확정"
+  },
+  {
+    "emp_id": "EMP-296",
+    "name": "정보처리기사",
+    "issuer": "PMI",
+    "acquired_at": "2018-03-15",
+    "_source": "자격 등록",
+    "_tier": "시스템 확정"
+  },
+  {
+    "emp_id": "EMP-303",
+    "name": "SQLD",
+    "issuer": "한국데이터산업진흥원",
+    "acquired_at": "2020-03-15",
+    "_source": "자격 등록",
+    "_tier": "시스템 확정"
+  },
+  {
+    "emp_id": "EMP-310",
+    "name": "PMP",
+    "issuer": "한국산업인력공단",
+    "acquired_at": "2024-01-15",
+    "_source": "자격 등록",
+    "_tier": "시스템 확정"
+  },
+  {
+    "emp_id": "EMP-331",
+    "name": "SQLD",
+    "issuer": "PMI",
+    "acquired_at": "2021-11-15",
+    "_source": "자격 등록",
+    "_tier": "시스템 확정"
+  },
+  {
+    "emp_id": "EMP-338",
+    "name": "정보처리기사",
+    "issuer": "PMI",
+    "acquired_at": "2020-09-15",
+    "_source": "자격 등록",
+    "_tier": "시스템 확정"
+  },
+  {
+    "emp_id": "EMP-345",
+    "name": "정보처리기사",
+    "issuer": "한국산업인력공단",
+    "acquired_at": "2019-03-15",
+    "_source": "자격 등록",
+    "_tier": "시스템 확정"
+  },
+  {
+    "emp_id": "EMP-366",
+    "name": "정보처리기사",
+    "issuer": "한국산업인력공단",
+    "acquired_at": "2024-09-15",
+    "_source": "자격 등록",
+    "_tier": "시스템 확정"
+  }
+]

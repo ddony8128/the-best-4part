@@ -1,0 +1,625 @@
+[
+  {
+    "emp_id": "EMP-001",
+    "skill": "SQL",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-001",
+    "skill": "Power BI",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-001",
+    "skill": "지표 설계",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-011",
+    "skill": "SQL",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-011",
+    "skill": "Python",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-011",
+    "skill": "Power BI",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-024",
+    "skill": "매출 분석",
+    "level": "전문",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-037",
+    "skill": "SQL",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-037",
+    "skill": "손익 분석",
+    "level": "전문",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-100",
+    "skill": "SAP",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-100",
+    "skill": "R",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-107",
+    "skill": "SAP",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-107",
+    "skill": "Tableau",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-114",
+    "skill": "Python",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-114",
+    "skill": "Power BI",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-121",
+    "skill": "Python",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-121",
+    "skill": "Power BI",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-128",
+    "skill": "SQL",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-128",
+    "skill": "Tableau",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-135",
+    "skill": "Python",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-135",
+    "skill": "Tableau",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-142",
+    "skill": "Python",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-142",
+    "skill": "Tableau",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-149",
+    "skill": "Excel",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-149",
+    "skill": "R",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-156",
+    "skill": "Python",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-156",
+    "skill": "Excel",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-163",
+    "skill": "Excel",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-163",
+    "skill": "Excel",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-170",
+    "skill": "SQL",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-170",
+    "skill": "Power BI",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-177",
+    "skill": "SAP",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-177",
+    "skill": "Excel",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-184",
+    "skill": "Excel",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-184",
+    "skill": "R",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-191",
+    "skill": "Excel",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-191",
+    "skill": "Tableau",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-198",
+    "skill": "Excel",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-198",
+    "skill": "Excel",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-205",
+    "skill": "Python",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-205",
+    "skill": "R",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-212",
+    "skill": "SAP",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-212",
+    "skill": "Excel",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-219",
+    "skill": "SQL",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-219",
+    "skill": "Power BI",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-226",
+    "skill": "Python",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-226",
+    "skill": "R",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-233",
+    "skill": "Excel",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-233",
+    "skill": "R",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-240",
+    "skill": "Excel",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-240",
+    "skill": "Tableau",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-247",
+    "skill": "Python",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-247",
+    "skill": "Power BI",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-254",
+    "skill": "Python",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-254",
+    "skill": "R",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-261",
+    "skill": "SQL",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-261",
+    "skill": "R",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-268",
+    "skill": "SQL",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-268",
+    "skill": "Tableau",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-275",
+    "skill": "Excel",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-275",
+    "skill": "R",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-282",
+    "skill": "Python",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-282",
+    "skill": "Tableau",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-289",
+    "skill": "Excel",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-289",
+    "skill": "Excel",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-296",
+    "skill": "SQL",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-296",
+    "skill": "R",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-303",
+    "skill": "Python",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-303",
+    "skill": "Tableau",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-310",
+    "skill": "Excel",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-310",
+    "skill": "Power BI",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-317",
+    "skill": "Excel",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-317",
+    "skill": "Power BI",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-324",
+    "skill": "SQL",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-324",
+    "skill": "R",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-331",
+    "skill": "Python",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-331",
+    "skill": "R",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-338",
+    "skill": "SAP",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-338",
+    "skill": "R",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-345",
+    "skill": "SQL",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-345",
+    "skill": "Tableau",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-352",
+    "skill": "Excel",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-352",
+    "skill": "R",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-359",
+    "skill": "SQL",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-359",
+    "skill": "Tableau",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-366",
+    "skill": "Python",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-366",
+    "skill": "Power BI",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-373",
+    "skill": "Python",
+    "level": "기초",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-373",
+    "skill": "R",
+    "level": "실무",
+    "_source": "스킬 인벤토리",
+    "_tier": "본인 기재"
+  }
+]

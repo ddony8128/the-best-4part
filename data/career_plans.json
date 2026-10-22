@@ -1,0 +1,223 @@
+[
+  {
+    "emp_id": "EMP-001",
+    "desired_jobs": [
+      "경영지표·데이터 표준"
+    ],
+    "long_term_goal": "그룹 공통 경영지표 체계를 운영하는 역할",
+    "mobility_intent": "1년 내",
+    "updated_at": "2026-09-30",
+    "_source": "경력개발계획(CDP)",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-011",
+    "desired_jobs": [
+      "데이터 분석",
+      "경영지표"
+    ],
+    "long_term_goal": "그룹 차원의 경영 데이터 표준을 만드는 역할",
+    "mobility_intent": "즉시",
+    "updated_at": "2026-09-30",
+    "_source": "경력개발계획(CDP)",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-037",
+    "desired_jobs": [
+      "재무 기획"
+    ],
+    "long_term_goal": "재무 기획 리더",
+    "mobility_intent": "1년 내",
+    "updated_at": "2026-09-30",
+    "_source": "경력개발계획(CDP)",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-100",
+    "desired_jobs": [
+      "IT 기획"
+    ],
+    "long_term_goal": "관리자 트랙",
+    "mobility_intent": "1년 내",
+    "updated_at": "2026-09-30",
+    "_source": "경력개발계획(CDP)",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-107",
+    "desired_jobs": [
+      "재무 기획"
+    ],
+    "long_term_goal": "미정",
+    "mobility_intent": "즉시",
+    "updated_at": "2026-09-30",
+    "_source": "경력개발계획(CDP)",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-128",
+    "desired_jobs": [
+      "데이터 분석"
+    ],
+    "long_term_goal": "전문가 트랙",
+    "mobility_intent": "즉시",
+    "updated_at": "2026-09-30",
+    "_source": "경력개발계획(CDP)",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-163",
+    "desired_jobs": [
+      "사업 기획"
+    ],
+    "long_term_goal": "전문가 트랙",
+    "mobility_intent": "없음",
+    "updated_at": "2026-09-30",
+    "_source": "경력개발계획(CDP)",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-170",
+    "desired_jobs": [
+      "사업 기획"
+    ],
+    "long_term_goal": "전문가 트랙",
+    "mobility_intent": "즉시",
+    "updated_at": "2026-09-30",
+    "_source": "경력개발계획(CDP)",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-191",
+    "desired_jobs": [
+      "사업 기획"
+    ],
+    "long_term_goal": "관리자 트랙",
+    "mobility_intent": "없음",
+    "updated_at": "2026-09-30",
+    "_source": "경력개발계획(CDP)",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-205",
+    "desired_jobs": [
+      "재무 기획"
+    ],
+    "long_term_goal": "미정",
+    "mobility_intent": "1년 내",
+    "updated_at": "2026-09-30",
+    "_source": "경력개발계획(CDP)",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-212",
+    "desired_jobs": [
+      "영업 기획"
+    ],
+    "long_term_goal": "전문가 트랙",
+    "mobility_intent": "즉시",
+    "updated_at": "2026-09-30",
+    "_source": "경력개발계획(CDP)",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-226",
+    "desired_jobs": [
+      "사업 기획"
+    ],
+    "long_term_goal": "전문가 트랙",
+    "mobility_intent": "즉시",
+    "updated_at": "2026-09-30",
+    "_source": "경력개발계획(CDP)",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-247",
+    "desired_jobs": [
+      "재무 기획"
+    ],
+    "long_term_goal": "관리자 트랙",
+    "mobility_intent": "1년 내",
+    "updated_at": "2026-09-30",
+    "_source": "경력개발계획(CDP)",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-261",
+    "desired_jobs": [
+      "IT 기획"
+    ],
+    "long_term_goal": "전문가 트랙",
+    "mobility_intent": "즉시",
+    "updated_at": "2026-09-30",
+    "_source": "경력개발계획(CDP)",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-282",
+    "desired_jobs": [
+      "IT 기획"
+    ],
+    "long_term_goal": "전문가 트랙",
+    "mobility_intent": "없음",
+    "updated_at": "2026-09-30",
+    "_source": "경력개발계획(CDP)",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-310",
+    "desired_jobs": [
+      "사업 기획"
+    ],
+    "long_term_goal": "미정",
+    "mobility_intent": "즉시",
+    "updated_at": "2026-09-30",
+    "_source": "경력개발계획(CDP)",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-324",
+    "desired_jobs": [
+      "데이터 분석"
+    ],
+    "long_term_goal": "미정",
+    "mobility_intent": "1년 내",
+    "updated_at": "2026-09-30",
+    "_source": "경력개발계획(CDP)",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-338",
+    "desired_jobs": [
+      "영업 기획"
+    ],
+    "long_term_goal": "미정",
+    "mobility_intent": "없음",
+    "updated_at": "2026-09-30",
+    "_source": "경력개발계획(CDP)",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-359",
+    "desired_jobs": [
+      "IT 기획"
+    ],
+    "long_term_goal": "전문가 트랙",
+    "mobility_intent": "1년 내",
+    "updated_at": "2026-09-30",
+    "_source": "경력개발계획(CDP)",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-373",
+    "desired_jobs": [
+      "IT 기획"
+    ],
+    "long_term_goal": "관리자 트랙",
+    "mobility_intent": "1년 내",
+    "updated_at": "2026-09-30",
+    "_source": "경력개발계획(CDP)",
+    "_tier": "본인 기재"
+  }
+]

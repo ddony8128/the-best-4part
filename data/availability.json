@@ -1,0 +1,398 @@
+[
+  {
+    "emp_id": "EMP-001",
+    "start": "2026-12-01",
+    "max_ratio_pct": 100,
+    "note": "서울 · 주 2일 원격 희망",
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-011",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-024",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-037",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-100",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-107",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-114",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-121",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-128",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-135",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-142",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-149",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-156",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-163",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-170",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-177",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-184",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-191",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-198",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-205",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-212",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-219",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-226",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-233",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-240",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-247",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-254",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-261",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-268",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-275",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-282",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-289",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-296",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-303",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-310",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-317",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-324",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-331",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-338",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-345",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-352",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-359",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-366",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  },
+  {
+    "emp_id": "EMP-373",
+    "start": null,
+    "max_ratio_pct": null,
+    "note": null,
+    "org_agreement": "협의 전",
+    "_source": "본인·소속 조직 입력",
+    "_tier": "면담 확인 필요"
+  }
+]

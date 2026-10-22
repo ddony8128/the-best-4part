@@ -1,0 +1,771 @@
+[
+  {
+    "emp_id": "EMP-001",
+    "title": "월간 실적 한눈에 보기",
+    "from": "2025-02-01",
+    "to": "2025-08-31",
+    "purpose": "사업부별 보고 수치와 표현 통일",
+    "role": "데이터 모델·대시보드 개발 담당",
+    "did": [
+      "SQL로 매출 집계 및 원장 대조",
+      "Power BI 모델·DAX 지표 작성",
+      "재무·영업과 순매출 정의 합의"
+    ],
+    "tools": [
+      "SQL",
+      "Power BI",
+      "DAX"
+    ],
+    "outputs": [
+      "매출·손익 대시보드",
+      "지표 정의서",
+      "대조 쿼리"
+    ],
+    "not_done": [
+      "원천 ERP 개발"
+    ],
+    "evidence_doc_id": "EMP-001-EV-P1",
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "문서 근거"
+  },
+  {
+    "emp_id": "EMP-011",
+    "title": "사업소 데이터 표준 통일",
+    "from": "2024-04-01",
+    "to": "2024-12-31",
+    "purpose": "3개 사업소 운영 지표 정의 통일",
+    "role": "실무 리드",
+    "did": [
+      "지표 정의 차이 조사",
+      "표준 정의서 작성",
+      "사업소 담당자 합의 진행"
+    ],
+    "tools": [
+      "SQL",
+      "Excel"
+    ],
+    "outputs": [
+      "데이터 표준 정의서"
+    ],
+    "not_done": [
+      "원천 시스템 개발"
+    ],
+    "evidence_doc_id": "EMP-011-EV-P1",
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "문서 근거"
+  },
+  {
+    "emp_id": "EMP-011",
+    "title": "월간 리포트 자동화",
+    "from": "2025-03-01",
+    "to": "2025-09-30",
+    "purpose": "월간 운영 리포트 작성 시간 단축",
+    "role": "개발 담당",
+    "did": [
+      "SQL 데이터 검증",
+      "Python 리포트 자동화"
+    ],
+    "tools": [
+      "SQL",
+      "Python",
+      "Power BI"
+    ],
+    "outputs": [
+      "자동화 스크립트",
+      "월간 리포트"
+    ],
+    "not_done": [],
+    "evidence_doc_id": "EMP-011-EV-P2",
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "문서 근거"
+  },
+  {
+    "emp_id": "EMP-024",
+    "title": "채널별 매출 분석 체계",
+    "from": "2023-02-01",
+    "to": "2023-10-31",
+    "purpose": "채널별 매출 기여 분석",
+    "role": "분석 담당",
+    "did": [
+      "채널별 실적 분석",
+      "실적 기준 조율"
+    ],
+    "tools": [
+      "Excel"
+    ],
+    "outputs": [
+      "채널 분석 보고서"
+    ],
+    "not_done": [],
+    "evidence_doc_id": "EMP-024-EV-P1",
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "문서 근거"
+  },
+  {
+    "emp_id": "EMP-037",
+    "title": "손익 차이 분석 보고 체계화",
+    "from": "2024-03-01",
+    "to": "2024-09-30",
+    "purpose": "월 손익 차이 원인 보고",
+    "role": "분석 담당",
+    "did": [
+      "결산 데이터 SQL 추출·검증",
+      "차이 원인 보고"
+    ],
+    "tools": [
+      "SQL",
+      "Excel"
+    ],
+    "outputs": [
+      "손익 차이 보고서"
+    ],
+    "not_done": [],
+    "evidence_doc_id": "EMP-037-EV-P1",
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "문서 근거"
+  },
+  {
+    "emp_id": "EMP-100",
+    "title": "보고 체계 정비",
+    "from": "2024-02-01",
+    "to": "2024-11-28",
+    "purpose": "부서 과제",
+    "role": "참여",
+    "did": [
+      "관련 데이터 정리",
+      "보고서 작성"
+    ],
+    "tools": [
+      "SAP",
+      "R"
+    ],
+    "outputs": [
+      "결과 보고서"
+    ],
+    "not_done": [],
+    "evidence_doc_id": "EMP-100-EV-P1",
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "문서 근거"
+  },
+  {
+    "emp_id": "EMP-107",
+    "title": "업무 프로세스 개선",
+    "from": "2024-01-01",
+    "to": "2024-12-28",
+    "purpose": "부서 과제",
+    "role": "리드",
+    "did": [
+      "관련 데이터 정리",
+      "보고서 작성"
+    ],
+    "tools": [
+      "SAP",
+      "Tableau"
+    ],
+    "outputs": [
+      "결과 보고서"
+    ],
+    "not_done": [],
+    "evidence_doc_id": "EMP-107-EV-P1",
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "문서 근거"
+  },
+  {
+    "emp_id": "EMP-121",
+    "title": "업무 프로세스 개선",
+    "from": "2024-04-01",
+    "to": "2024-10-28",
+    "purpose": "부서 과제",
+    "role": "리드",
+    "did": [
+      "관련 데이터 정리",
+      "보고서 작성"
+    ],
+    "tools": [
+      "Python",
+      "Power BI"
+    ],
+    "outputs": [
+      "결과 보고서"
+    ],
+    "not_done": [],
+    "evidence_doc_id": "EMP-121-EV-P1",
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "문서 근거"
+  },
+  {
+    "emp_id": "EMP-135",
+    "title": "데이터 정합성 점검",
+    "from": "2024-05-01",
+    "to": "2024-10-28",
+    "purpose": "부서 과제",
+    "role": "참여",
+    "did": [
+      "관련 데이터 정리",
+      "보고서 작성"
+    ],
+    "tools": [
+      "Python",
+      "Tableau"
+    ],
+    "outputs": [
+      "결과 보고서"
+    ],
+    "not_done": [],
+    "evidence_doc_id": "EMP-135-EV-P1",
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "문서 근거"
+  },
+  {
+    "emp_id": "EMP-142",
+    "title": "업무 프로세스 개선",
+    "from": "2024-04-01",
+    "to": "2024-10-28",
+    "purpose": "부서 과제",
+    "role": "참여",
+    "did": [
+      "관련 데이터 정리",
+      "보고서 작성"
+    ],
+    "tools": [
+      "Python",
+      "Tableau"
+    ],
+    "outputs": [
+      "결과 보고서"
+    ],
+    "not_done": [],
+    "evidence_doc_id": "EMP-142-EV-P1",
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "문서 근거"
+  },
+  {
+    "emp_id": "EMP-149",
+    "title": "업무 프로세스 개선",
+    "from": "2024-03-01",
+    "to": "2024-12-28",
+    "purpose": "부서 과제",
+    "role": "리드",
+    "did": [
+      "관련 데이터 정리",
+      "보고서 작성"
+    ],
+    "tools": [
+      "Excel",
+      "R"
+    ],
+    "outputs": [
+      "결과 보고서"
+    ],
+    "not_done": [],
+    "evidence_doc_id": null,
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-156",
+    "title": "보고 체계 정비",
+    "from": "2024-02-01",
+    "to": "2024-10-28",
+    "purpose": "부서 과제",
+    "role": "실무 담당",
+    "did": [
+      "관련 데이터 정리",
+      "보고서 작성"
+    ],
+    "tools": [
+      "Python",
+      "Excel"
+    ],
+    "outputs": [
+      "결과 보고서"
+    ],
+    "not_done": [],
+    "evidence_doc_id": null,
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-163",
+    "title": "보고 체계 정비",
+    "from": "2024-04-01",
+    "to": "2024-09-28",
+    "purpose": "부서 과제",
+    "role": "리드",
+    "did": [
+      "관련 데이터 정리",
+      "보고서 작성"
+    ],
+    "tools": [
+      "Excel",
+      "Excel"
+    ],
+    "outputs": [
+      "결과 보고서"
+    ],
+    "not_done": [],
+    "evidence_doc_id": null,
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-170",
+    "title": "비용 절감 TF",
+    "from": "2024-01-01",
+    "to": "2024-09-28",
+    "purpose": "부서 과제",
+    "role": "참여",
+    "did": [
+      "관련 데이터 정리",
+      "보고서 작성"
+    ],
+    "tools": [
+      "SQL",
+      "Power BI"
+    ],
+    "outputs": [
+      "결과 보고서"
+    ],
+    "not_done": [],
+    "evidence_doc_id": null,
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-184",
+    "title": "보고 체계 정비",
+    "from": "2024-02-01",
+    "to": "2024-08-28",
+    "purpose": "부서 과제",
+    "role": "실무 담당",
+    "did": [
+      "관련 데이터 정리",
+      "보고서 작성"
+    ],
+    "tools": [
+      "Excel",
+      "R"
+    ],
+    "outputs": [
+      "결과 보고서"
+    ],
+    "not_done": [],
+    "evidence_doc_id": null,
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-191",
+    "title": "데이터 정합성 점검",
+    "from": "2024-03-01",
+    "to": "2024-12-28",
+    "purpose": "부서 과제",
+    "role": "실무 담당",
+    "did": [
+      "관련 데이터 정리",
+      "보고서 작성"
+    ],
+    "tools": [
+      "Excel",
+      "Tableau"
+    ],
+    "outputs": [
+      "결과 보고서"
+    ],
+    "not_done": [],
+    "evidence_doc_id": "EMP-191-EV-P1",
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "문서 근거"
+  },
+  {
+    "emp_id": "EMP-198",
+    "title": "비용 절감 TF",
+    "from": "2024-04-01",
+    "to": "2024-10-28",
+    "purpose": "부서 과제",
+    "role": "리드",
+    "did": [
+      "관련 데이터 정리",
+      "보고서 작성"
+    ],
+    "tools": [
+      "Excel",
+      "Excel"
+    ],
+    "outputs": [
+      "결과 보고서"
+    ],
+    "not_done": [],
+    "evidence_doc_id": null,
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-205",
+    "title": "보고 체계 정비",
+    "from": "2024-06-01",
+    "to": "2024-10-28",
+    "purpose": "부서 과제",
+    "role": "리드",
+    "did": [
+      "관련 데이터 정리",
+      "보고서 작성"
+    ],
+    "tools": [
+      "Python",
+      "R"
+    ],
+    "outputs": [
+      "결과 보고서"
+    ],
+    "not_done": [],
+    "evidence_doc_id": null,
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-212",
+    "title": "보고 체계 정비",
+    "from": "2024-05-01",
+    "to": "2024-08-28",
+    "purpose": "부서 과제",
+    "role": "참여",
+    "did": [
+      "관련 데이터 정리",
+      "보고서 작성"
+    ],
+    "tools": [
+      "SAP",
+      "Excel"
+    ],
+    "outputs": [
+      "결과 보고서"
+    ],
+    "not_done": [],
+    "evidence_doc_id": "EMP-212-EV-P1",
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "문서 근거"
+  },
+  {
+    "emp_id": "EMP-247",
+    "title": "비용 절감 TF",
+    "from": "2024-04-01",
+    "to": "2024-12-28",
+    "purpose": "부서 과제",
+    "role": "참여",
+    "did": [
+      "관련 데이터 정리",
+      "보고서 작성"
+    ],
+    "tools": [
+      "Python",
+      "Power BI"
+    ],
+    "outputs": [
+      "결과 보고서"
+    ],
+    "not_done": [],
+    "evidence_doc_id": "EMP-247-EV-P1",
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "문서 근거"
+  },
+  {
+    "emp_id": "EMP-254",
+    "title": "비용 절감 TF",
+    "from": "2024-06-01",
+    "to": "2024-08-28",
+    "purpose": "부서 과제",
+    "role": "실무 담당",
+    "did": [
+      "관련 데이터 정리",
+      "보고서 작성"
+    ],
+    "tools": [
+      "Python",
+      "R"
+    ],
+    "outputs": [
+      "결과 보고서"
+    ],
+    "not_done": [],
+    "evidence_doc_id": null,
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-261",
+    "title": "보고 체계 정비",
+    "from": "2024-04-01",
+    "to": "2024-11-28",
+    "purpose": "부서 과제",
+    "role": "실무 담당",
+    "did": [
+      "관련 데이터 정리",
+      "보고서 작성"
+    ],
+    "tools": [
+      "SQL",
+      "R"
+    ],
+    "outputs": [
+      "결과 보고서"
+    ],
+    "not_done": [],
+    "evidence_doc_id": null,
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-268",
+    "title": "비용 절감 TF",
+    "from": "2024-05-01",
+    "to": "2024-08-28",
+    "purpose": "부서 과제",
+    "role": "참여",
+    "did": [
+      "관련 데이터 정리",
+      "보고서 작성"
+    ],
+    "tools": [
+      "SQL",
+      "Tableau"
+    ],
+    "outputs": [
+      "결과 보고서"
+    ],
+    "not_done": [],
+    "evidence_doc_id": "EMP-268-EV-P1",
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "문서 근거"
+  },
+  {
+    "emp_id": "EMP-289",
+    "title": "비용 절감 TF",
+    "from": "2024-02-01",
+    "to": "2024-12-28",
+    "purpose": "부서 과제",
+    "role": "실무 담당",
+    "did": [
+      "관련 데이터 정리",
+      "보고서 작성"
+    ],
+    "tools": [
+      "Excel",
+      "Excel"
+    ],
+    "outputs": [
+      "결과 보고서"
+    ],
+    "not_done": [],
+    "evidence_doc_id": null,
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-296",
+    "title": "데이터 정합성 점검",
+    "from": "2024-05-01",
+    "to": "2024-11-28",
+    "purpose": "부서 과제",
+    "role": "실무 담당",
+    "did": [
+      "관련 데이터 정리",
+      "보고서 작성"
+    ],
+    "tools": [
+      "SQL",
+      "R"
+    ],
+    "outputs": [
+      "결과 보고서"
+    ],
+    "not_done": [],
+    "evidence_doc_id": "EMP-296-EV-P1",
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "문서 근거"
+  },
+  {
+    "emp_id": "EMP-303",
+    "title": "데이터 정합성 점검",
+    "from": "2024-04-01",
+    "to": "2024-08-28",
+    "purpose": "부서 과제",
+    "role": "실무 담당",
+    "did": [
+      "관련 데이터 정리",
+      "보고서 작성"
+    ],
+    "tools": [
+      "Python",
+      "Tableau"
+    ],
+    "outputs": [
+      "결과 보고서"
+    ],
+    "not_done": [],
+    "evidence_doc_id": "EMP-303-EV-P1",
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "문서 근거"
+  },
+  {
+    "emp_id": "EMP-310",
+    "title": "비용 절감 TF",
+    "from": "2024-02-01",
+    "to": "2024-10-28",
+    "purpose": "부서 과제",
+    "role": "리드",
+    "did": [
+      "관련 데이터 정리",
+      "보고서 작성"
+    ],
+    "tools": [
+      "Excel",
+      "Power BI"
+    ],
+    "outputs": [
+      "결과 보고서"
+    ],
+    "not_done": [],
+    "evidence_doc_id": null,
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-324",
+    "title": "데이터 정합성 점검",
+    "from": "2024-03-01",
+    "to": "2024-07-28",
+    "purpose": "부서 과제",
+    "role": "리드",
+    "did": [
+      "관련 데이터 정리",
+      "보고서 작성"
+    ],
+    "tools": [
+      "SQL",
+      "R"
+    ],
+    "outputs": [
+      "결과 보고서"
+    ],
+    "not_done": [],
+    "evidence_doc_id": null,
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-331",
+    "title": "보고 체계 정비",
+    "from": "2024-06-01",
+    "to": "2024-09-28",
+    "purpose": "부서 과제",
+    "role": "실무 담당",
+    "did": [
+      "관련 데이터 정리",
+      "보고서 작성"
+    ],
+    "tools": [
+      "Python",
+      "R"
+    ],
+    "outputs": [
+      "결과 보고서"
+    ],
+    "not_done": [],
+    "evidence_doc_id": "EMP-331-EV-P1",
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "문서 근거"
+  },
+  {
+    "emp_id": "EMP-338",
+    "title": "비용 절감 TF",
+    "from": "2024-03-01",
+    "to": "2024-11-28",
+    "purpose": "부서 과제",
+    "role": "실무 담당",
+    "did": [
+      "관련 데이터 정리",
+      "보고서 작성"
+    ],
+    "tools": [
+      "SAP",
+      "R"
+    ],
+    "outputs": [
+      "결과 보고서"
+    ],
+    "not_done": [],
+    "evidence_doc_id": "EMP-338-EV-P1",
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "문서 근거"
+  },
+  {
+    "emp_id": "EMP-359",
+    "title": "데이터 정합성 점검",
+    "from": "2024-02-01",
+    "to": "2024-10-28",
+    "purpose": "부서 과제",
+    "role": "실무 담당",
+    "did": [
+      "관련 데이터 정리",
+      "보고서 작성"
+    ],
+    "tools": [
+      "SQL",
+      "Tableau"
+    ],
+    "outputs": [
+      "결과 보고서"
+    ],
+    "not_done": [],
+    "evidence_doc_id": null,
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-366",
+    "title": "업무 프로세스 개선",
+    "from": "2024-04-01",
+    "to": "2024-07-28",
+    "purpose": "부서 과제",
+    "role": "실무 담당",
+    "did": [
+      "관련 데이터 정리",
+      "보고서 작성"
+    ],
+    "tools": [
+      "Python",
+      "Power BI"
+    ],
+    "outputs": [
+      "결과 보고서"
+    ],
+    "not_done": [],
+    "evidence_doc_id": null,
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "본인 기재"
+  },
+  {
+    "emp_id": "EMP-373",
+    "title": "업무 프로세스 개선",
+    "from": "2024-03-01",
+    "to": "2024-11-28",
+    "purpose": "부서 과제",
+    "role": "참여",
+    "did": [
+      "관련 데이터 정리",
+      "보고서 작성"
+    ],
+    "tools": [
+      "Python",
+      "R"
+    ],
+    "outputs": [
+      "결과 보고서"
+    ],
+    "not_done": [],
+    "evidence_doc_id": null,
+    "_source": "프로젝트 시스템 · 경력기술서",
+    "_tier": "본인 기재"
+  }
+]
