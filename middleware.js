@@ -11,7 +11,7 @@ async function sign(value, secret) {
 }
 
 export default async function middleware(request) {
-  const secret = process.env.HR_SESSION_SECRET;
+  const secret = (process.env.HR_SESSION_SECRET || '').replace(/^﻿/, '').trim();
   const cookie = (request.headers.get('cookie') || '').split(/;\s*/).find(c => c.startsWith('tl_hr='));
   const [exp, sig] = (cookie ? decodeURIComponent(cookie.slice(6)) : '').split('.');
   if (secret && exp && sig && Number(exp) > Date.now() && sig === await sign(`hr.${exp}`, secret)) {

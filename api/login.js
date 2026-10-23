@@ -5,7 +5,9 @@ const HOURS = 8;
 
 export async function POST(request) {
   const { id = '', password = '' } = await request.json().catch(() => ({}));
-  const okId = process.env.HR_ID, okPw = process.env.HR_PASSWORD, secret = process.env.HR_SESSION_SECRET;
+  // 환경변수에 줄바꿈·BOM이 섞여 들어와도 비교가 깨지지 않게 다듬는다
+  const env = k => (process.env[k] || '').replace(/^﻿/, '').trim();
+  const okId = env('HR_ID'), okPw = env('HR_PASSWORD'), secret = env('HR_SESSION_SECRET');
   if (!okId || !okPw || !secret) return Response.json({ ok: false, error: '서버에 로그인 설정이 없습니다.' }, { status: 500 });
   const same = (a, b) => a.length === b.length && crypto.timingSafeEqual(Buffer.from(a), Buffer.from(b));
   if (!same(String(id), okId) || !same(String(password), okPw)) {
