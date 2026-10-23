@@ -1,7 +1,7 @@
 // 시연용 가상 인사 데이터 생성기.
 // 실제 인사 환경의 시스템별 내보내기(export) 형태를 그대로 흉내 낸다 → 나중에 실제 데이터로 바꿔 끼울 수 있게.
 // 실행: node data/generate.mjs  → data/*.json
-// 모든 인물·회사는 가상이다. 성별·나이 등 직무와 무관한 속성은 만들지 않는다.
+// 회사는 실제 한화 계열사 이름을 쓰지만, 모든 인물과 수치는 가상이다. 성별·나이 등 직무와 무관한 속성은 만들지 않는다.
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -12,7 +12,20 @@ const pick = a => a[Math.floor(rnd() * a.length)];
 const between = (a, b) => Math.round(a + rnd() * (b - a));
 const d = (y, m, day = 1) => `${y}-${String(m).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
 
-const COMPANIES = ['가온유통', '가온에너지', '가온시스템', '가온생명', '가온케미칼', '가온에어로', '가온오션', '가온증권'];
+const COMPANIES = ['한화갤러리아', '한화에너지', '한화시스템', '한화생명', '한화솔루션', '한화에어로스페이스', '한화오션', '한화투자증권', '한화엔진', '㈜한화'];
+// 계열사마다 실제로 있을 법한 조직만 쓴다 [팀, 직무군, 직무]
+const TEAMS = {
+  한화갤러리아: [['영업전략팀', '영업', '매출 분석'], ['MD기획팀', '영업', '상품 기획'], ['점포운영팀', '영업', '점포 운영']],
+  한화에너지: [['발전운영팀', '설비', '발전 설비 운영'], ['사업개발팀', '경영관리', '사업 개발'], ['재무팀', '재무', '재무 담당']],
+  한화시스템: [['ICT서비스팀', 'IT', '시스템 개발'], ['정보보호팀', 'IT', '보안 운영'], ['사업관리팀', '경영관리', '사업 관리']],
+  한화생명: [['상품개발팀', '금융', '상품 개발'], ['디지털전략팀', 'IT', '디지털 기획'], ['계리팀', '금융', '보험 계리']],
+  한화솔루션: [['생산기술팀', '생산', '공정 기술'], ['품질관리팀', '품질', '품질 데이터'], ['구매팀', '구매', '구매 분석']],
+  한화에어로스페이스: [['생산관리팀', '생산', '생산 계획'], ['품질보증팀', '품질', '품질 보증'], ['구매팀', '구매', '구매 관리']],
+  한화오션: [['생산기획팀', '생산', '생산 기획'], ['설계지원팀', '설계', '설계 데이터'], ['원가관리팀', '재무', '원가 분석']],
+  한화투자증권: [['리스크관리팀', '금융', '리스크 분석'], ['IT개발팀', 'IT', '시스템 개발'], ['리테일전략팀', '영업', '고객 분석']],
+  한화엔진: [['생산관리팀', '생산', '생산 관리'], ['설비보전팀', '설비', '설비 보전'], ['품질관리팀', '품질', '품질 데이터']],
+  '㈜한화': [['전략기획팀', '경영관리', '전략 기획'], ['재무팀', '재무', '재무 담당'], ['인사팀', '인사', '인사 운영']],
+};
 // 신뢰 등급: 시스템 확정 / 문서 근거 / 본인 기재 / 면담 확인 필요
 const T = { SYS: '시스템 확정', DOC: '문서 근거', SELF: '본인 기재', ASK: '면담 확인 필요' };
 
@@ -21,7 +34,7 @@ const add = (t, row) => tables[t].push(row);
 
 // ───── 상세 인물 (화면·영상 시나리오와 같은 사실) ─────
 const DETAILED = [
-  { emp_id: 'EMP-001', name: '김서윤', company: '가온유통', org: '경영분석팀', job_family: '경영관리', job: '경영분석', grade_band: 'G3', hire: d(2021, 3), applied: true,
+  { emp_id: 'EMP-001', name: '김서윤', company: '한화갤러리아', org: '경영분석팀', job_family: '경영관리', job: '경영분석', grade_band: 'G3', hire: d(2021, 3), applied: true,
     appts: [[d(2021, 3), null, '경영분석팀', '경영분석', '입사']],
     certs: [['SQLD', '한국데이터산업진흥원', d(2023, 6, 16), T.SYS]],
     lms: [['SQL 실무 심화', '데이터', 16, d(2022, 9, 30)]],
@@ -30,7 +43,7 @@ const DETAILED = [
     skills: [['SQL', '실무'], ['Power BI', '실무'], ['지표 설계', '실무']],
     cdp: [['경영지표·데이터 표준'], '그룹 공통 경영지표 체계를 운영하는 역할', '1년 내'],
     consent: true, avail: [d(2026, 12), 100, '서울 · 주 2일 원격 희망'] },
-  { emp_id: 'EMP-011', name: '이한결', company: '가온에너지', org: '데이터운영팀', job_family: '데이터', job: '데이터 운영', grade_band: 'G3', hire: d(2022, 8), applied: false,
+  { emp_id: 'EMP-011', name: '이한결', company: '한화에너지', org: '데이터운영팀', job_family: '데이터', job: '데이터 운영', grade_band: 'G3', hire: d(2022, 8), applied: false,
     appts: [[d(2022, 8), d(2024, 1, 31), '설비관리팀', '설비 관리', '입사'], [d(2024, 2), null, '데이터운영팀', '데이터 운영', '직무 전환']],
     certs: [['SQLD', '한국데이터산업진흥원', d(2023, 6, 16), T.SYS], ['ADsP', '한국데이터산업진흥원', d(2024, 11, 22), T.SYS]],
     lms: [['사내 데이터분석 심화과정', '데이터', 40, d(2024, 6, 28)], ['Python 업무 자동화', '데이터', 12, d(2025, 3, 14)]],
@@ -40,19 +53,18 @@ const DETAILED = [
     skills: [['SQL', '실무'], ['Python', '실무'], ['Power BI', '실무']],
     cdp: [['데이터 분석', '경영지표'], '그룹 차원의 경영 데이터 표준을 만드는 역할', '즉시'],
     consent: true, avail: null },
-  { emp_id: 'EMP-024', name: '박지호', company: '가온생명', org: '영업기획팀', job_family: '영업', job: '영업 실적 관리', grade_band: 'G3', hire: d(2020, 1), applied: false,
+  { emp_id: 'EMP-024', name: '박지호', company: '한화생명', org: '영업기획팀', job_family: '영업', job: '영업 실적 관리', grade_band: 'G3', hire: d(2020, 1), applied: false,
     appts: [[d(2020, 1), null, '영업기획팀', '영업 실적 관리', '입사']], certs: [], lms: [['SQL 기초', '데이터', 8, d(2023, 4, 7)]],
     perf: [[2024, 'S', 0.05, 121, '채널별 매출 분석으로 영업 목표 배분을 개선함.'], [2025, 'A', 0.14, 109, '영업·상품 부서 간 실적 기준을 조율함.']],
     projects: [['채널별 매출 분석 체계', d(2023, 2), d(2023, 10, 31), '채널별 매출 기여 분석', '분석 담당', ['채널별 실적 분석', '실적 기준 조율'], ['Excel'], ['채널 분석 보고서'], [], T.DOC]],
     skills: [['매출 분석', '전문']], cdp: null, consent: true, avail: null },
-  { emp_id: 'EMP-037', name: '최예린', company: '가온케미칼', org: '재무팀', job_family: '재무', job: '손익 분석', grade_band: 'G3', hire: d(2021, 7), applied: false,
+  { emp_id: 'EMP-037', name: '최예린', company: '한화솔루션', org: '재무팀', job_family: '재무', job: '손익 분석', grade_band: 'G3', hire: d(2021, 7), applied: false,
     appts: [[d(2021, 7), null, '재무팀', '손익 분석', '입사']], certs: [['재경관리사', '삼일회계법인', d(2022, 5, 20), T.SYS]], lms: [],
     perf: [[2024, 'A', 0.2, 106, '사업부 손익 차이 원인 분석 보고 체계를 만듦.'], [2025, 'A', 0.22, 105, '결산 데이터 검증 쿼리를 정리함.']],
     projects: [['손익 차이 분석 보고 체계화', d(2024, 3), d(2024, 9, 30), '월 손익 차이 원인 보고', '분석 담당', ['결산 데이터 SQL 추출·검증', '차이 원인 보고'], ['SQL', 'Excel'], ['손익 차이 보고서'], [], T.DOC]],
     skills: [['SQL', '실무'], ['손익 분석', '전문']], cdp: [['재무 기획'], '재무 기획 리더', '1년 내'], consent: true, avail: null },
 ];
 const FILLER_NAMES = ['정민호', '한다인', '오태경', '윤채원', ...'민서 지안 도윤 하은 서진 예준 수아 시우 지유 건우 채은 현우 유나 태민 소율 준서 다은 윤호 서아 재원 나연 승현 하린 우진 지민 은호 가윤 성민 다현 주원 세아 동하 연우 서율 이준 하람'.split(' ').map((g, i) => '김이박최정강조윤장임한오서신권황'[i % 16] + g)];
-const ORGS = [['기획팀', '경영관리', '사업 기획'], ['영업관리팀', '영업', '영업 지원'], ['재무팀', '재무', '재무 담당'], ['IT운영팀', 'IT', '시스템 운영'], ['품질관리팀', '품질', '품질 데이터'], ['구매팀', '구매', '구매 분석'], ['데이터플랫폼팀', '데이터', '데이터 엔지니어'], ['원가관리팀', '재무', '원가 분석'], ['사업관리팀', '경영관리', '사업 성과 관리'], ['리서치팀', '리서치', '산업 분석']];
 const GRADES = [['S', 0.05], ['A', 0.2], ['B+', 0.45], ['B', 0.8], ['C', 0.95]];
 
 function emit(e) {
@@ -75,14 +87,14 @@ function emit(e) {
 DETAILED.forEach(emit);
 
 FILLER_NAMES.forEach((name, i) => {
-  const [org, fam, job] = ORGS[i % ORGS.length];
-  const company = COMPANIES[(i + 3) % COMPANIES.length];
+  const company = COMPANIES[i % COMPANIES.length];
+  const [org, fam, job] = TEAMS[company][Math.floor(i / COMPANIES.length) % 3];
   const hy = between(2015, 2023);
   const emp_id = 'EMP-' + String(100 + i * 7).padStart(3, '0');
   const g = () => { const r = rnd(); const [grade] = GRADES.find(([, c]) => r <= c) || ['B']; return grade; };
   const tools = [pick(['SQL', 'Excel', 'Python', 'SAP']), pick(['Power BI', 'Tableau', 'Excel', 'R'])];
   emit({ emp_id, name, company, org, job_family: fam, job, grade_band: pick(['G2', 'G3', 'G4']), hire: d(hy, between(1, 12)), applied: rnd() > 0.85,
-    appts: rnd() > 0.7 ? [[d(hy, 1), d(hy + 2, 12, 31), pick(ORGS)[0], pick(ORGS)[2], '입사'], [d(hy + 3, 1), null, org, job, '직무 전환']] : [[d(hy, 1), null, org, job, '입사']],
+    appts: rnd() > 0.7 ? [[d(hy, 1), d(hy + 2, 12, 31), pick(TEAMS[company])[0], pick(TEAMS[company])[2], '입사'], [d(hy + 3, 1), null, org, job, '직무 전환']] : [[d(hy, 1), null, org, job, '입사']],
     certs: rnd() > 0.5 ? [[pick(['SQLD', 'ADsP', '정보처리기사', '재경관리사', 'PMP']), pick(['한국데이터산업진흥원', '한국산업인력공단', 'PMI']), d(between(2018, 2025), between(1, 12), 15), rnd() > 0.3 ? T.SYS : T.SELF]] : [],
     lms: rnd() > 0.4 ? [[pick(['데이터 리터러시', 'SQL 기초', '프로젝트 관리', '재무제표 이해']), pick(['데이터', '경영', '리더십']), between(4, 24), d(between(2022, 2026), between(1, 9), 20)]] : [],
     perf: [2024, 2025].map(y => { const grade = g(); return [y, grade, Math.round(rnd() * 100) / 100, between(85, 118), pick(['담당 업무를 안정적으로 수행함.', '유관 부서와의 협업이 원활함.', '개선 과제를 주도적으로 제안함.', '데이터 기반 보고 품질이 좋음.'])]; }),

@@ -148,10 +148,12 @@ result.hr = await record('hr', async mark => {
   await moveTo(L('.cand').nth(1), { fx: 0.3 }); await wait(1500);
   await moveTo(L('.cand .badge-hidden').first()); await wait(1300);
   await mark('reweight', L('#p4'));
-  await slide(3, 25);
-  await slide(4, 25);
+  // 합계 100%를 넘길 수 없으므로 먼저 줄이고 나서 올린다
   await slide(0, 15);
   await slide(1, 20);
+  await slide(2, 15);
+  await slide(3, 25);
+  await slide(4, 25);
   await wait(1500);
   await click(L('.cand').filter({ hasText: '이한결' }), { fx: 0.3 });
   await mark('detail', L('#detail'));

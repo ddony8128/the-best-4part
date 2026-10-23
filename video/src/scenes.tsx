@@ -98,7 +98,7 @@ export const Problem: React.FC = () => {
   const split = interpolate(f, [250, 290, 340, 370], [0, 1, 1, 0], { ...clamp, easing: Easing.inOut(Easing.cubic) });
   const beam = interpolate(f, [470, 590], [-0.08, 1.08], { ...clamp, easing: Easing.inOut(Easing.quad) });
   const hotOn = interpolate(f, [600, 625], [0, 1], clamp);
-  const cell = 21;
+  const cell = 19;
   const problems = [
     { n: '01', t: '공고를 보고 지원한 사람만', d: '적합하지만 지원하지 않았거나 덜 알려진 인재는 검토 대상에서 빠집니다.' },
     { n: '02', t: '계열사마다 흩어진 인재 정보', d: '경력·역량·프로젝트 경험을 그룹 차원에서 한 번에 볼 수 없습니다.' },
@@ -114,7 +114,7 @@ export const Problem: React.FC = () => {
             <Rise delay={20} style={{ marginTop: 26 }}><div style={{ fontSize: 76, fontWeight: 900, letterSpacing: -2.5, lineHeight: 1.2 }}>지금은 지원한</div></Rise>
             <Rise delay={28}><div style={{ fontSize: 76, fontWeight: 900, letterSpacing: -2.5, lineHeight: 1.2 }}>사람만 보입니다.</div></Rise>
             <Fade delay={60} style={{ marginTop: 50 }}>
-              <div style={{ fontSize: 34, color: '#bbb' }}>그룹 인재 <b style={{ color: '#fff' }}>1,248명</b> 중</div>
+              <div style={{ fontSize: 34, color: '#bbb' }}>인재풀 등록 <b style={{ color: '#fff' }}>1,248명</b> 중</div>
               <div style={{ fontSize: 128, fontWeight: 900, color: C.accent, letterSpacing: -4, lineHeight: 1.1 }}><Counter to={12} delay={66} dur={30} />명</div>
               <div style={{ fontSize: 30, color: '#999' }}>공모에 지원한 사람만 검토됩니다</div>
             </Fade>
@@ -158,10 +158,10 @@ export const Problem: React.FC = () => {
         </div>
       </AbsoluteFill>
       {/* 점 그리드 */}
-      <div style={{ position: 'absolute', left: 900, top: 150, width: COLS * cell + 7 * 26, height: ROWS * cell }}>
+      <div style={{ position: 'absolute', left: 860, top: 150, width: COLS * cell + 9 * 12, height: ROWS * cell }}>
         {Array.from({ length: COLS * ROWS }).map((_, i) => {
           const x = i % COLS, y = Math.floor(i / COLS);
-          const company = Math.floor(x / 6);
+          const company = Math.floor((x * 10) / COLS);
           const appear = interpolate(f - (x + y) * 0.9, [0, 18], [0, 1], clamp);
           const isApp = APPLICANTS.has(i);
           const appOn = interpolate(f, [70 + (i % 7) * 3, 84 + (i % 7) * 3], [0, 1], clamp);
@@ -172,7 +172,7 @@ export const Problem: React.FC = () => {
           if (isApp && appOn > 0 && !(stage >= 4 && scanned)) { bg = C.accent; scale = 1 + 0.35 * appOn; glow = appOn; }
           if (stage === 3 && isApp) scale *= 1 + 0.25 * Math.max(0, Math.sin((f + i) / 4));
           if (hotIdx >= 0 && hotOn > 0) { bg = C.accent; scale = 1 + 0.6 * hotOn + 0.12 * Math.sin((f + hotIdx * 5) / 6); glow = hotOn; }
-          const gapX = company * 26 * split;
+          const gapX = company * 12 * split;
           return (
             <div key={i} style={{ position: 'absolute', left: x * cell + gapX, top: y * cell, width: 11, height: 11, borderRadius: 6, background: bg, opacity: appear, transform: `scale(${scale})`, boxShadow: glow ? `0 0 ${14 * glow}px ${C.accent}` : undefined }}>
               {hotIdx >= 0 && hotOn > 0 && !HOT_APPLIED.has(i) && (
@@ -182,8 +182,8 @@ export const Problem: React.FC = () => {
           );
         })}
         {/* 계열사 라벨 (정보 분산 단계) */}
-        {['가온유통', '가온에너지', '가온시스템', '가온생명', '가온케미칼', '가온에어로', '가온오션', '가온증권'].map((n, k) => (
-          <div key={n} style={{ position: 'absolute', top: -46, left: k * 6 * cell + k * 26 * split, width: 6 * cell, textAlign: 'center', fontSize: 18, color: '#ccc', opacity: split, whiteSpace: 'nowrap' }}>{n}</div>
+        {['갤러리아', '에너지', '시스템', '생명', '솔루션', '에어로', '오션', '투자증권', '엔진', '㈜한화'].map((n, k) => (
+          <div key={n} style={{ position: 'absolute', top: -46, left: Math.ceil((k * COLS) / 10) * cell + k * 12 * split, width: (Math.ceil(((k + 1) * COLS) / 10) - Math.ceil((k * COLS) / 10)) * cell, textAlign: 'center', fontSize: 18, color: '#ccc', opacity: split, whiteSpace: 'nowrap' }}>{n}</div>
         ))}
         {/* 스캔 빔 */}
         {beam > -0.05 && beam < 1.05 && (

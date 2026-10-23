@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TALENT LINK | 인사 담당자 로그인</title>
+<style>
+:root{--ink:#181818;--muted:#717171;--line:#e6e5e2;--bg:#f6f6f4;--accent:#f6995d;--soft:#fff1e7}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--bg);color:var(--ink);font-family:Arial,'Malgun Gothic',sans-serif;font-size:14px;line-height:1.65;padding:20px}
+.wrap{width:100%;max-width:880px;display:grid;grid-template-columns:1fr 1fr;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 30px 80px #0000000f}
+.side{background:#1b1b1b;color:#fff;padding:40px 36px;display:flex;flex-direction:column}
+.brand{font-weight:900;letter-spacing:-1px;font-size:20px;display:flex;align-items:center;gap:10px}
+.logo{display:inline-block;background:var(--accent);width:28px;height:28px;border-radius:7px;position:relative}
+.logo:after{content:'';position:absolute;left:8px;top:6px;width:8px;height:12px;border-left:3px solid #171717;border-bottom:3px solid #171717;transform:rotate(-35deg)}
+.side .eyebrow{color:var(--accent);margin-top:46px}
+.eyebrow{font-size:10px;letter-spacing:2px;font-weight:bold;color:var(--muted)}
+.side h1{font-size:26px;letter-spacing:-1px;line-height:1.4;margin:10px 0 12px}
+.side p{color:#aaa;font-size:12px;margin:0}
+.side .foot{margin-top:auto;font-size:11px;color:#777;padding-top:30px}
+form{padding:44px 40px}
+h2{font-size:20px;letter-spacing:-.6px;margin:8px 0 4px}
+.sub{color:var(--muted);font-size:12px;margin:0 0 26px}
+.sso{display:flex;align-items:center;gap:10px;background:var(--soft);border-radius:8px;padding:11px 14px;font-size:12px;color:#6b503d;margin-bottom:22px}
+.sso b{color:#a24c17}
+label{display:block;font-size:12px;font-weight:600;margin:0 0 7px}
+input{width:100%;font:inherit;background:#fff;border:1px solid #ddd;border-radius:6px;padding:11px 12px;margin-bottom:16px;color:#222}
+input:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+button{width:100%;font:inherit;font-weight:600;cursor:pointer;background:var(--ink);color:#fff;border:1px solid var(--ink);border-radius:7px;padding:12px 16px;margin-top:4px}
+button:disabled{opacity:.5;cursor:default}
+.err{color:#b0442a;font-size:12px;min-height:20px;margin:10px 0 0}
+.back{display:inline-block;margin-top:18px;font-size:12px;color:var(--muted);text-decoration:none}
+@media(max-width:720px){.wrap{grid-template-columns:1fr}.side{padding:28px}.side .eyebrow{margin-top:24px}form{padding:28px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="side">
+    <div class="brand"><span class="logo"></span>TALENT LINK</div>
+    <div class="eyebrow">FOR HR · 인사 담당자</div>
+    <h1>인사 담당자만<br>접근할 수 있습니다.</h1>
+    <p>임직원 인재 정보와 평가 근거를 다루는 화면입니다. 접속 기록은 운영 이력에 남습니다.</p>
+    <div class="foot">시연 환경 · 가상 데이터</div>
+  </div>
+  <form id="f" autocomplete="on">
+    <div class="eyebrow">SIGN IN</div>
+    <h2>사내 계정(클레버스)으로 로그인</h2>
+    <p class="sub">클레버스 아이디와 비밀번호를 입력하세요.</p>
+    <div class="sso"><b>●</b> 사내 계정 통합 인증 · 인사 권한이 있는 계정만 허용</div>
+    <label for="id">클레버스 아이디</label>
+    <input id="id" name="username" autocomplete="username" required>
+    <label for="pw">비밀번호</label>
+    <input id="pw" name="password" type="password" autocomplete="current-password" required>
+    <button id="go">로그인</button>
+    <p class="err" id="err" role="alert"></p>
+    <a class="back" href="./index.html">← 시작 화면으로</a>
+  </form>
+</div>
+<script>
+const next=(()=>{const n=new URLSearchParams(location.search).get('next')||'/hr_matching.html';return n.startsWith('/')&&!n.startsWith('//')?n:'/hr_matching.html'})();
+document.getElementById('f').addEventListener('submit',async e=>{e.preventDefault();const b=document.getElementById('go'),err=document.getElementById('err');b.disabled=true;err.textContent='';
+ try{const r=await fetch('/api/login',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({id:document.getElementById('id').value.trim(),password:document.getElementById('pw').value})});const j=await r.json().catch(()=>({}));
+  if(r.ok&&j.ok){location.href=next;return}err.textContent=j.error||'로그인하지 못했습니다.'}catch{err.textContent='서버에 연결하지 못했습니다.'}b.disabled=false});
+</script>
+</body>
+</html>
