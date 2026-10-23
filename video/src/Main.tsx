@@ -15,7 +15,7 @@ const W = 1920, H = 1080;
 const HR_STEPS = ['JD 입력', '요건 확정', '전수 스캔', '후보 추천', '추천서·제안서'];
 const HR_CAPTIONS: Record<string, Caption> = {
   start: { step: 'JD 입력', title: 'JD 한 장이면 시작됩니다', sub: '충원할 TF·공석의 업무와 필수·우대 요건을 올립니다' },
-  sources: { step: 'JD 입력', title: '참고 자료와 스캔 범위까지', sub: '직무 적합 연구 · 고성과자 패턴 · 전임자 메모 / 10개 계열사 인재풀 1,248명' },
+  sources: { step: 'JD 입력', title: '참고 자료와 스캔 범위까지', sub: '직무 적합 연구 · 고성과자 패턴 · 전임자 메모 / 3개 계열사 인재풀 1,248명' },
   reqs: { step: '요건 확정', title: 'AI가 요건을 분해합니다', sub: '평가 축 · 정량/정성 · 필수/우대 · 근거 출처를 함께 제안' },
   weights: { step: '요건 확정', title: '사람이 확정해야 다음 단계로', sub: 'Gate — 요건과 가중치는 인사 담당자가 결정합니다' },
   scan: { step: '전수 스캔', title: '그룹 전체를 전수 스캔', sub: '필수 요건은 규칙으로 → 정성 항목은 LLM이 대조 → 상위 10명' },

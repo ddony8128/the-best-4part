@@ -32,8 +32,8 @@ await page.evaluate(() => {
 await page.goto(base + '/talent_hr_admin.html#jobs');
 await page.waitForTimeout(300);
 const j2 = await page.evaluate(() => state.jobs.find(j => j.id === 'JD-002'));
-check(9, j2 && j2.org === '제조혁신본부 · 설비기술팀' && j2.tasks.includes('센서') && j2.required && j2.deadline === '2026-11-20', '공고 수정: JD-002 요청 조직·업무·요건·마감일 채워짐 (예전 저장 데이터가 있던 브라우저 포함)');
-check(9, await page.evaluate(() => state.jobs.length === 10 && state.jobs.every(j => j.tasks && !j.tasks.includes('원문 미제공'))), '공고 10개 모두 본문 있음');
+check(9, j2 && j2.company === '한화오션' && j2.tasks.includes('선체 구조물') && j2.required && j2.preferred, '공고 수정: JD-002(한화오션 선체 구조설계) 업무·요건 채워짐 (예전 저장 데이터가 있던 브라우저 포함)');
+check(9, await page.evaluate(() => state.jobs.length === 45 && state.jobs.every(j => j.tasks && !j.tasks.includes('원문 미제공'))), '직무.docx 공고 45개 모두 본문 있음');
 await page.locator('#jobRows tr', { hasText: 'JD-002' }).locator('button', { hasText: '수정' }).click();
 await page.waitForTimeout(300);
 await shot('9-jd002-edit', page.locator('#jobModal'));
@@ -73,16 +73,16 @@ const m2 = await menu();
 check('메뉴', JSON.stringify(m1) === JSON.stringify(m2) && m2.includes('검토 · 협의 현황'), `인사 콘솔과 AI 매칭의 메뉴가 같음 (${m2.join(' / ')})`);
 
 // #4 AI 매칭 공고 선택
-await page.selectOption('#jdSelect', 'JD-002');
+await page.selectOption('#jdSelect', 'JD-010');
 const jd = await page.inputValue('#jdText');
-check(4, jd.includes('제조혁신본부') && jd.includes('예지보전') && jd.includes('창원'), 'JD-002 본문 전체가 들어감');
-await page.selectOption('#jdSelect', 'JD-003');
-check(4, (await page.inputValue('#jdText')).includes('RAG 검색 파이프라인'), 'JD-003 본문 전체가 들어감');
-check(4, (await page.locator('#jdSelect option').count()) === 10, '공고 10개 모두 선택 가능');
+check(4, jd.includes('한화오션') && jd.includes('디지털 트윈') && jd.includes('최적화 알고리즘'), 'JD-010 본문 전체가 들어감');
+await page.selectOption('#jdSelect', 'JD-013');
+check(4, (await page.inputValue('#jdText')).includes('ERP·MES'), 'JD-013 본문 전체가 들어감');
+check(4, (await page.locator('#jdSelect option').count()) === 45, '공고 45개 모두 선택 가능');
 await shot('4-jd003', page.locator('#p1 .form-grid'));
 
 // #1 Gate 가중치
-await page.selectOption('#jdSelect', 'JD-001');
+await page.selectOption('#jdSelect', 'JD-014');
 await page.click('#btnAnalyze');
 await page.waitForSelector('#btnGate:not([disabled])', { timeout: 15000 });
 await page.locator('#weightsGate input').nth(1).fill('50');
@@ -115,10 +115,10 @@ await page.goto(base + '/employee.html#profile');
 check(6, (await page.locator('header').textContent()).includes('인사 담당자 화면') === false, '상단 인사 담당자 화면 링크 없음');
 const prof = await page.locator('#profileGrid').textContent();
 check(8, (await page.locator('#profileGrid .masked').count()) === 5 && !/KPI|SQLD\(2023\)|근속 4년/.test(prof), '정량 5칸 가림 · 실제 값이 화면에 없음');
-check(8, prof.includes('3개 사업소 데이터 표준'), '정성 칸은 그대로 보임');
+check(8, prof.includes('3개 사업장 데이터 표준'), '정성 칸은 그대로 보임');
 check(3, !prof.includes('시연용'), '임직원 프로필 근거 문서 문구도 정리');
 await shot('8-profile', page.locator('#profileGrid'));
-check('회사명', prof.includes('한화에너지') && !(await page.content()).includes('가온'), '임직원 화면 회사명 한화에너지');
+check('회사명', prof.includes('한화에어로스페이스') && !/가온|한화(갤러리아|에너지|생명|솔루션|투자증권|엔진)|㈜한화/.test(await page.content()), '임직원 화면 회사명 한화에어로스페이스 · 3개 계열사만');
 await page.goto(base + '/employee.html#diagnose');
 await page.fill('#applyMotive', '테스트 지원');
 await page.click('text=지원하기 →');

@@ -14,16 +14,16 @@ const jobs = src.split(/^=+$/m).map(b => b.trim()).filter(Boolean).map(block => 
     return m ? m[1].trim().split('\n').map(l => l.replace(/^-\s*/, '').trim()).filter(Boolean) : [];
   };
   return {
-    id: head('JD 번호'), title: head('공고명'), org: head('요청 조직'), status: head('공고 상태'),
+    id: head('JD 번호'), title: head('공고명'), company: head('회사'), org: head('요청 조직'), status: head('공고 상태'), note: head('검증 상태'),
     tasks: sec('담당 업무'), required: sec('필수 요건'), preferred: sec('우대 요건'),
     conditions: sec('기간 · 투입 · 근무 조건').join(' '), deadline: sec('마감일')[0] || '',
   };
 });
-if (jobs.length !== 10 || jobs.some(j => !j.id || !j.title || !j.tasks.length)) throw new Error('공고 원문을 읽지 못했습니다');
+if (!jobs.length || jobs.some(j => !j.id || !j.title || !j.company || !j.tasks.length)) throw new Error('공고 원문을 읽지 못했습니다');
 fs.writeFileSync(path.join(DIR, 'jobs.json'), JSON.stringify(jobs, null, 2) + '\n');
 
 // 화면별 형태로 바꿔 표시된 구간(/*JOBS:BEGIN*/ … /*JOBS:END*/)에 넣는다
-const console_ = jobs.map(j => ({ id: j.id, title: j.title, org: j.org, status: j.status, tasks: j.tasks.join('\n'), required: j.required.join('\n'), preferred: j.preferred.join('\n'), conditions: j.conditions, deadline: j.deadline, source: '인사본부 공고 원문' }));
+const console_ = jobs.map(j => ({ id: j.id, title: j.title, company: j.company, org: j.org, status: j.status, tasks: j.tasks.join('\n'), required: j.required.join('\n'), preferred: j.preferred.join('\n'), conditions: j.conditions, deadline: j.deadline, source: `직무.docx · ${j.note || '공고 원문'}` }));
 const blocks = {
   'talent_hr_admin.html': `const INITIAL_JOBS=${JSON.stringify(console_)};`,
   'employee.html': `const FALLBACK_JOBS=${JSON.stringify(console_)};`,

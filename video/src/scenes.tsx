@@ -46,11 +46,11 @@ export const Hook: React.FC = () => {
     <Light>
       <AbsoluteFill style={{ padding: '150px 150px', flexDirection: 'row', gap: 90, alignItems: 'center' }}>
         <div style={{ flex: 1.15 }}>
-          <Kicker color={C.accentDeep}>A NEW TF IS FORMING</Kicker>
+          <Kicker color={C.accentDeep}>A NEW POSITION IS OPEN</Kicker>
           <div style={{ position: 'relative', height: 330, marginTop: 26 }}>
             <div style={{ position: 'absolute', inset: 0, opacity: 1 - phase2, transform: `translateY(${-phase2 * 40}px)` }}>
-              <Rise delay={4}><div style={{ fontSize: 96, fontWeight: 900, letterSpacing: -3, lineHeight: 1.2 }}>새 TF 자리가</div></Rise>
-              <Rise delay={12}><div style={{ fontSize: 96, fontWeight: 900, letterSpacing: -3, lineHeight: 1.2 }}>생겼습니다.</div></Rise>
+              <Rise delay={4}><div style={{ fontSize: 96, fontWeight: 900, letterSpacing: -3, lineHeight: 1.2 }}>새 자리가</div></Rise>
+              <Rise delay={12}><div style={{ fontSize: 96, fontWeight: 900, letterSpacing: -3, lineHeight: 1.2 }}>열렸습니다.</div></Rise>
             </div>
             <div style={{ position: 'absolute', inset: 0, opacity: phase2 }}>
               <Rise delay={96}><div style={{ fontSize: 78, fontWeight: 900, letterSpacing: -2.5, lineHeight: 1.25 }}>적합한 사람은</div></Rise>
@@ -67,16 +67,16 @@ export const Hook: React.FC = () => {
         </div>
         <div style={{ flex: 1, transform: `translateX(${(1 - card) * 300}px) rotate(${(1 - card) * 6}deg)`, opacity: card }}>
           <div style={{ background: '#fff', borderRadius: 22, border: `2px solid ${C.line}`, padding: 46, boxShadow: '0 40px 90px #0000001a' }}>
-            <div style={{ fontSize: 20, letterSpacing: 4, color: C.muted, fontWeight: 700 }}>JD-001 · 그룹 경영기획실</div>
-            <div style={{ fontSize: 46, fontWeight: 900, letterSpacing: -1.5, margin: '10px 0 26px' }}>경영지표·매출 분석 TF</div>
-            {[['필수', 'SQL 기반 데이터 집계·검증 실무'], ['필수', '매출·손익 지표 분석 경험 2년+'], ['우대', '경영지표 대시보드 구축'], ['우대', '여러 부서와 지표 정의 합의']].map(([k, v], i) => (
+            <div style={{ fontSize: 20, letterSpacing: 4, color: C.muted, fontWeight: 700 }}>JD-014 · 한화오션</div>
+            <div style={{ fontSize: 46, fontWeight: 900, letterSpacing: -1.5, margin: '10px 0 26px' }}>사업기획 및 사업관리</div>
+            {[['필수', '사업계획 수립·사업성 분석'], ['필수', '매출·원가·손익 지표 분석'], ['우대', '조선·제조업 PM·사업관리 경험'], ['우대', 'ERP·Excel·Power BI 실적분석']].map(([k, v], i) => (
               <Fade key={i} delay={40 + i * 7} y={10}>
                 <div style={{ display: 'flex', gap: 18, alignItems: 'center', padding: '15px 0', borderTop: `1.5px solid ${C.line}`, fontSize: 28 }}>
                   <span style={{ fontSize: 20, fontWeight: 700, padding: '4px 12px', borderRadius: 7, background: k === '필수' ? C.ink : '#f1f1ef', color: k === '필수' ? '#fff' : C.ink }}>{k}</span>{v}
                 </div>
               </Fade>
             ))}
-            <div style={{ marginTop: 18, fontSize: 22, color: C.muted }}>6개월 · 주 3일 참여</div>
+            <div style={{ marginTop: 18, fontSize: 22, color: C.muted }}>사내 공모 · 계열사 간 이동 가능</div>
           </div>
         </div>
       </AbsoluteFill>
@@ -158,10 +158,10 @@ export const Problem: React.FC = () => {
         </div>
       </AbsoluteFill>
       {/* 점 그리드 */}
-      <div style={{ position: 'absolute', left: 860, top: 150, width: COLS * cell + 9 * 12, height: ROWS * cell }}>
+      <div style={{ position: 'absolute', left: 860, top: 150, width: COLS * cell + 2 * 30, height: ROWS * cell }}>
         {Array.from({ length: COLS * ROWS }).map((_, i) => {
           const x = i % COLS, y = Math.floor(i / COLS);
-          const company = Math.floor((x * 10) / COLS);
+          const company = Math.floor((x * 3) / COLS);
           const appear = interpolate(f - (x + y) * 0.9, [0, 18], [0, 1], clamp);
           const isApp = APPLICANTS.has(i);
           const appOn = interpolate(f, [70 + (i % 7) * 3, 84 + (i % 7) * 3], [0, 1], clamp);
@@ -172,7 +172,7 @@ export const Problem: React.FC = () => {
           if (isApp && appOn > 0 && !(stage >= 4 && scanned)) { bg = C.accent; scale = 1 + 0.35 * appOn; glow = appOn; }
           if (stage === 3 && isApp) scale *= 1 + 0.25 * Math.max(0, Math.sin((f + i) / 4));
           if (hotIdx >= 0 && hotOn > 0) { bg = C.accent; scale = 1 + 0.6 * hotOn + 0.12 * Math.sin((f + hotIdx * 5) / 6); glow = hotOn; }
-          const gapX = company * 12 * split;
+          const gapX = company * 30 * split;
           return (
             <div key={i} style={{ position: 'absolute', left: x * cell + gapX, top: y * cell, width: 11, height: 11, borderRadius: 6, background: bg, opacity: appear, transform: `scale(${scale})`, boxShadow: glow ? `0 0 ${14 * glow}px ${C.accent}` : undefined }}>
               {hotIdx >= 0 && hotOn > 0 && !HOT_APPLIED.has(i) && (
@@ -182,8 +182,8 @@ export const Problem: React.FC = () => {
           );
         })}
         {/* 계열사 라벨 (정보 분산 단계) */}
-        {['갤러리아', '에너지', '시스템', '생명', '솔루션', '에어로', '오션', '투자증권', '엔진', '㈜한화'].map((n, k) => (
-          <div key={n} style={{ position: 'absolute', top: -46, left: Math.ceil((k * COLS) / 10) * cell + k * 12 * split, width: (Math.ceil(((k + 1) * COLS) / 10) - Math.ceil((k * COLS) / 10)) * cell, textAlign: 'center', fontSize: 18, color: '#ccc', opacity: split, whiteSpace: 'nowrap' }}>{n}</div>
+        {['한화오션', '한화시스템', '한화에어로스페이스'].map((n, k) => (
+          <div key={n} style={{ position: 'absolute', top: -46, left: Math.ceil((k * COLS) / 3) * cell + k * 30 * split, width: (Math.ceil(((k + 1) * COLS) / 3) - Math.ceil((k * COLS) / 3)) * cell, textAlign: 'center', fontSize: 18, color: '#ccc', opacity: split, whiteSpace: 'nowrap' }}>{n}</div>
         ))}
         {/* 스캔 빔 */}
         {beam > -0.05 && beam < 1.05 && (

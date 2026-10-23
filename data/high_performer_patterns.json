@@ -1,16 +1,16 @@
 [
   {
-    "job_family": "경영분석",
+    "job_family": "사업관리",
     "sample_n": 12,
     "min_sample_rule": 10,
     "period": "2023~2025 상위 평가자 익명 집계",
     "patterns": [
       {
-        "pattern": "타 부서와 지표 정의를 합의한 프로젝트 경험",
+        "pattern": "프로젝트 일정·원가·손익을 함께 관리한 경험",
         "share_pct": 75
       },
       {
-        "pattern": "SQL로 원천 데이터를 직접 검증한 경험",
+        "pattern": "ERP 원천 데이터로 실적을 직접 검증한 경험",
         "share_pct": 83
       },
       {

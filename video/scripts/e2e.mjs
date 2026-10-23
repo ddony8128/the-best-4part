@@ -63,7 +63,7 @@ check((await page.locator('#docBody').textContent()).includes('[추천서]'), 'r
 await page.click('#btnSend');
 await page.click('#docTabs button[data-doc=offer]');
 await page.waitForSelector('#btnSend:not([disabled])', { timeout: 20000 });
-check((await page.locator('#docBody').textContent()).includes('참여를 제안드립니다'), 'offer generated');
+check((await page.locator('#docBody').textContent()).includes('자리를 제안드립니다'), 'offer generated');
 await page.click('#btnSend');
 
 await page.goto(base + '/employee.html');
@@ -91,14 +91,15 @@ check((await audit()).includes('참여 제안 발송'), 'HR audit log has offer 
 const html = await page.content();
 check(!html.includes('가온'), 'console: no fictional company names');
 check(!html.includes('가상 설정') && !html.includes('미이수로 단정하지 않음'), 'console: evidence/education wording cleaned');
-check(await page.evaluate(() => state.jobs.find(j => j.id === 'JD-002').org) === '제조혁신본부 · 설비기술팀', 'console: JD-002 filled from source');
+check(await page.evaluate(() => state.jobs.length === 45 && state.jobs.find(j => j.id === 'JD-002').company === '한화오션' && state.jobs.find(j => j.id === 'JD-002').title === '선체 구조설계'), 'console: 45 JDs from 직무.docx');
+check(!/한화(갤러리아|에너지|생명|솔루션|투자증권|엔진)|㈜한화/.test(html), 'console: only the 3 affiliates');
 // 인재 참여 제안: 검색 팝업
 await page.click('nav a[href="#offers"]');
 await page.click('#offerPick');
 await page.fill('#pickerSearch', '박민준');
 check(await page.locator('#pickerList .pick-row').count() === 1, 'offer picker: search narrows to one person');
 await page.locator('#pickerList .pick-row').first().click();
-check((await page.locator('#offerPerson').inputValue()) === 'APP-002' && (await page.locator('#offerPickLabel').textContent()).includes('한화엔진'), 'offer picker: selection applied');
+check((await page.locator('#offerPerson').inputValue()) === 'APP-002' && (await page.locator('#offerPickLabel').textContent()).includes('한화에어로스페이스'), 'offer picker: selection applied');
 // 임직원: 인사 링크 없음, 정량 데이터 가림, 지원 취소
 await page.goto(base + '/employee.html#profile');
 check(await page.locator('header a[href="./talent_hr_admin.html"]').count() === 0, 'employee: HR link removed');
@@ -114,14 +115,14 @@ await page.waitForTimeout(300);
 check(await page.locator('#peopleRows', { hasText: '이한결' }).count() === 0 && (await audit()).includes('지원 취소'), 'console: cancelled applicant removed + logged');
 // AI 매칭: 다른 공고는 다른 요건·후보
 await page.goto(base + '/hr_matching.html?fast');
-await page.selectOption('#jdSelect', 'JD-002');
+await page.selectOption('#jdSelect', 'JD-010');
 await page.click('#btnAnalyze');
 await page.waitForSelector('#btnGate:not([disabled])', { timeout: 15000 });
-check((await page.locator('#reqRows').textContent()).includes('예지보전'), 'matching: JD-002 requirements');
+check((await page.locator('#reqRows').textContent()).includes('디지털 트윈'), 'matching: JD-010 requirements');
 await page.click('#btnGate');
 await page.waitForSelector('#p4.active', { timeout: 20000 });
 const top2 = await page.locator('.cand .nm').allTextContents();
-check(top2[0] === '이한결' && top2.includes('박민준'), 'matching: JD-002 ranks 이한결 first with 박민준 listed: ' + top2.slice(0, 3).join(', '));
+check(top2[0] === '이한결' && top2.includes('박민준'), 'matching: JD-010 ranks 이한결 first with 박민준 listed: ' + top2.slice(0, 3).join(', '));
 check(!(await page.content()).includes('가온'), 'matching: no fictional company names');
 
 check(errors.length === 0, 'no page errors' + (errors.length ? ': ' + errors.join(' | ') : ''));
