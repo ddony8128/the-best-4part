@@ -1,0 +1,119 @@
+/* TALENT LINK Design System (TL-DS) — 토스 디자인 시스템(TDS)의 구조를 따르고, 강조색만 한화 오렌지로 바꾼 것
+   원칙: 큰 글자 · 진한 본문 · 흰 카드와 회색 바탕 · 테두리 대신 여백 · 한 화면 하나의 주요 행동(오렌지) · 12px 이상 둥근 모서리
+   자세한 기준: docs/design-system.md   (각 페이지의 <style> 뒤에 불러와서 덮어쓴다) */
+:root{
+  /* Grey — TDS 회색 단계 그대로 */
+  --grey50:#f9fafb;--grey100:#f2f4f6;--grey200:#e5e8eb;--grey300:#d1d6db;--grey400:#b0b8c1;
+  --grey500:#8b95a1;--grey600:#6b7684;--grey700:#4e5968;--grey800:#333d4b;--grey900:#191f28;
+  /* Hanwha Orange — 브랜드 강조색(500)을 기준으로 단계화 */
+  --orange50:#fff4ee;--orange100:#ffe4d6;--orange200:#ffc6a8;--orange300:#ffa078;--orange400:#f9784a;
+  --orange500:#f4511e;--orange600:#dd4512;--orange700:#b8390e;--orange800:#8f2d0c;--orange900:#66200a;
+  /* Navy — 기존 어두운 화면(스캔 패널·로그인 좌측)에 쓰던 한화 네이비 */
+  --navy:#19243b;--navy2:#24314d;
+  /* Semantic */
+  --green50:#f0faf6;--green600:#02a262;--green700:#029359;--red50:#ffeeee;--red600:#e42939;--blue50:#e8f3ff;--blue600:#2272eb;
+  /* 기존 변수 → 새 토큰 (페이지 코드가 쓰는 이름 유지) */
+  --ink:var(--grey900);--muted:var(--grey700);--line:var(--grey200);--bg:var(--grey100);
+  --accent:var(--orange500);--soft:var(--orange50);--ok:var(--green700);--okbg:var(--green50);
+  /* Type scale (TDS Typography 1~7 기반, 데스크톱 화면에 맞춰 13px를 최소로) */
+  --t1:30px;--t2:26px;--t3:22px;--t4:20px;--t5:17px;--t6:15px;--t7:13px;
+  /* Radius · Space · Shadow · Motion */
+  --r-sm:8px;--r-md:12px;--r-lg:16px;--r-xl:20px;--r-full:999px;
+  --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:20px;--s6:24px;--s8:32px;--s10:40px;
+  --shadow-sm:0 1px 3px rgba(0,23,51,.04);--shadow-md:0 6px 20px rgba(0,23,51,.07);--shadow-lg:0 16px 40px rgba(0,23,51,.10);
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  font-size:var(--t6);line-height:1.6;font-weight:500;color:var(--grey900);letter-spacing:-.01em;-webkit-font-smoothing:antialiased;word-break:keep-all}
+button,input,select,textarea{font-family:inherit;letter-spacing:inherit}
+
+/* Headings */
+/* 제목 크기는 각 화면이 정한 값(이미 TDS 단계로 맞춤)을 쓰고, 굵기·자간만 통일 */
+h1{font-weight:700;letter-spacing:-.025em}
+h2{font-weight:700;letter-spacing:-.02em}
+h3{font-weight:700;letter-spacing:-.015em}
+.eyebrow{font-size:var(--t7);font-weight:700;letter-spacing:.02em;color:var(--orange600)}
+.muted{color:var(--grey700)}
+.tiny{font-size:var(--t7);color:var(--grey600);line-height:1.55}
+
+/* Buttons — 기본은 회색 면, 주요 행동은 오렌지 */
+button{border:0;background:var(--grey100);color:var(--grey800);border-radius:var(--r-md);padding:11px 18px;font-size:var(--t6);font-weight:600;line-height:1.4;transition:background .12s var(--ease),transform .12s var(--ease)}
+button:hover{background:var(--grey200);border-color:transparent}
+button:active{transform:scale(.98)}
+button:disabled{opacity:1;background:var(--grey100);color:var(--grey400);cursor:default;transform:none}
+button.primary,.primary{background:var(--orange500);color:#fff;border:0}
+button.primary:hover{background:var(--orange600)}
+button.accent,.accent{background:var(--orange50);color:var(--orange700);border:0}
+button.accent:hover{background:var(--orange100)}
+button.primary:disabled,button.accent:disabled{background:var(--grey100);color:var(--grey400)}
+.text-btn{background:none;color:var(--grey700);padding:0;font-size:var(--t6)}
+.text-btn:hover{background:none;color:var(--grey900)}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--orange200);outline-offset:2px}
+
+/* Inputs */
+label{font-size:var(--t6);font-weight:600;color:var(--grey800)}
+input,select,textarea{background:var(--grey50);border:1px solid var(--grey200);border-radius:var(--r-md);padding:12px 14px;font-size:var(--t6);color:var(--grey900);transition:border-color .12s,background .12s}
+input:focus,select:focus,textarea:focus{background:#fff;border-color:var(--orange400);outline:0}
+input::placeholder,textarea::placeholder{color:var(--grey500)}
+
+/* Surfaces */
+.card{background:#fff;border:0;border-radius:var(--r-xl);padding:28px;box-shadow:var(--shadow-sm)}
+.card-head{margin-bottom:20px}
+.notice{font-size:var(--t6);color:var(--orange800);background:var(--orange50);border-radius:var(--r-lg);padding:16px 20px;line-height:1.6}
+.notice b{color:var(--orange700)}
+
+/* Badges */
+.status,.pill,.tag,.srctag,.need{font-size:var(--t7);font-weight:600;border-radius:var(--r-sm);padding:4px 10px;border:0;line-height:1.5}
+.status{background:var(--grey100);color:var(--grey700)}
+.status.ok{background:var(--green50);color:var(--green700)}
+.status.check{background:var(--orange50);color:var(--orange700)}
+.status.dark{background:var(--grey800);color:#fff}
+.pill{background:var(--grey100);color:var(--grey700)}
+.tag,.srctag{background:var(--grey100);color:var(--grey700)}
+.need{background:var(--grey100);color:var(--grey700)}
+.need.must{background:var(--grey800);color:#fff}
+
+/* Tables */
+table{font-size:var(--t6)}
+th{font-size:var(--t7);font-weight:600;color:var(--grey600);background:transparent;border-bottom:1px solid var(--grey200)}
+td{border-bottom:1px solid var(--grey100);color:var(--grey800)}
+td strong{color:var(--grey900)}
+tr:last-child td{border-bottom:0}
+
+/* App shell: 사이드바 · 헤더 */
+aside{background:#fff;border-right:1px solid var(--grey100)}
+.brand{font-size:var(--t4);font-weight:800;letter-spacing:-.03em}
+.brand-sub{font-size:var(--t7);letter-spacing:.04em;color:var(--grey600)}
+.nav-label{font-size:var(--t7);letter-spacing:.04em;color:var(--grey500);font-weight:600}
+nav a{font-size:var(--t6);font-weight:600;color:var(--grey700);border-radius:var(--r-md);padding:12px 14px}
+nav a:hover{background:var(--grey50);color:var(--grey900)}
+nav a.active{background:var(--orange50);color:var(--orange700)}
+nav a span{color:var(--grey500)}nav a.active span{color:var(--orange600)}
+header{background:rgba(255,255,255,.9);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--grey100)}
+.breadcrumb{font-size:var(--t6);color:var(--grey600)}.breadcrumb b{color:var(--grey900);font-weight:700}
+.avatar{background:var(--grey800);font-size:var(--t7);font-weight:700}
+
+/* Chips · 단계 표시 · AI 상태 */
+.chip{font-size:var(--t6);font-weight:600;border:0;background:var(--grey100);color:var(--grey700);border-radius:var(--r-full);padding:8px 14px}
+.chip.on{background:var(--grey900);color:#fff}
+.step{border:0;border-radius:var(--r-lg);font-size:var(--t6);color:var(--grey500);background:#fff;box-shadow:var(--shadow-sm)}
+.step b{font-size:var(--t7);letter-spacing:.04em}
+.step.on{color:var(--grey900);box-shadow:inset 0 0 0 2px var(--orange500),var(--shadow-md)}.step.on b{color:var(--orange600)}
+.step.done{color:var(--grey800)}
+.ai-line{font-size:var(--t6);font-weight:600;color:var(--orange700);background:var(--orange50);border-radius:var(--r-full);padding:6px 14px}
+
+/* Toast */
+.toast{font-size:var(--t6);font-weight:600;border-radius:var(--r-lg);background:var(--grey900);color:#fff;box-shadow:var(--shadow-lg)}
+
+/* 문서 미리보기 안 글자도 읽기 쉽게 */
+.doc,.docview{font-size:var(--t6);line-height:1.75}
+
+/* 숫자 카드 · 목록 행 */
+.stat{border:0;border-radius:var(--r-xl);box-shadow:var(--shadow-sm);padding:24px}
+.stat strong{font-size:var(--t1);font-weight:700;letter-spacing:-.03em;color:var(--grey900)}
+.stat small{font-size:var(--t7);color:var(--grey600)}
+.stat button{background:none;padding:0;text-align:left;width:100%}.stat button:hover{background:none}
+.lv button{background:#fff;border:1px solid var(--grey200);color:var(--grey700);border-radius:var(--r-sm);font-size:var(--t7)}
+.lv button.on{background:var(--orange500);border-color:var(--orange500);color:#fff}
+.w{background:var(--grey50);border-radius:var(--r-lg)}

@@ -5,34 +5,34 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <script>/* 데이터 버전: 바뀌면 이 브라우저에 저장된 예전 기록을 한 번 비운다 */try{if(localStorage.getItem('talent-link-data-version')!=='2026-10-25'){['talent-hr-admin-v1','talent-link-applications','talent-link-offers','talent-link-audit-pending'].forEach(k=>localStorage.removeItem(k));localStorage.setItem('talent-link-data-version','2026-10-25')}}catch{}</script><title>TALENT LINK | 인사 담당자 로그인</title>
 <style>
-:root{--ink:#19243b;--muted:#677386;--line:#e8eaf0;--bg:#f7f8fb;--accent:#f4511e;--soft:#fff1e7}
+:root{--ink:#19243b;--muted:#4e5968;--line:#e8eaf0;--bg:#f7f8fb;--accent:#f4511e;--soft:#fff1e7}
 *{box-sizing:border-box}
-body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--bg);color:var(--ink);font-family:Arial,'Malgun Gothic',sans-serif;font-size:14px;line-height:1.65;padding:20px}
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--bg);color:var(--ink);font-family:Arial,'Malgun Gothic',sans-serif;font-size:15px;line-height:1.65;padding:20px}
 .wrap{width:100%;max-width:880px;display:grid;grid-template-columns:1fr 1fr;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 30px 80px #0000000f}
 .side{background:#19243b;color:#fff;padding:40px 36px;display:flex;flex-direction:column}
 .brand{font-weight:900;letter-spacing:-1px;font-size:20px;display:flex;align-items:center;gap:10px}
 .logo{display:inline-block;background:var(--accent);width:28px;height:28px;border-radius:7px;position:relative}
 .logo:after{content:'';position:absolute;left:8px;top:6px;width:8px;height:12px;border-left:3px solid #fff;border-bottom:3px solid #fff;transform:rotate(-35deg)}
 .side .eyebrow{color:var(--accent);margin-top:46px}
-.eyebrow{font-size:10px;letter-spacing:2px;font-weight:bold;color:var(--muted)}
+.eyebrow{font-size:13px;letter-spacing:2px;font-weight:bold;color:var(--muted)}
 .side h1{font-size:26px;letter-spacing:-1px;line-height:1.4;margin:10px 0 12px}
-.side p{color:#aaa;font-size:12px;margin:0}
-.side .foot{margin-top:auto;font-size:11px;color:#777;padding-top:30px}
+.side p{color:#8b95a1;font-size:14px;margin:0}
+.side .foot{margin-top:auto;font-size:13px;color:#4e5968;padding-top:30px}
 form{padding:44px 40px}
 h2{font-size:20px;letter-spacing:-.6px;margin:8px 0 4px}
-.sub{color:var(--muted);font-size:12px;margin:0 0 26px}
-.sso{display:flex;align-items:center;gap:10px;background:var(--soft);border-radius:8px;padding:11px 14px;font-size:12px;color:#a8461f;margin-bottom:22px}
+.sub{color:var(--muted);font-size:14px;margin:0 0 26px}
+.sso{display:flex;align-items:center;gap:10px;background:var(--soft);border-radius:8px;padding:11px 14px;font-size:14px;color:#a8461f;margin-bottom:22px}
 .sso b{color:#c8401a}
-label{display:block;font-size:12px;font-weight:600;margin:0 0 7px}
-input{width:100%;font:inherit;background:#fff;border:1px solid #ddd;border-radius:6px;padding:11px 12px;margin-bottom:16px;color:#26324d}
+label{display:block;font-size:14px;font-weight:600;margin:0 0 7px}
+input{width:100%;font:inherit;background:#fff;border:1px solid #d1d6db;border-radius:6px;padding:11px 12px;margin-bottom:16px;color:#333d4b}
 input:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 button{width:100%;font:inherit;font-weight:600;cursor:pointer;background:var(--ink);color:#fff;border:1px solid var(--ink);border-radius:7px;padding:12px 16px;margin-top:4px}
 button:disabled{opacity:.5;cursor:default}
-.err{color:#b0442a;font-size:12px;min-height:20px;margin:10px 0 0}
-.back{display:inline-block;margin-top:18px;font-size:12px;color:var(--muted);text-decoration:none}
+.err{color:#b0442a;font-size:14px;min-height:20px;margin:10px 0 0}
+.back{display:inline-block;margin-top:18px;font-size:14px;color:var(--muted);text-decoration:none}
 @media(max-width:720px){.wrap{grid-template-columns:1fr}.side{padding:28px}.side .eyebrow{margin-top:24px}form{padding:28px}}
 </style>
-</head>
+<!--tl-ds--><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"><link rel="stylesheet" href="./tl-ds.css"></head>
 <body>
 <div class="wrap">
   <div class="side">
@@ -51,7 +51,7 @@ button:disabled{opacity:.5;cursor:default}
     <input id="id" name="username" autocomplete="username" required>
     <label for="pw">비밀번호</label>
     <input id="pw" name="password" type="password" autocomplete="current-password" required>
-    <button id="go">로그인</button>
+    <button id="go" class="primary">로그인</button>
     <p class="err" id="err" role="alert"></p>
     <a class="back" href="./index.html">← 시작 화면으로</a>
   </form>

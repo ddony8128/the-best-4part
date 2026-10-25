@@ -1,0 +1,22 @@
+// 디자인 확인용 캡처 (정적 서버): node scripts/ds-shots.mjs <출력 폴더>
+import { chromium } from 'playwright';
+import http from 'node:http';
+import fs from 'node:fs';
+import path from 'node:path';
+const ROOT = path.resolve(import.meta.dirname, '../../public'), OUT = process.argv[2];
+const T = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.css': 'text/css' };
+const server = http.createServer((q, r) => { const p = path.join(ROOT, decodeURIComponent(q.url.split('?')[0]).replace(/^\/$/, '/index.html')); if (!fs.existsSync(p)) { r.writeHead(404); return r.end() } r.writeHead(200, { 'content-type': T[path.extname(p)] || 'text/plain' }); fs.createReadStream(p).pipe(r) }).listen(0);
+const base = `http://127.0.0.1:${server.address().port}`;
+const b = await chromium.launch(); const pg = await b.newPage({ viewport: { width: 1440, height: 900 } });
+const shot = async n => pg.screenshot({ path: path.join(OUT, n + '.png') });
+await pg.goto(base + '/index.html'); await pg.waitForTimeout(1200); await shot('1-index');
+await pg.goto(base + '/login.html'); await shot('2-login');
+await pg.goto(base + '/talent_hr_admin.html'); await pg.waitForTimeout(500); await shot('3-admin-home');
+await pg.goto(base + '/talent_hr_admin.html#jobs'); await pg.waitForTimeout(500); await shot('4-admin-jobs');
+await pg.goto(base + '/hr_matching.html?fast'); await pg.waitForTimeout(500); await shot('5-match-1');
+await pg.selectOption('#jdSelect', 'JD-014'); await pg.click('#btnAnalyze'); await pg.waitForSelector('#btnGate:not([disabled])'); await shot('6-match-2');
+await pg.click('#btnGate'); await pg.waitForTimeout(1500); await shot('7-match-3');
+await pg.waitForSelector('#p4.active', { timeout: 30000 }); await pg.waitForTimeout(400); await shot('8-match-4');
+await pg.goto(base + '/employee.html'); await pg.waitForTimeout(500); await shot('9-emp-home');
+await pg.evaluate(() => diagnose('JD-014')); await pg.waitForTimeout(400); await shot('10-emp-diag');
+await b.close(); server.close();
