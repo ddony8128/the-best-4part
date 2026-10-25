@@ -10187,17 +10187,17 @@
   "skill_record_id": "SK-EMP-HW-0019-1",
   "employee_id": "EMP-HW-0019",
   "skill": "B2B 마케팅",
-  "level": 5,
+  "level": 3,
   "basis": "프로젝트 수행 기반",
-  "context": "마케팅 및 제품전략 커뮤니케이션 | 제품 가치제안·전시회 캠페인"
+  "context": "해외사업 | 방산전자 해외 전시회 바이어 대응·제안 지원"
  },
  {
   "skill_record_id": "SK-EMP-HW-0019-2",
   "employee_id": "EMP-HW-0019",
   "skill": "제품 가치제안",
-  "level": 5,
+  "level": 4,
   "basis": "프로젝트 수행 기반",
-  "context": "마케팅 및 제품전략 커뮤니케이션 | 제품 가치제안·전시회 캠페인"
+  "context": "해외사업 | 방산전자 해외 전시회 바이어 대응·제안 지원"
  },
  {
   "skill_record_id": "SK-EMP-HW-0019-3",
@@ -10205,15 +10205,15 @@
   "skill": "방산전자",
   "level": 5,
   "basis": "프로젝트 수행 기반",
-  "context": "마케팅 및 제품전략 커뮤니케이션 | 제품 가치제안·전시회 캠페인"
+  "context": "해외사업 | 방산전자 해외 전시회 바이어 대응·제안 지원"
  },
  {
   "skill_record_id": "SK-EMP-HW-0019-4",
   "employee_id": "EMP-HW-0019",
   "skill": "ICT",
-  "level": 5,
+  "level": 4,
   "basis": "프로젝트 수행 기반",
-  "context": "마케팅 및 제품전략 커뮤니케이션 | 제품 가치제안·전시회 캠페인"
+  "context": "해외사업 | 방산전자 해외 전시회 바이어 대응·제안 지원"
  },
  {
   "skill_record_id": "SK-EMP-HW-0019-5",
@@ -10221,7 +10221,7 @@
   "skill": "CRM",
   "level": 5,
   "basis": "프로젝트 수행 기반",
-  "context": "마케팅 및 제품전략 커뮤니케이션 | 제품 가치제안·전시회 캠페인"
+  "context": "해외사업 | 방산전자 해외 전시회 바이어 대응·제안 지원"
  },
  {
   "skill_record_id": "SK-EMP-HW-0019-6",
@@ -10229,7 +10229,7 @@
   "skill": "영문 콘텐츠",
   "level": 4,
   "basis": "프로젝트 수행 기반",
-  "context": "마케팅 및 제품전략 커뮤니케이션 | 제품 가치제안·전시회 캠페인"
+  "context": "해외사업 | 방산전자 해외 전시회 바이어 대응·제안 지원"
  },
  {
   "skill_record_id": "SK-EMP-HW-0019-7",
@@ -10237,7 +10237,7 @@
   "skill": "Power BI",
   "level": 4,
   "basis": "프로젝트 수행 기반",
-  "context": "마케팅 및 제품전략 커뮤니케이션 | 제품 가치제안·전시회 캠페인"
+  "context": "해외사업 | 방산전자 해외 전시회 바이어 대응·제안 지원"
  },
  {
   "skill_record_id": "SK-EMP-HW-0019-8",
@@ -10245,6 +10245,6 @@
   "skill": "시장분석",
   "level": 4,
   "basis": "프로젝트 수행 기반",
-  "context": "마케팅 및 제품전략 커뮤니케이션 | 제품 가치제안·전시회 캠페인"
+  "context": "해외사업 | 방산전자 해외 전시회 바이어 대응·제안 지원"
  }
 ]

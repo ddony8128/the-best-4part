@@ -156,6 +156,7 @@ table{width:100%;border-collapse:collapse;font-size:12px;text-align:left}th{colo
       <div style="overflow:auto"><table><thead><tr><th>요구사항</th><th>평가 축</th><th>유형</th><th>필수 / 우대</th><th>근거 출처</th></tr></thead><tbody id="reqRows"></tbody></table></div>
       <div class="form-foot" style="margin-top:12px"><p class="tiny" style="margin:0">필수 / 우대를 눌러 바꿀 수 있습니다. 정량 요건은 규칙으로, 정성 요건은 AI가 인사 기록과 대조합니다.</p></div>
     </div>
+    <div class="card hidden" id="hardCard"><div class="card-head"><h2>정량 필수 조건 · Yes/No</h2><span class="tiny">AI 판정 전에 인사 기록으로 바로 거릅니다 · 비용 절감</span></div><div id="hardBody"></div></div>
     <div class="card hidden" id="refCard"><div class="card-head"><h2>AI가 함께 읽은 공고별 참고 자료</h2><span class="tiny">JD만으로는 드러나지 않는 요건을 보완</span></div><div class="refs" id="refBody"></div></div>
     <div class="card" id="weightCard" style="opacity:.35;transition:opacity .4s">
       <div class="card-head"><h2>평가 축 중요도 제안</h2><span class="tiny">매우 중요 · 중요 · 보통 · 덜 중요 — 비율은 자동 계산</span></div>
@@ -173,8 +174,8 @@ table{width:100%;border-collapse:collapse;font-size:12px;text-align:left}th{colo
       <div class="cos" id="scanCos"></div>
       <div class="funnel">
         <div class="fn"><small>스캔 범위</small><strong id="f1">0</strong><small>명 · 그룹 인재풀 등록</small></div>
-        <div class="fn"><small>1차 규칙 필터 (요건 키워드)</small><strong id="f2">0</strong><small>명</small></div>
-        <div class="fn"><small>AI 정밀 판정 (Claude)</small><strong id="f3">0</strong><small>명</small></div>
+        <div class="fn"><small>정량 필수 조건 통과 (Yes/No)</small><strong id="f2">0</strong><small>명</small></div>
+        <div class="fn"><small>AI 근거 판정 (통과자 전원)</small><strong id="f3">0</strong><small>명</small></div>
         <div class="fn hot"><small>추천 후보</small><strong id="f4">0</strong><small>명 · 상위 N</small></div>
       </div>
       <div class="grid-dots" id="dots"></div>
@@ -354,9 +355,10 @@ function renderScope(){$('scope').innerHTML=COMPANIES.map(([c,n])=>`<span class=
 const poolSize=()=>COMPANIES.filter(c=>scope.has(c[0])).reduce((a,c)=>a+c[1],0);
 
 // 서버(DB) 연결: 되면 인재풀 인원·공고 분석·스캔 결과를 DB에서, 안 되면 페이지에 든 기본 데이터로 동작
-const API=window.TalentAPI;let LIVE=false,ANALYSIS=null,REF=null;
+const API=window.TalentAPI;let LIVE=false,ANALYSIS=null,REF=null,HARD=[];
 async function boot(){const pool=await API.data('pool',{},8000);if(pool&&typeof pool==='object'&&!pool.error){LIVE=true;COMPANIES.forEach(c=>{if(pool[c[0]]!=null)c[1]=pool[c[0]]});renderScope()}}
 function applyAnalysis(row){ANALYSIS=row;const x=row.analysis,d=JDS[curJD];REQS=x.reqs.map(r=>({...r,src:r.src||[]}));WL=[...x.levels];syncW();d.pitch=x.pitch;d.needs=x.needs;d.ruleLog=x.rule_summary;d.synLog=x.synonym_example}
+function renderHard(){$('hardCard').classList.toggle('hidden',!HARD.length);$('hardBody').innerHTML=HARD.map(h=>`<div class="qa" style="display:flex;justify-content:space-between;gap:10px"><span>${esc(h.label)}</span><span class="tiny">${h.any.map(o=>o.certs?'자격 대장':'발령 이력').filter((v,i,a)=>a.indexOf(v)===i).join(' · ')}</span></div>`).join('')+'<p class="tiny" style="margin-top:10px">공고 등록 시 인사 담당자가 정한 조건입니다. 통과한 사람은 인원 제한 없이 모두 AI가 근거를 판정합니다.</p>'}
 function renderRef(ref){if(!ref){$('refCard').classList.add('hidden');return}const h=ref.handover||{},rb=ref.research_basis;
  $('refBody').innerHTML=`<div class="rf"><b>전임자 인수인계</b>${(h.tasks||[]).map(t=>`· ${esc(t.task)} <small>(${esc(t.status)})</small>`).join('<br>')}<br><small>비정형 메모 ${(h.memos||[]).length}건 · 후임자 역량 키워드 ${(h.successor_keywords||[]).length}개</small></div>
  <div class="rf"><b>같은 직무 고성과자 패턴 · ${ref.high_performers_sample_n}명</b>${(ref.high_performers||[]).slice(0,3).map(x=>`· ${esc(x.pattern)} <small>${x.share_pct}%</small>`).join('<br>')}</div>
@@ -367,9 +369,9 @@ async function paintReqs(state){$('reqRows').innerHTML='';for(const r of REQS){c
 // STEP 2
 async function analyze(){if(!scope.size){notify('스캔할 계열사를 하나 이상 고르세요.');return}
  // 고른 공고의 요건·기본 가중치·후보로 바꾼다
- curJD=$('jdSelect').value;ANALYSIS=null;REF=null;REQS=JDS[curJD].reqs.map(r=>({...r}));WL=toLevels(JDS[curJD].w);syncW();C=buildCands(curJD);selected=null;for(const k in docModels)delete docModels[k];show(2);$('reqRows').innerHTML='';reqsReady=false;$('btnGate').disabled=true;$('weightCard').style.opacity=.35;$('aiState').innerHTML='<span class="spin"></span>JD와 참고 자료를 분석하는 중';renderWeights('weightsGate',false);$('refCard').classList.add('hidden');
+ curJD=$('jdSelect').value;ANALYSIS=null;REF=null;REQS=JDS[curJD].reqs.map(r=>({...r}));WL=toLevels(JDS[curJD].w);syncW();C=buildCands(curJD);selected=null;for(const k in docModels)delete docModels[k];show(2);$('reqRows').innerHTML='';reqsReady=false;$('btnGate').disabled=true;$('weightCard').style.opacity=.35;$('aiState').innerHTML='<span class="spin"></span>JD와 참고 자료를 분석하는 중';renderWeights('weightsGate',false);$('refCard').classList.add('hidden');$('hardCard').classList.add('hidden');
  // 이 공고를 분석한 결과가 있으면 그대로 쓰고, 없으면 지금 Claude로 분석한다
- const got=LIVE?await API.data('analysis',{jd:curJD},10000):null;REF=got&&got.reference;renderRef(REF);
+ const got=LIVE?await API.data('analysis',{jd:curJD},10000):null;REF=got&&got.reference;HARD=(got&&got.hard)||[];renderHard();renderRef(REF);
  if(got&&got.analysis)applyAnalysis(got.analysis);
  else if(LIVE){const row=await API.post('analyze-jd',{jd:curJD},70000);if(row&&row.analysis)applyAnalysis(row);else notify('AI 분석에 실패해 공고 원문으로 요건을 정리했습니다.')}
  await sleep(600);await paintReqs()}
@@ -420,9 +422,9 @@ async function scanDemo(run){show(3);$('asyncBox').classList.add('hidden');const
  const cos=[...$('scanCos').children];
  const lit=(cls,ratio)=>dots.forEach((d,i)=>{if(((i*2654435761)>>>0)%1000<ratio*1000)d.className=cls});
  const p=count('f1',total,2200);for(const co of cos){co.classList.add('on');log(`<b>${co.dataset.c}</b> 인재풀 ${COMPANIES.find(c=>c[0]===co.dataset.c)[1]}명 프로필 정리 · 직무·역량 용어 통일`);dots.forEach((d,i)=>{if(i%cos.length===cos.indexOf(co))d.className='lit'});await sleep(260)}
- await p;log('필수 요건 규칙 확인 · '+JDS[curJD].ruleLog);lit('pass',.25);await count('f2',pass1,1100);
- log(`AI 관련어 대조 · 요구사항 ${REQS.length}개의 관련 용어로 확장 (표현이 달라도 같은 경험 연결)`);log(JDS[curJD].synLog);lit('pass',.12);dots.forEach((d,i)=>{if(d.className==='pass'&&((i*2654435761)>>>0)%1000>=120)d.className='lit'});await count('f3',pass2,1300);
- log(run?`Claude 정밀 판정 ${pass2}명 · 요건별 근거·우려·면담 질문 — 배치 처리 ${API.when(run.created_at)} 시작, ${API.minutes(run.created_at,run.finished_at)}분 소요`:'가중치 적용 · 종합 점수 산출 · 근거·미확인 요건·추가 질문 작성');log('중요도 적용 · 종합 점수 산출(판정 결과 + 인사 기록 지표, 규칙 계산)');dots.forEach((d,i)=>{if(((i*40503)>>>0)%N<top*2&&d.className==='pass')d.className='hot'});let hot=dots.filter(d=>d.className==='hot').length;dots.forEach((d,i)=>{if(hot<top&&d.className==='pass'){d.className='hot';hot++}});await count('f4',top,700);
+ await p;log('정량 필수 조건 확인 (자격 대장 · 발령 이력, Yes/No) · '+(HARD.length?HARD.map(h=>h.label).join(' · '):JDS[curJD].ruleLog));lit('pass',.25);await count('f2',pass1,1100);
+ log(`통과자 전원 AI 판정 · 요구사항 ${REQS.length}개를 인사 기록과 대조 (표현이 달라도 같은 경험 연결)`);log(JDS[curJD].synLog);lit('pass',.12);dots.forEach((d,i)=>{if(d.className==='pass'&&((i*2654435761)>>>0)%1000>=120)d.className='lit'});await count('f3',pass2,1300);
+ log(run?`Claude 근거 판정 ${pass2}명 · 요건별 근거·우려·면담 질문 — ${API.when(run.finished_at)} 완료된 스캔 결과 (대량 판정은 배치로 미리 처리)`:'가중치 적용 · 종합 점수 산출 · 근거·미확인 요건·추가 질문 작성');log('중요도 적용 · 종합 점수 산출(판정 결과 + 인사 기록 지표, 규칙 계산)');dots.forEach((d,i)=>{if(((i*40503)>>>0)%N<top*2&&d.className==='pass')d.className='hot'});let hot=dots.filter(d=>d.className==='hot').length;dots.forEach((d,i)=>{if(hot<top&&d.className==='pass'){d.className='hot';hot++}});await count('f4',top,700);
  $('scanTitle').textContent='스캔 완료 · 공모에 지원하지 않은 숨은 후보를 함께 찾았습니다';await sleep(1300);
  show(4);renderWeights('weightsLive',true);prevRank={};renderList(false);select(ranked()[0].c.emp)}
 
@@ -441,6 +443,7 @@ function cand(){return C.find(c=>c.emp===selected)}
 function renderDetail(){const c=cand();if(!c)return;const s=score(c);const rk=ranked().findIndex(x=>x.c.emp===c.emp)+1;
  $('detail').innerHTML=`<div class="card-head" style="margin-bottom:10px"><div><span class="tiny">${esc(c.emp)} · 프로필 확인일 ${esc(c.checked)}</span><h2>${esc(c.name)} ${c.applied?'<span class="badge-app">공모 지원</span>':'<span class="badge-hidden">숨은 후보</span>'}</h2><span class="muted" style="font-size:12px">${esc(c.company)} · ${esc(c.team)} · ${esc(c.role)}</span></div><div style="text-align:right"><div class="total" style="font-size:30px">${s.toFixed(1)}</div><span class="tiny">${rk?rk+'위 · ':''}참고 지표</span></div></div>
  ${AXES.map((a,i)=>`<div class="bar-row"><span>${a}</span><div class="bar-track"><div class="bar-fill" style="width:${c.ax[i]}%"></div></div><b>${c.ax[i]}</b></div>`).join('')}
+ ${(c.hard||[]).length?`<h3 style="margin-top:20px">정량 필수 조건</h3><table><tbody>${c.hard.map(h=>`<tr><td style="padding:8px 6px"><strong>${esc(h.label)}</strong><br><span class="tiny">${esc(h.detail)}</span></td><td style="padding:8px 6px;text-align:right"><span class="status ${h.ok?'ok':''}">${h.ok?'충족':'미충족'}</span></td></tr>`).join('')}</tbody></table>`:''}
  <h3 style="margin-top:20px">요건별 비교</h3><table><tbody>${REQS.map(r=>{const [st,ev]=c.req[r.id];return`<tr><td style="padding:8px 6px"><strong>${esc(r.r)}</strong><br><span class="tiny">${esc(r.need)} · ${esc(ev)}</span></td><td style="padding:8px 6px;text-align:right"><span class="status ${REQ_CLASS[st]}">${esc(st)}</span></td></tr>`}).join('')}</tbody></table>
  <h3 style="margin-top:18px">잘 맞는 점</h3>${c.strengths.map(x=>`<div class="evidence">${esc(x)}</div>`).join('')}
  <h3 style="margin-top:16px">우려되는 점</h3>${c.concerns.map(x=>`<div class="evidence warn">${esc(x)}</div>`).join('')}
@@ -469,7 +472,7 @@ function buildOffer(c){const j=JDS[curJD],sj=srcJob();return{title:`${j.title} �
  experience:{skills:confirmed(c).map(e=>e.split(' — ')[0]).slice(0,4),evidence:evidenceOf(c),deliverables:[]},
  job:{title:j.title,org:j.org,tasks:sj.tasks,required:sj.required,conditions:j.cond},
  availability:{conditions:c.avail,org_status:'소속 조직과의 협의는 인사팀이 함께 진행합니다'},
- reply_request:'관심이 있으시면 TALENT LINK 임직원 화면에서 적합도와 보충할 점을 확인하신 뒤 지원하시거나, 가능한 시작 시점과 투입 범위를 회신해 주세요.',
+ reply_request:'관심이 있으시면 TALENT LINK 임직원 화면에서 적합도와 보충할 점을 확인하신 뒤 지원하시거나, 이동 가능한 시점을 회신해 주세요.',
  notice:`본 제안은 배치 확정이나 이동 지시가 아니며, ${c.name} 님의 참여 의사와 소속 조직 여건을 확인한 뒤 협의하기 위한 절차입니다.`}}
 function openDoc(type){if(!cand())return;show(5);setTab(type)}
 document.querySelectorAll('#docTabs button').forEach(b=>b.onclick=()=>setTab(b.dataset.doc));

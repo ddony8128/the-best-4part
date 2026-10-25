@@ -24,8 +24,8 @@ export const activeApps = () => select('applications', 'cancelled_at=is.null&ord
 // 참여 여건: 지원서가 있으면 지원서, 없으면 인재풀 등록 때 적은 이동 희망 조건
 export function availability(e, app) {
   const a = app || { available_from: e.pool_available_from, participation_pct: e.pool_participation_pct, location: e.pool_location, org_status: e.org_status };
-  if (!a.available_from) return '참여 가능 시점·투입 범위 회신 필요 · 소속 조직 협의 전';
-  return `${a.available_from}부터 / 최대 ${a.participation_pct}% / ${a.location || '근무지 협의'} · ${a.org_status || '조직장 협의 전'}`;
+  if (!a.available_from) return '이동 가능 시점 회신 필요 · 소속 조직 협의 전';
+  return `${a.available_from}부터 / ${a.location || '근무지 협의'} · ${a.org_status || '조직장 협의 전'}`;
 }
 
 // AI에 넘길 프로필 문장. 이름·직급·나이·성별은 넣지 않는다(판정에 쓰지 않음).
@@ -89,17 +89,22 @@ const score1 = (job, jw, e, h) => jw.filter(w => h.includes(w)).length + (e.desi
 const score2 = (analysis, h) => { let s = 0; for (const r of analysis.reqs) for (const t of [r.r, ...(r.terms || [])].flatMap(words)) if (h.includes(t)) s += r.need === '필수' ? 2 : 1; return s };
 // 한 사람과 공고의 규칙 근접도(임직원 홈의 "가까운 직무" 순서용)
 export function ruleScore(job, analysis, e) { const h = haystack(e); return score1(job, jdWordsOf(job), e, h) + score2(analysis, h) }
+// 정량 필수 조건(Yes/No): 공고의 hard 조건을 인사 기록(자격 대장 · 직무군 경력)으로 바로 판정한다. AI 판정 전에 걸러 비용을 줄인다.
+const famMonths = (e, families) => families.includes(e.job_family || family(e.desired_jd)) ? e.relevant_experience_months : 0;
+const ym = m => `${Math.floor(m / 12)}년${m % 12 ? ' ' + (m % 12) + '개월' : ''}`;
+export function hardCheck(job, e) {
+  return (job.hard || []).map(c => {
+    for (const o of c.any) {
+      if (o.certs) { const hit = e.certifications.find(x => o.certs.includes(x.certificate)); if (hit) return { label: c.label, ok: true, detail: `${hit.certificate} 보유 (자격 대장)` } }
+      if (o.families) { const m = famMonths(e, o.families); if (m >= o.months) return { label: c.label, ok: true, detail: `${e.job_family || family(e.desired_jd)} 직무 경력 ${ym(m)} (발령 이력)` } }
+    }
+    return { label: c.label, ok: false, detail: '기록상 미충족' };
+  });
+}
 export function prefilter(job, analysis, pool, apps, scope) {
-  const jw = jdWordsOf(job);
   const people = Object.values(pool).filter(e => e.talent_pool && (!scope || scope.includes(e.company)));
-  const applied = new Set(apps.filter(a => a.jd_id === job.id).map(a => a.employee_id));
-  const s1 = people.map(e => { const h = haystack(e); return { e, h, s1: score1(job, jw, e, h) } }).sort((a, b) => b.s1 - a.s1);
-  const n1 = Math.round(people.length * 0.25);
-  const pass1 = s1.filter((x, i) => i < n1 || applied.has(x.e.employee_id));
-  const s2 = pass1.map(x => ({ ...x, s2: x.s1 + score2(analysis, x.h) })).sort((a, b) => b.s2 - a.s2);
-  const n2 = Math.min(30, s2.length);
-  const pass2 = s2.filter((x, i) => i < n2 || applied.has(x.e.employee_id)).map(x => x.e.employee_id);
-  return { total: people.length, pass1: pass1.length, pass2 };
+  const pass = people.filter(e => hardCheck(job, e).every(c => c.ok)).map(e => e.employee_id);
+  return { total: people.length, pass1: pass.length, pass2: pass };
 }
 
 // ── 후보 1명 판정 요청 (요건별 근거 확인 · 강점 · 우려 · 질문). 점수는 아래 규칙으로 계산한다.
@@ -138,7 +143,7 @@ export function axesOf(job, analysis, e, judged) {
 export function candidateOf(job, analysis, e, judged, app) {
   return {
     emp: e.employee_id, name: e.name, company: e.company, team: e.team, role: e.role, checked: e.as_of,
-    applied: !!app, ax: axesOf(job, analysis, e, judged),
+    applied: !!app, ax: axesOf(job, analysis, e, judged), hard: hardCheck(job, e),
     req: Object.fromEntries(judged.requirements.map(r => [r.id, [r.status, r.evidence]])),
     strengths: judged.strengths, concerns: judged.concerns, questions: judged.questions, avail: availability(e, app),
   };
@@ -161,7 +166,7 @@ export function applicationRecord(a, e, job) {
     '보유 자격증': e.certifications.map(c => `${c.certificate} | ${c.issuer} | ${c.obtained_date}`).join(' / ') || '없음',
     '교육': e.training.map(t => `${t.course} (${t.completion_date})`).join(' / ') || '기재 없음',
     ...(a ? { '자기소개서 — 지원 동기': a.motive } : { '커리어 계획': e.career_plans.map(c => `${c.desired_role} · ${c.development_goal}`).join(' / ') || '-' }),
-    '참여': a ? `${a.available_from}부터 / 최대 ${a.participation_pct}% / ${a.location}` : availability(e).split(' · ')[0],
+    '참여': a ? `${a.available_from || '시점 협의'}부터 / ${a.location || '근무지 협의'}` : availability(e).split(' · ')[0],
     '조직 승인': a ? a.org_status : (e.org_status || '조직장 협의 전'),
     '본인 프로필 확인일': e.as_of,
   };

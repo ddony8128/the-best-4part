@@ -31,9 +31,9 @@ const OFFER = `[작업] 공고에 맞는 후보에게 보낼 "인재 참여 제�
 - experience.skills: 직접 수행한 일 2~4개 (동사형 구)
 - experience.evidence: 근거 문서 제목
 - experience.deliverables: 산출물 이름
-- availability.conditions: 후보가 기재한 시작 시점·투입 비율·근무지를 " | "로 이어 한 줄로
+- availability.conditions: 후보가 기재한 이동 가능 시점·근무지를 " | "로 이어 한 줄로
 - availability.org_status: 소속 조직 협의 상태 한 줄
-- reply_request: 관심 여부와 가능한 시작 시점·투입 범위를 회신해 달라는 한 문장
+- reply_request: 관심 여부와 이동 가능한 시점을 회신해 달라는 한 문장
 - notice: 배치 확정이나 이동 지시가 아니며, 본인 의사와 소속 조직 여건을 확인한 뒤 협의한다는 한 문장
 
 [입력]
@@ -48,7 +48,7 @@ const REPORT = `[작업] 인사팀장 등 상사에게 올릴 "인재 추천 보
 - experience.skills: 직접 수행한 일 2~4개 (동사형 구)
 - experience.exclusions: 수행하지 않은 범위 (없으면 빈 배열)
 - experience.deliverables: 주요 산출물 이름
-- experience.conditions: 참여 조건을 짧은 조각으로. 예: ["2026-12-01 시작", "최대 80% 투입", "판교 주 3일 출근"]
+- experience.conditions: 참여 조건을 짧은 조각으로. 예: ["2026-12-01부터 이동 가능", "판교·창원 근무 협의"]
 - experience.checks: 결정 전에 확인할 것. 조직장 협의 상태, 공고 미지원이면 "공고 미지원 (참여 의사 확인 필요)"
 - experience.evidence: 근거 문서 제목
 - fit: 2~3개. 직무와 잘 맞는 점 (hr_reason이 있으면 그 판단을 살려서)

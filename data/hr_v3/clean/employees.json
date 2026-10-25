@@ -22,7 +22,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 100,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0002",
@@ -47,7 +48,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 100,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0003",
@@ -72,7 +74,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 100,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0004",
@@ -97,7 +100,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 80,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0005",
@@ -122,7 +126,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 40,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0006",
@@ -147,7 +152,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 100,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0007",
@@ -172,7 +178,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 40,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0008",
@@ -197,7 +204,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 60,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0009",
@@ -222,7 +230,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 80,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0010",
@@ -247,7 +256,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 80,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0011",
@@ -272,7 +282,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 80,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0012",
@@ -297,7 +308,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 60,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0013",
@@ -322,7 +334,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 80,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0014",
@@ -347,7 +360,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 100,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0015",
@@ -372,7 +386,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 100,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0016",
@@ -397,7 +412,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 80,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0017",
@@ -422,7 +438,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 80,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0018",
@@ -447,16 +464,18 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 80,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0019",
   "name": "임광현",
   "company": "한화시스템",
   "division": null,
-  "team": "글로벌마케팅팀",
-  "role": "글로벌 B2B 기술마케팅 책임",
+  "team": "해외사업팀",
+  "role": "방산 수출 사업지원 책임",
   "grade": "과장",
+  "job_family": "영업",
   "hire_date": "2011-04-12",
   "tenure_months": 186,
   "current_role_start": "2021-09-12",
@@ -465,13 +484,13 @@
   "location": "판교",
   "desired_jd": "JD-034",
   "talent_pool": true,
-  "career_summary": "가장 대표적인 수행 경험은 「마케팅 및 제품전략 커뮤니케이션 | 제품 가치제안·전시회 캠페인」입니다.\n프로젝트에서 담당한 직접 수행 업무는 방산전자·ICT 제품의 기술 가치제안, 해외 전시회 통합 캠페인, CRM 전환지표 운영을 직접 주도입니다.\n이 과정에서 작성하거나 관리한 주요 산출물은 제품 브로슈어·영문 세일즈키트·캠페인 KPI 대시보드 / 신규 해외 리드 112건, 유효 리드 54건, 영업기회 전환 18건 (내부 기록 기준)입니다.\n실무에서는 시장 보고서에 근거 링크와 기준일을 명시 활동을 우선적으로 정리했습니다.\n집계에 사용한 데이터의 출처와 필터 기준을 별도 문서로 남겼습니다\n성과 지표 및 결과 메모에는 신규 해외 리드 112건, 유효 리드 54건, 영업기회 전환 18건 (내부 기록 기준)로 기록되어 있으며 산출 방식과 귀속 범위는 검토가 필요합니다.\n추가 프로젝트인 「마케팅 및 제품전략 커뮤니케이션 | 캠페인 리드·콘텐츠 데이터 분석」에서도 자료 정합성과 관계부서 피드백을 확인했습니다.\n향후에는 캠페인 진행 전에 리드 정의와 데이터 집계 원칙을 합의하여 보고의 신뢰도를 높이겠습니다.\n최종 수주 및 계약 체결과 같이 제가 직접 수행하지 않은 업무는 본인의 기여로 주장하지 않겠습니다.",
-  "interest": "저는 한화시스템 글로벌마케팅팀에서 과장 직급으로 글로벌 B2B 기술마케팅 책임 업무를 수행해 왔습니다.\n마케팅 및 제품전략 커뮤니케이션 직무에 관심을 갖게 된 계기는 고객이 기술 정보를 이해하는 과정에서 생기는 간극을 확인했기 때문입니다.\n제가 특히 주목한 업무는 시장 보고서에 근거 링크와 기준일을 명시입니다.\n현업에서 B2B 마케팅, 제품 가치제안, 방산전자, ICT 역량을 사용해 자료와 실행 과정을 정리했습니다.\n마케팅은 콘텐츠를 제작하는 것으로 끝나지 않고 고객의 질문과 영업 현장의 반응을 제품팀에 전달해야 한다고 생각합니다.\n집계에 사용한 데이터의 출처와 필터 기준을 별도 문서로 남겼습니다\n입사 후에는 영업 단계별 고객 반응을 분석하여 전달 자료를 개선하겠습니다\n지원서에 적은 성과는 팀 단위 결과와 제가 직접 담당한 범위를 분리하여 설명하겠습니다.",
+  "career_summary": "가장 대표적인 수행 경험은 「해외사업 | 방산전자 해외 전시회 바이어 대응·제안 지원」입니다.\n프로젝트에서 담당한 직접 수행 업무는 방산전자·ICT 제품의 기술 가치제안, 해외 전시회 통합 캠페인, CRM 전환지표 운영을 직접 주도입니다.\n이 과정에서 작성하거나 관리한 주요 산출물은 제품 브로슈어·영문 세일즈키트·캠페인 KPI 대시보드 / 신규 해외 리드 112건, 유효 리드 54건, 영업기회 전환 18건 (내부 기록 기준)입니다.\n실무에서는 시장 보고서에 근거 링크와 기준일을 명시 활동을 우선적으로 정리했습니다.\n집계에 사용한 데이터의 출처와 필터 기준을 별도 문서로 남겼습니다\n성과 지표 및 결과 메모에는 신규 해외 리드 112건, 유효 리드 54건, 영업기회 전환 18건 (내부 기록 기준)로 기록되어 있으며 산출 방식과 귀속 범위는 검토가 필요합니다.\n추가 프로젝트인 「해외사업 | 수출 리드 CRM·콘텐츠 데이터 분석」에서도 자료 정합성과 관계부서 피드백을 확인했습니다.\n향후에는 캠페인 진행 전에 리드 정의와 데이터 집계 원칙을 합의하여 보고의 신뢰도를 높이겠습니다.\n최종 수주 및 계약 체결과 같이 제가 직접 수행하지 않은 업무는 본인의 기여로 주장하지 않겠습니다.",
+  "interest": "저는 한화시스템 해외사업팀에서 과장 직급으로 방산 수출 사업지원 업무를 수행해 왔습니다.\n마케팅 및 제품전략 커뮤니케이션 직무에 관심을 갖게 된 계기는 고객이 기술 정보를 이해하는 과정에서 생기는 간극을 확인했기 때문입니다.\n제가 특히 주목한 업무는 시장 보고서에 근거 링크와 기준일을 명시입니다.\n현업에서 B2B 마케팅, 제품 가치제안, 방산전자, ICT 역량을 사용해 자료와 실행 과정을 정리했습니다.\n마케팅은 콘텐츠를 제작하는 것으로 끝나지 않고 고객의 질문과 영업 현장의 반응을 제품팀에 전달해야 한다고 생각합니다.\n집계에 사용한 데이터의 출처와 필터 기준을 별도 문서로 남겼습니다\n입사 후에는 영업 단계별 고객 반응을 분석하여 전달 자료를 개선하겠습니다\n지원서에 적은 성과는 팀 단위 결과와 제가 직접 담당한 범위를 분리하여 설명하겠습니다.",
   "strengths_and_gaps": "제가 수행하지 않았거나 경험이 제한적인 업무는 고객 미팅 최종 계약 체결은 영업조직 책임입니다.\n이 부분은 다른 조직의 결과를 자신의 경험으로 포장하지 않고 명확히 구분할 계획입니다.\n현재 보유 기술 중 B2B 마케팅은 실무 사례로 설명할 수 있으나, 모든 세부 영역에서 동일한 숙련도를 보유한 것은 아닙니다.\n정량 성과는 KPI 정의, 기준 기간, 기여한 조직을 함께 제시하여 검증받겠습니다.\n필요한 보완 과제는 영업 단계별 고객 반응을 분석하여 전달 자료를 개선하겠습니다\n신규 도구를 학습할 때에는 교육 수료와 실제 독립 수행 여부를 구분하겠습니다.\n검증이 필요한 증빙은 수행 부서 또는 담당자에게 확인 요청한 뒤 상태를 업데이트하겠습니다.\n부족한 분야는 관련 부서와 공동 프로젝트를 수행하고 결과물을 남기는 방식으로 보완하겠습니다.",
   "as_of": "2026-10-23",
   "pool_available_from": "2026-12-01",
-  "pool_participation_pct": 80,
-  "pool_location": "판교 근무 협의 가능",
+  "pool_participation_pct": null,
+  "pool_location": "판교·창원 근무 협의 가능",
   "org_status": "조직장 협의 전"
  },
  {
@@ -497,7 +516,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 80,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0021",
@@ -522,7 +542,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 80,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0022",
@@ -547,7 +568,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 80,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0023",
@@ -572,7 +594,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 80,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0024",
@@ -597,7 +620,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 100,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0025",
@@ -622,7 +646,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 80,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0026",
@@ -647,7 +672,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 60,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0027",
@@ -672,7 +698,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 100,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0028",
@@ -697,7 +724,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 100,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0029",
@@ -722,7 +750,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 40,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0030",
@@ -747,7 +776,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 60,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0031",
@@ -772,7 +802,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 100,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0032",
@@ -797,7 +828,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 40,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0033",
@@ -822,7 +854,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 60,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0034",
@@ -847,7 +880,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 100,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0035",
@@ -872,7 +906,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 40,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0036",
@@ -897,7 +932,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 60,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0037",
@@ -922,7 +958,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 60,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0038",
@@ -947,7 +984,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 100,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0039",
@@ -972,7 +1010,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 60,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0040",
@@ -997,7 +1036,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 40,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0041",
@@ -1022,7 +1062,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 100,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0042",
@@ -1047,7 +1088,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 40,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0043",
@@ -1072,7 +1114,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 80,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0044",
@@ -1097,7 +1140,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 80,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0045",
@@ -1122,7 +1166,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 100,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0046",
@@ -1147,7 +1192,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 80,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0047",
@@ -1172,7 +1218,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 60,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0048",
@@ -1197,7 +1244,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 100,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0049",
@@ -1222,7 +1270,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 60,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0050",
@@ -1247,7 +1296,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 40,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0051",
@@ -1272,7 +1322,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 60,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "안전"
  },
  {
   "employee_id": "EMP-HW-0052",
@@ -1297,7 +1348,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 80,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0053",
@@ -1322,7 +1374,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 60,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0054",
@@ -1347,7 +1400,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 100,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "생산"
  },
  {
   "employee_id": "EMP-HW-0055",
@@ -1372,7 +1426,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 40,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0056",
@@ -1397,7 +1452,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 100,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0057",
@@ -1422,7 +1478,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 80,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "전략"
  },
  {
   "employee_id": "EMP-HW-0058",
@@ -1447,7 +1504,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 100,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0059",
@@ -1472,7 +1530,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 40,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "전략"
  },
  {
   "employee_id": "EMP-HW-0060",
@@ -1497,7 +1556,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 60,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0061",
@@ -1522,7 +1582,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 100,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0062",
@@ -1547,7 +1608,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 80,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0063",
@@ -1572,7 +1634,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 60,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0064",
@@ -1597,7 +1660,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 100,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0065",
@@ -1622,7 +1686,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 80,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0066",
@@ -1647,7 +1712,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 100,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0067",
@@ -1672,7 +1738,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 80,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0068",
@@ -1697,7 +1764,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 80,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0069",
@@ -1722,7 +1790,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 80,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0070",
@@ -1747,7 +1816,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 80,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0071",
@@ -1772,7 +1842,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 40,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "영업"
  },
  {
   "employee_id": "EMP-HW-0072",
@@ -1797,7 +1868,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 60,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "생산"
  },
  {
   "employee_id": "EMP-HW-0073",
@@ -1822,7 +1894,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 40,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0074",
@@ -1847,7 +1920,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 80,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "영업"
  },
  {
   "employee_id": "EMP-HW-0075",
@@ -1872,7 +1946,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 100,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "전략"
  },
  {
   "employee_id": "EMP-HW-0076",
@@ -1897,7 +1972,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 60,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "전략"
  },
  {
   "employee_id": "EMP-HW-0077",
@@ -1922,7 +1998,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 40,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "구매"
  },
  {
   "employee_id": "EMP-HW-0078",
@@ -1947,7 +2024,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 80,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "구매"
  },
  {
   "employee_id": "EMP-HW-0079",
@@ -1972,7 +2050,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 40,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0080",
@@ -1997,7 +2076,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 40,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "생산"
  },
  {
   "employee_id": "EMP-HW-0081",
@@ -2022,7 +2102,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 60,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "생산"
  },
  {
   "employee_id": "EMP-HW-0082",
@@ -2047,7 +2128,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 100,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "생산"
  },
  {
   "employee_id": "EMP-HW-0083",
@@ -2072,7 +2154,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 60,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "생산"
  },
  {
   "employee_id": "EMP-HW-0084",
@@ -2097,7 +2180,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 40,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0085",
@@ -2122,7 +2206,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 80,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "전략"
  },
  {
   "employee_id": "EMP-HW-0086",
@@ -2147,7 +2232,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 60,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "영업"
  },
  {
   "employee_id": "EMP-HW-0087",
@@ -2172,7 +2258,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 80,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "전략"
  },
  {
   "employee_id": "EMP-HW-0088",
@@ -2197,7 +2284,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 80,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "재무"
  },
  {
   "employee_id": "EMP-HW-0089",
@@ -2222,7 +2310,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 40,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0090",
@@ -2247,7 +2336,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 40,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0091",
@@ -2272,7 +2362,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 80,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "생산"
  },
  {
   "employee_id": "EMP-HW-0092",
@@ -2297,7 +2388,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 60,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0093",
@@ -2322,7 +2414,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 100,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "생산"
  },
  {
   "employee_id": "EMP-HW-0094",
@@ -2347,7 +2440,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 60,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "품질"
  },
  {
   "employee_id": "EMP-HW-0095",
@@ -2372,7 +2466,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 60,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "품질"
  },
  {
   "employee_id": "EMP-HW-0096",
@@ -2397,7 +2492,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 60,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "안전"
  },
  {
   "employee_id": "EMP-HW-0097",
@@ -2422,7 +2518,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 80,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0098",
@@ -2447,7 +2544,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 80,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "영업"
  },
  {
   "employee_id": "EMP-HW-0099",
@@ -2472,7 +2570,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 80,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "생산"
  },
  {
   "employee_id": "EMP-HW-0100",
@@ -2497,7 +2596,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 80,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "재무"
  },
  {
   "employee_id": "EMP-HW-0101",
@@ -2522,7 +2622,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 60,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0102",
@@ -2547,7 +2648,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 60,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0103",
@@ -2572,7 +2674,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 80,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0104",
@@ -2597,7 +2700,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 40,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "전략"
  },
  {
   "employee_id": "EMP-HW-0105",
@@ -2622,7 +2726,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 40,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "재무"
  },
  {
   "employee_id": "EMP-HW-0106",
@@ -2647,7 +2752,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 100,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0107",
@@ -2672,7 +2778,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 60,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "재무"
  },
  {
   "employee_id": "EMP-HW-0108",
@@ -2697,7 +2804,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 60,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "인사"
  },
  {
   "employee_id": "EMP-HW-0109",
@@ -2722,7 +2830,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 60,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0110",
@@ -2747,7 +2856,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 80,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0111",
@@ -2772,7 +2882,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 100,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0112",
@@ -2797,7 +2908,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 60,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0113",
@@ -2822,7 +2934,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 60,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0114",
@@ -2847,7 +2960,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 60,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0115",
@@ -2872,7 +2986,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 100,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "구매"
  },
  {
   "employee_id": "EMP-HW-0116",
@@ -2897,7 +3012,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 80,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "품질"
  },
  {
   "employee_id": "EMP-HW-0117",
@@ -2922,7 +3038,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 40,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "품질"
  },
  {
   "employee_id": "EMP-HW-0118",
@@ -2947,7 +3064,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 40,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "품질"
  },
  {
   "employee_id": "EMP-HW-0119",
@@ -2972,7 +3090,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 40,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "영업"
  },
  {
   "employee_id": "EMP-HW-0120",
@@ -2997,7 +3116,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 100,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "구매"
  },
  {
   "employee_id": "EMP-HW-0121",
@@ -3022,7 +3142,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 40,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "전략"
  },
  {
   "employee_id": "EMP-HW-0122",
@@ -3047,7 +3168,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 100,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "재무"
  },
  {
   "employee_id": "EMP-HW-0123",
@@ -3072,7 +3194,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 60,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "재무"
  },
  {
   "employee_id": "EMP-HW-0124",
@@ -3097,7 +3220,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 40,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0125",
@@ -3122,7 +3246,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 40,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "생산"
  },
  {
   "employee_id": "EMP-HW-0126",
@@ -3147,7 +3272,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 100,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0127",
@@ -3172,7 +3298,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 100,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "생산"
  },
  {
   "employee_id": "EMP-HW-0128",
@@ -3197,7 +3324,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 100,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "품질"
  },
  {
   "employee_id": "EMP-HW-0129",
@@ -3222,7 +3350,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 40,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "영업"
  },
  {
   "employee_id": "EMP-HW-0130",
@@ -3247,7 +3376,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 80,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "구매"
  },
  {
   "employee_id": "EMP-HW-0131",
@@ -3272,7 +3402,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 60,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "전략"
  },
  {
   "employee_id": "EMP-HW-0132",
@@ -3297,7 +3428,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 100,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "전략"
  },
  {
   "employee_id": "EMP-HW-0133",
@@ -3322,7 +3454,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 100,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "인사"
  },
  {
   "employee_id": "EMP-HW-0134",
@@ -3347,7 +3480,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 100,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0135",
@@ -3372,7 +3506,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 100,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0136",
@@ -3397,7 +3532,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 60,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0137",
@@ -3422,7 +3558,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 60,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0138",
@@ -3447,7 +3584,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 60,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0139",
@@ -3472,7 +3610,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 60,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "생산"
  },
  {
   "employee_id": "EMP-HW-0140",
@@ -3497,7 +3636,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 80,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "품질"
  },
  {
   "employee_id": "EMP-HW-0141",
@@ -3522,7 +3662,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 40,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "안전"
  },
  {
   "employee_id": "EMP-HW-0142",
@@ -3547,7 +3688,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 80,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0143",
@@ -3572,7 +3714,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 80,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0144",
@@ -3597,7 +3740,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 40,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "구매"
  },
  {
   "employee_id": "EMP-HW-0145",
@@ -3622,7 +3766,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 60,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0146",
@@ -3647,7 +3792,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 100,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0147",
@@ -3672,7 +3818,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 80,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "영업"
  },
  {
   "employee_id": "EMP-HW-0148",
@@ -3697,7 +3844,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 100,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0149",
@@ -3722,7 +3870,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 100,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "재무"
  },
  {
   "employee_id": "EMP-HW-0150",
@@ -3747,7 +3896,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 40,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "재무"
  },
  {
   "employee_id": "EMP-HW-0151",
@@ -3772,7 +3922,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 40,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "구매"
  },
  {
   "employee_id": "EMP-HW-0152",
@@ -3797,7 +3948,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 100,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "인사"
  },
  {
   "employee_id": "EMP-HW-0153",
@@ -3822,7 +3974,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 40,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "인사"
  },
  {
   "employee_id": "EMP-HW-0154",
@@ -3847,7 +4000,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 40,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0155",
@@ -3872,7 +4026,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 80,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0156",
@@ -3897,7 +4052,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 100,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0157",
@@ -3922,7 +4078,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 40,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0158",
@@ -3947,7 +4104,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 100,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0159",
@@ -3972,7 +4130,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 40,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "생산"
  },
  {
   "employee_id": "EMP-HW-0160",
@@ -3997,7 +4156,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 80,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "구매"
  },
  {
   "employee_id": "EMP-HW-0161",
@@ -4022,7 +4182,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 100,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "생산"
  },
  {
   "employee_id": "EMP-HW-0162",
@@ -4047,7 +4208,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 60,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "생산"
  },
  {
   "employee_id": "EMP-HW-0163",
@@ -4072,7 +4234,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 80,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "품질"
  },
  {
   "employee_id": "EMP-HW-0164",
@@ -4097,7 +4260,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 40,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0165",
@@ -4122,7 +4286,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 100,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "전략"
  },
  {
   "employee_id": "EMP-HW-0166",
@@ -4147,7 +4312,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 40,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "구매"
  },
  {
   "employee_id": "EMP-HW-0167",
@@ -4172,7 +4338,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 60,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "품질"
  },
  {
   "employee_id": "EMP-HW-0168",
@@ -4197,7 +4364,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 80,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "재무"
  },
  {
   "employee_id": "EMP-HW-0169",
@@ -4222,7 +4390,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 100,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0170",
@@ -4247,7 +4416,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 40,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "생산"
  },
  {
   "employee_id": "EMP-HW-0171",
@@ -4272,7 +4442,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 60,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "생산"
  },
  {
   "employee_id": "EMP-HW-0172",
@@ -4297,7 +4468,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 80,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "생산"
  },
  {
   "employee_id": "EMP-HW-0173",
@@ -4322,7 +4494,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 40,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "생산"
  },
  {
   "employee_id": "EMP-HW-0174",
@@ -4347,7 +4520,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 80,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "품질"
  },
  {
   "employee_id": "EMP-HW-0175",
@@ -4372,7 +4546,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 80,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0176",
@@ -4397,7 +4572,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 60,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "영업"
  },
  {
   "employee_id": "EMP-HW-0177",
@@ -4422,7 +4598,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 40,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "전략"
  },
  {
   "employee_id": "EMP-HW-0178",
@@ -4447,7 +4624,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 100,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "인사"
  },
  {
   "employee_id": "EMP-HW-0179",
@@ -4472,7 +4650,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 40,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "재무"
  },
  {
   "employee_id": "EMP-HW-0180",
@@ -4497,7 +4676,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 100,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0181",
@@ -4522,7 +4702,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 100,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0182",
@@ -4547,7 +4728,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 100,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0183",
@@ -4572,7 +4754,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 40,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "품질"
  },
  {
   "employee_id": "EMP-HW-0184",
@@ -4597,7 +4780,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 40,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0185",
@@ -4622,7 +4806,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 100,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "전략"
  },
  {
   "employee_id": "EMP-HW-0186",
@@ -4647,7 +4832,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 80,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "안전"
  },
  {
   "employee_id": "EMP-HW-0187",
@@ -4672,7 +4858,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 100,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0188",
@@ -4697,7 +4884,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 40,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0189",
@@ -4722,7 +4910,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 40,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "전략"
  },
  {
   "employee_id": "EMP-HW-0190",
@@ -4747,7 +4936,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 40,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "재무"
  },
  {
   "employee_id": "EMP-HW-0191",
@@ -4772,7 +4962,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 100,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0192",
@@ -4797,7 +4988,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 100,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "전략"
  },
  {
   "employee_id": "EMP-HW-0193",
@@ -4822,7 +5014,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 60,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0194",
@@ -4847,7 +5040,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 80,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "재무"
  },
  {
   "employee_id": "EMP-HW-0195",
@@ -4872,7 +5066,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 60,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "영업"
  },
  {
   "employee_id": "EMP-HW-0196",
@@ -4897,7 +5092,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 100,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "인사"
  },
  {
   "employee_id": "EMP-HW-0197",
@@ -4922,7 +5118,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 80,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0198",
@@ -4947,7 +5144,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 100,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0199",
@@ -4972,7 +5170,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 40,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0200",
@@ -4997,7 +5196,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 40,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0201",
@@ -5022,7 +5222,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 40,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0202",
@@ -5047,7 +5248,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 100,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0203",
@@ -5072,7 +5274,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 80,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0204",
@@ -5097,7 +5300,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 100,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0205",
@@ -5122,7 +5326,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 60,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0206",
@@ -5147,7 +5352,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 60,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "생산"
  },
  {
   "employee_id": "EMP-HW-0207",
@@ -5172,7 +5378,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 40,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "생산"
  },
  {
   "employee_id": "EMP-HW-0208",
@@ -5197,7 +5404,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 40,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "품질"
  },
  {
   "employee_id": "EMP-HW-0209",
@@ -5222,7 +5430,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 60,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "영업"
  },
  {
   "employee_id": "EMP-HW-0210",
@@ -5247,7 +5456,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 100,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "전략"
  },
  {
   "employee_id": "EMP-HW-0211",
@@ -5272,7 +5482,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 80,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "구매"
  },
  {
   "employee_id": "EMP-HW-0212",
@@ -5297,7 +5508,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 80,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "품질"
  },
  {
   "employee_id": "EMP-HW-0213",
@@ -5322,7 +5534,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 40,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "재무"
  },
  {
   "employee_id": "EMP-HW-0214",
@@ -5347,7 +5560,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 60,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0215",
@@ -5372,7 +5586,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 60,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "생산"
  },
  {
   "employee_id": "EMP-HW-0216",
@@ -5397,7 +5612,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 80,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "생산"
  },
  {
   "employee_id": "EMP-HW-0217",
@@ -5422,7 +5638,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 100,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "재무"
  },
  {
   "employee_id": "EMP-HW-0218",
@@ -5447,7 +5664,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 100,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "품질"
  },
  {
   "employee_id": "EMP-HW-0219",
@@ -5472,7 +5690,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 80,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0220",
@@ -5497,7 +5716,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 80,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "인사"
  },
  {
   "employee_id": "EMP-HW-0221",
@@ -5522,7 +5742,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 80,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0222",
@@ -5547,7 +5768,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 100,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "전략"
  },
  {
   "employee_id": "EMP-HW-0223",
@@ -5572,7 +5794,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 40,
   "pool_location": "창원 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "인사"
  },
  {
   "employee_id": "EMP-HW-0224",
@@ -5597,7 +5820,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 100,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0225",
@@ -5622,7 +5846,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 60,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0226",
@@ -5647,7 +5872,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 40,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0227",
@@ -5672,7 +5898,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 100,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "생산"
  },
  {
   "employee_id": "EMP-HW-0228",
@@ -5697,7 +5924,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 60,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0229",
@@ -5722,7 +5950,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 40,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "생산"
  },
  {
   "employee_id": "EMP-HW-0230",
@@ -5747,7 +5976,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 60,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "안전"
  },
  {
   "employee_id": "EMP-HW-0231",
@@ -5772,7 +6002,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 100,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "안전"
  },
  {
   "employee_id": "EMP-HW-0232",
@@ -5797,7 +6028,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 100,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "생산"
  },
  {
   "employee_id": "EMP-HW-0233",
@@ -5822,7 +6054,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 40,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0234",
@@ -5847,7 +6080,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 60,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "생산"
  },
  {
   "employee_id": "EMP-HW-0235",
@@ -5872,7 +6106,8 @@
   "pool_available_from": "2026-12-23",
   "pool_participation_pct": 100,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "재무"
  },
  {
   "employee_id": "EMP-HW-0236",
@@ -5897,7 +6132,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 60,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0237",
@@ -5922,7 +6158,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 60,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "전략"
  },
  {
   "employee_id": "EMP-HW-0238",
@@ -5947,7 +6184,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 100,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0239",
@@ -5972,7 +6210,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 60,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "전략"
  },
  {
   "employee_id": "EMP-HW-0240",
@@ -5997,7 +6236,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 100,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "재무"
  },
  {
   "employee_id": "EMP-HW-0241",
@@ -6022,7 +6262,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 60,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0242",
@@ -6047,7 +6288,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 60,
   "pool_location": "거제 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "재무"
  },
  {
   "employee_id": "EMP-HW-0243",
@@ -6072,7 +6314,8 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 40,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0244",
@@ -6097,7 +6340,8 @@
   "pool_available_from": "2026-11-23",
   "pool_participation_pct": 80,
   "pool_location": "구미 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "마케팅"
  },
  {
   "employee_id": "EMP-HW-0245",
@@ -6122,7 +6366,8 @@
   "pool_available_from": "2027-01-23",
   "pool_participation_pct": 60,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "설계"
  },
  {
   "employee_id": "EMP-HW-0246",
@@ -6147,7 +6392,8 @@
   "pool_available_from": "2027-03-23",
   "pool_participation_pct": 60,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  },
  {
   "employee_id": "EMP-HW-0247",
@@ -6172,6 +6418,7 @@
   "pool_available_from": "2027-02-23",
   "pool_participation_pct": 80,
   "pool_location": "판교 근무 가능",
-  "org_status": "조직장 협의 전"
+  "org_status": "조직장 협의 전",
+  "job_family": "SW"
  }
 ]

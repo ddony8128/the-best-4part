@@ -40,8 +40,8 @@ export async function GET(request) {
       return json(Object.values(pool).filter(e => e.talent_pool).map(e => applicationRecord(null, e)));
     }
     if (r === 'analysis') {
-      const [row, ref] = await Promise.all([latest('job_analyses', `jd_id=eq.${jd}`), select('job_references', `jd_id=eq.${jd}`)]);
-      return json({ analysis: row, reference: ref[0] || null });
+      const [row, ref, job] = await Promise.all([latest('job_analyses', `jd_id=eq.${jd}`), select('job_references', `jd_id=eq.${jd}`), select('jobs', `id=eq.${jd}&select=hard`)]);
+      return json({ analysis: row, reference: ref[0] || null, hard: job[0]?.hard || [] });
     }
     if (r === 'scan') {
       const run = await latest('scan_runs', `jd_id=eq.${jd}`);

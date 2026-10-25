@@ -90,7 +90,7 @@ function buildOffer(v){const a=person(v.offerPerson),j=getJob(v.offerJob),me=TD.
   experience:{skills:TD.split(a.fields['직접 수행']),evidence:evTitles(a),deliverables:TD.split(a.fields['산출물'])},
   job:{title:j.title,org:j.org,tasks:TD.split(j.tasks),required:TD.split(j.required),conditions:j.conditions},
   availability:{conditions:a.fields['참여'],org_status:a.fields['조직 승인']},
-  reply_request:'관심 여부와 실제 참여 가능한 시작 시점, 투입 범위를 회신해 주시면 감사하겠습니다.',
+  reply_request:'관심 여부와 이동 가능한 시점을 회신해 주시면 감사하겠습니다.',
   notice:`본 제안은 배치 확정이나 이동 지시가 아니며, ${a.name} 님의 참여 의사와 소속 조직 여건을 확인한 뒤 협의하기 위한 절차입니다.`};
  return{subject:'[참여 제안] '+j.title+' — '+a.name+'님',model,input:{job:jobInput(j),candidate:candInput(a,j),hr_note:v.offerReason}}}
 function buildReport(v){const a=person(v.reportAI),b=person(v.reportHR),j=getJob(v.reportJob);

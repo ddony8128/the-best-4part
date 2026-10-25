@@ -18,11 +18,11 @@ console.log(`대상: ${meta.name} (${REF}, ${meta.region})`);
 const DDL = `
 drop table if exists self_diagnoses, job_analyses, job_references, scan_results, scan_runs, audit_log, reports, offers, applications, career_plans, performance, training, certifications,
   skill_development, skills, evidence, projects, assignments, employees, jobs cascade;
-create table jobs (id text primary key, company text, title text, org text, status text, note text, tasks text[], required text[], preferred text[], conditions text, deadline date);
+create table jobs (id text primary key, company text, title text, org text, status text, note text, tasks text[], required text[], preferred text[], conditions text, deadline date, hard jsonb);
 create table employees (employee_id text primary key, name text not null, company text, division text, team text, role text, grade text, hire_date date,
   tenure_months int, current_role_start date, current_role_months int, relevant_experience_months int, location text, desired_jd text references jobs(id),
   talent_pool boolean default true, career_summary text, interest text, strengths_and_gaps text, as_of date,
-  pool_available_from date, pool_participation_pct int, pool_location text, org_status text);
+  pool_available_from date, pool_participation_pct int, pool_location text, org_status text, job_family text);
 create table assignments (assignment_id text primary key, employee_id text references employees on delete cascade, effective_date date, end_date date, company text, team text, role text, change_type text);
 create table projects (project_id text primary key, employee_id text references employees on delete cascade, company text, title text, start_date date, end_date date, role text, direct_contributions text, deliverable text, not_performed text, outcome text);
 create table evidence (evidence_id text primary key, employee_id text references employees on delete cascade, project_id text references projects on delete cascade, evidence_type text, title text, role text, contributions text, deliverables text, results text);

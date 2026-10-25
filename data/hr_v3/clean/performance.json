@@ -16421,8 +16421,8 @@
   "year": 2024,
   "kpi": "CRM 데이터 품질",
   "kpi_target": 100,
-  "kpi_achievement_pct": 82,
-  "grade": "C"
+  "kpi_achievement_pct": 96,
+  "grade": "B"
  },
  {
   "evaluation_id": "PERF-EMP-HW-0019-2025-10",
@@ -16439,7 +16439,7 @@
   "year": 2026,
   "kpi": "제품 가치제안 개선",
   "kpi_target": 100,
-  "kpi_achievement_pct": 89,
-  "grade": "C"
+  "kpi_achievement_pct": 98,
+  "grade": "B"
  }
 ]
