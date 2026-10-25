@@ -16,7 +16,7 @@ if (meta.name !== 'talent-link') throw new Error('프로젝트 이름 불일치:
 console.log(`대상: ${meta.name} (${REF}, ${meta.region})`);
 
 const DDL = `
-drop table if exists job_references, scan_results, scan_runs, audit_log, reports, offers, applications, career_plans, performance, training, certifications,
+drop table if exists self_diagnoses, job_analyses, job_references, scan_results, scan_runs, audit_log, reports, offers, applications, career_plans, performance, training, certifications,
   skill_development, skills, evidence, projects, assignments, employees, jobs cascade;
 create table jobs (id text primary key, company text, title text, org text, status text, note text, tasks text[], required text[], preferred text[], conditions text, deadline date);
 create table employees (employee_id text primary key, name text not null, company text, division text, team text, role text, grade text, hire_date date,
@@ -35,14 +35,19 @@ create table career_plans (cdp_id text primary key, employee_id text references 
 -- 공고별 참고 자료: 전임자 인수인계 · 고성과자 패턴 · 직무 연구 요약 (AI가 요건을 정리할 때 JD와 함께 참고)
 create table job_references (jd_id text primary key references jobs(id), business text, handover jsonb, high_performers jsonb, high_performers_sample_n int, research jsonb, research_basis jsonb, updated_at timestamptz default now());
 -- 업무 기록 (화면에서 쌓임)
-create table applications (id bigint generated always as identity primary key, employee_id text references employees on delete cascade, jd_id text references jobs(id), motive text, available_from date, participation_pct int, location text, org_status text, status text default '미검토', created_at timestamptz default now(), cancelled_at timestamptz);
-create table offers (id bigint generated always as identity primary key, employee_id text references employees on delete cascade, jd_id text references jobs(id), sender text, subject text, model jsonb, html text, created_at timestamptz default now());
+create table applications (id bigint generated always as identity primary key, employee_id text references employees on delete cascade, jd_id text references jobs(id), motive text, available_from date, participation_pct int, location text, org_status text, status text default '미검토', review jsonb, created_at timestamptz default now(), cancelled_at timestamptz);
+create table offers (id bigint generated always as identity primary key, employee_id text references employees on delete cascade, jd_id text references jobs(id), sender text, subject text, model jsonb, html text, attachment text, created_at timestamptz default now());
 create table reports (id bigint generated always as identity primary key, employee_id text references employees on delete cascade, jd_id text references jobs(id), sender text, recipient text, subject text, model jsonb, html text, created_at timestamptz default now());
 create table audit_log (id bigint generated always as identity primary key, actor text, action text, detail jsonb, created_at timestamptz default now());
-create table scan_runs (id bigint generated always as identity primary key, jd_id text references jobs(id), requested_by text, criteria jsonb, status text default '대기', total int, processed int default 0, batch_id text, created_at timestamptz default now(), finished_at timestamptz);
-create table scan_results (id bigint generated always as identity primary key, run_id bigint references scan_runs on delete cascade, employee_id text references employees on delete cascade, axes jsonb, requirements jsonb, strengths text[], concerns text[], questions text[], model text, created_at timestamptz default now());
+-- 공고 분석(요건·축 중요도) 기록: 스캔은 어떤 분석본으로 돌렸는지 함께 남긴다
+create table job_analyses (id bigint generated always as identity primary key, jd_id text references jobs(id), analysis jsonb, model text, requested_by text, created_at timestamptz default now());
+-- 인재 스캔: 규칙 필터 → AI 판정(Message Batches, 비동기) → 결과
+create table scan_runs (id bigint generated always as identity primary key, jd_id text references jobs(id), analysis_id bigint references job_analyses, requested_by text, scope text[], status text default '대기', total int, pass1 int, pass2 int, processed int default 0, batch_id text, error text, created_at timestamptz default now(), finished_at timestamptz);
+create table scan_results (id bigint generated always as identity primary key, run_id bigint references scan_runs on delete cascade, employee_id text references employees on delete cascade, applied boolean, judged jsonb, candidate jsonb, model text, created_at timestamptz default now());
+-- 임직원 셀프 진단 결과
+create table self_diagnoses (id bigint generated always as identity primary key, employee_id text references employees on delete cascade, jd_id text references jobs(id), analysis_id bigint references job_analyses, judged jsonb, candidate jsonb, model text, created_at timestamptz default now());
 create index on assignments(employee_id); create index on projects(employee_id); create index on evidence(employee_id); create index on skills(employee_id);
-create index on performance(employee_id); create index on training(employee_id); create index on certifications(employee_id); create index on scan_results(run_id);
+create index on performance(employee_id); create index on training(employee_id); create index on certifications(employee_id); create index on scan_results(run_id); create index on scan_runs(jd_id); create index on job_analyses(jd_id);
 do $$ declare t text; begin for t in select tablename from pg_tables where schemaname = 'public' loop execute format('alter table %I enable row level security', t); end loop; end $$;
 `;
 

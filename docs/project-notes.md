@@ -192,3 +192,12 @@
 - 가중치 → 4단계(≥0.30 매우 중요, ≥0.20 중요, ≥0.15 보통, 그 외 덜 중요), 공고별 job_references.research_basis에 적재(45건)
 - 출처는 실제 메타분석만(Barrick & Mount 1991, Vinchur 1998, Judge 2002, Christian 2009 등). 가중치는 "연구 경향을 참고한 초기값"으로 표현
 - 사용 계획: 공고 분석 시 Claude 입력에 넣어 요건 후보 제안, 중요도 기본값은 규칙으로 바로 적용, 스캔 시 행동 근거 판정
+
+## 2026-10-25 실기능 연결 (DB · AI)
+- 서버 API: /api/data(조회), /api/records(지원·취소·정정·검토·제안·보고·운영 기록), /api/analyze-jd(공고 분석, 실시간 ~13초), /api/scan(비동기 스캔: 규칙 필터 즉시 → Claude Message Batches → 결과 저장), /api/diagnose(셀프 진단, 실시간 ~11초)
+- 공용 로직 api/_lib/talent.js: 규칙 필터 2단계(246→62→30, 지원자는 항상 포함), 후보 판정 프롬프트, 축 점수 = 요건 판정 65% + 인사 기록 지표 35%(규칙 계산)
+- 미리 계산: data/scan/precompute.mjs — 45개 공고 분석 + 1,364건 판정 배치(실제 5분). 화면은 같은 분석본의 완료 결과를 재생, 분석을 바꾸면 새 배치 요청 + 진행률 UI
+- 화면: hr_matching(참고 자료 카드, AI로 다시 분석, 비동기 진행 상자, 문서 발송 DB 저장), 인사 콘솔(지원서·검토·운영 기록 DB, 제안 대상 인재풀 246명), 임직원(본인 프로필·진단·지원·취소·받은 제안 DB)
+- 시연 임직원 계정: 권재빈(EMP-HW-0032, 한화오션 마케팅전략팀, 지원 이력 없음) — JD-045 숨은 후보. DEMO_EMPLOYEE_ID로 변경 가능
+- DB가 안 되면 화면은 페이지에 든 기본 데이터로 동작(정적 e2e 유지)
+- 로컬 확인: node data/scan/dev-server.mjs → video/scripts/live-e2e.mjs. 시연 전 정리: node data/scan/reset-records.mjs

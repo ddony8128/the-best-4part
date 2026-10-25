@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<script>/* 데이터 버전: 바뀌면 이 브라우저에 저장된 예전 기록을 한 번 비운다 */try{if(localStorage.getItem('talent-link-data-version')!=='2026-10-25'){['talent-hr-admin-v1','talent-link-applications','talent-link-offers','talent-link-audit-pending'].forEach(k=>localStorage.removeItem(k));localStorage.setItem('talent-link-data-version','2026-10-25')}}catch{}</script><script src="./talent-docs.js"></script><title>TALENT LINK | AI 인재 매칭</title>
+<script>/* 데이터 버전: 바뀌면 이 브라우저에 저장된 예전 기록을 한 번 비운다 */try{if(localStorage.getItem('talent-link-data-version')!=='2026-10-25'){['talent-hr-admin-v1','talent-link-applications','talent-link-offers','talent-link-audit-pending'].forEach(k=>localStorage.removeItem(k));localStorage.setItem('talent-link-data-version','2026-10-25')}}catch{}</script><script src="./talent-docs.js"></script><script src="./talent-api.js"></script><title>TALENT LINK | AI 인재 매칭</title>
 <style>
 :root{--ink:#19243b;--muted:#677386;--line:#e8eaf0;--bg:#f7f8fb;--accent:#f4511e;--soft:#fff1e7;--ok:#2f6b3a;--okbg:#e8f3ea}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
@@ -65,6 +65,8 @@ table{width:100%;border-collapse:collapse;font-size:12px;text-align:left}th{colo
 .funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:24px}
 .fn{border:1px solid #34405a;border-radius:9px;padding:18px;background:#26324d}.fn small{color:#999;font-size:11px}.fn strong{display:block;font-size:34px;letter-spacing:-1.5px;color:#fff;margin-top:4px;font-variant-numeric:tabular-nums}.fn.hot{border-color:var(--accent)}.fn.hot strong{color:var(--accent)}
 .grid-dots{display:grid;grid-template-columns:repeat(52,1fr);gap:4px;margin:6px 0 20px}.grid-dots i{display:block;aspect-ratio:1;border-radius:50%;background:#34405a;transition:background .25s,transform .25s}.grid-dots i.lit{background:#55617a}.grid-dots i.pass{background:#ffb28b}.grid-dots i.hot{background:var(--accent);transform:scale(1.35)}
+.refs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.refs .rf{border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:12px;line-height:1.7}.refs .rf b{display:block;font-size:12px;margin-bottom:4px}.refs .rf small{color:var(--muted)}
+.async{margin-top:20px;border:1px solid #ffffff22;border-radius:10px;padding:18px 20px;background:#ffffff0d}.async .bar{height:8px;border-radius:4px;background:#ffffff1f;overflow:hidden;margin:12px 0 8px}.async .bar i{display:block;height:100%;width:0;background:var(--accent);transition:width .6s}.async .row{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12px;color:#c9cdd6}.async button{margin-top:12px}
 .scanlog{font:12px/1.8 Consolas,monospace;color:#9a9a9a;height:110px;overflow:hidden}.scanlog div{animation:rowin .3s ease both}.scanlog b{color:var(--accent);font-weight:400}
 .cos{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:18px}.co{font-size:11px;border:1px solid #3a3a3a;border-radius:999px;padding:4px 10px;color:#777;transition:all .3s}.co.on{border-color:var(--accent);color:#fff;background:#26324d}
 /* candidates */
@@ -88,7 +90,7 @@ table{width:100%;border-collapse:collapse;font-size:12px;text-align:left}th{colo
 .tabs{display:flex;gap:6px;margin-bottom:16px}.tabs button.active{background:#26324d;color:#fff;border-color:#26324d}
 .toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%);background:#26324d;color:#fff;padding:12px 22px;border-radius:7px;z-index:99;font-size:12px;max-width:90vw}.hidden{display:none!important}
 .footer{font-size:10px;color:#999;display:flex;justify-content:space-between;gap:16px;margin-top:32px;border-top:1px solid var(--line);padding-top:17px}
-@media(max-width:1100px){aside{width:185px;padding:26px 14px}main{margin-left:185px}.content{padding:28px 25px}header{padding:0 25px}.two,.form-grid{grid-template-columns:1fr}.weights{grid-template-columns:repeat(3,1fr)}.funnel{grid-template-columns:1fr 1fr}.detail{position:static}}
+@media(max-width:1100px){.refs{grid-template-columns:1fr}aside{width:185px;padding:26px 14px}main{margin-left:185px}.content{padding:28px 25px}header{padding:0 25px}.two,.form-grid{grid-template-columns:1fr}.weights{grid-template-columns:repeat(3,1fr)}.funnel{grid-template-columns:1fr 1fr}.detail{position:static}}
 @media(max-width:700px){aside{position:sticky;top:0;width:100%;height:auto;padding:12px 16px;display:block;border-right:0;border-bottom:1px solid #ddd}.brand-sub,.nav-label,.aside-bottom{display:none}nav{display:flex;overflow:auto;margin-top:9px;gap:5px}nav a{font-size:11px;padding:7px 10px;margin:0;white-space:nowrap}nav a span{display:none}main{margin-left:0}header{height:54px;padding:0 18px}.content{padding:22px 16px}.stepper{grid-template-columns:repeat(5,minmax(90px,1fr));overflow:auto}.weights{grid-template-columns:1fr 1fr}.cand{grid-template-columns:26px 1fr 52px}.cand .mini{display:none}.grid-dots{grid-template-columns:repeat(26,1fr)}.doc{padding:22px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
@@ -152,8 +154,9 @@ table{width:100%;border-collapse:collapse;font-size:12px;text-align:left}th{colo
     <div class="card">
       <div class="card-head"><h2>AI가 정리한 요구사항</h2><span class="ai-line" id="aiState"><span class="spin"></span>JD와 참고 자료를 분석하는 중</span></div>
       <div style="overflow:auto"><table><thead><tr><th>요구사항</th><th>평가 축</th><th>유형</th><th>필수 / 우대</th><th>근거 출처</th></tr></thead><tbody id="reqRows"></tbody></table></div>
-      <p class="tiny" style="margin-top:12px">필수 / 우대를 눌러 바꿀 수 있습니다. 정량 요건은 규칙으로, 정성 요건은 LLM이 프로필 문장과 대조합니다.</p>
+      <div class="form-foot" style="margin-top:12px"><p class="tiny" style="margin:0">필수 / 우대를 눌러 바꿀 수 있습니다. 정량 요건은 규칙으로, 정성 요건은 AI가 인사 기록과 대조합니다.</p><button id="btnReanalyze" class="hidden" onclick="reanalyze()">AI로 다시 분석</button></div>
     </div>
+    <div class="card hidden" id="refCard"><div class="card-head"><h2>AI가 함께 읽은 공고별 참고 자료</h2><span class="tiny">JD만으로는 드러나지 않는 요건을 보완</span></div><div class="refs" id="refBody"></div></div>
     <div class="card" id="weightCard" style="opacity:.35;transition:opacity .4s">
       <div class="card-head"><h2>평가 축 중요도 제안</h2><span class="tiny">매우 중요 · 중요 · 보통 · 덜 중요 — 비율은 자동 계산</span></div>
       <div class="weights" id="weightsGate"></div>
@@ -170,12 +173,13 @@ table{width:100%;border-collapse:collapse;font-size:12px;text-align:left}th{colo
       <div class="cos" id="scanCos"></div>
       <div class="funnel">
         <div class="fn"><small>스캔 범위</small><strong id="f1">0</strong><small>명 · 그룹 인재풀 등록</small></div>
-        <div class="fn"><small>필수 요건 1차 통과 (규칙)</small><strong id="f2">0</strong><small>명</small></div>
-        <div class="fn"><small>정성 평가 (LLM 대조)</small><strong id="f3">0</strong><small>명</small></div>
+        <div class="fn"><small>1차 규칙 필터 (요건 키워드)</small><strong id="f2">0</strong><small>명</small></div>
+        <div class="fn"><small>AI 정밀 판정 (Claude)</small><strong id="f3">0</strong><small>명</small></div>
         <div class="fn hot"><small>추천 후보</small><strong id="f4">0</strong><small>명 · 상위 N</small></div>
       </div>
       <div class="grid-dots" id="dots"></div>
       <div class="scanlog" id="scanlog"></div>
+      <div class="async hidden" id="asyncBox"></div>
     </div>
   </section>
 
@@ -328,7 +332,7 @@ JOB_SOURCE.forEach(j=>{const d=JDS[j.id]||(JDS[j.id]={w:[25,30,20,10,15],evals:{
   pitch:j.tasks[0]+' 등을 맡는 자리입니다.',needs:[...j.required,...j.preferred.slice(1)],ruleLog:j.required.join(' · '),synLog:'표현이 달라도 같은 경험을 역량 동의어 사전으로 연결'});
  d.title=j.title;d.org=j.org;d.company=j.company;d.text=jdText(j);d.cond=j.conditions});
 Object.keys(JDS).forEach(k=>{if(!JOB_SOURCE.some(j=>j.id===k))delete JDS[k]});
-let curJD='JD-014',REQS=JDS[curJD].reqs.map(r=>({...r})),C=[];
+let curJD='JD-045',REQS=JDS[curJD].reqs.map(r=>({...r})),C=[];
 const DEFAULT_W=JDS['JD-014'].w;
 // 상세 평가가 없는 후보는 공고·사번으로 고정된 값을 만든다 (새로고침해도 같음)
 function seeded(str){let h=2166136261;for(const ch of str)h=Math.imul(h^ch.charCodeAt(0),16777619)>>>0;return()=>{h=(Math.imul(h,1103515245)+12345)>>>0;return h/4294967296}}
@@ -349,12 +353,29 @@ function initStep1(){$('jdSelect').innerHTML=JOB_SOURCE.map(j=>`<option value="$
 function renderScope(){$('scope').innerHTML=COMPANIES.map(([c,n])=>`<span class="chip ${scope.has(c)?'on':''}" data-c="${c}">${c} · ${n}</span>`).join('');$('scope').querySelectorAll('.chip').forEach(ch=>ch.onclick=()=>{const c=ch.dataset.c;scope.has(c)?scope.delete(c):scope.add(c);renderScope()});$('scopeCount').textContent=`${scope.size}개 계열사 · 인재풀 ${poolSize().toLocaleString()}명`}
 const poolSize=()=>COMPANIES.filter(c=>scope.has(c[0])).reduce((a,c)=>a+c[1],0);
 
+// 서버(DB) 연결: 되면 인재풀 인원·공고 분석·스캔 결과를 DB에서, 안 되면 페이지에 든 기본 데이터로 동작
+const API=window.TalentAPI;let LIVE=false,ANALYSIS=null,REF=null;
+async function boot(){const pool=await API.data('pool',{},8000);if(pool&&typeof pool==='object'&&!pool.error){LIVE=true;COMPANIES.forEach(c=>{if(pool[c[0]]!=null)c[1]=pool[c[0]]});renderScope()}}
+function applyAnalysis(row){ANALYSIS=row;const x=row.analysis,d=JDS[curJD];REQS=x.reqs.map(r=>({...r,src:r.src||[]}));WL=[...x.levels];syncW();d.pitch=x.pitch;d.needs=x.needs;d.ruleLog=x.rule_summary;d.synLog=x.synonym_example}
+function renderRef(ref){if(!ref){$('refCard').classList.add('hidden');return}const h=ref.handover||{},rb=ref.research_basis;
+ $('refBody').innerHTML=`<div class="rf"><b>전임자 인수인계</b>${(h.tasks||[]).map(t=>`· ${esc(t.task)} <small>(${esc(t.status)})</small>`).join('<br>')}<br><small>비정형 메모 ${(h.memos||[]).length}건 · 후임자 역량 키워드 ${(h.successor_keywords||[]).length}개</small></div>
+ <div class="rf"><b>같은 직무 고성과자 패턴 · ${ref.high_performers_sample_n}명</b>${(ref.high_performers||[]).slice(0,3).map(x=>`· ${esc(x.pattern)} <small>${x.share_pct}%</small>`).join('<br>')}</div>
+ <div class="rf"><b>직무 연구 · ${esc(rb?.family||'')} 직무군</b>${esc(rb?.focus||'')}<br>${(rb?.traits||[]).filter(t=>t.level==='매우 중요'||t.level==='중요').map(t=>`· ${esc(t.behavior)} <small>${esc(t.level)}</small>`).join('<br>')}<br><small>${esc((rb?.sources||[]).join(' · '))}</small></div>`;$('refCard').classList.remove('hidden')}
+async function paintReqs(state){$('reqRows').innerHTML='';for(const r of REQS){const tr=document.createElement('tr');tr.className='row-in';tr.innerHTML=reqRow(r);$('reqRows').appendChild(tr);bindNeed(tr,r);await sleep(300)}
+ await sleep(200);renderWeights('weightsGate',false);$('weightCard').style.opacity=1;$('aiState').innerHTML=`✓ 요구사항 ${REQS.length}개 · 필수 ${REQS.filter(r=>r.need==='필수').length} · 우대 ${REQS.filter(r=>r.need!=='필수').length} 제안${state?' · '+state:''}`;reqsReady=true;$('btnGate').disabled=false}
+const anLabel=()=>ANALYSIS?`${API.when(ANALYSIS.created_at)} AI 분석`:'';
+
 // STEP 2
 async function analyze(){if(!scope.size){notify('스캔할 계열사를 하나 이상 고르세요.');return}
  // 고른 공고의 요건·기본 가중치·후보로 바꾼다
- curJD=$('jdSelect').value;REQS=JDS[curJD].reqs.map(r=>({...r}));WL=toLevels(JDS[curJD].w);syncW();C=buildCands(curJD);selected=null;for(const k in docModels)delete docModels[k];show(2);$('reqRows').innerHTML='';reqsReady=false;$('btnGate').disabled=true;$('weightCard').style.opacity=.35;$('aiState').innerHTML='<span class="spin"></span>JD와 참고 자료를 분석하는 중';renderWeights('weightsGate',false);
- await sleep(900);for(const r of REQS){const tr=document.createElement('tr');tr.className='row-in';tr.innerHTML=reqRow(r);$('reqRows').appendChild(tr);bindNeed(tr,r);await sleep(380)}
- await sleep(300);$('weightCard').style.opacity=1;$('aiState').innerHTML=`✓ 요구사항 ${REQS.length}개 · 필수 ${REQS.filter(r=>r.need==='필수').length} · 우대 ${REQS.filter(r=>r.need!=='필수').length} 제안 완료`;reqsReady=true;$('btnGate').disabled=false}
+ curJD=$('jdSelect').value;ANALYSIS=null;REF=null;REQS=JDS[curJD].reqs.map(r=>({...r}));WL=toLevels(JDS[curJD].w);syncW();C=buildCands(curJD);selected=null;for(const k in docModels)delete docModels[k];show(2);$('reqRows').innerHTML='';reqsReady=false;$('btnGate').disabled=true;$('weightCard').style.opacity=.35;$('aiState').innerHTML='<span class="spin"></span>JD와 참고 자료를 분석하는 중';renderWeights('weightsGate',false);$('refCard').classList.add('hidden');$('btnReanalyze').classList.toggle('hidden',!LIVE);
+ const got=LIVE?await API.data('analysis',{jd:curJD},10000):null;
+ if(got&&got.analysis)applyAnalysis(got.analysis);REF=got&&got.reference;renderRef(REF);
+ await sleep(600);await paintReqs(anLabel())}
+async function reanalyze(){const b=$('btnReanalyze');b.disabled=true;reqsReady=false;$('btnGate').disabled=true;$('weightCard').style.opacity=.35;$('aiState').innerHTML='<span class="spin"></span>Claude가 JD와 참고 자료를 다시 읽는 중 · 약 15초';
+ const row=await API.post('analyze-jd',{jd:curJD},70000);b.disabled=false;
+ if(!row||!row.analysis){notify('AI 분석에 실패했습니다. 이전 분석을 그대로 씁니다.');await paintReqs(anLabel());return}
+ applyAnalysis(row);await paintReqs('방금 AI 분석 · 새 요건으로 스캔하면 판정을 다시 받습니다')}
 function reqRow(r){return`<td><strong>${esc(r.r)}</strong></td><td>${esc(r.axis)}</td><td>${esc(r.type)}</td><td><button class="need ${r.need==='필수'?'must':''}">${esc(r.need)}</button></td><td>${r.src.map(s=>`<span class="srctag">${esc(s)}</span>`).join('')}</td>`}
 function bindNeed(tr,r){tr.querySelector('.need').onclick=()=>{r.need=r.need==='필수'?'우대':'필수';tr.innerHTML=reqRow(r);bindNeed(tr,r)}}
 // 중요도: 축마다 4단계 중 하나를 고르면 비율은 자동 계산된다 (매우 중요 4 : 중요 3 : 보통 2 : 덜 중요 1)
@@ -370,8 +391,30 @@ function renderWeights(target,live){$(target).innerHTML=AXES.map((a,i)=>`<div cl
 function weightState(){}
 function confirmGate(){scan()}
 
-// STEP 3
-async function scan(){show(3);const total=poolSize();const pass1=Math.round(total*.25),pass2=Math.round(total*.12),top=10;
+// STEP 3 — 규칙 필터는 즉시, 후보별 AI 판정은 Claude Message Batches로 비동기 처리(수십 분). 같은 분석본의 완료된 결과가 있으면 그것을 보여준다.
+async function scan(){if(!LIVE||!ANALYSIS)return scanDemo();show(3);$('asyncBox').classList.add('hidden');
+ const s=await API.data('scan',{jd:curJD},10000);
+ if(s&&s.done&&s.done.analysis_id===ANALYSIS.id&&s.candidates?.length){C=s.candidates;return scanDemo(s.done)}
+ if(s&&s.run&&s.run.status==='진행 중'&&s.run.analysis_id===ANALYSIS.id)return waitRun(s.run,s);
+ $('scanTitle').textContent='스캔을 요청하는 중입니다';
+ const r=await API.post('scan',{jd:curJD,analysis_id:ANALYSIS.id,scope:[...scope]},40000);
+ if(!r||!r.run){notify('스캔 요청에 실패했습니다.');if(s&&s.done&&s.candidates?.length){C=s.candidates;if(s.analysis)applyAnalysis(s.analysis);return scanDemo(s.done)}return scanDemo()}
+ waitRun(r.run,s)}
+let pollT=null;
+function waitRun(run,prev){clearTimeout(pollT);$('scanTitle').textContent='후보별 AI 판정을 배치로 처리하고 있습니다';$('scanlog').innerHTML='';$('dots').innerHTML='';
+ $('scanCos').innerHTML=COMPANIES.filter(c=>scope.has(c[0])).map(c=>`<span class="co on">${c[0]}</span>`).join('');
+ $('f1').textContent=run.total;$('f2').textContent=run.pass1;$('f3').textContent=run.pass2;$('f4').textContent='-';
+ const box=$('asyncBox');box.classList.remove('hidden');const t0=new Date(run.created_at);
+ const paint=r=>{const pct=Math.round(100*(r.processed||0)/Math.max(1,r.pass2)),min=Math.round((Date.now()-t0)/60000);
+  box.innerHTML=`<b>스캔 #${r.id} · ${esc(r.status)}</b><div class="bar"><i style="width:${pct}%"></i></div>
+  <div class="row"><span>AI 판정 ${r.processed||0} / ${r.pass2}명</span><span>경과 ${min}분 · 보통 수십 분 소요(대량 요청은 배치로 처리해 비용을 절반으로 줄임)</span></div>
+  <p class="tiny" style="color:#9aa1ad;margin-top:10px">규칙 필터(${r.total}→${r.pass1}→${r.pass2}명)는 바로 끝났고, 후보별 근거 판정을 Claude가 배치로 처리하는 중입니다. 이 화면을 닫아도 계속 진행되며, 완료되면 알림이 옵니다.</p>
+  ${prev&&prev.done&&prev.candidates?.length?`<button onclick="showPrev()">이전 스캔 결과 보기 (${API.when(prev.done.finished_at)} 완료)</button>`:''}`};
+ paint(run);
+ const tick=async()=>{const r=await API.get('scan',{run:run.id},60000);if(r&&r.run){paint(r.run);if(r.run.status==='완료'){const s=await API.data('scan',{jd:curJD},15000);if(s&&s.candidates?.length){C=s.candidates;notify(`스캔 #${run.id} 완료 · 후보 ${s.candidates.length}명 판정`);return scanDemo(s.done)}}}pollT=setTimeout(tick,15000)};
+ pollT=setTimeout(tick,8000);showPrev=()=>{clearTimeout(pollT);C=prev.candidates;if(prev.analysis)applyAnalysis(prev.analysis);scanDemo(prev.done)}}
+let showPrev=()=>{};
+async function scanDemo(run){show(3);$('asyncBox').classList.add('hidden');const total=run?run.total:poolSize();const pass1=run?run.pass1:Math.round(total*.25),pass2=run?run.pass2:Math.round(total*.12),top=10;
  $('scanCos').innerHTML=COMPANIES.filter(c=>scope.has(c[0])).map(c=>`<span class="co" data-c="${c[0]}">${c[0]}</span>`).join('');
  const N=52*8;$('dots').innerHTML='<i></i>'.repeat(N);const dots=[...$('dots').children];$('scanlog').innerHTML='';['f1','f2','f3','f4'].forEach(f=>$(f).textContent='0');
  const log=t=>{const d=document.createElement('div');d.innerHTML=t;$('scanlog').prepend(d)};
@@ -381,8 +424,8 @@ async function scan(){show(3);const total=poolSize();const pass1=Math.round(tota
  const lit=(cls,ratio)=>dots.forEach((d,i)=>{if(((i*2654435761)>>>0)%1000<ratio*1000)d.className=cls});
  const p=count('f1',total,2200);for(const co of cos){co.classList.add('on');log(`<b>${co.dataset.c}</b> 인재풀 ${COMPANIES.find(c=>c[0]===co.dataset.c)[1]}명 프로필 정리 · 직무·역량 용어 통일`);dots.forEach((d,i)=>{if(i%cos.length===cos.indexOf(co))d.className='lit'});await sleep(260)}
  await p;log('필수 요건 규칙 확인 · '+JDS[curJD].ruleLog);lit('pass',.25);await count('f2',pass1,1100);
- log('LLM 정성 대조 · 프로필 문장 ↔ 요구사항 6개 (표현이 달라도 같은 경험 연결)');log(JDS[curJD].synLog);lit('pass',.12);dots.forEach((d,i)=>{if(d.className==='pass'&&((i*2654435761)>>>0)%1000>=120)d.className='lit'});await count('f3',pass2,1300);
- log('가중치 적용 · 종합 점수 산출 · 근거·미확인 요건·추가 질문 작성');dots.forEach((d,i)=>{if(((i*40503)>>>0)%N<top*2&&d.className==='pass')d.className='hot'});let hot=dots.filter(d=>d.className==='hot').length;dots.forEach((d,i)=>{if(hot<top&&d.className==='pass'){d.className='hot';hot++}});await count('f4',top,700);
+ log(`AI 관련어 대조 · 요구사항 ${REQS.length}개의 관련 용어로 확장 (표현이 달라도 같은 경험 연결)`);log(JDS[curJD].synLog);lit('pass',.12);dots.forEach((d,i)=>{if(d.className==='pass'&&((i*2654435761)>>>0)%1000>=120)d.className='lit'});await count('f3',pass2,1300);
+ log(run?`Claude 정밀 판정 ${pass2}명 · 요건별 근거·우려·면담 질문 — 배치 처리 ${API.when(run.created_at)} 시작, ${API.minutes(run.created_at,run.finished_at)}분 소요`:'가중치 적용 · 종합 점수 산출 · 근거·미확인 요건·추가 질문 작성');log('중요도 적용 · 종합 점수 산출(판정 결과 + 인사 기록 지표, 규칙 계산)');dots.forEach((d,i)=>{if(((i*40503)>>>0)%N<top*2&&d.className==='pass')d.className='hot'});let hot=dots.filter(d=>d.className==='hot').length;dots.forEach((d,i)=>{if(hot<top&&d.className==='pass'){d.className='hot';hot++}});await count('f4',top,700);
  $('scanTitle').textContent='스캔 완료 · 공모에 지원하지 않은 숨은 후보를 함께 찾았습니다';await sleep(1300);
  show(4);renderWeights('weightsLive',true);prevRank={};renderList(false);select(ranked()[0].c.emp)}
 
@@ -455,13 +498,15 @@ function sendDoc(){const c=cand();const text=TD.toText($('docBody'));const html=
  const entry={time,action:docType==='report'?`AI 인재 매칭 · ${c.name}(${c.emp}) 추천서 상부 보고 — ${JDS[curJD].title}`:`AI 인재 매칭 · ${c.name}(${c.emp})에게 참여 제안 발송 — ${JDS[curJD].title}`};
  // 인사 콘솔 상태가 있으면 바로 기록하고, 없으면 콘솔이 다음에 열릴 때 합친다
  try{const s=hrState();if(s){s.audit=Array.isArray(s.audit)?s.audit:[];s.audit.unshift(entry);localStorage.setItem(HR_KEY,JSON.stringify(s))}else{const pend=JSON.parse(localStorage.getItem('talent-link-audit-pending')||'[]');pend.unshift(entry);localStorage.setItem('talent-link-audit-pending',JSON.stringify(pend))}}catch{}
+ const me=TD.me(),J=JDS[curJD];
+ if(LIVE)API.record(docType,docType==='offer'?{employee_id:c.emp,jd_id:curJD,sender:TD.label(me),subject:`[참여 제안] ${J.company} ${J.title} — ${c.name}님`,model:m||null,html,attachment:m?TD.letterFile(m).name:'',actor:me.name,action:entry.action}:{employee_id:c.emp,jd_id:curJD,sender:TD.label(me),recipient:TD.label(TD.managerOf(me.id)),subject:m?.title||`${J.title} 인재 추천 보고서 — ${c.name}`,model:m||null,html,actor:me.name,action:entry.action}).then(r=>{if(!r)notify('서버 저장에 실패했습니다. 이 브라우저에는 저장되었습니다.')});
  if(docType==='offer'){try{const list=JSON.parse(localStorage.getItem(OFFER_KEY)||'[]');list.unshift({emp:c.emp,name:c.name,jd:curJD,title:JDS[curJD].title,subject:`[참여 제안] ${JDS[curJD].company} ${JDS[curJD].title} — ${c.name}님`,body:text,html,attachment:m?TD.letterFile(m).name:'',time});localStorage.setItem(OFFER_KEY,JSON.stringify(list))}catch{}notify(`${c.name} 님에게 제안을 보냈습니다. 임직원 화면에 도착했습니다.`)}
  else notify('추천서를 상부에 보고했습니다. 운영 기록에 남았습니다.')}
 function docFile(){const c=cand(),m=docModels[docType+c.emp];if(!m)return null;return docType==='offer'?TD.letterFile(m):{name:`인재추천보고서_${c.name}.html`,html:`<!doctype html><html lang="ko"><head><meta charset="utf-8"><title>${esc(m.title)}</title><style>body{max-width:800px;margin:40px auto;padding:24px;font-family:'Malgun Gothic',sans-serif}${TD.DOC_CSS}</style></head><body>${$('docBody').innerHTML}</body></html>`}}
 function downloadDoc(){const f=docFile();if(f)TD.download(f.name,f.html)}
 function printDoc(){const f=docFile();if(f)TD.printFile(f)}
-function resetAll(){curJD='JD-014';WL=toLevels(DEFAULT_W);syncW();REQS=JDS[curJD].reqs.map(r=>({...r}));C=buildCands(curJD);selected=null;for(const k in docModels)delete docModels[k];maxStep=1;scope=new Set(COMPANIES.map(c=>c[0]));initStep1();show(1)}
-C=buildCands(curJD);initStep1();show(1);
+function resetAll(){curJD='JD-045';ANALYSIS=null;clearTimeout(pollT);WL=toLevels(DEFAULT_W);syncW();REQS=JDS[curJD].reqs.map(r=>({...r}));C=buildCands(curJD);selected=null;for(const k in docModels)delete docModels[k];maxStep=1;scope=new Set(COMPANIES.map(c=>c[0]));initStep1();show(1)}
+C=buildCands(curJD);initStep1();show(1);boot();
 </script>
 </body>
 </html>

@@ -19,7 +19,7 @@ const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
 await page.route('**/api/draft', r => r.fulfill({ status: 200, contentType: 'application/json', body: '{}' }));
 const errors = [];
 page.on('pageerror', e => errors.push(e.message));
-page.on('console', m => m.type() === 'error' && errors.push(m.text()));
+page.on('console', m => m.type() === 'error' && !/Failed to load resource/.test(m.text()) && errors.push(m.text())); // 정적 모드에는 /api가 없어 404가 정상
 const check = (ok, msg) => { console.log((ok ? 'PASS ' : 'FAIL ') + msg); if (!ok) process.exitCode = 1; };
 
 await page.goto(base + '/index.html');
@@ -30,6 +30,8 @@ await page.goto(base + '/talent_hr_admin.html');
 await page.waitForTimeout(400);
 
 await page.goto(base + '/hr_matching.html?fast');
+// DB 없는 정적 모드: 페이지에 든 상세 평가 공고(JD-014)로 확인
+await page.selectOption('#jdSelect', 'JD-014');
 await page.click('#btnAnalyze');
 await page.waitForSelector('#btnGate:not([disabled])', { timeout: 15000 });
 check(await page.locator('#reqRows tr').count() === 6, 'six requirements generated');

@@ -80,3 +80,56 @@ export const SCHEMAS = {
 };
 
 export const build = (type, input) => (type === 'offer' ? OFFER : REPORT).replace('{{input}}', JSON.stringify(input, null, 2));
+
+// ── 인재 매칭: 공고 분석 · 후보 판정 ─────────────────────────────
+const AXIS_ENUM = ['직무경험', '업무 역량', '업무 성과', '성장 가능성', '커리어 적합성'];
+const LEVEL = { type: 'string', enum: ['매우 중요', '중요', '보통', '덜 중요'] };
+
+export const ANALYZE_SYSTEM = `당신은 한화 그룹 인사팀에서 계열사 간 인재 매칭을 돕는 공고 분석 담당자입니다.
+공고(JD)와 공고별 참고 자료(전임자 인수인계, 같은 직무 고성과자 패턴, 직무 연구 요약, 연구 기반 행동 요건)를 읽고,
+인재풀을 스캔할 때 쓸 요구사항과 평가 축의 중요도를 제안합니다. 인사 담당자가 이 제안을 검토하고 고칩니다.
+
+- requirements는 6~8개. JD의 필수·우대 요건을 기본으로 하고, 참고 자료에서만 드러나는 요건을 1~3개 더합니다.
+  · requirement: 근거로 확인할 수 있는 짧은 구. 예: "B2B 고객 세그먼트 분석·CRM 데이터 관리 경험"
+  · axis: 이 요건이 주로 보여주는 평가 축 하나
+  · type: 수치·기간·자격으로 확인되면 "정량", 서술·사례로 확인되면 "정성"
+  · need: JD 필수 요건이면 "필수", 나머지는 "우대"
+  · sources: 이 요건의 출처. JD / 전임자 / 고성과자 / 연구자료 중 해당하는 것 모두
+  · related_terms: 표현이 달라도 같은 경험을 가리키는 사내 용어 3~6개 (예: "실적분석 대시보드" ↔ "Power BI 월간 리포트")
+- 연구 기반 행동 요건은 성격을 추정하는 항목이 아니라 기록으로 확인할 수 있는 행동으로 씁니다. 예: "목표 달성 안정성(연도별 KPI 달성의 꾸준함)"
+  축은 목표 달성·기한 준수 → 업무 성과, 신기술 습득·직무 전환 → 성장 가능성, 대외 협의·리딩·협업 → 업무 역량으로 둡니다.
+- axis_importance: 다섯 축 각각의 중요도. 연구 기반 행동 요건의 기본 중요도와 JD의 무게를 함께 반영합니다.
+- pitch: 이 자리를 한 문장으로 소개 / needs: 이 자리에 꼭 필요한 역량 3개
+- rule_summary: 1단계 규칙 확인에 쓸 핵심 요건을 " · "로 이은 한 줄
+- synonym_example: 표현이 달라도 같은 경험으로 연결되는 예 한 줄. 형식: 예: “A” ↔ “B”
+- 성별·나이·학교 등 직무와 무관한 요건은 만들지 않습니다. 존댓말이 아닌 명사형으로 짧게 씁니다.`;
+
+export const EVAL_SYSTEM = `당신은 한화 그룹 인사팀의 인재 매칭 검토 담당자입니다. 확정된 공고 요건마다 후보의 인사 기록에서 근거를 찾아 판정합니다.
+점수는 매기지 않습니다. 점수는 시스템이 판정 결과와 인사 기록으로 따로 계산합니다.
+
+판정 기준
+- "확인": 프로젝트 수행 기록·증빙(수행확인서 등)·자격 대장·교육 이력·평가 기록·발령 이력에 직접적인 근거가 있음
+- "확인 필요": 관련은 있지만 본인 기재 수준이거나, 다른 분야 경험이라 전환 가능성을 면담에서 확인해야 함
+- "정보 미확인": 관련 기록이 없음. 정보가 없는 것을 역량이 없는 것으로 단정하지 않습니다.
+
+작성 기준
+- requirements: 요건 id마다 하나. evidence는 "구체적 사실 — 출처" 한 줄(사실 부분은 60자 이내). 출처는 수행확인서 / 자격 대장 / 교육 이력 / 평가 기록 / 발령 이력 / 커리어 계획 / 본인 기재 중 하나. 기록이 없으면 "관련 기록 없음 — 면담 확인"
+- strengths·concerns·questions는 각각 한 문장(80자 이내)입니다.
+- strengths 2~3개: 공고의 담당 업무와 맞닿는 실제 수행 기록. 공모에 지원하지 않은 후보라면 그 점이 드러나도록 한 개는 커리어 방향과의 연결을 씁니다.
+- concerns 1~3개: 근거가 약하거나 확인이 필요한 점. 소속 조직 협의 상태가 협의 전이면 포함
+- questions 2~3개: 면담에서 확인할 구체적 질문
+- 입력에 있는 사실만 씁니다. 성별·나이·직급·가족 등 직무와 무관한 내용, 사번 같은 코드는 쓰지 않습니다. 존댓말로 짧게 씁니다.`;
+
+const S = { type: 'string' }, SA = { type: 'array', items: S };
+const O = p => ({ type: 'object', properties: p, required: Object.keys(p), additionalProperties: false });
+export const MATCH_SCHEMAS = {
+  analysis: O({
+    pitch: S, needs: SA, rule_summary: S, synonym_example: S,
+    requirements: { type: 'array', items: O({ requirement: S, axis: { type: 'string', enum: AXIS_ENUM }, type: { type: 'string', enum: ['정량', '정성'] }, need: { type: 'string', enum: ['필수', '우대'] }, sources: { type: 'array', items: { type: 'string', enum: ['JD', '전임자', '고성과자', '연구자료'] } }, related_terms: SA }) },
+    axis_importance: O(Object.fromEntries(AXIS_ENUM.map(a => [a, LEVEL]))),
+  }),
+  evaluation: O({
+    requirements: { type: 'array', items: O({ id: S, status: { type: 'string', enum: ['확인', '확인 필요', '정보 미확인'] }, evidence: S }) },
+    strengths: SA, concerns: SA, questions: SA,
+  }),
+};
