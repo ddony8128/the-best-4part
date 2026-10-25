@@ -1,0 +1,118 @@
+{
+ "p1": {
+  "sec": 2.23,
+  "hash": "24c355b0e76d46c25338cb8c499f2122"
+ },
+ "p0": {
+  "sec": 2.31,
+  "hash": "77cd9ff68f67e1985d8c4798d8429795"
+ },
+ "hook": {
+  "sec": 5.73,
+  "hash": "f3c0667d9d80ffe3f51f1e5127bc5d33"
+ },
+ "p2": {
+  "sec": 2.62,
+  "hash": "51e3036b320c7cb060f9ff4e77a0367f"
+ },
+ "p3": {
+  "sec": 2.48,
+  "hash": "8c7db6e7be657303e43ce1a7d5243e80"
+ },
+ "ch1": {
+  "sec": 2.21,
+  "hash": "43dd55e98f5ff462e2568e0f831c3afb"
+ },
+ "hr-jd": {
+  "sec": 4.35,
+  "hash": "9c4c7ff330d2a5c2c6d46b311b6e853c"
+ },
+ "p4": {
+  "sec": 4.22,
+  "hash": "1be16b2ba5c9a25244f3b363306aeaf9"
+ },
+ "hr-reqs": {
+  "sec": 6.24,
+  "hash": "8daee14d4049aa2c984f380326479911"
+ },
+ "hr-weights": {
+  "sec": 1.83,
+  "hash": "dffc732e05bd0f479da8351b515508b5"
+ },
+ "hr-hard": {
+  "sec": 4.12,
+  "hash": "cc94ecda5ad579e0dd5ab99a807eb142"
+ },
+ "hr-list": {
+  "sec": 3.42,
+  "hash": "61cd10ee769a47e283dec1d9af54199d"
+ },
+ "hr-reweight": {
+  "sec": 3.25,
+  "hash": "757e3dc1250584f4abc8756c6e9767c7"
+ },
+ "hr-scan": {
+  "sec": 6.32,
+  "hash": "1edfb3884e5d936f0d0b424ee8b5562d"
+ },
+ "hr-concerns": {
+  "sec": 4.68,
+  "hash": "7d01cb6d5d6915858f81b9a407bfbccd"
+ },
+ "hr-report-done": {
+  "sec": 5.43,
+  "hash": "e353d2a963156c9167cf580697153d69"
+ },
+ "ch2": {
+  "sec": 2.53,
+  "hash": "f7fbe533910269d58eff7ebbe1a9113a"
+ },
+ "hr-offer-done": {
+  "sec": 4.01,
+  "hash": "14fa660e5a14542181e631785169034c"
+ },
+ "hr-detail": {
+  "sec": 8.6,
+  "hash": "28138635986016f75bcf54a973b8a3d2"
+ },
+ "emp-login": {
+  "sec": 4.52,
+  "hash": "9177faa7d67c4da963046a154e83be8e"
+ },
+ "emp-home": {
+  "sec": 3.25,
+  "hash": "5998e242653393a314acfefb37e037f4"
+ },
+ "emp-offer-open": {
+  "sec": 2.56,
+  "hash": "fd755d1cec40cb85b67cbf7a86c733c8"
+ },
+ "emp-diag": {
+  "sec": 2.64,
+  "hash": "1e65e783a4f62422c32c0293d082587e"
+ },
+ "emp-apply": {
+  "sec": 2.87,
+  "hash": "2ed4d9e1ed0a6c4f3ecf244af588e7eb"
+ },
+ "emp-reqs": {
+  "sec": 3.54,
+  "hash": "63c5faf630e7485cb24869c529fe19c1"
+ },
+ "console-recent": {
+  "sec": 4.76,
+  "hash": "85f5f2286fbff6e5fd09e038c9962ed8"
+ },
+ "outro": {
+  "sec": 3.87,
+  "hash": "daee785205d12dd5f9c86faf4ddb7eff"
+ },
+ "principles": {
+  "sec": 2.91,
+  "hash": "c94b189a5412e8dae019762e0fa6c2bf"
+ },
+ "effects": {
+  "sec": 9.62,
+  "hash": "0b1dec384dc56eeb6af1a3901b868c77"
+ }
+}

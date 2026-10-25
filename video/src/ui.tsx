@@ -7,7 +7,7 @@ export const Dark: React.FC<{ children?: React.ReactNode; glow?: [number, number
   const gx = glow[0] + Math.sin(f / 90) * 6, gy = glow[1] + Math.cos(f / 110) * 5;
   return (
     <AbsoluteFill style={{ background: C.dark, fontFamily: FONT, color: '#fff' }}>
-      <AbsoluteFill style={{ background: `radial-gradient(ellipse 60% 55% at ${gx}% ${gy}%, #f6995d24 0%, transparent 70%), radial-gradient(ellipse 50% 50% at ${100 - gx}% ${100 - gy}%, #ffffff0a 0%, transparent 70%)` }} />
+      <AbsoluteFill style={{ background: `radial-gradient(ellipse 60% 55% at ${gx}% ${gy}%, #f4511e24 0%, transparent 70%), radial-gradient(ellipse 50% 50% at ${100 - gx}% ${100 - gy}%, #ffffff0a 0%, transparent 70%)` }} />
       {children}
     </AbsoluteFill>
   );
@@ -15,7 +15,7 @@ export const Dark: React.FC<{ children?: React.ReactNode; glow?: [number, number
 
 export const Light: React.FC<{ children?: React.ReactNode }> = ({ children }) => (
   <AbsoluteFill style={{ background: C.bg, fontFamily: FONT, color: C.ink }}>
-    <AbsoluteFill style={{ background: 'radial-gradient(ellipse 70% 60% at 85% 10%, #f6995d1c 0%, transparent 70%)' }} />
+    <AbsoluteFill style={{ background: 'radial-gradient(ellipse 70% 60% at 85% 10%, #f4511e1c 0%, transparent 70%)' }} />
     {children}
   </AbsoluteFill>
 );
@@ -50,9 +50,9 @@ export const LogoMark: React.FC<{ size?: number; delay?: number }> = ({ size = 1
   const s = useSpring(delay, { damping: 12, stiffness: 140 } as never);
   const draw = interpolate(f - delay - 8, [0, 18], [1, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.out(Easing.cubic) });
   return (
-    <div style={{ width: size, height: size, borderRadius: size * 0.25, background: C.accent, transform: `scale(${s}) rotate(${(1 - s) * -30}deg)`, display: 'grid', placeItems: 'center', boxShadow: `0 ${size * 0.2}px ${size * 0.6}px #f6995d55` }}>
+    <div style={{ width: size, height: size, borderRadius: size * 0.25, background: C.accent, transform: `scale(${s}) rotate(${(1 - s) * -30}deg)`, display: 'grid', placeItems: 'center', boxShadow: `0 ${size * 0.2}px ${size * 0.6}px #f4511e55` }}>
       <svg width={size * 0.6} height={size * 0.6} viewBox="0 0 60 60">
-        <path d="M14 30 L26 42 L47 17" fill="none" stroke={C.ink} strokeWidth={8} strokeLinecap="round" strokeLinejoin="round" pathLength={1} strokeDasharray={1} strokeDashoffset={draw} />
+        <path d="M14 30 L26 42 L47 17" fill="none" stroke="#fff" strokeWidth={8} strokeLinecap="round" strokeLinejoin="round" pathLength={1} strokeDasharray={1} strokeDashoffset={draw} />
       </svg>
     </div>
   );

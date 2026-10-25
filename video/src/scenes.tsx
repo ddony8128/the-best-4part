@@ -58,7 +58,7 @@ export const Hook: React.FC = () => {
               <Fade delay={140} y={16}>
                 <div style={{ fontSize: 54, fontWeight: 700, marginTop: 26, position: 'relative', display: 'inline-block', color: C.ink }}>
                   그런데, 그 사람은 <span style={{ position: 'relative', color: C.accentDeep }}>지원했을까요?
-                    <span style={{ position: 'absolute', left: 0, bottom: 2, height: 14, width: `${under * 100}%`, background: '#f6995d55', zIndex: -1 }} />
+                    <span style={{ position: 'absolute', left: 0, bottom: 2, height: 14, width: `${under * 100}%`, background: '#f4511e55', zIndex: -1 }} />
                   </span>
                 </div>
               </Fade>
@@ -67,16 +67,16 @@ export const Hook: React.FC = () => {
         </div>
         <div style={{ flex: 1, transform: `translateX(${(1 - card) * 300}px) rotate(${(1 - card) * 6}deg)`, opacity: card }}>
           <div style={{ background: '#fff', borderRadius: 22, border: `2px solid ${C.line}`, padding: 46, boxShadow: '0 40px 90px #0000001a' }}>
-            <div style={{ fontSize: 20, letterSpacing: 4, color: C.muted, fontWeight: 700 }}>JD-014 · 한화오션</div>
-            <div style={{ fontSize: 46, fontWeight: 900, letterSpacing: -1.5, margin: '10px 0 26px' }}>사업기획 및 사업관리</div>
-            {[['필수', '사업계획 수립·사업성 분석'], ['필수', '매출·원가·손익 지표 분석'], ['우대', '조선·제조업 PM·사업관리 경험'], ['우대', 'ERP·Excel·Power BI 실적분석']].map(([k, v], i) => (
+            <div style={{ fontSize: 20, letterSpacing: 2, color: C.muted, fontWeight: 700 }}>JD-045 · 한화에어로스페이스</div>
+            <div style={{ fontSize: 46, fontWeight: 800, letterSpacing: -1.5, margin: '10px 0 26px' }}>마케팅 및 글로벌 브랜드 전략</div>
+            {[['필수', 'B2B·글로벌 마케팅 기획'], ['필수', '시장 세분화·브랜드 커뮤니케이션'], ['우대', '항공우주·방산 산업 마케팅'], ['우대', '영문 콘텐츠·전시회·캠페인 분석']].map(([k, v], i) => (
               <Fade key={i} delay={40 + i * 7} y={10}>
                 <div style={{ display: 'flex', gap: 18, alignItems: 'center', padding: '15px 0', borderTop: `1.5px solid ${C.line}`, fontSize: 28 }}>
                   <span style={{ fontSize: 20, fontWeight: 700, padding: '4px 12px', borderRadius: 7, background: k === '필수' ? C.ink : '#f1f1ef', color: k === '필수' ? '#fff' : C.ink }}>{k}</span>{v}
                 </div>
               </Fade>
             ))}
-            <div style={{ marginTop: 18, fontSize: 22, color: C.muted }}>사내 공모 · 계열사 간 이동 가능</div>
+            <div style={{ marginTop: 18, fontSize: 22, color: C.muted }}>사내 공모 · 계열사 간 이동 가능 · K9·천무 글로벌 전시</div>
           </div>
         </div>
       </AbsoluteFill>
@@ -85,10 +85,10 @@ export const Hook: React.FC = () => {
 };
 
 // ───────── 문제 → 해결 (같은 점 그리드가 이어진다) ─────────
-const COLS = 48, ROWS = 26; // 48 × 26 = 1,248명
-const APPLICANTS = new Set([37, 152, 230, 318, 401, 488, 590, 671, 760, 845, 951, 1102]);
-const HOT = [211, 377, 529, 615, 702, 866, 903, 1001, 1137, 1190];
-const HOT_APPLIED = new Set([152 /* not in HOT */]);
+const COLS = 19, ROWS = 13; // 19 × 13 = 247명 (그룹 인재풀)
+const APPLICANTS = new Set([41, 97, 158, 213]);
+const HOT = [22, 58, 83, 120, 136, 171, 190, 213, 225, 240];
+const HOT_APPLIED = new Set([213]);
 
 export const Problem: React.FC = () => {
   const f = useCurrentFrame();
@@ -98,7 +98,7 @@ export const Problem: React.FC = () => {
   const split = interpolate(f, [250, 290, 340, 370], [0, 1, 1, 0], { ...clamp, easing: Easing.inOut(Easing.cubic) });
   const beam = interpolate(f, [470, 590], [-0.08, 1.08], { ...clamp, easing: Easing.inOut(Easing.quad) });
   const hotOn = interpolate(f, [600, 625], [0, 1], clamp);
-  const cell = 19;
+  const cell = 50;
   const problems = [
     { n: '01', t: '공고를 보고 지원한 사람만', d: '적합하지만 지원하지 않았거나 덜 알려진 인재는 검토 대상에서 빠집니다.' },
     { n: '02', t: '계열사마다 흩어진 인재 정보', d: '경력·역량·프로젝트 경험을 그룹 차원에서 한 번에 볼 수 없습니다.' },
@@ -114,8 +114,8 @@ export const Problem: React.FC = () => {
             <Rise delay={20} style={{ marginTop: 26 }}><div style={{ fontSize: 76, fontWeight: 900, letterSpacing: -2.5, lineHeight: 1.2 }}>지금은 지원한</div></Rise>
             <Rise delay={28}><div style={{ fontSize: 76, fontWeight: 900, letterSpacing: -2.5, lineHeight: 1.2 }}>사람만 보입니다.</div></Rise>
             <Fade delay={60} style={{ marginTop: 50 }}>
-              <div style={{ fontSize: 34, color: '#bbb' }}>인재풀 등록 <b style={{ color: '#fff' }}>1,248명</b> 중</div>
-              <div style={{ fontSize: 128, fontWeight: 900, color: C.accent, letterSpacing: -4, lineHeight: 1.1 }}><Counter to={12} delay={66} dur={30} />명</div>
+              <div style={{ fontSize: 34, color: '#c9cfda' }}>그룹 인재풀 <b style={{ color: '#fff' }}>247명</b> 중</div>
+              <div style={{ fontSize: 128, fontWeight: 900, color: C.accent, letterSpacing: -4, lineHeight: 1.1 }}><Counter to={4} delay={66} dur={30} />명</div>
               <div style={{ fontSize: 30, color: '#999' }}>공모에 지원한 사람만 검토됩니다</div>
             </Fade>
           </div>
@@ -129,7 +129,7 @@ export const Problem: React.FC = () => {
                   const cur = stage === i + 1;
                   return (
                     <Fade key={i} delay={P[i + 1]} x={-40} y={0}>
-                      <div style={{ opacity: on ? (cur ? 1 : 0.42) : 0, padding: '28px 32px', borderRadius: 18, border: `2px solid ${cur ? C.accent : '#ffffff22'}`, background: cur ? '#f6995d14' : 'transparent' }}>
+                      <div style={{ opacity: on ? (cur ? 1 : 0.42) : 0, padding: '28px 32px', borderRadius: 18, border: `2px solid ${cur ? C.accent : '#ffffff22'}`, background: cur ? '#f4511e14' : 'transparent' }}>
                         <div style={{ display: 'flex', gap: 22, alignItems: 'baseline' }}>
                           <span style={{ fontSize: 30, fontWeight: 900, color: C.accent }}>{p.n}</span>
                           <span style={{ fontSize: 44, fontWeight: 900, letterSpacing: -1.2 }}>{p.t}</span>
@@ -149,7 +149,7 @@ export const Problem: React.FC = () => {
               <Rise delay={466} style={{ marginTop: 26 }}><div style={{ fontSize: 70, fontWeight: 900, letterSpacing: -2.4, lineHeight: 1.22 }}>지원하지 않은 인재까지,</div></Rise>
               <Rise delay={474}><div style={{ fontSize: 70, fontWeight: 900, letterSpacing: -2.4, lineHeight: 1.22 }}>그룹 전체를 <span style={{ color: C.accent }}>스캔</span>합니다.</div></Rise>
               <div style={{ marginTop: 52, display: 'flex', flexDirection: 'column', gap: 18, alignItems: 'flex-start' }}>
-                {['① 인재 스캐닝 · 상위 N명 추천', '② 추천서 자동 작성', '③ 제안서 자동 작성', '④ 임직원 셀프 진단 · 바로 지원'].map((t, i) => (
+                {['① 인재 스캐닝 · 상위 10명 추천', '② 추천서 작성 (상부 보고)', '③ 제안서 · 오퍼 레터 작성', '④ 임직원 셀프 진단 · 바로 지원'].map((t, i) => (
                   <Fade key={i} delay={640 + i * 12} x={-30} y={0}><Pill dark>{t}</Pill></Fade>
                 ))}
               </div>
@@ -158,7 +158,7 @@ export const Problem: React.FC = () => {
         </div>
       </AbsoluteFill>
       {/* 점 그리드 */}
-      <div style={{ position: 'absolute', left: 860, top: 150, width: COLS * cell + 2 * 30, height: ROWS * cell }}>
+      <div style={{ position: 'absolute', left: 860, top: 170, width: COLS * cell + 2 * 30, height: ROWS * cell, transform: 'scale(0.98)', transformOrigin: '0 0' }}>
         {Array.from({ length: COLS * ROWS }).map((_, i) => {
           const x = i % COLS, y = Math.floor(i / COLS);
           const company = Math.floor((x * 3) / COLS);
@@ -174,7 +174,7 @@ export const Problem: React.FC = () => {
           if (hotIdx >= 0 && hotOn > 0) { bg = C.accent; scale = 1 + 0.6 * hotOn + 0.12 * Math.sin((f + hotIdx * 5) / 6); glow = hotOn; }
           const gapX = company * 30 * split;
           return (
-            <div key={i} style={{ position: 'absolute', left: x * cell + gapX, top: y * cell, width: 11, height: 11, borderRadius: 6, background: bg, opacity: appear, transform: `scale(${scale})`, boxShadow: glow ? `0 0 ${14 * glow}px ${C.accent}` : undefined }}>
+            <div key={i} style={{ position: 'absolute', left: x * cell + gapX, top: y * cell, width: 30, height: 30, borderRadius: 15, background: bg, opacity: appear, transform: `scale(${scale})`, boxShadow: glow ? `0 0 ${14 * glow}px ${C.accent}` : undefined }}>
               {hotIdx >= 0 && hotOn > 0 && !HOT_APPLIED.has(i) && (
                 <div style={{ position: 'absolute', inset: -7, borderRadius: 14, border: `2px solid #fff`, opacity: hotOn * 0.85, transform: `scale(${1 + 0.3 * Math.sin((f + hotIdx * 7) / 8)})` }} />
               )}
@@ -187,12 +187,12 @@ export const Problem: React.FC = () => {
         ))}
         {/* 스캔 빔 */}
         {beam > -0.05 && beam < 1.05 && (
-          <div style={{ position: 'absolute', top: -30, bottom: -30, left: `${beam * 100}%`, width: 6, background: C.accent, boxShadow: `0 0 40px 12px #f6995d88`, borderRadius: 3 }} />
+          <div style={{ position: 'absolute', top: -30, bottom: -30, left: `${beam * 100}%`, width: 6, background: C.accent, boxShadow: `0 0 40px 12px #f4511e88`, borderRadius: 3 }} />
         )}
         {/* 범례 */}
         <div style={{ position: 'absolute', top: ROWS * cell + 40, left: 0, display: 'flex', gap: 36, fontSize: 24, color: '#aaa' }}>
           {stage < 4 ? (
-            <><span><b style={{ color: C.accent }}>●</b> 공모 지원자 12명</span><span><b style={{ color: '#555' }}>●</b> 검토되지 않는 임직원 1,236명</span></>
+            <><span><b style={{ color: C.accent }}>●</b> 공모 지원자 4명</span><span><b style={{ color: '#555' }}>●</b> 검토되지 않는 임직원 243명</span></>
           ) : (
             <Fade delay={600}><span><b style={{ color: C.accent }}>●</b> 추천 후보 상위 10명 &nbsp;·&nbsp; <span style={{ color: '#fff' }}>◯</span> 그중 공모 미지원 <b style={{ color: '#fff' }}>숨은 후보</b></span></Fade>
           )}
@@ -238,7 +238,7 @@ const Tile: React.FC<{ delay: number; label: string; children: React.ReactNode; 
 
 export const Effects: React.FC = () => {
   const f = useCurrentFrame();
-  const shrink = interpolate(f, [150, 195], [1, 6 / 45], { ...clamp, easing: Easing.inOut(Easing.cubic) });
+  const shrink = interpolate(f, [150, 195], [1, 34 / 247], { ...clamp, easing: Easing.inOut(Easing.cubic) });
   const big = { fontSize: 92, fontWeight: 900, letterSpacing: -3.5, lineHeight: 1 } as const;
   const arrow = (d: number) => <span style={{ display: 'inline-block', margin: '0 22px', color: C.accent, opacity: interpolate(f, [d, d + 10], [0, 1], clamp), transform: `translateX(${interpolate(f, [d, d + 14], [-20, 0], clamp)}px)` }}>→</span>;
   return (
@@ -249,38 +249,38 @@ export const Effects: React.FC = () => {
             <Kicker color={C.accentDeep}>EXPECTED IMPACT</Kicker>
             <Rise delay={4} style={{ marginTop: 12 }}><div style={{ fontSize: 82, fontWeight: 900, letterSpacing: -3 }}>무엇이 달라지나요</div></Rise>
           </div>
-          <Fade delay={30}><div style={{ fontSize: 22, color: C.muted, textAlign: 'right', lineHeight: 1.6 }}>시연 데이터 · 팀 추정치 기준<br />도입 시 기준선 측정 후 확정</div></Fade>
+          <Fade delay={30}><div style={{ fontSize: 22, color: C.muted, textAlign: 'right', lineHeight: 1.6 }}>JD-045 스캔 결과 기준<br />도입 시 기준선 측정 후 확정</div></Fade>
         </div>
         <div style={{ flex: 1, display: 'grid', gridTemplateColumns: '1fr 1fr', gridTemplateRows: '1fr 1fr', gap: 28, marginTop: 40 }}>
-          <Tile delay={24} label="후보 탐색 범위" sub="공모 지원자만 → 설정한 범위의 전 임직원">
-            <div style={big}><span style={{ color: C.muted }}>12명</span>{arrow(44)}<span style={{ color: C.ink }}><Counter from={12} to={1248} delay={50} dur={50} />명</span></div>
+          <Tile delay={24} label="후보 탐색 범위" sub="공모 지원자만 → 그룹 인재풀 전체 (JD-045 기준)">
+            <div style={big}><span style={{ color: C.muted }}>4명</span>{arrow(44)}<span style={{ color: C.ink }}><Counter from={4} to={247} delay={50} dur={50} />명</span></div>
           </Tile>
-          <Tile delay={110} label="후보 1명 검토 시간" sub="요건 대조 · 근거 정리를 AI가 먼저 해 둡니다">
+          <Tile delay={110} label="AI 판정 대상 (정량 조건 사전 필터)" sub="기록으로 바로 확인되는 조건으로 먼저 걸러 AI 비용을 줄입니다">
             <div style={{ width: '100%' }}>
               <div style={{ display: 'flex', alignItems: 'baseline', gap: 20 }}>
-                <div style={big}><Counter from={45} to={6} delay={150} dur={45} />분</div>
-                <div style={{ fontSize: 40, fontWeight: 900, color: '#fff', background: C.ink, borderRadius: 12, padding: '4px 16px', opacity: interpolate(f, [190, 200], [0, 1], clamp) }}>−87%</div>
+                <div style={big}><Counter from={247} to={34} delay={150} dur={45} />명</div>
+                <div style={{ fontSize: 40, fontWeight: 800, color: '#fff', background: C.ink, borderRadius: 12, padding: '4px 16px', opacity: interpolate(f, [190, 200], [0, 1], clamp) }}>−86%</div>
               </div>
-              <div style={{ height: 22, background: '#efefed', borderRadius: 6, marginTop: 22, overflow: 'hidden' }}><div style={{ height: '100%', width: `${shrink * 100}%`, background: C.accent, borderRadius: 6 }} /></div>
+              <div style={{ height: 22, background: '#e5e8eb', borderRadius: 6, marginTop: 22, overflow: 'hidden' }}><div style={{ height: '100%', width: `${shrink * 100}%`, background: C.accent, borderRadius: 6 }} /></div>
             </div>
           </Tile>
           <Tile delay={200} label="숨은 후보 발견" sub="상위 10명 중 공모에 지원하지 않은 적합 후보">
             <div style={{ display: 'flex', alignItems: 'center', gap: 44 }}>
-              <div style={big}><Counter to={8} delay={215} dur={30} />명</div>
+              <div style={big}><Counter to={9} delay={215} dur={30} />명</div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 40px)', gap: 14 }}>
                 {Array.from({ length: 10 }).map((_, i) => {
                   const on = interpolate(f, [220 + i * 4, 230 + i * 4], [0, 1], clamp);
-                  const hidden = i !== 0 && i !== 6;
-                  return <div key={i} style={{ width: 40, height: 40, borderRadius: 20, background: hidden ? C.accent : '#d9d6d1', transform: `scale(${on})` }} />;
+                  const hidden = i !== 5;
+                  return <div key={i} style={{ width: 40, height: 40, borderRadius: 20, background: hidden ? C.accent : '#d1d6db', transform: `scale(${on})` }} />;
                 })}
               </div>
             </div>
           </Tile>
-          <Tile delay={290} label="추천 근거 문서화" sub="모든 추천에 요건별 근거 · 우려 · 확인 질문 · 확인일">
+          <Tile delay={290} label="추천 근거 문서화" sub="모든 추천에 요건별 근거 · 우려 · 확인 질문">
             <div style={{ display: 'flex', alignItems: 'center', gap: 40 }}>
               <div style={big}><Counter to={100} delay={305} dur={40} />%</div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 8, fontSize: 24 }}>
-                {['추천서 · 상부 보고', '제안서 · 당사자 메일', '면담 확인 질문'].map((t, i) => <Fade key={t} delay={320 + i * 8} x={20} y={0}><span style={{ color: C.ok, fontWeight: 900 }}>✓</span> {t}</Fade>)}
+                {['추천서 · 상부 보고', '제안서 · 오퍼 레터', '면담 확인 질문'].map((t, i) => <Fade key={t} delay={320 + i * 8} x={20} y={0}><span style={{ color: C.ok, fontWeight: 900 }}>✓</span> {t}</Fade>)}
               </div>
             </div>
           </Tile>
@@ -289,7 +289,7 @@ export const Effects: React.FC = () => {
           {[['조직', '외부 채용 전에, 그룹 안에서 먼저 찾습니다.'], ['임직원', '지원하지 않아도, 맞는 기회가 먼저 옵니다.']].map(([k, v], i) => (
             <Fade key={k} delay={390 + i * 14} style={{ flex: 1 }}>
               <div style={{ background: C.ink, color: '#fff', borderRadius: 18, padding: '24px 34px', fontSize: 32, fontWeight: 700, display: 'flex', gap: 20, alignItems: 'center' }}>
-                <span style={{ fontSize: 22, color: C.ink, background: C.accent, borderRadius: 8, padding: '4px 14px', fontWeight: 900 }}>{k}</span>{v}
+                <span style={{ fontSize: 22, color: '#fff', background: C.accent, borderRadius: 8, padding: '4px 14px', fontWeight: 900 }}>{k}</span>{v}
               </div>
             </Fade>
           ))}
