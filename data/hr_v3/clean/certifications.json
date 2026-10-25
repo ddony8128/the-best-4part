@@ -1,0 +1,1752 @@
+[
+ {
+  "certification_id": "CERT-EMP-HW-0001-1",
+  "employee_id": "EMP-HW-0001",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0002-1",
+  "employee_id": "EMP-HW-0002",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0003-1",
+  "employee_id": "EMP-HW-0003",
+  "certificate": "ADsP",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0004-1",
+  "employee_id": "EMP-HW-0004",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0005-1",
+  "employee_id": "EMP-HW-0005",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0006-1",
+  "employee_id": "EMP-HW-0006",
+  "certificate": "Google Analytics 교육 인증",
+  "issuer": "Google",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0007-1",
+  "employee_id": "EMP-HW-0007",
+  "certificate": "ADsP",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0008-1",
+  "employee_id": "EMP-HW-0008",
+  "certificate": "ADsP",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0009-1",
+  "employee_id": "EMP-HW-0009",
+  "certificate": "ADsP",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0010-1",
+  "employee_id": "EMP-HW-0010",
+  "certificate": "ADsP",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0011-1",
+  "employee_id": "EMP-HW-0011",
+  "certificate": "Google Analytics 교육 인증",
+  "issuer": "Google",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0012-1",
+  "employee_id": "EMP-HW-0012",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0013-1",
+  "employee_id": "EMP-HW-0013",
+  "certificate": "ADsP",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0014-1",
+  "employee_id": "EMP-HW-0014",
+  "certificate": "ADsP",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0015-1",
+  "employee_id": "EMP-HW-0015",
+  "certificate": "ADsP",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0016-1",
+  "employee_id": "EMP-HW-0016",
+  "certificate": "Google Analytics 교육 인증",
+  "issuer": "Google",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0017-1",
+  "employee_id": "EMP-HW-0017",
+  "certificate": "Google Analytics 교육 인증",
+  "issuer": "Google",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0018-1",
+  "employee_id": "EMP-HW-0018",
+  "certificate": "ADsP",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0020-1",
+  "employee_id": "EMP-HW-0020",
+  "certificate": "Google Analytics 교육 인증",
+  "issuer": "Google",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0021-1",
+  "employee_id": "EMP-HW-0021",
+  "certificate": "Google Analytics 교육 인증",
+  "issuer": "Google",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0022-1",
+  "employee_id": "EMP-HW-0022",
+  "certificate": "Google Analytics 교육 인증",
+  "issuer": "Google",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0023-1",
+  "employee_id": "EMP-HW-0023",
+  "certificate": "Google Analytics 교육 인증",
+  "issuer": "Google",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0024-1",
+  "employee_id": "EMP-HW-0024",
+  "certificate": "Google Analytics 교육 인증",
+  "issuer": "Google",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0025-1",
+  "employee_id": "EMP-HW-0025",
+  "certificate": "ADsP",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0026-1",
+  "employee_id": "EMP-HW-0026",
+  "certificate": "Google Analytics 교육 인증",
+  "issuer": "Google",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0027-1",
+  "employee_id": "EMP-HW-0027",
+  "certificate": "Google Analytics 교육 인증",
+  "issuer": "Google",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0028-1",
+  "employee_id": "EMP-HW-0028",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0029-1",
+  "employee_id": "EMP-HW-0029",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0030-1",
+  "employee_id": "EMP-HW-0030",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0031-1",
+  "employee_id": "EMP-HW-0031",
+  "certificate": "Google Analytics 교육 인증",
+  "issuer": "Google",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0032-1",
+  "employee_id": "EMP-HW-0032",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0033-1",
+  "employee_id": "EMP-HW-0033",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0034-1",
+  "employee_id": "EMP-HW-0034",
+  "certificate": "Google Analytics 교육 인증",
+  "issuer": "Google",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0035-1",
+  "employee_id": "EMP-HW-0035",
+  "certificate": "Google Analytics 교육 인증",
+  "issuer": "Google",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0036-1",
+  "employee_id": "EMP-HW-0036",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0037-1",
+  "employee_id": "EMP-HW-0037",
+  "certificate": "Google Analytics 교육 인증",
+  "issuer": "Google",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0038-1",
+  "employee_id": "EMP-HW-0038",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0039-1",
+  "employee_id": "EMP-HW-0039",
+  "certificate": "Google Analytics 교육 인증",
+  "issuer": "Google",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0040-1",
+  "employee_id": "EMP-HW-0040",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0041-1",
+  "employee_id": "EMP-HW-0041",
+  "certificate": "ADsP",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0042-1",
+  "employee_id": "EMP-HW-0042",
+  "certificate": "ADsP",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0043-1",
+  "employee_id": "EMP-HW-0043",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0044-1",
+  "employee_id": "EMP-HW-0044",
+  "certificate": "ADsP",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0045-1",
+  "employee_id": "EMP-HW-0045",
+  "certificate": "ADsP",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0046-1",
+  "employee_id": "EMP-HW-0046",
+  "certificate": "Google Analytics 교육 인증",
+  "issuer": "Google",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0047-1",
+  "employee_id": "EMP-HW-0047",
+  "certificate": "ADsP",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-0048-1",
+  "employee_id": "EMP-HW-0048",
+  "certificate": "일반기계기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2021-01-23"
+ },
+ {
+  "certification_id": "CERT-0048-2",
+  "employee_id": "EMP-HW-0048",
+  "certificate": "컴퓨터활용능력 1급",
+  "issuer": "대한상공회의소",
+  "obtained_date": "2026-01-23"
+ },
+ {
+  "certification_id": "CERT-0049-1",
+  "employee_id": "EMP-HW-0049",
+  "certificate": "전기기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2023-11-23"
+ },
+ {
+  "certification_id": "CERT-0050-1",
+  "employee_id": "EMP-HW-0050",
+  "certificate": "품질경영기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2025-06-23"
+ },
+ {
+  "certification_id": "CERT-0051-1",
+  "employee_id": "EMP-HW-0051",
+  "certificate": "정보보안기사",
+  "issuer": "한국인터넷진흥원",
+  "obtained_date": "2022-06-23"
+ },
+ {
+  "certification_id": "CERT-0052-1",
+  "employee_id": "EMP-HW-0052",
+  "certificate": "일반기계기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2025-12-23"
+ },
+ {
+  "certification_id": "CERT-0052-2",
+  "employee_id": "EMP-HW-0052",
+  "certificate": "산업안전기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2024-05-23"
+ },
+ {
+  "certification_id": "CERT-0053-1",
+  "employee_id": "EMP-HW-0053",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2019-09-23"
+ },
+ {
+  "certification_id": "CERT-0053-2",
+  "employee_id": "EMP-HW-0053",
+  "certificate": "일반기계기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2022-08-23"
+ },
+ {
+  "certification_id": "CERT-0054-1",
+  "employee_id": "EMP-HW-0054",
+  "certificate": "전기기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2020-01-23"
+ },
+ {
+  "certification_id": "CERT-0055-1",
+  "employee_id": "EMP-HW-0055",
+  "certificate": "컴퓨터활용능력 1급",
+  "issuer": "대한상공회의소",
+  "obtained_date": "2021-01-23"
+ },
+ {
+  "certification_id": "CERT-0056-1",
+  "employee_id": "EMP-HW-0056",
+  "certificate": "컴퓨터활용능력 1급",
+  "issuer": "대한상공회의소",
+  "obtained_date": "2024-07-23"
+ },
+ {
+  "certification_id": "CERT-0057-1",
+  "employee_id": "EMP-HW-0057",
+  "certificate": "정보처리기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2025-09-23"
+ },
+ {
+  "certification_id": "CERT-0057-2",
+  "employee_id": "EMP-HW-0057",
+  "certificate": "컴퓨터활용능력 1급",
+  "issuer": "대한상공회의소",
+  "obtained_date": "2021-12-23"
+ },
+ {
+  "certification_id": "CERT-0058-1",
+  "employee_id": "EMP-HW-0058",
+  "certificate": "전기기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2024-01-23"
+ },
+ {
+  "certification_id": "CERT-0058-2",
+  "employee_id": "EMP-HW-0058",
+  "certificate": "정보보안기사",
+  "issuer": "한국인터넷진흥원",
+  "obtained_date": "2023-10-23"
+ },
+ {
+  "certification_id": "CERT-0060-1",
+  "employee_id": "EMP-HW-0060",
+  "certificate": "ADsP",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2026-06-23"
+ },
+ {
+  "certification_id": "CERT-0062-1",
+  "employee_id": "EMP-HW-0062",
+  "certificate": "정보보안기사",
+  "issuer": "한국인터넷진흥원",
+  "obtained_date": "2026-02-23"
+ },
+ {
+  "certification_id": "CERT-0062-2",
+  "employee_id": "EMP-HW-0062",
+  "certificate": "정보처리기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2025-03-23"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0064-1",
+  "employee_id": "EMP-HW-0064",
+  "certificate": "Google Analytics 교육 인증",
+  "issuer": "Google",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-0065-1",
+  "employee_id": "EMP-HW-0065",
+  "certificate": "산업안전기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2019-05-23"
+ },
+ {
+  "certification_id": "CERT-0066-1",
+  "employee_id": "EMP-HW-0066",
+  "certificate": "정보보안기사",
+  "issuer": "한국인터넷진흥원",
+  "obtained_date": "2026-03-23"
+ },
+ {
+  "certification_id": "CERT-0066-2",
+  "employee_id": "EMP-HW-0066",
+  "certificate": "정보보안기사",
+  "issuer": "한국인터넷진흥원",
+  "obtained_date": "2026-06-23"
+ },
+ {
+  "certification_id": "CERT-0067-1",
+  "employee_id": "EMP-HW-0067",
+  "certificate": "일반기계기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2019-05-23"
+ },
+ {
+  "certification_id": "CERT-0067-2",
+  "employee_id": "EMP-HW-0067",
+  "certificate": "물류관리사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2023-02-23"
+ },
+ {
+  "certification_id": "CERT-0068-1",
+  "employee_id": "EMP-HW-0068",
+  "certificate": "품질경영기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2026-01-23"
+ },
+ {
+  "certification_id": "CERT-0069-1",
+  "employee_id": "EMP-HW-0069",
+  "certificate": "품질경영기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2022-04-23"
+ },
+ {
+  "certification_id": "CERT-0069-2",
+  "employee_id": "EMP-HW-0069",
+  "certificate": "정보처리기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2020-11-23"
+ },
+ {
+  "certification_id": "CERT-0070-1",
+  "employee_id": "EMP-HW-0070",
+  "certificate": "정보보안기사",
+  "issuer": "한국인터넷진흥원",
+  "obtained_date": "2023-12-23"
+ },
+ {
+  "certification_id": "CERT-0071-1",
+  "employee_id": "EMP-HW-0071",
+  "certificate": "전기기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2022-11-23"
+ },
+ {
+  "certification_id": "CERT-0071-2",
+  "employee_id": "EMP-HW-0071",
+  "certificate": "컴퓨터활용능력 1급",
+  "issuer": "대한상공회의소",
+  "obtained_date": "2020-11-23"
+ },
+ {
+  "certification_id": "CERT-0072-1",
+  "employee_id": "EMP-HW-0072",
+  "certificate": "물류관리사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2025-12-23"
+ },
+ {
+  "certification_id": "CERT-0072-2",
+  "employee_id": "EMP-HW-0072",
+  "certificate": "컴퓨터활용능력 1급",
+  "issuer": "대한상공회의소",
+  "obtained_date": "2022-06-23"
+ },
+ {
+  "certification_id": "CERT-0073-1",
+  "employee_id": "EMP-HW-0073",
+  "certificate": "물류관리사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2020-06-23"
+ },
+ {
+  "certification_id": "CERT-0073-2",
+  "employee_id": "EMP-HW-0073",
+  "certificate": "물류관리사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2021-09-23"
+ },
+ {
+  "certification_id": "CERT-0074-1",
+  "employee_id": "EMP-HW-0074",
+  "certificate": "품질경영기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2026-03-23"
+ },
+ {
+  "certification_id": "CERT-0074-2",
+  "employee_id": "EMP-HW-0074",
+  "certificate": "산업안전기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2022-05-23"
+ },
+ {
+  "certification_id": "CERT-0076-1",
+  "employee_id": "EMP-HW-0076",
+  "certificate": "전기기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2022-08-23"
+ },
+ {
+  "certification_id": "CERT-0077-1",
+  "employee_id": "EMP-HW-0077",
+  "certificate": "정보처리기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2024-12-23"
+ },
+ {
+  "certification_id": "CERT-0077-2",
+  "employee_id": "EMP-HW-0077",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2023-04-23"
+ },
+ {
+  "certification_id": "CERT-0082-1",
+  "employee_id": "EMP-HW-0082",
+  "certificate": "ADsP",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2021-12-23"
+ },
+ {
+  "certification_id": "CERT-0083-1",
+  "employee_id": "EMP-HW-0083",
+  "certificate": "컴퓨터활용능력 1급",
+  "issuer": "대한상공회의소",
+  "obtained_date": "2025-12-23"
+ },
+ {
+  "certification_id": "CERT-0085-1",
+  "employee_id": "EMP-HW-0085",
+  "certificate": "정보처리기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2024-01-23"
+ },
+ {
+  "certification_id": "CERT-0086-1",
+  "employee_id": "EMP-HW-0086",
+  "certificate": "컴퓨터활용능력 1급",
+  "issuer": "대한상공회의소",
+  "obtained_date": "2026-04-23"
+ },
+ {
+  "certification_id": "CERT-0087-1",
+  "employee_id": "EMP-HW-0087",
+  "certificate": "컴퓨터활용능력 1급",
+  "issuer": "대한상공회의소",
+  "obtained_date": "2019-04-23"
+ },
+ {
+  "certification_id": "CERT-0089-1",
+  "employee_id": "EMP-HW-0089",
+  "certificate": "품질경영기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2021-03-23"
+ },
+ {
+  "certification_id": "CERT-0091-1",
+  "employee_id": "EMP-HW-0091",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2023-03-23"
+ },
+ {
+  "certification_id": "CERT-0092-1",
+  "employee_id": "EMP-HW-0092",
+  "certificate": "물류관리사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2020-08-23"
+ },
+ {
+  "certification_id": "CERT-0092-2",
+  "employee_id": "EMP-HW-0092",
+  "certificate": "산업안전기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2019-06-23"
+ },
+ {
+  "certification_id": "CERT-0093-1",
+  "employee_id": "EMP-HW-0093",
+  "certificate": "물류관리사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2025-02-23"
+ },
+ {
+  "certification_id": "CERT-0093-2",
+  "employee_id": "EMP-HW-0093",
+  "certificate": "컴퓨터활용능력 1급",
+  "issuer": "대한상공회의소",
+  "obtained_date": "2022-02-23"
+ },
+ {
+  "certification_id": "CERT-0094-1",
+  "employee_id": "EMP-HW-0094",
+  "certificate": "정보보안기사",
+  "issuer": "한국인터넷진흥원",
+  "obtained_date": "2025-05-23"
+ },
+ {
+  "certification_id": "CERT-0095-1",
+  "employee_id": "EMP-HW-0095",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2025-08-23"
+ },
+ {
+  "certification_id": "CERT-0097-1",
+  "employee_id": "EMP-HW-0097",
+  "certificate": "정보처리기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2024-07-23"
+ },
+ {
+  "certification_id": "CERT-0098-1",
+  "employee_id": "EMP-HW-0098",
+  "certificate": "정보보안기사",
+  "issuer": "한국인터넷진흥원",
+  "obtained_date": "2022-12-23"
+ },
+ {
+  "certification_id": "CERT-0100-1",
+  "employee_id": "EMP-HW-0100",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2020-02-23"
+ },
+ {
+  "certification_id": "CERT-0101-1",
+  "employee_id": "EMP-HW-0101",
+  "certificate": "정보처리기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2023-05-23"
+ },
+ {
+  "certification_id": "CERT-0102-1",
+  "employee_id": "EMP-HW-0102",
+  "certificate": "일반기계기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2021-08-23"
+ },
+ {
+  "certification_id": "CERT-0102-2",
+  "employee_id": "EMP-HW-0102",
+  "certificate": "품질경영기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2021-09-23"
+ },
+ {
+  "certification_id": "CERT-0103-1",
+  "employee_id": "EMP-HW-0103",
+  "certificate": "산업안전기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2024-02-23"
+ },
+ {
+  "certification_id": "CERT-0104-1",
+  "employee_id": "EMP-HW-0104",
+  "certificate": "품질경영기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2024-05-23"
+ },
+ {
+  "certification_id": "CERT-0104-2",
+  "employee_id": "EMP-HW-0104",
+  "certificate": "정보처리기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2025-09-23"
+ },
+ {
+  "certification_id": "CERT-0105-1",
+  "employee_id": "EMP-HW-0105",
+  "certificate": "일반기계기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2024-06-23"
+ },
+ {
+  "certification_id": "CERT-0105-2",
+  "employee_id": "EMP-HW-0105",
+  "certificate": "정보처리기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2026-02-23"
+ },
+ {
+  "certification_id": "CERT-0106-1",
+  "employee_id": "EMP-HW-0106",
+  "certificate": "산업안전기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2024-08-23"
+ },
+ {
+  "certification_id": "CERT-0107-1",
+  "employee_id": "EMP-HW-0107",
+  "certificate": "전기기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2022-01-23"
+ },
+ {
+  "certification_id": "CERT-0107-2",
+  "employee_id": "EMP-HW-0107",
+  "certificate": "물류관리사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2025-09-23"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0109-1",
+  "employee_id": "EMP-HW-0109",
+  "certificate": "Google Analytics 교육 인증",
+  "issuer": "Google",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-0111-1",
+  "employee_id": "EMP-HW-0111",
+  "certificate": "정보처리기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2021-07-23"
+ },
+ {
+  "certification_id": "CERT-0112-1",
+  "employee_id": "EMP-HW-0112",
+  "certificate": "전기기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2023-07-23"
+ },
+ {
+  "certification_id": "CERT-0112-2",
+  "employee_id": "EMP-HW-0112",
+  "certificate": "일반기계기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2024-08-23"
+ },
+ {
+  "certification_id": "CERT-0114-1",
+  "employee_id": "EMP-HW-0114",
+  "certificate": "정보보안기사",
+  "issuer": "한국인터넷진흥원",
+  "obtained_date": "2021-06-23"
+ },
+ {
+  "certification_id": "CERT-0115-1",
+  "employee_id": "EMP-HW-0115",
+  "certificate": "산업안전기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2024-06-23"
+ },
+ {
+  "certification_id": "CERT-0116-1",
+  "employee_id": "EMP-HW-0116",
+  "certificate": "정보보안기사",
+  "issuer": "한국인터넷진흥원",
+  "obtained_date": "2022-03-23"
+ },
+ {
+  "certification_id": "CERT-0116-2",
+  "employee_id": "EMP-HW-0116",
+  "certificate": "산업안전기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2020-02-23"
+ },
+ {
+  "certification_id": "CERT-0117-1",
+  "employee_id": "EMP-HW-0117",
+  "certificate": "ADsP",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2021-11-23"
+ },
+ {
+  "certification_id": "CERT-0117-2",
+  "employee_id": "EMP-HW-0117",
+  "certificate": "정보처리기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2021-02-23"
+ },
+ {
+  "certification_id": "CERT-0118-1",
+  "employee_id": "EMP-HW-0118",
+  "certificate": "산업안전기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2023-04-23"
+ },
+ {
+  "certification_id": "CERT-0120-1",
+  "employee_id": "EMP-HW-0120",
+  "certificate": "물류관리사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2026-02-23"
+ },
+ {
+  "certification_id": "CERT-0120-2",
+  "employee_id": "EMP-HW-0120",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2025-03-23"
+ },
+ {
+  "certification_id": "CERT-0121-1",
+  "employee_id": "EMP-HW-0121",
+  "certificate": "전기기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2025-10-23"
+ },
+ {
+  "certification_id": "CERT-0121-2",
+  "employee_id": "EMP-HW-0121",
+  "certificate": "정보처리기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2026-06-23"
+ },
+ {
+  "certification_id": "CERT-0122-1",
+  "employee_id": "EMP-HW-0122",
+  "certificate": "산업안전기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2020-09-23"
+ },
+ {
+  "certification_id": "CERT-0122-2",
+  "employee_id": "EMP-HW-0122",
+  "certificate": "품질경영기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2019-11-23"
+ },
+ {
+  "certification_id": "CERT-0123-1",
+  "employee_id": "EMP-HW-0123",
+  "certificate": "정보보안기사",
+  "issuer": "한국인터넷진흥원",
+  "obtained_date": "2024-03-23"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0124-1",
+  "employee_id": "EMP-HW-0124",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-0125-1",
+  "employee_id": "EMP-HW-0125",
+  "certificate": "ADsP",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2023-05-23"
+ },
+ {
+  "certification_id": "CERT-0126-1",
+  "employee_id": "EMP-HW-0126",
+  "certificate": "품질경영기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2025-12-23"
+ },
+ {
+  "certification_id": "CERT-0126-2",
+  "employee_id": "EMP-HW-0126",
+  "certificate": "전기기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2025-06-23"
+ },
+ {
+  "certification_id": "CERT-0127-1",
+  "employee_id": "EMP-HW-0127",
+  "certificate": "전기기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2025-07-23"
+ },
+ {
+  "certification_id": "CERT-0129-1",
+  "employee_id": "EMP-HW-0129",
+  "certificate": "컴퓨터활용능력 1급",
+  "issuer": "대한상공회의소",
+  "obtained_date": "2020-03-23"
+ },
+ {
+  "certification_id": "CERT-0129-2",
+  "employee_id": "EMP-HW-0129",
+  "certificate": "컴퓨터활용능력 1급",
+  "issuer": "대한상공회의소",
+  "obtained_date": "2026-01-23"
+ },
+ {
+  "certification_id": "CERT-0131-1",
+  "employee_id": "EMP-HW-0131",
+  "certificate": "산업안전기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2021-01-23"
+ },
+ {
+  "certification_id": "CERT-0131-2",
+  "employee_id": "EMP-HW-0131",
+  "certificate": "컴퓨터활용능력 1급",
+  "issuer": "대한상공회의소",
+  "obtained_date": "2019-06-23"
+ },
+ {
+  "certification_id": "CERT-0132-1",
+  "employee_id": "EMP-HW-0132",
+  "certificate": "ADsP",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2023-05-23"
+ },
+ {
+  "certification_id": "CERT-0133-1",
+  "employee_id": "EMP-HW-0133",
+  "certificate": "품질경영기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2023-11-23"
+ },
+ {
+  "certification_id": "CERT-0134-1",
+  "employee_id": "EMP-HW-0134",
+  "certificate": "전기기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2024-01-23"
+ },
+ {
+  "certification_id": "CERT-0134-2",
+  "employee_id": "EMP-HW-0134",
+  "certificate": "정보보안기사",
+  "issuer": "한국인터넷진흥원",
+  "obtained_date": "2025-05-23"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0135-1",
+  "employee_id": "EMP-HW-0135",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-0136-1",
+  "employee_id": "EMP-HW-0136",
+  "certificate": "컴퓨터활용능력 1급",
+  "issuer": "대한상공회의소",
+  "obtained_date": "2025-03-23"
+ },
+ {
+  "certification_id": "CERT-0137-1",
+  "employee_id": "EMP-HW-0137",
+  "certificate": "일반기계기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2021-06-23"
+ },
+ {
+  "certification_id": "CERT-0138-1",
+  "employee_id": "EMP-HW-0138",
+  "certificate": "ADsP",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2023-11-23"
+ },
+ {
+  "certification_id": "CERT-0141-1",
+  "employee_id": "EMP-HW-0141",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2019-06-23"
+ },
+ {
+  "certification_id": "CERT-0143-1",
+  "employee_id": "EMP-HW-0143",
+  "certificate": "ADsP",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2025-12-23"
+ },
+ {
+  "certification_id": "CERT-0143-2",
+  "employee_id": "EMP-HW-0143",
+  "certificate": "물류관리사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2026-05-23"
+ },
+ {
+  "certification_id": "CERT-0148-1",
+  "employee_id": "EMP-HW-0148",
+  "certificate": "전기기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2025-01-23"
+ },
+ {
+  "certification_id": "CERT-0149-1",
+  "employee_id": "EMP-HW-0149",
+  "certificate": "산업안전기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2024-12-23"
+ },
+ {
+  "certification_id": "CERT-0149-2",
+  "employee_id": "EMP-HW-0149",
+  "certificate": "정보처리기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2025-01-23"
+ },
+ {
+  "certification_id": "CERT-0151-1",
+  "employee_id": "EMP-HW-0151",
+  "certificate": "일반기계기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2025-10-23"
+ },
+ {
+  "certification_id": "CERT-0151-2",
+  "employee_id": "EMP-HW-0151",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2026-05-23"
+ },
+ {
+  "certification_id": "CERT-0152-1",
+  "employee_id": "EMP-HW-0152",
+  "certificate": "품질경영기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2024-04-23"
+ },
+ {
+  "certification_id": "CERT-0153-1",
+  "employee_id": "EMP-HW-0153",
+  "certificate": "일반기계기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2026-05-23"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0154-1",
+  "employee_id": "EMP-HW-0154",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-0157-1",
+  "employee_id": "EMP-HW-0157",
+  "certificate": "품질경영기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2024-12-23"
+ },
+ {
+  "certification_id": "CERT-0157-2",
+  "employee_id": "EMP-HW-0157",
+  "certificate": "물류관리사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2019-12-23"
+ },
+ {
+  "certification_id": "CERT-0158-1",
+  "employee_id": "EMP-HW-0158",
+  "certificate": "물류관리사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2023-08-23"
+ },
+ {
+  "certification_id": "CERT-0159-1",
+  "employee_id": "EMP-HW-0159",
+  "certificate": "물류관리사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2026-05-23"
+ },
+ {
+  "certification_id": "CERT-0161-1",
+  "employee_id": "EMP-HW-0161",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-05-23"
+ },
+ {
+  "certification_id": "CERT-0161-2",
+  "employee_id": "EMP-HW-0161",
+  "certificate": "일반기계기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2024-08-23"
+ },
+ {
+  "certification_id": "CERT-0162-1",
+  "employee_id": "EMP-HW-0162",
+  "certificate": "일반기계기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2026-02-23"
+ },
+ {
+  "certification_id": "CERT-0162-2",
+  "employee_id": "EMP-HW-0162",
+  "certificate": "산업안전기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2020-04-23"
+ },
+ {
+  "certification_id": "CERT-0165-1",
+  "employee_id": "EMP-HW-0165",
+  "certificate": "물류관리사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2021-08-23"
+ },
+ {
+  "certification_id": "CERT-0166-1",
+  "employee_id": "EMP-HW-0166",
+  "certificate": "물류관리사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2023-03-23"
+ },
+ {
+  "certification_id": "CERT-0166-2",
+  "employee_id": "EMP-HW-0166",
+  "certificate": "컴퓨터활용능력 1급",
+  "issuer": "대한상공회의소",
+  "obtained_date": "2022-11-23"
+ },
+ {
+  "certification_id": "CERT-0167-1",
+  "employee_id": "EMP-HW-0167",
+  "certificate": "ADsP",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2020-12-23"
+ },
+ {
+  "certification_id": "CERT-0167-2",
+  "employee_id": "EMP-HW-0167",
+  "certificate": "정보보안기사",
+  "issuer": "한국인터넷진흥원",
+  "obtained_date": "2026-05-23"
+ },
+ {
+  "certification_id": "CERT-0168-1",
+  "employee_id": "EMP-HW-0168",
+  "certificate": "산업안전기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2024-12-23"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0169-1",
+  "employee_id": "EMP-HW-0169",
+  "certificate": "Google Analytics 교육 인증",
+  "issuer": "Google",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-0171-1",
+  "employee_id": "EMP-HW-0171",
+  "certificate": "일반기계기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2026-01-23"
+ },
+ {
+  "certification_id": "CERT-0174-1",
+  "employee_id": "EMP-HW-0174",
+  "certificate": "정보보안기사",
+  "issuer": "한국인터넷진흥원",
+  "obtained_date": "2024-09-23"
+ },
+ {
+  "certification_id": "CERT-0174-2",
+  "employee_id": "EMP-HW-0174",
+  "certificate": "정보보안기사",
+  "issuer": "한국인터넷진흥원",
+  "obtained_date": "2022-09-23"
+ },
+ {
+  "certification_id": "CERT-0176-1",
+  "employee_id": "EMP-HW-0176",
+  "certificate": "품질경영기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2020-05-23"
+ },
+ {
+  "certification_id": "CERT-0177-1",
+  "employee_id": "EMP-HW-0177",
+  "certificate": "전기기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2025-10-23"
+ },
+ {
+  "certification_id": "CERT-0178-1",
+  "employee_id": "EMP-HW-0178",
+  "certificate": "물류관리사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2023-07-23"
+ },
+ {
+  "certification_id": "CERT-0179-1",
+  "employee_id": "EMP-HW-0179",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-01-23"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0180-1",
+  "employee_id": "EMP-HW-0180",
+  "certificate": "Google Analytics 교육 인증",
+  "issuer": "Google",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-0181-1",
+  "employee_id": "EMP-HW-0181",
+  "certificate": "정보보안기사",
+  "issuer": "한국인터넷진흥원",
+  "obtained_date": "2022-07-23"
+ },
+ {
+  "certification_id": "CERT-0181-2",
+  "employee_id": "EMP-HW-0181",
+  "certificate": "정보처리기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2024-07-23"
+ },
+ {
+  "certification_id": "CERT-0182-1",
+  "employee_id": "EMP-HW-0182",
+  "certificate": "품질경영기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2020-02-23"
+ },
+ {
+  "certification_id": "CERT-0183-1",
+  "employee_id": "EMP-HW-0183",
+  "certificate": "정보처리기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2019-05-23"
+ },
+ {
+  "certification_id": "CERT-0184-1",
+  "employee_id": "EMP-HW-0184",
+  "certificate": "컴퓨터활용능력 1급",
+  "issuer": "대한상공회의소",
+  "obtained_date": "2024-01-23"
+ },
+ {
+  "certification_id": "CERT-0185-1",
+  "employee_id": "EMP-HW-0185",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2021-11-23"
+ },
+ {
+  "certification_id": "CERT-0185-2",
+  "employee_id": "EMP-HW-0185",
+  "certificate": "물류관리사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2022-12-23"
+ },
+ {
+  "certification_id": "CERT-0187-1",
+  "employee_id": "EMP-HW-0187",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-01-23"
+ },
+ {
+  "certification_id": "CERT-0188-1",
+  "employee_id": "EMP-HW-0188",
+  "certificate": "ADsP",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2019-07-23"
+ },
+ {
+  "certification_id": "CERT-0188-2",
+  "employee_id": "EMP-HW-0188",
+  "certificate": "품질경영기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2020-12-23"
+ },
+ {
+  "certification_id": "CERT-0189-1",
+  "employee_id": "EMP-HW-0189",
+  "certificate": "산업안전기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2024-05-23"
+ },
+ {
+  "certification_id": "CERT-0189-2",
+  "employee_id": "EMP-HW-0189",
+  "certificate": "품질경영기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2024-06-23"
+ },
+ {
+  "certification_id": "CERT-0191-1",
+  "employee_id": "EMP-HW-0191",
+  "certificate": "컴퓨터활용능력 1급",
+  "issuer": "대한상공회의소",
+  "obtained_date": "2019-05-23"
+ },
+ {
+  "certification_id": "CERT-0192-1",
+  "employee_id": "EMP-HW-0192",
+  "certificate": "컴퓨터활용능력 1급",
+  "issuer": "대한상공회의소",
+  "obtained_date": "2022-08-23"
+ },
+ {
+  "certification_id": "CERT-0192-2",
+  "employee_id": "EMP-HW-0192",
+  "certificate": "물류관리사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2022-10-23"
+ },
+ {
+  "certification_id": "CERT-0195-1",
+  "employee_id": "EMP-HW-0195",
+  "certificate": "물류관리사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2022-11-23"
+ },
+ {
+  "certification_id": "CERT-0195-2",
+  "employee_id": "EMP-HW-0195",
+  "certificate": "일반기계기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2020-05-23"
+ },
+ {
+  "certification_id": "CERT-0196-1",
+  "employee_id": "EMP-HW-0196",
+  "certificate": "일반기계기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2020-04-23"
+ },
+ {
+  "certification_id": "CERT-0197-1",
+  "employee_id": "EMP-HW-0197",
+  "certificate": "일반기계기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2021-10-23"
+ },
+ {
+  "certification_id": "CERT-0197-2",
+  "employee_id": "EMP-HW-0197",
+  "certificate": "컴퓨터활용능력 1급",
+  "issuer": "대한상공회의소",
+  "obtained_date": "2026-03-23"
+ },
+ {
+  "certification_id": "CERT-0198-1",
+  "employee_id": "EMP-HW-0198",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2019-06-23"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0199-1",
+  "employee_id": "EMP-HW-0199",
+  "certificate": "ADsP",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-0200-1",
+  "employee_id": "EMP-HW-0200",
+  "certificate": "산업안전기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2023-03-23"
+ },
+ {
+  "certification_id": "CERT-0201-1",
+  "employee_id": "EMP-HW-0201",
+  "certificate": "정보보안기사",
+  "issuer": "한국인터넷진흥원",
+  "obtained_date": "2022-08-23"
+ },
+ {
+  "certification_id": "CERT-0201-2",
+  "employee_id": "EMP-HW-0201",
+  "certificate": "ADsP",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2026-02-23"
+ },
+ {
+  "certification_id": "CERT-0202-1",
+  "employee_id": "EMP-HW-0202",
+  "certificate": "품질경영기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2019-06-23"
+ },
+ {
+  "certification_id": "CERT-0202-2",
+  "employee_id": "EMP-HW-0202",
+  "certificate": "정보처리기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2026-06-23"
+ },
+ {
+  "certification_id": "CERT-0203-1",
+  "employee_id": "EMP-HW-0203",
+  "certificate": "전기기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2024-10-23"
+ },
+ {
+  "certification_id": "CERT-0204-1",
+  "employee_id": "EMP-HW-0204",
+  "certificate": "산업안전기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2023-10-23"
+ },
+ {
+  "certification_id": "CERT-0205-1",
+  "employee_id": "EMP-HW-0205",
+  "certificate": "전기기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2023-12-23"
+ },
+ {
+  "certification_id": "CERT-0207-1",
+  "employee_id": "EMP-HW-0207",
+  "certificate": "물류관리사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2020-07-23"
+ },
+ {
+  "certification_id": "CERT-0208-1",
+  "employee_id": "EMP-HW-0208",
+  "certificate": "정보처리기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2024-03-23"
+ },
+ {
+  "certification_id": "CERT-0210-1",
+  "employee_id": "EMP-HW-0210",
+  "certificate": "ADsP",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2020-10-23"
+ },
+ {
+  "certification_id": "CERT-0212-1",
+  "employee_id": "EMP-HW-0212",
+  "certificate": "정보보안기사",
+  "issuer": "한국인터넷진흥원",
+  "obtained_date": "2022-02-23"
+ },
+ {
+  "certification_id": "CERT-0213-1",
+  "employee_id": "EMP-HW-0213",
+  "certificate": "물류관리사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2024-10-23"
+ },
+ {
+  "certification_id": "CERT-0213-2",
+  "employee_id": "EMP-HW-0213",
+  "certificate": "ADsP",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-05-23"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0214-1",
+  "employee_id": "EMP-HW-0214",
+  "certificate": "Google Analytics 교육 인증",
+  "issuer": "Google",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-0215-1",
+  "employee_id": "EMP-HW-0215",
+  "certificate": "ADsP",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2026-04-23"
+ },
+ {
+  "certification_id": "CERT-0216-1",
+  "employee_id": "EMP-HW-0216",
+  "certificate": "컴퓨터활용능력 1급",
+  "issuer": "대한상공회의소",
+  "obtained_date": "2019-05-23"
+ },
+ {
+  "certification_id": "CERT-0218-1",
+  "employee_id": "EMP-HW-0218",
+  "certificate": "일반기계기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2026-06-23"
+ },
+ {
+  "certification_id": "CERT-0220-1",
+  "employee_id": "EMP-HW-0220",
+  "certificate": "품질경영기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2022-06-23"
+ },
+ {
+  "certification_id": "CERT-0221-1",
+  "employee_id": "EMP-HW-0221",
+  "certificate": "정보보안기사",
+  "issuer": "한국인터넷진흥원",
+  "obtained_date": "2020-05-23"
+ },
+ {
+  "certification_id": "CERT-0221-2",
+  "employee_id": "EMP-HW-0221",
+  "certificate": "일반기계기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2022-05-23"
+ },
+ {
+  "certification_id": "CERT-0223-1",
+  "employee_id": "EMP-HW-0223",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2023-05-23"
+ },
+ {
+  "certification_id": "CERT-0223-2",
+  "employee_id": "EMP-HW-0223",
+  "certificate": "품질경영기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2025-01-23"
+ },
+ {
+  "certification_id": "CERT-0224-1",
+  "employee_id": "EMP-HW-0224",
+  "certificate": "정보처리기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2023-07-23"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0225-1",
+  "employee_id": "EMP-HW-0225",
+  "certificate": "Google Analytics 교육 인증",
+  "issuer": "Google",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-0227-1",
+  "employee_id": "EMP-HW-0227",
+  "certificate": "일반기계기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2025-02-23"
+ },
+ {
+  "certification_id": "CERT-0228-1",
+  "employee_id": "EMP-HW-0228",
+  "certificate": "전기기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2025-12-23"
+ },
+ {
+  "certification_id": "CERT-0229-1",
+  "employee_id": "EMP-HW-0229",
+  "certificate": "산업안전기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2019-11-23"
+ },
+ {
+  "certification_id": "CERT-0229-2",
+  "employee_id": "EMP-HW-0229",
+  "certificate": "품질경영기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2023-05-23"
+ },
+ {
+  "certification_id": "CERT-0232-1",
+  "employee_id": "EMP-HW-0232",
+  "certificate": "정보보안기사",
+  "issuer": "한국인터넷진흥원",
+  "obtained_date": "2021-07-23"
+ },
+ {
+  "certification_id": "CERT-0233-1",
+  "employee_id": "EMP-HW-0233",
+  "certificate": "물류관리사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2023-09-23"
+ },
+ {
+  "certification_id": "CERT-0234-1",
+  "employee_id": "EMP-HW-0234",
+  "certificate": "ADsP",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2025-02-23"
+ },
+ {
+  "certification_id": "CERT-0235-1",
+  "employee_id": "EMP-HW-0235",
+  "certificate": "산업안전기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2025-01-23"
+ },
+ {
+  "certification_id": "CERT-0235-2",
+  "employee_id": "EMP-HW-0235",
+  "certificate": "일반기계기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2022-02-23"
+ },
+ {
+  "certification_id": "CERT-0237-1",
+  "employee_id": "EMP-HW-0237",
+  "certificate": "전기기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2026-04-23"
+ },
+ {
+  "certification_id": "CERT-0237-2",
+  "employee_id": "EMP-HW-0237",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2024-12-23"
+ },
+ {
+  "certification_id": "CERT-0238-1",
+  "employee_id": "EMP-HW-0238",
+  "certificate": "물류관리사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2024-09-23"
+ },
+ {
+  "certification_id": "CERT-0239-1",
+  "employee_id": "EMP-HW-0239",
+  "certificate": "전기기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2025-10-23"
+ },
+ {
+  "certification_id": "CERT-0239-2",
+  "employee_id": "EMP-HW-0239",
+  "certificate": "ADsP",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2025-10-23"
+ },
+ {
+  "certification_id": "CERT-0241-1",
+  "employee_id": "EMP-HW-0241",
+  "certificate": "일반기계기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2024-11-23"
+ },
+ {
+  "certification_id": "CERT-0241-2",
+  "employee_id": "EMP-HW-0241",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2019-07-23"
+ },
+ {
+  "certification_id": "CERT-0243-1",
+  "employee_id": "EMP-HW-0243",
+  "certificate": "일반기계기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2023-06-23"
+ },
+ {
+  "certification_id": "CERT-EMP-HW-0244-1",
+  "employee_id": "EMP-HW-0244",
+  "certificate": "Google Analytics 교육 인증",
+  "issuer": "Google",
+  "obtained_date": "2024-09-13"
+ },
+ {
+  "certification_id": "CERT-0245-1",
+  "employee_id": "EMP-HW-0245",
+  "certificate": "SQLD",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2023-07-23"
+ },
+ {
+  "certification_id": "CERT-0247-1",
+  "employee_id": "EMP-HW-0247",
+  "certificate": "일반기계기사",
+  "issuer": "한국산업인력공단",
+  "obtained_date": "2019-06-23"
+ },
+ {
+  "certification_id": "CERT-0247-2",
+  "employee_id": "EMP-HW-0247",
+  "certificate": "ADsP",
+  "issuer": "한국데이터산업진흥원",
+  "obtained_date": "2022-10-23"
+ }
+]

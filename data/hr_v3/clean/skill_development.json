@@ -1,0 +1,4403 @@
+[
+ {
+  "development_id": "DEV-EMP-HW-0001-1",
+  "employee_id": "EMP-HW-0001",
+  "skill": "제품 가치제안",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0001-2",
+  "employee_id": "EMP-HW-0001",
+  "skill": "고객 세분화",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0002-1",
+  "employee_id": "EMP-HW-0002",
+  "skill": "B2B 마케팅",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0002-2",
+  "employee_id": "EMP-HW-0002",
+  "skill": "시장분석",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0003-1",
+  "employee_id": "EMP-HW-0003",
+  "skill": "B2B 커뮤니케이션",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0003-2",
+  "employee_id": "EMP-HW-0003",
+  "skill": "경쟁사 분석",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0004-1",
+  "employee_id": "EMP-HW-0004",
+  "skill": "제품 가치제안",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0004-2",
+  "employee_id": "EMP-HW-0004",
+  "skill": "고객 세분화",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0005-1",
+  "employee_id": "EMP-HW-0005",
+  "skill": "B2B 마케팅",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0005-2",
+  "employee_id": "EMP-HW-0005",
+  "skill": "시장분석",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0006-1",
+  "employee_id": "EMP-HW-0006",
+  "skill": "글로벌 마케팅",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0006-2",
+  "employee_id": "EMP-HW-0006",
+  "skill": "영문 콘텐츠",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0007-1",
+  "employee_id": "EMP-HW-0007",
+  "skill": "글로벌 마케팅",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0007-2",
+  "employee_id": "EMP-HW-0007",
+  "skill": "영문 콘텐츠",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0008-1",
+  "employee_id": "EMP-HW-0008",
+  "skill": "B2B 커뮤니케이션",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0008-2",
+  "employee_id": "EMP-HW-0008",
+  "skill": "경쟁사 분석",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0009-1",
+  "employee_id": "EMP-HW-0009",
+  "skill": "글로벌 마케팅",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0009-2",
+  "employee_id": "EMP-HW-0009",
+  "skill": "영문 콘텐츠",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0010-1",
+  "employee_id": "EMP-HW-0010",
+  "skill": "제품 가치제안",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0010-2",
+  "employee_id": "EMP-HW-0010",
+  "skill": "고객 세분화",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0011-1",
+  "employee_id": "EMP-HW-0011",
+  "skill": "B2B 커뮤니케이션",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0011-2",
+  "employee_id": "EMP-HW-0011",
+  "skill": "경쟁사 분석",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0012-1",
+  "employee_id": "EMP-HW-0012",
+  "skill": "글로벌 마케팅",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0012-2",
+  "employee_id": "EMP-HW-0012",
+  "skill": "영문 콘텐츠",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0013-1",
+  "employee_id": "EMP-HW-0013",
+  "skill": "B2B 커뮤니케이션",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0013-2",
+  "employee_id": "EMP-HW-0013",
+  "skill": "경쟁사 분석",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0014-1",
+  "employee_id": "EMP-HW-0014",
+  "skill": "B2B 커뮤니케이션",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0014-2",
+  "employee_id": "EMP-HW-0014",
+  "skill": "경쟁사 분석",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0015-1",
+  "employee_id": "EMP-HW-0015",
+  "skill": "제품 가치제안",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0015-2",
+  "employee_id": "EMP-HW-0015",
+  "skill": "고객 세분화",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0016-1",
+  "employee_id": "EMP-HW-0016",
+  "skill": "B2B 커뮤니케이션",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0016-2",
+  "employee_id": "EMP-HW-0016",
+  "skill": "경쟁사 분석",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0017-1",
+  "employee_id": "EMP-HW-0017",
+  "skill": "제품 가치제안",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0017-2",
+  "employee_id": "EMP-HW-0017",
+  "skill": "고객 세분화",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0018-1",
+  "employee_id": "EMP-HW-0018",
+  "skill": "글로벌 마케팅",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0018-2",
+  "employee_id": "EMP-HW-0018",
+  "skill": "영문 콘텐츠",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0020-1",
+  "employee_id": "EMP-HW-0020",
+  "skill": "제품 가치제안",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0020-2",
+  "employee_id": "EMP-HW-0020",
+  "skill": "고객 세분화",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0021-1",
+  "employee_id": "EMP-HW-0021",
+  "skill": "B2B 마케팅",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0021-2",
+  "employee_id": "EMP-HW-0021",
+  "skill": "시장분석",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0022-1",
+  "employee_id": "EMP-HW-0022",
+  "skill": "제품 가치제안",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0022-2",
+  "employee_id": "EMP-HW-0022",
+  "skill": "고객 세분화",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0023-1",
+  "employee_id": "EMP-HW-0023",
+  "skill": "B2B 커뮤니케이션",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0023-2",
+  "employee_id": "EMP-HW-0023",
+  "skill": "경쟁사 분석",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0024-1",
+  "employee_id": "EMP-HW-0024",
+  "skill": "제품 가치제안",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0024-2",
+  "employee_id": "EMP-HW-0024",
+  "skill": "고객 세분화",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0025-1",
+  "employee_id": "EMP-HW-0025",
+  "skill": "제품 가치제안",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0025-2",
+  "employee_id": "EMP-HW-0025",
+  "skill": "고객 세분화",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0026-1",
+  "employee_id": "EMP-HW-0026",
+  "skill": "제품 가치제안",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0026-2",
+  "employee_id": "EMP-HW-0026",
+  "skill": "고객 세분화",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0027-1",
+  "employee_id": "EMP-HW-0027",
+  "skill": "B2B 마케팅",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0027-2",
+  "employee_id": "EMP-HW-0027",
+  "skill": "시장분석",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0028-1",
+  "employee_id": "EMP-HW-0028",
+  "skill": "제품 가치제안",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0028-2",
+  "employee_id": "EMP-HW-0028",
+  "skill": "고객 세분화",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0029-1",
+  "employee_id": "EMP-HW-0029",
+  "skill": "B2B 마케팅",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0029-2",
+  "employee_id": "EMP-HW-0029",
+  "skill": "시장분석",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0030-1",
+  "employee_id": "EMP-HW-0030",
+  "skill": "글로벌 마케팅",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0030-2",
+  "employee_id": "EMP-HW-0030",
+  "skill": "영문 콘텐츠",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0031-1",
+  "employee_id": "EMP-HW-0031",
+  "skill": "B2B 커뮤니케이션",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0031-2",
+  "employee_id": "EMP-HW-0031",
+  "skill": "경쟁사 분석",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0032-1",
+  "employee_id": "EMP-HW-0032",
+  "skill": "B2B 커뮤니케이션",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0032-2",
+  "employee_id": "EMP-HW-0032",
+  "skill": "경쟁사 분석",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0033-1",
+  "employee_id": "EMP-HW-0033",
+  "skill": "B2B 마케팅",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0033-2",
+  "employee_id": "EMP-HW-0033",
+  "skill": "시장분석",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0034-1",
+  "employee_id": "EMP-HW-0034",
+  "skill": "B2B 마케팅",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0034-2",
+  "employee_id": "EMP-HW-0034",
+  "skill": "제품 가치제안",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0035-1",
+  "employee_id": "EMP-HW-0035",
+  "skill": "글로벌 마케팅",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0035-2",
+  "employee_id": "EMP-HW-0035",
+  "skill": "영문 콘텐츠",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0036-1",
+  "employee_id": "EMP-HW-0036",
+  "skill": "제품 가치제안",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0036-2",
+  "employee_id": "EMP-HW-0036",
+  "skill": "고객 세분화",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0037-1",
+  "employee_id": "EMP-HW-0037",
+  "skill": "B2B 커뮤니케이션",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0037-2",
+  "employee_id": "EMP-HW-0037",
+  "skill": "경쟁사 분석",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0038-1",
+  "employee_id": "EMP-HW-0038",
+  "skill": "B2B 커뮤니케이션",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0038-2",
+  "employee_id": "EMP-HW-0038",
+  "skill": "경쟁사 분석",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0039-1",
+  "employee_id": "EMP-HW-0039",
+  "skill": "제품 가치제안",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0039-2",
+  "employee_id": "EMP-HW-0039",
+  "skill": "고객 세분화",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0040-1",
+  "employee_id": "EMP-HW-0040",
+  "skill": "제품 가치제안",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0040-2",
+  "employee_id": "EMP-HW-0040",
+  "skill": "고객 세분화",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0041-1",
+  "employee_id": "EMP-HW-0041",
+  "skill": "제품 가치제안",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0041-2",
+  "employee_id": "EMP-HW-0041",
+  "skill": "고객 세분화",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0042-1",
+  "employee_id": "EMP-HW-0042",
+  "skill": "B2B 커뮤니케이션",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0042-2",
+  "employee_id": "EMP-HW-0042",
+  "skill": "경쟁사 분석",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0043-1",
+  "employee_id": "EMP-HW-0043",
+  "skill": "B2B 마케팅",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0043-2",
+  "employee_id": "EMP-HW-0043",
+  "skill": "시장분석",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0044-1",
+  "employee_id": "EMP-HW-0044",
+  "skill": "B2B 커뮤니케이션",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0044-2",
+  "employee_id": "EMP-HW-0044",
+  "skill": "경쟁사 분석",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0045-1",
+  "employee_id": "EMP-HW-0045",
+  "skill": "B2B 마케팅",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0045-2",
+  "employee_id": "EMP-HW-0045",
+  "skill": "ICT",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0046-1",
+  "employee_id": "EMP-HW-0046",
+  "skill": "B2B 마케팅",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0046-2",
+  "employee_id": "EMP-HW-0046",
+  "skill": "시장분석",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0047-1",
+  "employee_id": "EMP-HW-0047",
+  "skill": "제품 가치제안",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0047-2",
+  "employee_id": "EMP-HW-0047",
+  "skill": "고객 세분화",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-0048-1",
+  "employee_id": "EMP-HW-0048",
+  "skill": "프로젝트 관리",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2026-05-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0049-1",
+  "employee_id": "EMP-HW-0049",
+  "skill": "RPA",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-03-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0050-1",
+  "employee_id": "EMP-HW-0050",
+  "skill": "품질관리",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-04-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0051-1",
+  "employee_id": "EMP-HW-0051",
+  "skill": "위험성평가",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-07-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0051-2",
+  "employee_id": "EMP-HW-0051",
+  "skill": "위험성평가",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-05-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0051-3",
+  "employee_id": "EMP-HW-0051",
+  "skill": "위험성평가",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-02-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0052-1",
+  "employee_id": "EMP-HW-0052",
+  "skill": "CAE",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-11-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0052-2",
+  "employee_id": "EMP-HW-0052",
+  "skill": "SCADA",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2024-11-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0052-3",
+  "employee_id": "EMP-HW-0052",
+  "skill": "SCADA",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2024-11-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0053-1",
+  "employee_id": "EMP-HW-0053",
+  "skill": "Python",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-09-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0054-1",
+  "employee_id": "EMP-HW-0054",
+  "skill": "CAD",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2024-12-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0054-2",
+  "employee_id": "EMP-HW-0054",
+  "skill": "PLC",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-06-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0055-1",
+  "employee_id": "EMP-HW-0055",
+  "skill": "Python",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-07-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0055-2",
+  "employee_id": "EMP-HW-0055",
+  "skill": "SCADA",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2024-12-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0056-1",
+  "employee_id": "EMP-HW-0056",
+  "skill": "위험성평가",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-07-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0056-2",
+  "employee_id": "EMP-HW-0056",
+  "skill": "CAD",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-03-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0056-3",
+  "employee_id": "EMP-HW-0056",
+  "skill": "CAE",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-11-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0057-1",
+  "employee_id": "EMP-HW-0057",
+  "skill": "RPA",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-08-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0057-2",
+  "employee_id": "EMP-HW-0057",
+  "skill": "RPA",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2026-06-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0058-1",
+  "employee_id": "EMP-HW-0058",
+  "skill": "MES",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-04-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0058-2",
+  "employee_id": "EMP-HW-0058",
+  "skill": "Python",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2024-12-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0058-3",
+  "employee_id": "EMP-HW-0058",
+  "skill": "MES",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-07-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0059-1",
+  "employee_id": "EMP-HW-0059",
+  "skill": "품질관리",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2024-11-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0059-2",
+  "employee_id": "EMP-HW-0059",
+  "skill": "Power BI",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-06-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0060-1",
+  "employee_id": "EMP-HW-0060",
+  "skill": "C++",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-05-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0061-1",
+  "employee_id": "EMP-HW-0061",
+  "skill": "SAP",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-07-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0062-1",
+  "employee_id": "EMP-HW-0062",
+  "skill": "SAP",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-08-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0063-1",
+  "employee_id": "EMP-HW-0063",
+  "skill": "위험성평가",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-03-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0064-1",
+  "employee_id": "EMP-HW-0064",
+  "skill": "방산전자",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0064-2",
+  "employee_id": "EMP-HW-0064",
+  "skill": "기술 문서",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-0065-1",
+  "employee_id": "EMP-HW-0065",
+  "skill": "SysML",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-03-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0065-2",
+  "employee_id": "EMP-HW-0065",
+  "skill": "SysML",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-09-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0065-3",
+  "employee_id": "EMP-HW-0065",
+  "skill": "AutoCAD",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-10-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0066-1",
+  "employee_id": "EMP-HW-0066",
+  "skill": "CAE",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-04-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0067-1",
+  "employee_id": "EMP-HW-0067",
+  "skill": "원가분석",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-11-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0067-2",
+  "employee_id": "EMP-HW-0067",
+  "skill": "C++",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-02-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0067-3",
+  "employee_id": "EMP-HW-0067",
+  "skill": "원가분석",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-12-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0068-1",
+  "employee_id": "EMP-HW-0068",
+  "skill": "Simulink",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-08-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0068-2",
+  "employee_id": "EMP-HW-0068",
+  "skill": "Simulink",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-09-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0068-3",
+  "employee_id": "EMP-HW-0068",
+  "skill": "Simulink",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-10-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0069-1",
+  "employee_id": "EMP-HW-0069",
+  "skill": "B2B 영업",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2026-06-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0069-2",
+  "employee_id": "EMP-HW-0069",
+  "skill": "B2B 영업",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-01-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0069-3",
+  "employee_id": "EMP-HW-0069",
+  "skill": "CAD",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-04-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0070-1",
+  "employee_id": "EMP-HW-0070",
+  "skill": "AI 모델링",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-11-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0070-2",
+  "employee_id": "EMP-HW-0070",
+  "skill": "Power BI",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-08-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0070-3",
+  "employee_id": "EMP-HW-0070",
+  "skill": "CAD",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-12-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0071-1",
+  "employee_id": "EMP-HW-0071",
+  "skill": "C++",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-09-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0072-1",
+  "employee_id": "EMP-HW-0072",
+  "skill": "ERP",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2024-12-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0072-2",
+  "employee_id": "EMP-HW-0072",
+  "skill": "품질관리",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-09-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0072-3",
+  "employee_id": "EMP-HW-0072",
+  "skill": "Java",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2026-05-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0073-1",
+  "employee_id": "EMP-HW-0073",
+  "skill": "Simulink",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-03-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0073-2",
+  "employee_id": "EMP-HW-0073",
+  "skill": "ERP",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-02-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0074-1",
+  "employee_id": "EMP-HW-0074",
+  "skill": "ROS",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-03-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0075-1",
+  "employee_id": "EMP-HW-0075",
+  "skill": "Python",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-02-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0075-2",
+  "employee_id": "EMP-HW-0075",
+  "skill": "MATLAB",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-04-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0075-3",
+  "employee_id": "EMP-HW-0075",
+  "skill": "RPA",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-10-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0076-1",
+  "employee_id": "EMP-HW-0076",
+  "skill": "프로젝트 관리",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-05-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0076-2",
+  "employee_id": "EMP-HW-0076",
+  "skill": "MES",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-03-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0076-3",
+  "employee_id": "EMP-HW-0076",
+  "skill": "RPA",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-05-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0077-1",
+  "employee_id": "EMP-HW-0077",
+  "skill": "SAP",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-01-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0078-1",
+  "employee_id": "EMP-HW-0078",
+  "skill": "ERP",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-03-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0079-1",
+  "employee_id": "EMP-HW-0079",
+  "skill": "Excel",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0079-2",
+  "employee_id": "EMP-HW-0079",
+  "skill": "문서 관리",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-0080-1",
+  "employee_id": "EMP-HW-0080",
+  "skill": "CATIA",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-03-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0081-1",
+  "employee_id": "EMP-HW-0081",
+  "skill": "CATIA",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2026-05-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0082-1",
+  "employee_id": "EMP-HW-0082",
+  "skill": "CAD",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-06-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0082-2",
+  "employee_id": "EMP-HW-0082",
+  "skill": "CAD",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-04-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0082-3",
+  "employee_id": "EMP-HW-0082",
+  "skill": "프로젝트 관리",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-03-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0083-1",
+  "employee_id": "EMP-HW-0083",
+  "skill": "MES",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2026-08-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0084-1",
+  "employee_id": "EMP-HW-0084",
+  "skill": "품질관리",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-06-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0085-1",
+  "employee_id": "EMP-HW-0085",
+  "skill": "원가분석",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2026-06-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0085-2",
+  "employee_id": "EMP-HW-0085",
+  "skill": "Ansys",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-03-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0086-1",
+  "employee_id": "EMP-HW-0086",
+  "skill": "ROS",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-07-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0087-1",
+  "employee_id": "EMP-HW-0087",
+  "skill": "Ansys",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-06-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0088-1",
+  "employee_id": "EMP-HW-0088",
+  "skill": "ROS",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-02-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0088-2",
+  "employee_id": "EMP-HW-0088",
+  "skill": "원가분석",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-03-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0088-3",
+  "employee_id": "EMP-HW-0088",
+  "skill": "ROS",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-04-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0089-1",
+  "employee_id": "EMP-HW-0089",
+  "skill": "CAD",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2024-12-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0090-1",
+  "employee_id": "EMP-HW-0090",
+  "skill": "행정지원",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0090-2",
+  "employee_id": "EMP-HW-0090",
+  "skill": "일정관리",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-0091-1",
+  "employee_id": "EMP-HW-0091",
+  "skill": "회계결산",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-06-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0092-1",
+  "employee_id": "EMP-HW-0092",
+  "skill": "CAD",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-03-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0093-1",
+  "employee_id": "EMP-HW-0093",
+  "skill": "Power BI",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-05-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0093-2",
+  "employee_id": "EMP-HW-0093",
+  "skill": "CAD",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-12-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0094-1",
+  "employee_id": "EMP-HW-0094",
+  "skill": "Simulink",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-02-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0094-2",
+  "employee_id": "EMP-HW-0094",
+  "skill": "ERP",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-12-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0095-1",
+  "employee_id": "EMP-HW-0095",
+  "skill": "B2B 영업",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-07-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0096-1",
+  "employee_id": "EMP-HW-0096",
+  "skill": "위험성평가",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-11-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0096-2",
+  "employee_id": "EMP-HW-0096",
+  "skill": "SCADA",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-01-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0096-3",
+  "employee_id": "EMP-HW-0096",
+  "skill": "SCADA",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-07-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0097-1",
+  "employee_id": "EMP-HW-0097",
+  "skill": "AutoCAD",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-07-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0097-2",
+  "employee_id": "EMP-HW-0097",
+  "skill": "FPGA",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-02-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0097-3",
+  "employee_id": "EMP-HW-0097",
+  "skill": "FPGA",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-05-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0098-1",
+  "employee_id": "EMP-HW-0098",
+  "skill": "C++",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-06-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0098-2",
+  "employee_id": "EMP-HW-0098",
+  "skill": "Python",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2024-11-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0098-3",
+  "employee_id": "EMP-HW-0098",
+  "skill": "C++",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-04-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0099-1",
+  "employee_id": "EMP-HW-0099",
+  "skill": "CAE",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-04-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0100-1",
+  "employee_id": "EMP-HW-0100",
+  "skill": "회계결산",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-01-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0100-2",
+  "employee_id": "EMP-HW-0100",
+  "skill": "AutoCAD",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-06-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0100-3",
+  "employee_id": "EMP-HW-0100",
+  "skill": "Python",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-07-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0101-1",
+  "employee_id": "EMP-HW-0101",
+  "skill": "RPA",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-04-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0101-2",
+  "employee_id": "EMP-HW-0101",
+  "skill": "CATIA",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-08-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0101-3",
+  "employee_id": "EMP-HW-0101",
+  "skill": "Simulink",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-01-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0102-1",
+  "employee_id": "EMP-HW-0102",
+  "skill": "ERP",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-03-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0102-2",
+  "employee_id": "EMP-HW-0102",
+  "skill": "SQL",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-02-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0103-1",
+  "employee_id": "EMP-HW-0103",
+  "skill": "MES",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-01-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0104-1",
+  "employee_id": "EMP-HW-0104",
+  "skill": "MES",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-04-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0105-1",
+  "employee_id": "EMP-HW-0105",
+  "skill": "FPGA",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-09-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0105-2",
+  "employee_id": "EMP-HW-0105",
+  "skill": "Simulink",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-09-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0106-1",
+  "employee_id": "EMP-HW-0106",
+  "skill": "AutoCAD",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-06-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0107-1",
+  "employee_id": "EMP-HW-0107",
+  "skill": "Ansys",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-06-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0107-2",
+  "employee_id": "EMP-HW-0107",
+  "skill": "회계결산",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2026-02-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0108-1",
+  "employee_id": "EMP-HW-0108",
+  "skill": "MES",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2024-12-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0108-2",
+  "employee_id": "EMP-HW-0108",
+  "skill": "ROS",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-08-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0109-1",
+  "employee_id": "EMP-HW-0109",
+  "skill": "제품 가치제안",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0109-2",
+  "employee_id": "EMP-HW-0109",
+  "skill": "고객 세분화",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-0110-1",
+  "employee_id": "EMP-HW-0110",
+  "skill": "SysML",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-03-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0110-2",
+  "employee_id": "EMP-HW-0110",
+  "skill": "CAE",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-05-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0110-3",
+  "employee_id": "EMP-HW-0110",
+  "skill": "CAE",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2026-09-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0111-1",
+  "employee_id": "EMP-HW-0111",
+  "skill": "ROS",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-09-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0111-2",
+  "employee_id": "EMP-HW-0111",
+  "skill": "CAD",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-05-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0111-3",
+  "employee_id": "EMP-HW-0111",
+  "skill": "Simulink",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-08-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0112-1",
+  "employee_id": "EMP-HW-0112",
+  "skill": "품질관리",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-11-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0113-1",
+  "employee_id": "EMP-HW-0113",
+  "skill": "프로젝트 관리",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-02-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0113-2",
+  "employee_id": "EMP-HW-0113",
+  "skill": "RPA",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2024-12-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0114-1",
+  "employee_id": "EMP-HW-0114",
+  "skill": "CAD",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-03-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0115-1",
+  "employee_id": "EMP-HW-0115",
+  "skill": "ERP",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-06-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0116-1",
+  "employee_id": "EMP-HW-0116",
+  "skill": "CAD",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-01-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0117-1",
+  "employee_id": "EMP-HW-0117",
+  "skill": "FPGA",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-12-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0118-1",
+  "employee_id": "EMP-HW-0118",
+  "skill": "Python",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2024-10-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0118-2",
+  "employee_id": "EMP-HW-0118",
+  "skill": "Python",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-08-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0119-1",
+  "employee_id": "EMP-HW-0119",
+  "skill": "Python",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-06-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0120-1",
+  "employee_id": "EMP-HW-0120",
+  "skill": "ERP",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-02-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0121-1",
+  "employee_id": "EMP-HW-0121",
+  "skill": "ERP",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-04-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0121-2",
+  "employee_id": "EMP-HW-0121",
+  "skill": "ERP",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-01-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0121-3",
+  "employee_id": "EMP-HW-0121",
+  "skill": "ERP",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-03-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0122-1",
+  "employee_id": "EMP-HW-0122",
+  "skill": "C++",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2026-01-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0123-1",
+  "employee_id": "EMP-HW-0123",
+  "skill": "C++",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2026-06-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0123-2",
+  "employee_id": "EMP-HW-0123",
+  "skill": "C++",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-06-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0123-3",
+  "employee_id": "EMP-HW-0123",
+  "skill": "MES",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2026-07-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0124-1",
+  "employee_id": "EMP-HW-0124",
+  "skill": "B2B 마케팅",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0124-2",
+  "employee_id": "EMP-HW-0124",
+  "skill": "시장분석",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-0125-1",
+  "employee_id": "EMP-HW-0125",
+  "skill": "CATIA",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-04-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0126-1",
+  "employee_id": "EMP-HW-0126",
+  "skill": "MATLAB",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-03-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0127-1",
+  "employee_id": "EMP-HW-0127",
+  "skill": "B2B 영업",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-05-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0128-1",
+  "employee_id": "EMP-HW-0128",
+  "skill": "요구사항 분석",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-03-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0129-1",
+  "employee_id": "EMP-HW-0129",
+  "skill": "회계결산",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2024-12-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0129-2",
+  "employee_id": "EMP-HW-0129",
+  "skill": "SysML",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-04-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0129-3",
+  "employee_id": "EMP-HW-0129",
+  "skill": "B2B 영업",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-08-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0130-1",
+  "employee_id": "EMP-HW-0130",
+  "skill": "ERP",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-05-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0130-2",
+  "employee_id": "EMP-HW-0130",
+  "skill": "SAP",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-10-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0130-3",
+  "employee_id": "EMP-HW-0130",
+  "skill": "MATLAB",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-06-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0131-1",
+  "employee_id": "EMP-HW-0131",
+  "skill": "SQL",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-04-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0131-2",
+  "employee_id": "EMP-HW-0131",
+  "skill": "프로젝트 관리",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-10-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0132-1",
+  "employee_id": "EMP-HW-0132",
+  "skill": "AI 모델링",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-07-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0132-2",
+  "employee_id": "EMP-HW-0132",
+  "skill": "Python",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-01-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0132-3",
+  "employee_id": "EMP-HW-0132",
+  "skill": "품질관리",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-07-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0133-1",
+  "employee_id": "EMP-HW-0133",
+  "skill": "Java",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-05-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0133-2",
+  "employee_id": "EMP-HW-0133",
+  "skill": "RPA",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-08-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0134-1",
+  "employee_id": "EMP-HW-0134",
+  "skill": "ERP",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-06-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0134-2",
+  "employee_id": "EMP-HW-0134",
+  "skill": "ERP",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-01-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0134-3",
+  "employee_id": "EMP-HW-0134",
+  "skill": "SAP",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-05-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0135-1",
+  "employee_id": "EMP-HW-0135",
+  "skill": "B2B 커뮤니케이션",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0135-2",
+  "employee_id": "EMP-HW-0135",
+  "skill": "경쟁사 분석",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-0136-1",
+  "employee_id": "EMP-HW-0136",
+  "skill": "CAD",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-03-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0136-2",
+  "employee_id": "EMP-HW-0136",
+  "skill": "Python",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-08-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0137-1",
+  "employee_id": "EMP-HW-0137",
+  "skill": "CAD",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-04-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0137-2",
+  "employee_id": "EMP-HW-0137",
+  "skill": "CATIA",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2024-10-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0137-3",
+  "employee_id": "EMP-HW-0137",
+  "skill": "CAD",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-11-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0138-1",
+  "employee_id": "EMP-HW-0138",
+  "skill": "SAP",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-04-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0139-1",
+  "employee_id": "EMP-HW-0139",
+  "skill": "MES",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-07-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0140-1",
+  "employee_id": "EMP-HW-0140",
+  "skill": "품질관리",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-03-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0141-1",
+  "employee_id": "EMP-HW-0141",
+  "skill": "MATLAB",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-06-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0141-2",
+  "employee_id": "EMP-HW-0141",
+  "skill": "C++",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-04-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0141-3",
+  "employee_id": "EMP-HW-0141",
+  "skill": "위험성평가",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-08-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0142-1",
+  "employee_id": "EMP-HW-0142",
+  "skill": "CAE",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-03-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0142-2",
+  "employee_id": "EMP-HW-0142",
+  "skill": "CAE",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-03-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0143-1",
+  "employee_id": "EMP-HW-0143",
+  "skill": "Python",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2024-10-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0143-2",
+  "employee_id": "EMP-HW-0143",
+  "skill": "원가분석",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-06-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0143-3",
+  "employee_id": "EMP-HW-0143",
+  "skill": "ROS",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2026-05-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0144-1",
+  "employee_id": "EMP-HW-0144",
+  "skill": "PLC",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-07-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0145-1",
+  "employee_id": "EMP-HW-0145",
+  "skill": "Python",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2026-02-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0146-1",
+  "employee_id": "EMP-HW-0146",
+  "skill": "프로젝트 관리",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2024-10-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0146-2",
+  "employee_id": "EMP-HW-0146",
+  "skill": "CAE",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-07-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0147-1",
+  "employee_id": "EMP-HW-0147",
+  "skill": "ERP",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-09-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0147-2",
+  "employee_id": "EMP-HW-0147",
+  "skill": "PLC",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-03-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0148-1",
+  "employee_id": "EMP-HW-0148",
+  "skill": "ERP",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-08-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0148-2",
+  "employee_id": "EMP-HW-0148",
+  "skill": "ERP",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-10-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0148-3",
+  "employee_id": "EMP-HW-0148",
+  "skill": "ERP",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-05-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0149-1",
+  "employee_id": "EMP-HW-0149",
+  "skill": "ERP",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-05-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0149-2",
+  "employee_id": "EMP-HW-0149",
+  "skill": "Power BI",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2026-09-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0150-1",
+  "employee_id": "EMP-HW-0150",
+  "skill": "MES",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2026-03-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0151-1",
+  "employee_id": "EMP-HW-0151",
+  "skill": "AI 모델링",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-12-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0151-2",
+  "employee_id": "EMP-HW-0151",
+  "skill": "AI 모델링",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2026-01-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0152-1",
+  "employee_id": "EMP-HW-0152",
+  "skill": "SAP",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-04-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0152-2",
+  "employee_id": "EMP-HW-0152",
+  "skill": "SAP",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-08-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0153-1",
+  "employee_id": "EMP-HW-0153",
+  "skill": "ERP",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-07-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0153-2",
+  "employee_id": "EMP-HW-0153",
+  "skill": "CAE",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-05-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0153-3",
+  "employee_id": "EMP-HW-0153",
+  "skill": "Python",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-09-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0154-1",
+  "employee_id": "EMP-HW-0154",
+  "skill": "B2B 마케팅",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0154-2",
+  "employee_id": "EMP-HW-0154",
+  "skill": "시장분석",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-0155-1",
+  "employee_id": "EMP-HW-0155",
+  "skill": "SysML",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-08-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0155-2",
+  "employee_id": "EMP-HW-0155",
+  "skill": "RPA",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-05-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0155-3",
+  "employee_id": "EMP-HW-0155",
+  "skill": "요구사항 분석",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2024-11-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0156-1",
+  "employee_id": "EMP-HW-0156",
+  "skill": "ROS",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-01-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0156-2",
+  "employee_id": "EMP-HW-0156",
+  "skill": "FPGA",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-10-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0156-3",
+  "employee_id": "EMP-HW-0156",
+  "skill": "RPA",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-04-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0157-1",
+  "employee_id": "EMP-HW-0157",
+  "skill": "요구사항 분석",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-11-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0157-2",
+  "employee_id": "EMP-HW-0157",
+  "skill": "요구사항 분석",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-08-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0157-3",
+  "employee_id": "EMP-HW-0157",
+  "skill": "CAE",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-10-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0158-1",
+  "employee_id": "EMP-HW-0158",
+  "skill": "MATLAB",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-05-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0158-2",
+  "employee_id": "EMP-HW-0158",
+  "skill": "AI 모델링",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-04-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0159-1",
+  "employee_id": "EMP-HW-0159",
+  "skill": "CATIA",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-10-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0160-1",
+  "employee_id": "EMP-HW-0160",
+  "skill": "FPGA",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-01-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0160-2",
+  "employee_id": "EMP-HW-0160",
+  "skill": "FPGA",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2026-04-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0160-3",
+  "employee_id": "EMP-HW-0160",
+  "skill": "CATIA",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-08-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0161-1",
+  "employee_id": "EMP-HW-0161",
+  "skill": "ERP",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2026-07-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0161-2",
+  "employee_id": "EMP-HW-0161",
+  "skill": "SAP",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-04-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0161-3",
+  "employee_id": "EMP-HW-0161",
+  "skill": "요구사항 분석",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-10-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0162-1",
+  "employee_id": "EMP-HW-0162",
+  "skill": "MES",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-10-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0162-2",
+  "employee_id": "EMP-HW-0162",
+  "skill": "요구사항 분석",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-07-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0162-3",
+  "employee_id": "EMP-HW-0162",
+  "skill": "PLC",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-10-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0163-1",
+  "employee_id": "EMP-HW-0163",
+  "skill": "CATIA",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2026-02-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0163-2",
+  "employee_id": "EMP-HW-0163",
+  "skill": "PLC",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-05-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0164-1",
+  "employee_id": "EMP-HW-0164",
+  "skill": "FPGA",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-06-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0164-2",
+  "employee_id": "EMP-HW-0164",
+  "skill": "FPGA",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-12-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0164-3",
+  "employee_id": "EMP-HW-0164",
+  "skill": "품질관리",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-03-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0165-1",
+  "employee_id": "EMP-HW-0165",
+  "skill": "Java",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-01-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0166-1",
+  "employee_id": "EMP-HW-0166",
+  "skill": "Python",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2024-10-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0166-2",
+  "employee_id": "EMP-HW-0166",
+  "skill": "ROS",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-07-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0166-3",
+  "employee_id": "EMP-HW-0166",
+  "skill": "Simulink",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-04-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0167-1",
+  "employee_id": "EMP-HW-0167",
+  "skill": "AutoCAD",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-04-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0167-2",
+  "employee_id": "EMP-HW-0167",
+  "skill": "ERP",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2024-11-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0167-3",
+  "employee_id": "EMP-HW-0167",
+  "skill": "AutoCAD",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-10-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0168-1",
+  "employee_id": "EMP-HW-0168",
+  "skill": "ERP",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-03-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0169-1",
+  "employee_id": "EMP-HW-0169",
+  "skill": "제품 가치제안",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0169-2",
+  "employee_id": "EMP-HW-0169",
+  "skill": "고객 세분화",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-0170-1",
+  "employee_id": "EMP-HW-0170",
+  "skill": "MATLAB",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-06-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0171-1",
+  "employee_id": "EMP-HW-0171",
+  "skill": "C++",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-04-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0171-2",
+  "employee_id": "EMP-HW-0171",
+  "skill": "MATLAB",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2024-12-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0171-3",
+  "employee_id": "EMP-HW-0171",
+  "skill": "MATLAB",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-07-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0172-1",
+  "employee_id": "EMP-HW-0172",
+  "skill": "CAD",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-01-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0172-2",
+  "employee_id": "EMP-HW-0172",
+  "skill": "CAD",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-10-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0173-1",
+  "employee_id": "EMP-HW-0173",
+  "skill": "MES",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-06-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0173-2",
+  "employee_id": "EMP-HW-0173",
+  "skill": "AI 모델링",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-10-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0173-3",
+  "employee_id": "EMP-HW-0173",
+  "skill": "ERP",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-03-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0174-1",
+  "employee_id": "EMP-HW-0174",
+  "skill": "RPA",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-05-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0174-2",
+  "employee_id": "EMP-HW-0174",
+  "skill": "CATIA",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-09-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0174-3",
+  "employee_id": "EMP-HW-0174",
+  "skill": "품질관리",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-09-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0175-1",
+  "employee_id": "EMP-HW-0175",
+  "skill": "SAP",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2024-10-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0175-2",
+  "employee_id": "EMP-HW-0175",
+  "skill": "SysML",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-11-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0176-1",
+  "employee_id": "EMP-HW-0176",
+  "skill": "SQL",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-04-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0177-1",
+  "employee_id": "EMP-HW-0177",
+  "skill": "CAD",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-01-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0178-1",
+  "employee_id": "EMP-HW-0178",
+  "skill": "PLC",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-03-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0178-2",
+  "employee_id": "EMP-HW-0178",
+  "skill": "PLC",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-06-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0179-1",
+  "employee_id": "EMP-HW-0179",
+  "skill": "SAP",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-03-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0179-2",
+  "employee_id": "EMP-HW-0179",
+  "skill": "ERP",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2024-11-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0179-3",
+  "employee_id": "EMP-HW-0179",
+  "skill": "PLC",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-09-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0180-1",
+  "employee_id": "EMP-HW-0180",
+  "skill": "글로벌 마케팅",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0180-2",
+  "employee_id": "EMP-HW-0180",
+  "skill": "영문 콘텐츠",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-0181-1",
+  "employee_id": "EMP-HW-0181",
+  "skill": "AutoCAD",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-02-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0182-1",
+  "employee_id": "EMP-HW-0182",
+  "skill": "Ansys",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-08-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0182-2",
+  "employee_id": "EMP-HW-0182",
+  "skill": "AutoCAD",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-01-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0182-3",
+  "employee_id": "EMP-HW-0182",
+  "skill": "CAE",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2024-12-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0183-1",
+  "employee_id": "EMP-HW-0183",
+  "skill": "CAD",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-06-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0183-2",
+  "employee_id": "EMP-HW-0183",
+  "skill": "AI 모델링",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-05-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0183-3",
+  "employee_id": "EMP-HW-0183",
+  "skill": "위험성평가",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2024-11-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0184-1",
+  "employee_id": "EMP-HW-0184",
+  "skill": "PLC",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2024-11-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0184-2",
+  "employee_id": "EMP-HW-0184",
+  "skill": "ERP",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-09-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0185-1",
+  "employee_id": "EMP-HW-0185",
+  "skill": "Simulink",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-07-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0185-2",
+  "employee_id": "EMP-HW-0185",
+  "skill": "Simulink",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-05-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0186-1",
+  "employee_id": "EMP-HW-0186",
+  "skill": "위험성평가",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-04-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0186-2",
+  "employee_id": "EMP-HW-0186",
+  "skill": "프로젝트 관리",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-02-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0187-1",
+  "employee_id": "EMP-HW-0187",
+  "skill": "원가분석",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-11-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0188-1",
+  "employee_id": "EMP-HW-0188",
+  "skill": "ROS",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-05-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0189-1",
+  "employee_id": "EMP-HW-0189",
+  "skill": "CAD",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-07-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0189-2",
+  "employee_id": "EMP-HW-0189",
+  "skill": "PLC",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-02-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0189-3",
+  "employee_id": "EMP-HW-0189",
+  "skill": "PLC",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-12-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0190-1",
+  "employee_id": "EMP-HW-0190",
+  "skill": "AutoCAD",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-02-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0190-2",
+  "employee_id": "EMP-HW-0190",
+  "skill": "Power BI",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-05-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0190-3",
+  "employee_id": "EMP-HW-0190",
+  "skill": "Python",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-10-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0191-1",
+  "employee_id": "EMP-HW-0191",
+  "skill": "SysML",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-03-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0192-1",
+  "employee_id": "EMP-HW-0192",
+  "skill": "Python",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-06-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0192-2",
+  "employee_id": "EMP-HW-0192",
+  "skill": "RPA",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-08-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0192-3",
+  "employee_id": "EMP-HW-0192",
+  "skill": "RPA",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-04-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0193-1",
+  "employee_id": "EMP-HW-0193",
+  "skill": "Python",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-04-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0193-2",
+  "employee_id": "EMP-HW-0193",
+  "skill": "ERP",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2024-10-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0193-3",
+  "employee_id": "EMP-HW-0193",
+  "skill": "Python",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-08-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0194-1",
+  "employee_id": "EMP-HW-0194",
+  "skill": "FPGA",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-02-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0194-2",
+  "employee_id": "EMP-HW-0194",
+  "skill": "Ansys",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-04-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0194-3",
+  "employee_id": "EMP-HW-0194",
+  "skill": "CATIA",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-11-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0195-1",
+  "employee_id": "EMP-HW-0195",
+  "skill": "B2B 영업",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-04-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0195-2",
+  "employee_id": "EMP-HW-0195",
+  "skill": "C++",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-10-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0196-1",
+  "employee_id": "EMP-HW-0196",
+  "skill": "AutoCAD",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2026-07-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0196-2",
+  "employee_id": "EMP-HW-0196",
+  "skill": "ERP",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2026-08-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0196-3",
+  "employee_id": "EMP-HW-0196",
+  "skill": "MATLAB",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-03-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0197-1",
+  "employee_id": "EMP-HW-0197",
+  "skill": "AutoCAD",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-02-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0197-2",
+  "employee_id": "EMP-HW-0197",
+  "skill": "ERP",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-05-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0197-3",
+  "employee_id": "EMP-HW-0197",
+  "skill": "ERP",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-07-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0198-1",
+  "employee_id": "EMP-HW-0198",
+  "skill": "MATLAB",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2024-12-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0199-1",
+  "employee_id": "EMP-HW-0199",
+  "skill": "제품 가치제안",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0199-2",
+  "employee_id": "EMP-HW-0199",
+  "skill": "고객 세분화",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-0200-1",
+  "employee_id": "EMP-HW-0200",
+  "skill": "SysML",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2024-10-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0201-1",
+  "employee_id": "EMP-HW-0201",
+  "skill": "회계결산",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2026-05-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0201-2",
+  "employee_id": "EMP-HW-0201",
+  "skill": "SysML",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-07-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0201-3",
+  "employee_id": "EMP-HW-0201",
+  "skill": "FPGA",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-06-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0202-1",
+  "employee_id": "EMP-HW-0202",
+  "skill": "C++",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-04-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0202-2",
+  "employee_id": "EMP-HW-0202",
+  "skill": "Power BI",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-02-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0202-3",
+  "employee_id": "EMP-HW-0202",
+  "skill": "요구사항 분석",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2024-11-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0203-1",
+  "employee_id": "EMP-HW-0203",
+  "skill": "C++",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-09-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0203-2",
+  "employee_id": "EMP-HW-0203",
+  "skill": "Simulink",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-02-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0204-1",
+  "employee_id": "EMP-HW-0204",
+  "skill": "프로젝트 관리",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-03-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0204-2",
+  "employee_id": "EMP-HW-0204",
+  "skill": "프로젝트 관리",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-04-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0205-1",
+  "employee_id": "EMP-HW-0205",
+  "skill": "프로젝트 관리",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-07-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0205-2",
+  "employee_id": "EMP-HW-0205",
+  "skill": "B2B 영업",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-08-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0205-3",
+  "employee_id": "EMP-HW-0205",
+  "skill": "B2B 영업",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2024-10-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0206-1",
+  "employee_id": "EMP-HW-0206",
+  "skill": "요구사항 분석",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-01-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0207-1",
+  "employee_id": "EMP-HW-0207",
+  "skill": "회계결산",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-06-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0207-2",
+  "employee_id": "EMP-HW-0207",
+  "skill": "회계결산",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2024-10-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0207-3",
+  "employee_id": "EMP-HW-0207",
+  "skill": "Simulink",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-09-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0208-1",
+  "employee_id": "EMP-HW-0208",
+  "skill": "Ansys",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-09-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0208-2",
+  "employee_id": "EMP-HW-0208",
+  "skill": "SysML",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-01-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0209-1",
+  "employee_id": "EMP-HW-0209",
+  "skill": "CAD",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2026-02-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0210-1",
+  "employee_id": "EMP-HW-0210",
+  "skill": "AI 모델링",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-03-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0211-1",
+  "employee_id": "EMP-HW-0211",
+  "skill": "ROS",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-04-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0211-2",
+  "employee_id": "EMP-HW-0211",
+  "skill": "SQL",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2024-10-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0211-3",
+  "employee_id": "EMP-HW-0211",
+  "skill": "ROS",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2024-10-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0212-1",
+  "employee_id": "EMP-HW-0212",
+  "skill": "Simulink",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-04-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0212-2",
+  "employee_id": "EMP-HW-0212",
+  "skill": "C++",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-03-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0213-1",
+  "employee_id": "EMP-HW-0213",
+  "skill": "회계결산",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2024-10-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0213-2",
+  "employee_id": "EMP-HW-0213",
+  "skill": "회계결산",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-09-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0214-1",
+  "employee_id": "EMP-HW-0214",
+  "skill": "B2B 커뮤니케이션",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0214-2",
+  "employee_id": "EMP-HW-0214",
+  "skill": "경쟁사 분석",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-0215-1",
+  "employee_id": "EMP-HW-0215",
+  "skill": "CAD",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-08-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0215-2",
+  "employee_id": "EMP-HW-0215",
+  "skill": "CAD",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-11-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0216-1",
+  "employee_id": "EMP-HW-0216",
+  "skill": "SQL",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-08-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0217-1",
+  "employee_id": "EMP-HW-0217",
+  "skill": "CAD",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2026-02-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0217-2",
+  "employee_id": "EMP-HW-0217",
+  "skill": "Power BI",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-08-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0218-1",
+  "employee_id": "EMP-HW-0218",
+  "skill": "ERP",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-02-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0218-2",
+  "employee_id": "EMP-HW-0218",
+  "skill": "RPA",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-10-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0218-3",
+  "employee_id": "EMP-HW-0218",
+  "skill": "원가분석",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-05-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0219-1",
+  "employee_id": "EMP-HW-0219",
+  "skill": "C++",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-02-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0220-1",
+  "employee_id": "EMP-HW-0220",
+  "skill": "SysML",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-07-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0220-2",
+  "employee_id": "EMP-HW-0220",
+  "skill": "B2B 영업",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2024-10-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0221-1",
+  "employee_id": "EMP-HW-0221",
+  "skill": "PLC",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-11-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0221-2",
+  "employee_id": "EMP-HW-0221",
+  "skill": "PLC",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-10-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0222-1",
+  "employee_id": "EMP-HW-0222",
+  "skill": "위험성평가",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2024-12-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0222-2",
+  "employee_id": "EMP-HW-0222",
+  "skill": "위험성평가",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-06-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0223-1",
+  "employee_id": "EMP-HW-0223",
+  "skill": "MATLAB",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-03-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0224-1",
+  "employee_id": "EMP-HW-0224",
+  "skill": "위험성평가",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2024-12-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0224-2",
+  "employee_id": "EMP-HW-0224",
+  "skill": "위험성평가",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-05-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0224-3",
+  "employee_id": "EMP-HW-0224",
+  "skill": "ERP",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-05-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0225-1",
+  "employee_id": "EMP-HW-0225",
+  "skill": "제품 가치제안",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0225-2",
+  "employee_id": "EMP-HW-0225",
+  "skill": "고객 세분화",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-0226-1",
+  "employee_id": "EMP-HW-0226",
+  "skill": "AutoCAD",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-11-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0227-1",
+  "employee_id": "EMP-HW-0227",
+  "skill": "Ansys",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-09-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0228-1",
+  "employee_id": "EMP-HW-0228",
+  "skill": "Python",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-04-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0228-2",
+  "employee_id": "EMP-HW-0228",
+  "skill": "CAD",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2024-10-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0228-3",
+  "employee_id": "EMP-HW-0228",
+  "skill": "Python",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-12-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0229-1",
+  "employee_id": "EMP-HW-0229",
+  "skill": "MES",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-06-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0229-2",
+  "employee_id": "EMP-HW-0229",
+  "skill": "공정개선",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-09-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0229-3",
+  "employee_id": "EMP-HW-0229",
+  "skill": "ERP",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-08-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0230-1",
+  "employee_id": "EMP-HW-0230",
+  "skill": "프로젝트 관리",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2024-12-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0231-1",
+  "employee_id": "EMP-HW-0231",
+  "skill": "CATIA",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-01-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0231-2",
+  "employee_id": "EMP-HW-0231",
+  "skill": "SAP",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-06-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0231-3",
+  "employee_id": "EMP-HW-0231",
+  "skill": "위험성평가",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-03-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0232-1",
+  "employee_id": "EMP-HW-0232",
+  "skill": "Python",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-02-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0233-1",
+  "employee_id": "EMP-HW-0233",
+  "skill": "C++",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-07-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0234-1",
+  "employee_id": "EMP-HW-0234",
+  "skill": "SAP",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-05-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0235-1",
+  "employee_id": "EMP-HW-0235",
+  "skill": "Simulink",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-03-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0235-2",
+  "employee_id": "EMP-HW-0235",
+  "skill": "원가분석",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-08-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0235-3",
+  "employee_id": "EMP-HW-0235",
+  "skill": "AutoCAD",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2024-11-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0236-1",
+  "employee_id": "EMP-HW-0236",
+  "skill": "CAD",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2024-10-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0236-2",
+  "employee_id": "EMP-HW-0236",
+  "skill": "CAE",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2024-10-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0237-1",
+  "employee_id": "EMP-HW-0237",
+  "skill": "회계결산",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-07-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0237-2",
+  "employee_id": "EMP-HW-0237",
+  "skill": "AI 모델링",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2026-05-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0237-3",
+  "employee_id": "EMP-HW-0237",
+  "skill": "RPA",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-10-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0238-1",
+  "employee_id": "EMP-HW-0238",
+  "skill": "SQL",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-07-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0239-1",
+  "employee_id": "EMP-HW-0239",
+  "skill": "Power BI",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2026-06-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0239-2",
+  "employee_id": "EMP-HW-0239",
+  "skill": "공정개선",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-04-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0239-3",
+  "employee_id": "EMP-HW-0239",
+  "skill": "B2B 영업",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-01-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0240-1",
+  "employee_id": "EMP-HW-0240",
+  "skill": "B2B 영업",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-04-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0241-1",
+  "employee_id": "EMP-HW-0241",
+  "skill": "B2B 영업",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-05-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-0241-2",
+  "employee_id": "EMP-HW-0241",
+  "skill": "B2B 영업",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-10-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0241-3",
+  "employee_id": "EMP-HW-0241",
+  "skill": "B2B 영업",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2025-01-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0242-1",
+  "employee_id": "EMP-HW-0242",
+  "skill": "CATIA",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-08-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0243-1",
+  "employee_id": "EMP-HW-0243",
+  "skill": "공정개선",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2026-07-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0243-2",
+  "employee_id": "EMP-HW-0243",
+  "skill": "Simulink",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2026-02-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0243-3",
+  "employee_id": "EMP-HW-0243",
+  "skill": "AutoCAD",
+  "from_level": 2,
+  "to_level": 3,
+  "acquired_date": "2025-01-23",
+  "method": "자기주도 학습"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0244-1",
+  "employee_id": "EMP-HW-0244",
+  "skill": "제품 가치제안",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0244-2",
+  "employee_id": "EMP-HW-0244",
+  "skill": "고객 세분화",
+  "from_level": 2,
+  "to_level": 2,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-0245-1",
+  "employee_id": "EMP-HW-0245",
+  "skill": "요구사항 분석",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-11-23",
+  "method": "교육 수료"
+ },
+ {
+  "development_id": "DEV-0245-2",
+  "employee_id": "EMP-HW-0245",
+  "skill": "요구사항 분석",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2026-09-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0246-1",
+  "employee_id": "EMP-HW-0246",
+  "skill": "요구사항 분석",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2026-03-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0246-2",
+  "employee_id": "EMP-HW-0246",
+  "skill": "요구사항 분석",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2024-10-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0246-3",
+  "employee_id": "EMP-HW-0246",
+  "skill": "요구사항 분석",
+  "from_level": 1,
+  "to_level": 4,
+  "acquired_date": "2025-09-23",
+  "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-0247-1",
+  "employee_id": "EMP-HW-0247",
+  "skill": "Power BI",
+  "from_level": 1,
+  "to_level": 3,
+  "acquired_date": "2024-11-23",
+  "method": "실무 프로젝트"
+ }
+]
