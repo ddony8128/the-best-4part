@@ -3,6 +3,7 @@
 // 실행: SUPABASE_ACCESS_TOKEN=... node data/load-supabase.mjs   (URL·secret 키·ref는 .env.local에서 읽음)
 import fs from 'node:fs';
 import path from 'node:path';
+import { JD_FAMILY } from './hr_v3/org.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const local = Object.fromEntries(fs.readFileSync(path.join(ROOT, '.env.local'), 'utf8').replace(/^﻿/, '').split(/\r?\n/).filter(l => l.includes('=')).map(l => [l.slice(0, l.indexOf('=')).replace(/^﻿/, '').trim(), l.slice(l.indexOf('=') + 1).trim()]));
@@ -32,7 +33,7 @@ create table training (training_id text primary key, employee_id text references
 create table performance (evaluation_id text primary key, employee_id text references employees on delete cascade, year int, kpi text, kpi_target int, kpi_achievement_pct int, grade text);
 create table career_plans (cdp_id text primary key, employee_id text references employees on delete cascade, desired_jd text, desired_role text, development_goal text, plan text, target_date date);
 -- 공고별 참고 자료: 전임자 인수인계 · 고성과자 패턴 · 직무 연구 요약 (AI가 요건을 정리할 때 JD와 함께 참고)
-create table job_references (jd_id text primary key references jobs(id), business text, handover jsonb, high_performers jsonb, high_performers_sample_n int, research jsonb, updated_at timestamptz default now());
+create table job_references (jd_id text primary key references jobs(id), business text, handover jsonb, high_performers jsonb, high_performers_sample_n int, research jsonb, research_basis jsonb, updated_at timestamptz default now());
 -- 업무 기록 (화면에서 쌓임)
 create table applications (id bigint generated always as identity primary key, employee_id text references employees on delete cascade, jd_id text references jobs(id), motive text, available_from date, participation_pct int, location text, org_status text, status text default '미검토', created_at timestamptz default now(), cancelled_at timestamptz);
 create table offers (id bigint generated always as identity primary key, employee_id text references employees on delete cascade, jd_id text references jobs(id), sender text, subject text, model jsonb, html text, created_at timestamptz default now());
@@ -63,7 +64,12 @@ await new Promise(r => setTimeout(r, 3000));
 const jobs = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/jobs.json'), 'utf8')).map(j => ({ ...j, deadline: j.deadline || null }));
 await insert('jobs', jobs);
 const refs = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/references/references.json'), 'utf8'));
-await insert('job_references', Object.entries(refs).map(([jd, r]) => ({ jd_id: jd, business: r.handover.business, handover: { tasks: r.handover.tasks, memos: r.handover.memos, successor_keywords: r.handover.successor_keywords }, high_performers: r.high_performers, high_performers_sample_n: r.high_performers_sample_n, research: r.research })));
+// 직무군별 연구 기반 가중치(research_framework.json) → 공고마다 4단계 중요도의 행동 요건 후보로 펼친다
+const RF = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/references/research_framework.json'), 'utf8'));
+const level = w => w >= 0.3 ? '매우 중요' : w >= 0.2 ? '중요' : w >= 0.15 ? '보통' : '덜 중요';
+const basis = jd => { const fam = JD_FAMILY[jd] || '마케팅', f = RF.families[fam];
+  return { family: fam, focus: f.focus, sources: f.sources, traits: Object.entries(f.weights).map(([k, w]) => ({ trait: RF.traits[k].name, behavior: RF.traits[k].behavior, weight: w, level: level(w), evidence: RF.traits[k].evidence })) } };
+await insert('job_references', Object.entries(refs).map(([jd, r]) => ({ jd_id: jd, business: r.handover.business, handover: { tasks: r.handover.tasks, memos: r.handover.memos, successor_keywords: r.handover.successor_keywords }, high_performers: r.high_performers, high_performers_sample_n: r.high_performers_sample_n, research: r.research, research_basis: basis(jd) })));
 const C = f => JSON.parse(fs.readFileSync(path.join(ROOT, 'data/hr_v3/clean', f + '.json'), 'utf8'));
 for (const t of ['employees', 'assignments', 'projects', 'evidence', 'skills', 'skill_development', 'certifications', 'training', 'performance', 'career_plans', 'applications']) await insert(t, C(t));
 const counts = await sql(['jobs', 'job_references', 'employees', 'assignments', 'projects', 'evidence', 'skills', 'skill_development', 'certifications', 'training', 'performance', 'career_plans', 'applications'].map(t => `select '${t}' as t, count(*)::int as n from ${t}`).join(' union all '));

@@ -1,0 +1,25 @@
+{
+ "about": "직무군별 성격 5요인-직무성과 메타분석 연구를 참고한 초기 가중치. 성격 점수를 따로 매기지 않고, 각 요인을 인사 DB에 있는 관찰 가능한 행동 근거로 바꿔 공고 요건 후보로 제안한다. 가중치는 논문 수치가 아니라 연구 경향을 참고해 정한 초기값이며, 이동 후 성과 기록으로 보정한다.",
+ "levels": "가중치 0.30 이상 매우 중요 · 0.20 이상 중요 · 0.15 이상 보통 · 그 외 덜 중요",
+ "traits": {
+  "C": { "name": "성실성", "behavior": "목표 달성 안정성·기한 준수", "evidence": ["performance: 연도별 KPI 달성률의 꾸준함", "projects: 일정 내 산출물 완료"] },
+  "E": { "name": "외향성(주도성)", "behavior": "주도적 대외 협의·과제 리딩", "evidence": ["projects: 리딩·대외 협의 역할", "assignments: TF 참여"] },
+  "O": { "name": "개방성", "behavior": "신기술 습득·직무 전환 적응", "evidence": ["training: 신기술 교육 이수", "skill_development: 역량 향상 이력", "assignments: 직무 전환 경험"] },
+  "ES": { "name": "정서적 안정성", "behavior": "긴급·고위험 과제 수행", "evidence": ["projects: 긴급 대응·장애 처리 기록(없으면 정보 미확인)"] },
+  "A": { "name": "친화성", "behavior": "부서 간 협업·조정", "evidence": ["projects: 협업 과제의 직접 기여", "evidence: 협업 산출물"] }
+ },
+ "families": {
+  "SW": { "weights": { "C": 0.40, "O": 0.25, "ES": 0.15, "A": 0.15, "E": 0.05 }, "focus": "정밀한 구현·결함 관리와 새 기술 적응이 핵심, 대외 성향은 성과와 관련이 약함", "sources": ["Cruz, da Silva & Capretz (2015), Information and Software Technology", "Acuña, Gómez & Juristo (2009), Information and Software Technology", "Barrick & Mount (1991), Personnel Psychology"] },
+  "영업": { "weights": { "E": 0.35, "C": 0.30, "ES": 0.15, "O": 0.10, "A": 0.10 }, "focus": "외향성 중 주도성과 성실성 중 성취 지향이 실적을 가장 잘 예측", "sources": ["Vinchur, Schippmann, Switzer & Roth (1998), Journal of Applied Psychology", "Barrick & Mount (1991), Personnel Psychology"] },
+  "전략": { "weights": { "C": 0.35, "E": 0.25, "O": 0.20, "ES": 0.10, "A": 0.10 }, "focus": "실행 일관성(성실성)과 대외 조율·전략적 탐색이 함께 필요한 통합형", "sources": ["Judge, Bono, Ilies & Gerhardt (2002), Journal of Applied Psychology", "Barrick & Mount (1991), Personnel Psychology"] },
+  "마케팅": { "weights": { "O": 0.30, "E": 0.25, "C": 0.25, "ES": 0.10, "A": 0.10 }, "focus": "새 시장·콘텐츠 기획의 개방성과 대외 커뮤니케이션, 실행 관리가 함께 필요", "sources": ["Vinchur et al. (1998), Journal of Applied Psychology", "Barrick, Mount & Judge (2001), International Journal of Selection and Assessment"] },
+  "설계": { "weights": { "C": 0.35, "O": 0.25, "ES": 0.15, "A": 0.15, "E": 0.10 }, "focus": "직무 지식·실제 수행 경험이 성격보다 예측력이 커서 경력 근거를 우선하고, 성실성·개방성을 보조로 봄", "sources": ["Schmidt & Hunter (1998), Psychological Bulletin", "Hurtz & Donovan (2000), Journal of Applied Psychology"] },
+  "생산": { "weights": { "C": 0.35, "ES": 0.20, "E": 0.20, "A": 0.15, "O": 0.10 }, "focus": "공정 일정 준수와 현장 인력 리딩, 돌발 상황 대응", "sources": ["Barrick & Mount (1991), Personnel Psychology", "Judge et al. (2002), Journal of Applied Psychology"] },
+  "품질": { "weights": { "C": 0.40, "ES": 0.20, "O": 0.15, "A": 0.15, "E": 0.10 }, "focus": "성실성 하위 요인 중 신뢰성·질서가 기록 누락 없는 검사 업무와 관련", "sources": ["Dudley, Orvis, Lebiecki & Cortina (2006), Journal of Applied Psychology", "Hurtz & Donovan (2000), Journal of Applied Psychology"] },
+  "안전": { "weights": { "C": 0.40, "ES": 0.20, "A": 0.20, "E": 0.10, "O": 0.10 }, "focus": "성실성과 안전 동기·지식이 안전 성과와 사고 감소를 예측", "sources": ["Christian, Bradley, Wallace & Burke (2009), Journal of Applied Psychology", "Clarke & Robertson (2005), Journal of Occupational and Organizational Psychology"] },
+  "구매": { "weights": { "C": 0.30, "E": 0.20, "ES": 0.20, "A": 0.15, "O": 0.15 }, "focus": "협상 성과와 공급망 일정 관리, 지나친 양보를 피하는 균형", "sources": ["Sharma, Bottom & Elfenbein (2013), Organizational Psychology Review", "Barrick & Mount (1991), Personnel Psychology"] },
+  "재무": { "weights": { "C": 0.45, "ES": 0.20, "O": 0.15, "A": 0.10, "E": 0.10 }, "focus": "정확성·기한 준수(성실성)가 가장 일관된 예측 요인", "sources": ["Barrick & Mount (1991), Personnel Psychology", "Dudley et al. (2006), Journal of Applied Psychology"] },
+  "인사": { "weights": { "A": 0.25, "C": 0.25, "E": 0.20, "ES": 0.20, "O": 0.10 }, "focus": "대인 상호작용이 많은 직무에서는 친화성·정서적 안정성의 영향이 커짐", "sources": ["Mount, Barrick & Stewart (1998), Human Performance", "Hurtz & Donovan (2000), Journal of Applied Psychology"] }
+ },
+ "next": ["공고 분석 시 가중치를 4단계 중요도로 바꿔 '연구 기반 행동 요건' 후보로 제안(담당자가 조정)", "연차가 높을수록 개방성·외향성 비중 상향", "사내 이동 후 성과 기록으로 가중치 보정"]
+}
