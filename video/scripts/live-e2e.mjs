@@ -33,10 +33,8 @@ check(await page.locator('#refCard:not(.hidden) .rf').count() === 3, 'reference 
 check((await page.locator('#reqRows').textContent()).includes('연구자료'), 'research-based requirement included');
 
 if (process.env.NEW_BATCH) {
-  console.log(t(), 're-analyze (live Claude)');
-  await page.click('#btnReanalyze');
-  await page.waitForFunction(() => /방금 AI 분석/.test(document.getElementById('aiState').textContent), null, { timeout: 90000 });
-  check(true, 'live re-analysis done: ' + await page.locator('#reqRows tr').count() + ' requirements');
+  // 분석 결과를 지우면 분석 버튼이 그 자리에서 Claude로 분석한다 → 새 요건이므로 새 스캔 배치
+  console.log('NEW_BATCH: run data/scan/reset-analyses.mjs for JD-045 first');
   await page.click('#btnGate');
   await page.waitForSelector('#asyncBox:not(.hidden)', { timeout: 60000 });
   check(true, 'async batch box: ' + (await page.locator('#asyncBox').textContent()).slice(0, 80));

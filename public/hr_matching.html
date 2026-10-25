@@ -154,7 +154,7 @@ table{width:100%;border-collapse:collapse;font-size:12px;text-align:left}th{colo
     <div class="card">
       <div class="card-head"><h2>AI가 정리한 요구사항</h2><span class="ai-line" id="aiState"><span class="spin"></span>JD와 참고 자료를 분석하는 중</span></div>
       <div style="overflow:auto"><table><thead><tr><th>요구사항</th><th>평가 축</th><th>유형</th><th>필수 / 우대</th><th>근거 출처</th></tr></thead><tbody id="reqRows"></tbody></table></div>
-      <div class="form-foot" style="margin-top:12px"><p class="tiny" style="margin:0">필수 / 우대를 눌러 바꿀 수 있습니다. 정량 요건은 규칙으로, 정성 요건은 AI가 인사 기록과 대조합니다.</p><button id="btnReanalyze" class="hidden" onclick="reanalyze()">AI로 다시 분석</button></div>
+      <div class="form-foot" style="margin-top:12px"><p class="tiny" style="margin:0">필수 / 우대를 눌러 바꿀 수 있습니다. 정량 요건은 규칙으로, 정성 요건은 AI가 인사 기록과 대조합니다.</p></div>
     </div>
     <div class="card hidden" id="refCard"><div class="card-head"><h2>AI가 함께 읽은 공고별 참고 자료</h2><span class="tiny">JD만으로는 드러나지 않는 요건을 보완</span></div><div class="refs" id="refBody"></div></div>
     <div class="card" id="weightCard" style="opacity:.35;transition:opacity .4s">
@@ -363,19 +363,16 @@ function renderRef(ref){if(!ref){$('refCard').classList.add('hidden');return}con
  <div class="rf"><b>직무 연구 · ${esc(rb?.family||'')} 직무군</b>${esc(rb?.focus||'')}<br>${(rb?.traits||[]).filter(t=>t.level==='매우 중요'||t.level==='중요').map(t=>`· ${esc(t.behavior)} <small>${esc(t.level)}</small>`).join('<br>')}<br><small>${esc((rb?.sources||[]).join(' · '))}</small></div>`;$('refCard').classList.remove('hidden')}
 async function paintReqs(state){$('reqRows').innerHTML='';for(const r of REQS){const tr=document.createElement('tr');tr.className='row-in';tr.innerHTML=reqRow(r);$('reqRows').appendChild(tr);bindNeed(tr,r);await sleep(300)}
  await sleep(200);renderWeights('weightsGate',false);$('weightCard').style.opacity=1;$('aiState').innerHTML=`✓ 요구사항 ${REQS.length}개 · 필수 ${REQS.filter(r=>r.need==='필수').length} · 우대 ${REQS.filter(r=>r.need!=='필수').length} 제안${state?' · '+state:''}`;reqsReady=true;$('btnGate').disabled=false}
-const anLabel=()=>ANALYSIS?`${API.when(ANALYSIS.created_at)} AI 분석`:'';
 
 // STEP 2
 async function analyze(){if(!scope.size){notify('스캔할 계열사를 하나 이상 고르세요.');return}
  // 고른 공고의 요건·기본 가중치·후보로 바꾼다
- curJD=$('jdSelect').value;ANALYSIS=null;REF=null;REQS=JDS[curJD].reqs.map(r=>({...r}));WL=toLevels(JDS[curJD].w);syncW();C=buildCands(curJD);selected=null;for(const k in docModels)delete docModels[k];show(2);$('reqRows').innerHTML='';reqsReady=false;$('btnGate').disabled=true;$('weightCard').style.opacity=.35;$('aiState').innerHTML='<span class="spin"></span>JD와 참고 자료를 분석하는 중';renderWeights('weightsGate',false);$('refCard').classList.add('hidden');$('btnReanalyze').classList.toggle('hidden',!LIVE);
- const got=LIVE?await API.data('analysis',{jd:curJD},10000):null;
- if(got&&got.analysis)applyAnalysis(got.analysis);REF=got&&got.reference;renderRef(REF);
- await sleep(600);await paintReqs(anLabel())}
-async function reanalyze(){const b=$('btnReanalyze');b.disabled=true;reqsReady=false;$('btnGate').disabled=true;$('weightCard').style.opacity=.35;$('aiState').innerHTML='<span class="spin"></span>Claude가 JD와 참고 자료를 다시 읽는 중 · 약 15초';
- const row=await API.post('analyze-jd',{jd:curJD},70000);b.disabled=false;
- if(!row||!row.analysis){notify('AI 분석에 실패했습니다. 이전 분석을 그대로 씁니다.');await paintReqs(anLabel());return}
- applyAnalysis(row);await paintReqs('방금 AI 분석 · 새 요건으로 스캔하면 판정을 다시 받습니다')}
+ curJD=$('jdSelect').value;ANALYSIS=null;REF=null;REQS=JDS[curJD].reqs.map(r=>({...r}));WL=toLevels(JDS[curJD].w);syncW();C=buildCands(curJD);selected=null;for(const k in docModels)delete docModels[k];show(2);$('reqRows').innerHTML='';reqsReady=false;$('btnGate').disabled=true;$('weightCard').style.opacity=.35;$('aiState').innerHTML='<span class="spin"></span>JD와 참고 자료를 분석하는 중';renderWeights('weightsGate',false);$('refCard').classList.add('hidden');
+ // 이 공고를 분석한 결과가 있으면 그대로 쓰고, 없으면 지금 Claude로 분석한다
+ const got=LIVE?await API.data('analysis',{jd:curJD},10000):null;REF=got&&got.reference;renderRef(REF);
+ if(got&&got.analysis)applyAnalysis(got.analysis);
+ else if(LIVE){const row=await API.post('analyze-jd',{jd:curJD},70000);if(row&&row.analysis)applyAnalysis(row);else notify('AI 분석에 실패해 공고 원문으로 요건을 정리했습니다.')}
+ await sleep(600);await paintReqs()}
 function reqRow(r){return`<td><strong>${esc(r.r)}</strong></td><td>${esc(r.axis)}</td><td>${esc(r.type)}</td><td><button class="need ${r.need==='필수'?'must':''}">${esc(r.need)}</button></td><td>${r.src.map(s=>`<span class="srctag">${esc(s)}</span>`).join('')}</td>`}
 function bindNeed(tr,r){tr.querySelector('.need').onclick=()=>{r.need=r.need==='필수'?'우대':'필수';tr.innerHTML=reqRow(r);bindNeed(tr,r)}}
 // 중요도: 축마다 4단계 중 하나를 고르면 비율은 자동 계산된다 (매우 중요 4 : 중요 3 : 보통 2 : 덜 중요 1)
