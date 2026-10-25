@@ -1,4 +1,4 @@
-// 추천서 · 제안서 초안 생성: 프롬프트 틀(_lib/prompts.js) → Claude(구조화 JSON 출력)
+// 추천서 · 제안서 초안 생성: 프롬프트 틀(_lib/prompts.js) → Claude Sonnet 5.5(구조화 JSON 출력)
 // Claude가 실패하면 Gemini, 둘 다 실패하면 화면이 규칙 기반 초안으로 대신한다.
 // 인사 담당자 세션 쿠키가 있어야 호출할 수 있다.
 import crypto from 'node:crypto';
@@ -18,7 +18,7 @@ function isHR(request) {
 
 async function withClaude(type, input) {
   const client = new Anthropic({ apiKey: env('ANTHROPIC_API_KEY'), timeout: 25000, maxRetries: 1 });
-  const model = env('CLAUDE_MODEL') || 'claude-opus-5-5';
+  const model = env('CLAUDE_MODEL') || 'claude-sonnet-5-5';
   const res = await client.beta.messages.create({
     model,
     max_tokens: 8000,
