@@ -79,7 +79,7 @@ check((await api('offers')).length === offers0 + 1, 'offer saved to DB');
 // 임직원 로그인(시연 계정: 입력칸에 커서를 두면 자동 입력)
 await page.goto(BASE + '/login.html?role=emp&next=/employee.html');
 await page.click('#id');
-check(await page.inputValue('#id') === 'EMP-HW-0019' && (await page.inputValue('#pw')).length > 0, 'employee login autofill');
+check(await page.inputValue('#id') === 'pangpanghyun' && (await page.inputValue('#pw')).length > 0, 'employee login autofill');
 await Promise.all([page.waitForURL(/employee\.html/, { timeout: 20000 }), page.click('#go')]);
 const emp = await ctx.newPage();
 emp.on('pageerror', e => errors.push(e.message));

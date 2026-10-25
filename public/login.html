@@ -62,7 +62,7 @@ const home=EMP?'/employee.html':'/talent_hr_admin.html';
 const next=(()=>{const n=Q.get('next')||home;return n.startsWith('/')&&!n.startsWith('//')?n:home})();
 if(EMP){document.title='TALENT LINK | 임직원 로그인';document.getElementById('sideEye').textContent='FOR EMPLOYEES · 임직원';document.getElementById('sideTitle').innerHTML='내 경력에 맞는<br>그룹 내 기회를 확인하세요.';document.getElementById('sideText').textContent='받은 제안, 직무별 적합도 진단, 지원 현황을 한곳에서 봅니다.';document.getElementById('sso').innerHTML='<b>●</b> 사내 계정 통합 인증 · 그룹 임직원 계정'}
 // 시연용: 입력칸에 커서를 두면 시연 계정이 채워진다 (인사팀 김대헌 사원 / 임직원 임광현 과장)
-const DEMO=EMP?['EMP-HW-0019','hanwha0019']:['daeheonjjang','dh0909'];
+const DEMO=EMP?['pangpanghyun','pph0909']:['daeheonjjang','dh0909'];
 ['id','pw'].forEach(k=>document.getElementById(k).addEventListener('focus',()=>{const a=document.getElementById('id'),b=document.getElementById('pw');if(!a.value)a.value=DEMO[0];if(!b.value)b.value=DEMO[1]}));
 document.getElementById('f').addEventListener('submit',async e=>{e.preventDefault();const b=document.getElementById('go'),err=document.getElementById('err');b.disabled=true;err.textContent='';
  try{const r=await fetch('/api/login',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({id:document.getElementById('id').value.trim(),password:document.getElementById('pw').value,role:EMP?'emp':undefined})});const j=await r.json().catch(()=>({}));
