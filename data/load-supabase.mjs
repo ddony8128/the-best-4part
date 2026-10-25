@@ -15,7 +15,7 @@ if (meta.name !== 'talent-link') throw new Error('프로젝트 이름 불일치:
 console.log(`대상: ${meta.name} (${REF}, ${meta.region})`);
 
 const DDL = `
-drop table if exists scan_results, scan_runs, audit_log, reports, offers, applications, career_plans, performance, training, certifications,
+drop table if exists job_references, scan_results, scan_runs, audit_log, reports, offers, applications, career_plans, performance, training, certifications,
   skill_development, skills, evidence, projects, assignments, employees, jobs cascade;
 create table jobs (id text primary key, company text, title text, org text, status text, note text, tasks text[], required text[], preferred text[], conditions text, deadline date);
 create table employees (employee_id text primary key, name text not null, company text, division text, team text, role text, grade text, hire_date date,
@@ -31,6 +31,8 @@ create table certifications (certification_id text primary key, employee_id text
 create table training (training_id text primary key, employee_id text references employees on delete cascade, course text, completion_date date, hours int);
 create table performance (evaluation_id text primary key, employee_id text references employees on delete cascade, year int, kpi text, kpi_target int, kpi_achievement_pct int, grade text);
 create table career_plans (cdp_id text primary key, employee_id text references employees on delete cascade, desired_jd text, desired_role text, development_goal text, plan text, target_date date);
+-- 공고별 참고 자료: 전임자 인수인계 · 고성과자 패턴 · 직무 연구 요약 (AI가 요건을 정리할 때 JD와 함께 참고)
+create table job_references (jd_id text primary key references jobs(id), business text, handover jsonb, high_performers jsonb, high_performers_sample_n int, research jsonb, updated_at timestamptz default now());
 -- 업무 기록 (화면에서 쌓임)
 create table applications (id bigint generated always as identity primary key, employee_id text references employees on delete cascade, jd_id text references jobs(id), motive text, available_from date, participation_pct int, location text, org_status text, status text default '미검토', created_at timestamptz default now(), cancelled_at timestamptz);
 create table offers (id bigint generated always as identity primary key, employee_id text references employees on delete cascade, jd_id text references jobs(id), sender text, subject text, model jsonb, html text, created_at timestamptz default now());
@@ -60,7 +62,9 @@ await sql("notify pgrst, 'reload schema';");
 await new Promise(r => setTimeout(r, 3000));
 const jobs = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/jobs.json'), 'utf8')).map(j => ({ ...j, deadline: j.deadline || null }));
 await insert('jobs', jobs);
+const refs = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/references/references.json'), 'utf8'));
+await insert('job_references', Object.entries(refs).map(([jd, r]) => ({ jd_id: jd, business: r.handover.business, handover: { tasks: r.handover.tasks, memos: r.handover.memos, successor_keywords: r.handover.successor_keywords }, high_performers: r.high_performers, high_performers_sample_n: r.high_performers_sample_n, research: r.research })));
 const C = f => JSON.parse(fs.readFileSync(path.join(ROOT, 'data/hr_v3/clean', f + '.json'), 'utf8'));
 for (const t of ['employees', 'assignments', 'projects', 'evidence', 'skills', 'skill_development', 'certifications', 'training', 'performance', 'career_plans', 'applications']) await insert(t, C(t));
-const counts = await sql(['jobs', 'employees', 'assignments', 'projects', 'evidence', 'skills', 'skill_development', 'certifications', 'training', 'performance', 'career_plans', 'applications'].map(t => `select '${t}' as t, count(*)::int as n from ${t}`).join(' union all '));
+const counts = await sql(['jobs', 'job_references', 'employees', 'assignments', 'projects', 'evidence', 'skills', 'skill_development', 'certifications', 'training', 'performance', 'career_plans', 'applications'].map(t => `select '${t}' as t, count(*)::int as n from ${t}`).join(' union all '));
 console.log(counts.map(c => `${c.t} ${c.n}`).join(' · '));
