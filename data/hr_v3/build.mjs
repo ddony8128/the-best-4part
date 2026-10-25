@@ -49,6 +49,16 @@ for (const e of T.employees) {
   seen.add(n); e.name = n;
 }
 
+// 지정 이름: 희망 공고가 서로 다른 19명(계열사·직무 고르게)에게 순서대로 부여
+const NAMED = ['강동구', '김도현', '공영찬', '김창섭', '박서연', '백진우', '신민규', '신채은', '김예주', '심현준', '안근호', '안찬호', '황성훈', '이지은', '이태연', '임민수', '최희정', '하성민', '성연재'];
+const NAMED_JDS = ['JD-001', 'JD-004', 'JD-005', 'JD-006', 'JD-007', 'JD-014', 'JD-017', 'JD-018', 'JD-019', 'JD-020', 'JD-021', 'JD-022', 'JD-028', 'JD-029', 'JD-034', 'JD-035', 'JD-037', 'JD-039', 'JD-043'];
+{
+  const taken = new Set(NAMED);
+  // 지정 이름과 겹치는 기존 인원은 다른 이름으로
+  for (const e of T.employees) if (taken.has(e.name)) { let k = 0, n; do { const h = hash(e.employee_id + 'x' + k++); n = SUR[h % 40] + GIV[(h >>> 8) % GIV.length] } while (seen.has(n) || taken.has(n)); RENAMED[e.employee_id] = [RENAMED[e.employee_id]?.[0] || e.name, n]; seen.add(n); e.name = n }
+  NAMED_JDS.forEach((jd, i) => { const e = T.employees.find(x => x.desired_jd === jd && !NAMED.includes(x.name)); RENAMED[e.employee_id] = [RENAMED[e.employee_id]?.[0] || e.name, NAMED[i]]; e.name = NAMED[i] });
+}
+
 // 기록이 부족한 인원 = 프로젝트 성과가 비어 있는 사람
 const byEmp = (t, id) => T[t].filter(r => r.employee_id === id);
 const thin = T.employees.filter(e => byEmp('projects', e.employee_id).some(p => !p.outcome));
