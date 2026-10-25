@@ -5,77 +5,97 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <script>/* 시연 데이터 버전: 바뀌면 이 브라우저에 저장된 예전 시연 기록을 한 번 비운다 */try{if(localStorage.getItem('talent-link-data-version')!=='2026-10-24'){['talent-hr-admin-v1','talent-link-applications','talent-link-offers','talent-link-audit-pending'].forEach(k=>localStorage.removeItem(k));localStorage.setItem('talent-link-data-version','2026-10-24')}}catch{}</script><title>TALENT LINK</title>
 <style>
-:root{--ink:#181818;--muted:#717171;--line:#e6e5e2;--bg:#f6f6f4;--accent:#f6995d;--soft:#fff1e7}
+:root{--ink:#19243b;--muted:#677386;--line:#e8eaf0;--accent:#f4511e;--soft:#fff1e7}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,'Malgun Gothic',sans-serif;font-size:14px;line-height:1.65}
-main{max-width:980px;margin:0 auto;padding:56px 20px 64px}
+body{margin:0;background:#fff;color:var(--ink);font-family:Pretendard,'Noto Sans KR','Malgun Gothic',sans-serif;font-size:14px;line-height:1.65}
+a{color:inherit}
+.top{height:78px;display:flex;justify-content:space-between;align-items:center;max-width:1250px;margin:auto;padding:0 28px}
 .brand{font-weight:900;letter-spacing:-1px;font-size:22px;display:flex;align-items:center;gap:10px}
 .logo{display:inline-block;background:var(--accent);width:28px;height:28px;border-radius:7px;position:relative}
-.logo:after{content:'';position:absolute;left:8px;top:6px;width:8px;height:12px;border-left:3px solid #171717;border-bottom:3px solid #171717;transform:rotate(-35deg)}
-.eyebrow{font-size:10px;letter-spacing:2px;font-weight:bold;color:var(--muted);margin-top:40px}
-h1{font-size:32px;letter-spacing:-1.5px;line-height:1.3;margin:8px 0 10px}
-.lead{color:var(--muted);margin:0 0 34px;max-width:620px}
-.choose{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-a.door{display:block;background:#fff;border:1px solid var(--line);border-radius:12px;padding:30px 28px 26px;color:inherit;text-decoration:none;position:relative;min-height:300px;transition:border-color .15s,transform .15s}
-a.door:hover{border-color:#999;transform:translateY(-2px)}
-a.door.hr{background:#1b1b1b;color:#fff;border-color:#1b1b1b}
-a.door .who{font-size:10px;letter-spacing:2px;font-weight:bold;color:var(--muted)}
-a.door.hr .who{color:var(--accent)}
-a.door h2{font-size:24px;letter-spacing:-1px;margin:10px 0 8px}
-a.door p{margin:0 0 18px;font-size:13px;color:var(--muted)}
-a.door.hr p{color:#aaa}
-a.door ul{list-style:none;padding:0;margin:0 0 56px;font-size:12px;color:#555}
-a.door.hr ul{color:#ccc}
-a.door li{padding:5px 0;border-top:1px solid var(--line)}
-a.door.hr li{border-color:#333}
-a.door li:before{content:'→';margin-right:8px;color:var(--accent)}
-.btn{position:absolute;left:28px;bottom:26px;display:inline-block;border-radius:7px;padding:11px 18px;font-weight:600;font-size:13px;background:var(--ink);color:#fff}
-a.door.hr .btn{background:var(--accent);color:#181818}
-.pill{display:inline-block;border:1px solid var(--line);border-radius:5px;font-size:11px;padding:2px 8px;background:#fff;margin-left:8px;vertical-align:middle;color:var(--ink)}
-.link{margin-top:26px;font-size:12px;color:var(--muted)}
-.link span{display:inline-block;margin-right:14px}
-footer{margin-top:48px;font-size:11px;color:#999;border-top:1px solid var(--line);padding-top:16px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-@media(max-width:700px){.choose{grid-template-columns:1fr}h1{font-size:26px}a.door{min-height:0;padding-bottom:84px}}
+.logo:after{content:'';position:absolute;left:8px;top:6px;width:8px;height:12px;border-left:3px solid #fff;border-bottom:3px solid #fff;transform:rotate(-35deg)}
+.top small{font-size:11px;letter-spacing:2px;font-weight:700;color:var(--muted)}
+.hero{background:radial-gradient(ellipse at 83% 40%,#fff1e7,transparent 38%),linear-gradient(110deg,#fff 45%,#fffaf6);overflow:hidden}
+.heroInner{max-width:1250px;min-height:640px;margin:auto;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:30px 28px;gap:12px}
+.eyebrow{color:#e2673d;font-size:12px;font-weight:800;letter-spacing:3px}
+h1{font-size:clamp(38px,4.4vw,62px);letter-spacing:-3px;line-height:1.2;margin:22px 0}
+h1 span{display:block;color:var(--accent)}
+.hero p{font-size:17px;color:#596578;line-height:1.9;max-width:480px;word-break:keep-all;margin:0}
+.actions{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}
+a.door{display:flex;flex-direction:column;gap:2px;text-decoration:none;border:1px solid #d9dde7;border-radius:12px;padding:14px 24px;font-weight:800;font-size:16px;background:#fff;color:var(--ink);transition:filter .15s,transform .15s}
+a.door small{font-weight:500;font-size:12px;color:var(--muted)}
+a.door.hr{background:var(--accent);border-color:var(--accent);color:#fff}
+a.door.hr small{color:#ffe3d6}
+a.door:hover{filter:brightness(.96);transform:translateY(-2px)}
+a.door:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.hero p.note{margin-top:22px;font-size:12px;color:var(--muted);max-width:480px;word-break:keep-all}
+.dnaWrap{position:relative;min-height:540px;display:flex;align-items:center;justify-content:center}
+.dnaWrap:before{content:'';position:absolute;width:440px;height:440px;border:1px solid #f7d9c9;border-radius:50%;box-shadow:0 0 0 50px #ffebe533,0 0 0 115px #ffede51a}
+.helix{width:min(100%,560px);height:540px;overflow:visible;filter:drop-shadow(0 15px 20px #ff6a3825)}
+.strand1,.strand2{fill:none;stroke-width:5.5;stroke-linecap:round}
+.strand1{stroke:#ef551f}.strand2{stroke:#ffb28b}
+.rung{stroke:#e6a48c;stroke-width:3;stroke-linecap:round}
+.node{fill:#fff;stroke:#f16534;stroke-width:3}
+.float{position:absolute;border:1px solid #f7d9ca;padding:12px 16px;border-radius:13px;background:#ffffffdd;box-shadow:0 8px 24px #b9684420;font-size:13px;font-weight:750;animation:float 5s ease-in-out infinite}
+.float small{display:block;color:#8f9bad;font-weight:500;margin-top:3px}
+.f1{top:24%;left:3%}.f2{top:40%;right:0;animation-delay:-1.4s}.f3{bottom:22%;left:8%;animation-delay:-2.8s}
+@keyframes float{50%{transform:translateY(-12px)}}
+.section{padding:72px 28px;max-width:1150px;margin:auto}
+.section h2{font-size:31px;letter-spacing:-1px;margin:10px 0}
+.lead{color:#69768b;line-height:1.8;margin:0}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px}
+.feature{padding:29px 25px;border:1px solid var(--line);border-radius:17px}
+.feature strong{font-size:19px}
+.feature p{font-size:14px;color:var(--muted);line-height:1.8;margin:8px 0 0;word-break:keep-all}
+.feature i{font-style:normal;font-size:26px;color:var(--accent);display:block;margin-bottom:15px}
+footer{text-align:center;padding:30px 16px;color:#9aa2ad;border-top:1px solid var(--line);font-size:12px}
+@media(max-width:760px){.top{padding:0 16px}.top small{display:none}.heroInner{display:flex;flex-direction:column;align-items:stretch;min-height:0;padding:40px 16px 10px}h1{letter-spacing:-2px}.hero p{font-size:15px}a.door{flex:1 1 100%}.dnaWrap{min-height:390px}.dnaWrap:before{width:300px;height:300px}.helix{height:390px}.float{font-size:11px}.features{grid-template-columns:1fr}.section{padding:42px 16px}}
+@media(prefers-reduced-motion:reduce){.float{animation:none}a.door{transition:none}}
 </style>
 </head>
 <body>
+<header class="top"><div class="brand"><span class="logo"></span>TALENT LINK</div><small>HANWHA AI SOLUTION CHALLENGE</small></header>
 <main>
-  <div class="brand"><span class="logo"></span>TALENT LINK</div>
-  <div class="eyebrow">HANWHA AI SOLUTION CHALLENGE</div>
-  <h1>그룹 전체에서 적합한 인재를 찾고,<br>임직원은 스스로 기회를 확인합니다.</h1>
-  <p class="lead">TF·공석이 생기면 계열사를 넘어 후보를 탐색하고 근거와 함께 추천합니다. 최종 판단은 사람이 합니다. 어느 쪽으로 들어갈지 선택하세요.</p>
-
-  <div class="choose">
-    <a class="door hr" href="./login.html?next=/hr_matching.html">
-      <div class="who">FOR HR · 인사 담당자</div>
-      <h2>인사 담당자</h2>
-      <p>JD를 올리고 그룹 전체에서 후보를 찾아 검토·추천·제안합니다.</p>
-      <ul>
-        <li>공고(JD) 등록·관리</li>
-        <li>AI 인재 스캐닝 · 상위 N명 추천 · 가중치 조정</li>
-        <li>지원자 검토 · 비교</li>
-        <li>추천서 · 제안서 자동 작성</li>
-      </ul>
-      <span class="btn">사내 계정으로 로그인 →</span>
-    </a>
-    <a class="door" href="./employee.html">
-      <div class="who">FOR EMPLOYEE · 임직원</div>
-      <h2>지원자</h2>
-      <p>열린 직무에 내가 얼마나 맞는지 보고, 보충할 점을 확인한 뒤 바로 지원합니다.</p>
-      <ul>
-        <li>열린 직무(JD) 둘러보기</li>
-        <li>내 프로필 기준 적합도 진단</li>
-        <li>더 적합해지기 위한 보충 포인트</li>
-        <li>바로 지원 → 인사 담당자에게 전달</li>
-      </ul>
-      <span class="btn">지원자로 들어가기 →</span>
-    </a>
+<section class="hero"><div class="heroInner">
+  <div>
+    <div class="eyebrow">PEOPLE × SKILLS × OPPORTUNITY</div>
+    <h1>한화의 인재를 연결하다<span>Talent Link</span></h1>
+    <p>계열사와 직무의 경계를 넘어, 사람의 역량과 새로운 기회를 연결합니다. 데이터로 인재의 가능성을 발견하는 플랫폼.</p>
+    <div class="actions">
+      <a class="door hr" href="./login.html?next=/hr_matching.html">인사 담당자 →<small>사내 계정으로 로그인</small></a>
+      <a class="door" href="./employee.html">지원자 →<small>임직원 · 적합도 진단과 지원</small></a>
+    </div>
+    <p class="note">AI는 후보 탐색과 검토를 돕고, 최종 배치는 사람이 결정합니다.</p>
   </div>
+  <div class="dnaWrap">
+    <svg id="dna" class="helix" viewBox="0 0 510 545" role="img" aria-label="움직이는 DNA 이중나선"><g id="rungs"></g><path class="strand2" id="s2"/><path class="strand1" id="s1"/></svg>
+    <div class="float f1">● PEOPLE<small>사람과 경험</small></div>
+    <div class="float f2">◆ SKILLS<small>보유 역량</small></div>
+    <div class="float f3">▣ JOBS<small>새로운 기회</small></div>
+  </div>
+</div></section>
 
-  <p class="link" style="margin-bottom:0"><span><b style="color:var(--ink)">운영 원칙</b> AI는 후보 탐색과 검토를 돕고, 최종 배치는 현업 검증·본인 참여 의사·소속 조직 여건을 종합해 사람이 결정합니다.</span></p>
-  <p class="link"><span>두 화면은 같은 브라우저 저장소를 공유합니다.</span><span>지원자가 지원하면 인사 담당자 화면의 지원자 목록과 운영 기록에 바로 나타납니다.</span></p>
-
-  <footer><span>TALENT LINK · HANWHA AI SOLUTION CHALLENGE</span><span>시연용 가상 데이터 · 실제 임직원 정보 없음</span></footer>
+<section class="section" id="intro">
+  <div class="eyebrow">CONNECT THE POTENTIAL</div>
+  <h2>역량을 연결하고, 가능성을 발견합니다.</h2>
+  <p class="lead">입력한 직무 정보와 구성원 역량을 기반으로 연결하는 간결한 워크스페이스</p>
+  <div class="features">
+    <div class="feature"><i>◎</i><strong>인재 탐색</strong><p>등록된 직무와 인재 정보를 한곳에서 확인합니다.</p></div>
+    <div class="feature"><i>◇</i><strong>역량 매칭</strong><p>등록된 보유 역량과 요구 역량의 일치 여부를 확인합니다.</p></div>
+    <div class="feature"><i>↗</i><strong>새로운 기회</strong><p>직무 등록과 관심 직무 지원을 연결합니다.</p></div>
+  </div>
+</section>
 </main>
+<footer>TALENT LINK · HANWHA AI SOLUTION CHALLENGE · 시연용 가상 데이터 · 실제 임직원 정보 없음</footer>
+<script>
+// DNA 이중나선: 두 가닥과 가로대를 매 프레임 다시 그린다 (이미지 없음)
+(function(){const svg=document.getElementById('dna'),front=svg.querySelector('#s1'),back=svg.querySelector('#s2'),rungs=svg.querySelector('#rungs');
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function frame(ms){const phase=reduced?0:ms*.00042;let a='',b='',bars='';const N=135;
+ for(let i=0;i<=N;i++){const t=i/N,y=35+t*475,th=t*Math.PI*5+phase,x1=255+104*Math.sin(th),x2=255-104*Math.sin(th);a+=(i?'L':'M')+x1.toFixed(2)+','+y.toFixed(2);b+=(i?'L':'M')+x2.toFixed(2)+','+y.toFixed(2)}
+ for(let i=0;i<30;i++){const t=(i+.4)/30,y=(35+t*475).toFixed(2),th=t*Math.PI*5+phase,x1=(255+104*Math.sin(th)).toFixed(2),x2=(255-104*Math.sin(th)).toFixed(2),o=(.24+.5*Math.abs(Math.cos(th))).toFixed(2);
+  bars+=`<line class="rung" x1="${x1}" y1="${y}" x2="${x2}" y2="${y}" opacity="${o}"/><circle class="node" cx="${x1}" cy="${y}" r="3.5"/><circle class="node" cx="${x2}" cy="${y}" r="3.5"/>`}
+ front.setAttribute('d',a);back.setAttribute('d',b);rungs.innerHTML=bars;if(!reduced)requestAnimationFrame(frame)}
+requestAnimationFrame(frame)})();
+</script>
 </body>
 </html>
