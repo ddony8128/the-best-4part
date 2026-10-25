@@ -10182,5 +10182,69 @@
   "level": 4,
   "basis": "프로젝트 수행 기반",
   "context": "팀원 일정 관리와 산출물 검토"
+ },
+ {
+  "skill_record_id": "SK-EMP-HW-0019-1",
+  "employee_id": "EMP-HW-0019",
+  "skill": "B2B 마케팅",
+  "level": 5,
+  "basis": "프로젝트 수행 기반",
+  "context": "마케팅 및 제품전략 커뮤니케이션 | 제품 가치제안·전시회 캠페인"
+ },
+ {
+  "skill_record_id": "SK-EMP-HW-0019-2",
+  "employee_id": "EMP-HW-0019",
+  "skill": "제품 가치제안",
+  "level": 5,
+  "basis": "프로젝트 수행 기반",
+  "context": "마케팅 및 제품전략 커뮤니케이션 | 제품 가치제안·전시회 캠페인"
+ },
+ {
+  "skill_record_id": "SK-EMP-HW-0019-3",
+  "employee_id": "EMP-HW-0019",
+  "skill": "방산전자",
+  "level": 5,
+  "basis": "프로젝트 수행 기반",
+  "context": "마케팅 및 제품전략 커뮤니케이션 | 제품 가치제안·전시회 캠페인"
+ },
+ {
+  "skill_record_id": "SK-EMP-HW-0019-4",
+  "employee_id": "EMP-HW-0019",
+  "skill": "ICT",
+  "level": 5,
+  "basis": "프로젝트 수행 기반",
+  "context": "마케팅 및 제품전략 커뮤니케이션 | 제품 가치제안·전시회 캠페인"
+ },
+ {
+  "skill_record_id": "SK-EMP-HW-0019-5",
+  "employee_id": "EMP-HW-0019",
+  "skill": "CRM",
+  "level": 5,
+  "basis": "프로젝트 수행 기반",
+  "context": "마케팅 및 제품전략 커뮤니케이션 | 제품 가치제안·전시회 캠페인"
+ },
+ {
+  "skill_record_id": "SK-EMP-HW-0019-6",
+  "employee_id": "EMP-HW-0019",
+  "skill": "영문 콘텐츠",
+  "level": 4,
+  "basis": "프로젝트 수행 기반",
+  "context": "마케팅 및 제품전략 커뮤니케이션 | 제품 가치제안·전시회 캠페인"
+ },
+ {
+  "skill_record_id": "SK-EMP-HW-0019-7",
+  "employee_id": "EMP-HW-0019",
+  "skill": "Power BI",
+  "level": 4,
+  "basis": "프로젝트 수행 기반",
+  "context": "마케팅 및 제품전략 커뮤니케이션 | 제품 가치제안·전시회 캠페인"
+ },
+ {
+  "skill_record_id": "SK-EMP-HW-0019-8",
+  "employee_id": "EMP-HW-0019",
+  "skill": "시장분석",
+  "level": 4,
+  "basis": "프로젝트 수행 기반",
+  "context": "마케팅 및 제품전략 커뮤니케이션 | 제품 가치제안·전시회 캠페인"
  }
 ]

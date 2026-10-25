@@ -6348,5 +6348,35 @@
   "team": "지상SW팀",
   "role": "임베디드 SW",
   "change_type": "직무 전환"
+ },
+ {
+  "assignment_id": "AS-EMP-HW-0019-1",
+  "employee_id": "EMP-HW-0019",
+  "effective_date": "2011-04-12",
+  "end_date": "2016-11-11",
+  "company": "한화시스템",
+  "team": "사업지원팀",
+  "role": "사업지원 담당",
+  "change_type": "신규 입사"
+ },
+ {
+  "assignment_id": "AS-EMP-HW-0019-2",
+  "employee_id": "EMP-HW-0019",
+  "effective_date": "2016-11-12",
+  "end_date": "2021-09-11",
+  "company": "한화시스템",
+  "team": "사업지원팀",
+  "role": "사업지원 담당",
+  "change_type": "조직 이동"
+ },
+ {
+  "assignment_id": "AS-EMP-HW-0019-3",
+  "employee_id": "EMP-HW-0019",
+  "effective_date": "2021-09-12",
+  "end_date": null,
+  "company": "한화시스템",
+  "team": "글로벌마케팅팀",
+  "role": "글로벌 B2B 기술마케팅 책임",
+  "change_type": "직무 전환"
  }
 ]

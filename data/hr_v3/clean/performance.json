@@ -16342,5 +16342,104 @@
   "kpi_target": 100,
   "kpi_achievement_pct": 101,
   "grade": "B"
+ },
+ {
+  "evaluation_id": "PERF-EMP-HW-0019-2016-01",
+  "employee_id": "EMP-HW-0019",
+  "year": 2016,
+  "kpi": "CRM 데이터 품질",
+  "kpi_target": 100,
+  "kpi_achievement_pct": 101,
+  "grade": "B"
+ },
+ {
+  "evaluation_id": "PERF-EMP-HW-0019-2017-02",
+  "employee_id": "EMP-HW-0019",
+  "year": 2017,
+  "kpi": "영문 콘텐츠 납기",
+  "kpi_target": 100,
+  "kpi_achievement_pct": 110,
+  "grade": "B"
+ },
+ {
+  "evaluation_id": "PERF-EMP-HW-0019-2018-03",
+  "employee_id": "EMP-HW-0019",
+  "year": 2018,
+  "kpi": "제품 가치제안 개선",
+  "kpi_target": 100,
+  "kpi_achievement_pct": 92,
+  "grade": "B"
+ },
+ {
+  "evaluation_id": "PERF-EMP-HW-0019-2019-04",
+  "employee_id": "EMP-HW-0019",
+  "year": 2019,
+  "kpi": "고객 접점 확대",
+  "kpi_target": 100,
+  "kpi_achievement_pct": 115,
+  "grade": "A"
+ },
+ {
+  "evaluation_id": "PERF-EMP-HW-0019-2020-05",
+  "employee_id": "EMP-HW-0019",
+  "year": 2020,
+  "kpi": "유효 리드 발굴",
+  "kpi_target": 100,
+  "kpi_achievement_pct": 115,
+  "grade": "A"
+ },
+ {
+  "evaluation_id": "PERF-EMP-HW-0019-2021-06",
+  "employee_id": "EMP-HW-0019",
+  "year": 2021,
+  "kpi": "캠페인 목표 달성",
+  "kpi_target": 100,
+  "kpi_achievement_pct": 121,
+  "grade": "A"
+ },
+ {
+  "evaluation_id": "PERF-EMP-HW-0019-2022-07",
+  "employee_id": "EMP-HW-0019",
+  "year": 2022,
+  "kpi": "전시회 후속 상담",
+  "kpi_target": 100,
+  "kpi_achievement_pct": 138,
+  "grade": "S"
+ },
+ {
+  "evaluation_id": "PERF-EMP-HW-0019-2023-08",
+  "employee_id": "EMP-HW-0019",
+  "year": 2023,
+  "kpi": "콘텐츠 유입 성과",
+  "kpi_target": 100,
+  "kpi_achievement_pct": 100,
+  "grade": "B"
+ },
+ {
+  "evaluation_id": "PERF-EMP-HW-0019-2024-09",
+  "employee_id": "EMP-HW-0019",
+  "year": 2024,
+  "kpi": "CRM 데이터 품질",
+  "kpi_target": 100,
+  "kpi_achievement_pct": 82,
+  "grade": "C"
+ },
+ {
+  "evaluation_id": "PERF-EMP-HW-0019-2025-10",
+  "employee_id": "EMP-HW-0019",
+  "year": 2025,
+  "kpi": "영문 콘텐츠 납기",
+  "kpi_target": 100,
+  "kpi_achievement_pct": 124,
+  "grade": "A"
+ },
+ {
+  "evaluation_id": "PERF-EMP-HW-0019-2026-11",
+  "employee_id": "EMP-HW-0019",
+  "year": 2026,
+  "kpi": "제품 가치제안 개선",
+  "kpi_target": 100,
+  "kpi_achievement_pct": 89,
+  "grade": "C"
  }
 ]

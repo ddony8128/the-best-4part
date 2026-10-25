@@ -4399,5 +4399,23 @@
   "to_level": 3,
   "acquired_date": "2024-11-23",
   "method": "실무 프로젝트"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0019-1",
+  "employee_id": "EMP-HW-0019",
+  "skill": "B2B 마케팅",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
+ },
+ {
+  "development_id": "DEV-EMP-HW-0019-2",
+  "employee_id": "EMP-HW-0019",
+  "skill": "제품 가치제안",
+  "from_level": 2,
+  "to_level": 4,
+  "acquired_date": "2025-11-25",
+  "method": "프로젝트 참여 및 교육 이수"
  }
 ]

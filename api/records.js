@@ -8,7 +8,8 @@ const log = (actor, action, detail) => insert('audit_log', [{ actor, action, det
 export async function POST(request) {
   const b = await request.json().catch(() => ({}));
   try {
-    const me = ME_ID();
+    const me = ME_ID(request);
+    if (['apply', 'cancel', 'fix'].includes(b.kind) && !me) return denied();
     if (b.kind === 'apply') {
       const [emp] = await select('employees', `employee_id=eq.${me}&select=name`);
       const dup = await select('applications', `employee_id=eq.${me}&jd_id=eq.${b.jd}&cancelled_at=is.null`);

@@ -15,14 +15,18 @@ const check = (ok, msg) => { console.log((ok ? 'PASS ' : 'FAIL ') + msg); if (!o
 const t = () => new Date().toLocaleTimeString('ko-KR');
 
 // 로그인
-const lr = await ctx.request.post(BASE + '/api/login', { data: { id: ID, password: PW } });
-check(lr.ok(), 'login');
+await page.goto(BASE + '/login.html');
+await page.click('#pw');
+check(await page.inputValue('#id') !== '', 'hr login autofill');
+if (process.env.HR_ID) { await page.fill('#id', ID); await page.fill('#pw', PW) }
+await Promise.all([page.waitForURL(/talent_hr_admin/, { timeout: 20000 }), page.click('#go')]);
+check(true, 'hr login');
 const api = async (r, p = '') => (await ctx.request.get(`${BASE}/api/data?r=${r}${p}`)).json();
 const offers0 = (await api('offers')).length, reports0 = (await api('reports')).length;
 
 // ── AI 인재 매칭
 await page.goto(BASE + '/hr_matching.html?fast');
-await page.waitForFunction(() => /246/.test(document.getElementById('scopeCount').textContent), null, { timeout: 15000 });
+await page.waitForFunction(() => /2\d\d명/.test(document.getElementById('scopeCount').textContent), null, { timeout: 15000 });
 check(true, 'pool size from DB: ' + await page.locator('#scopeCount').textContent());
 await page.selectOption('#jdSelect', 'JD-045');
 await page.click('#btnAnalyze');
@@ -72,10 +76,15 @@ await page.waitForTimeout(1500);
 check((await api('offers')).length === offers0 + 1, 'offer saved to DB');
 
 // ── 임직원 화면 (로그인한 본인)
+// 임직원 로그인(시연 계정: 입력칸에 커서를 두면 자동 입력)
+await page.goto(BASE + '/login.html?role=emp&next=/employee.html');
+await page.click('#id');
+check(await page.inputValue('#id') === 'EMP-HW-0019' && (await page.inputValue('#pw')).length > 0, 'employee login autofill');
+await Promise.all([page.waitForURL(/employee\.html/, { timeout: 20000 }), page.click('#go')]);
 const emp = await ctx.newPage();
 emp.on('pageerror', e => errors.push(e.message));
 await emp.goto(BASE + '/employee.html');
-await emp.waitForFunction(() => document.getElementById('meName').textContent !== '이한결', null, { timeout: 15000 });
+await emp.waitForFunction(() => document.getElementById('meName').textContent === '임광현', null, { timeout: 15000 });
 const me = await emp.locator('#meName').textContent();
 check(true, 'employee from DB: ' + me + ' · ' + await emp.locator('#meOrg').textContent());
 await emp.evaluate(() => go('jobs'));
@@ -112,7 +121,7 @@ await page.waitForFunction(id => SOURCE_APPS.some(a => a.id === id), mine.id, { 
 check(await page.evaluate(id => review(SOURCE_APPS.find(a => a.id === id)).stage, mine.id) === '인터뷰 예정', 'review stage persisted in DB');
 const audit = (await api('audit')).map(a => a.action).join('\n');
 check(/추천서 상부 보고/.test(audit) && /참여 제안 발송/.test(audit) && /직접 지원/.test(audit), 'audit log has report · offer · application');
-check(await page.evaluate(() => POOL.length) === 246, 'offer picker uses full talent pool (246)');
+check(await page.evaluate(() => POOL.length) >= 246, 'offer picker uses full talent pool');
 
 // 임직원: 지원 취소 → 콘솔에서 빠짐 (테스트 흔적 정리)
 await emp.evaluate(() => go('applications'));

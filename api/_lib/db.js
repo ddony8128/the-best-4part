@@ -35,8 +35,15 @@ export const insert = (table, rows) => call('POST', table, rows, { Prefer: 'retu
 export const update = (table, filter, patch) => call('PATCH', `${table}?${filter}`, patch, { Prefer: 'return=representation' });
 export const upsert = (table, rows) => call('POST', table, rows, { Prefer: 'return=representation,resolution=merge-duplicates' });
 
-// 임직원 화면에 로그인한 본인(시연 계정)
-export const ME_ID = () => env('DEMO_EMPLOYEE_ID') || 'EMP-HW-0032'; // 권재빈 · 한화오션 마케팅전략팀
+// 임직원 화면에 로그인한 본인의 사번 (쿠키 tl_emp = 만료.사번.서명). 로그인하지 않았으면 null
+export function ME_ID(request) {
+  const secret = env('HR_SESSION_SECRET');
+  const cookie = (request.headers.get('cookie') || '').split(/;\s*/).find(c => c.startsWith('tl_emp='));
+  const parts = (cookie ? decodeURIComponent(cookie.slice(7)) : '').split('.');
+  if (!secret || parts.length !== 3 || Number(parts[0]) < Date.now()) return null;
+  const want = crypto.createHmac('sha256', secret).update(`emp.${parts[0]}.${parts[1]}`).digest('hex');
+  return want.length === parts[2].length && crypto.timingSafeEqual(Buffer.from(want), Buffer.from(parts[2])) ? parts[1] : null;
+}
 
 export const json = (data, status = 200) => Response.json(data, { status, headers: { 'cache-control': 'no-store' } });
 export const denied = () => json({ error: '로그인이 필요합니다.' }, 401);

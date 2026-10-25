@@ -1,5 +1,5 @@
 // 로컬 확인용 서버: public/ 정적 파일 + api/*.js 함수(실제 talent-link DB · Claude 호출).
-// 로그인은 로컬 전용 계정(아이디 hr / 비밀번호 hr)으로 대신한다. 실행: node data/scan/dev-server.mjs [포트]
+// 로그인은 시연 계정(로그인 화면 자동 입력값)을 쓴다. 실행: node data/scan/dev-server.mjs [포트]
 import './localenv.mjs';
 import http from 'node:http';
 import fs from 'node:fs';
@@ -7,8 +7,8 @@ import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 
 process.env.HR_SESSION_SECRET = 'local-dev';
-process.env.HR_ID = 'hr';
-process.env.HR_PASSWORD = 'hr';
+process.env.HR_ID = 'daeheonjjang'; // 로그인 화면 시연 자동 입력값과 같게
+process.env.HR_PASSWORD = 'dh0909';
 const ROOT = path.resolve(import.meta.dirname, '../..');
 const PUB = path.join(ROOT, 'public');
 const TYPES = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png' };

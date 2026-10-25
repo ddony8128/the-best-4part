@@ -1,6 +1,6 @@
 // 임직원 셀프 진단 (POST /api/diagnose { jd, fresh }) — 로그인한 임직원 본인 프로필 ↔ 공고
 // 저장된 진단이 있으면 그대로, 없거나 fresh면 Claude로 실시간 판정(약 10~20초) 후 저장
-import { select, insert, json, ME_ID } from './_lib/db.js';
+import { select, insert, json, denied, ME_ID } from './_lib/db.js';
 import { loadPool, candidateOf } from './_lib/talent.js';
 import { evaluateNow } from './_lib/scan.js';
 import { analyzeJob } from './analyze-jd.js';
@@ -8,7 +8,8 @@ import { analyzeJob } from './analyze-jd.js';
 export async function POST(request) {
   const { jd, fresh } = await request.json().catch(() => ({}));
   if (!/^JD-\d{3}$/.test(jd || '')) return json({ error: '공고 번호가 맞지 않습니다.' }, 400);
-  const me = ME_ID();
+  const me = ME_ID(request);
+  if (!me) return denied();
   try {
     if (!fresh) {
       const [d] = await select('self_diagnoses', `employee_id=eq.${me}&jd_id=eq.${jd}&order=id.desc&limit=1`);

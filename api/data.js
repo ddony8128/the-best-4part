@@ -11,9 +11,10 @@ export async function GET(request) {
   try {
     if (r === 'jobs') return json(await select('jobs', 'order=id'));
 
-    if (r === 'me') return json(await meProfile());
+    if (r === 'me' || r === 'my') { if (!ME_ID(request)) return denied() }
+    if (r === 'me') return json(await meProfile(ME_ID(request)));
     if (r === 'my') {
-      const id = ME_ID();
+      const id = ME_ID(request);
       const [apps, offers, diags] = await Promise.all([
         select('applications', `employee_id=eq.${id}&cancelled_at=is.null&order=id.desc`),
         select('offers', `employee_id=eq.${id}&order=id.desc`),
@@ -60,8 +61,7 @@ export async function GET(request) {
 }
 
 // 임직원 본인 화면용 프로필: 5개 축별 정량(인사 담당자만 열람)·정성 요약 + 근거 문서
-async function meProfile() {
-  const id = ME_ID();
+async function meProfile(id) {
   const e = (await loadPool([id]))[id];
   if (!e) return null;
   const perf = e.performance.filter(p => p.year >= 2024).sort((a, b) => a.year - b.year);

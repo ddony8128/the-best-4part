@@ -3351,5 +3351,26 @@
   "course": "디지털 전환 기초",
   "completion_date": "2025-06-23",
   "hours": 40
+ },
+ {
+  "training_id": "TRN-EMP-HW-0019-1",
+  "employee_id": "EMP-HW-0019",
+  "course": "프로젝트 관리 전문",
+  "completion_date": "2024-07-16",
+  "hours": 24
+ },
+ {
+  "training_id": "TRN-EMP-HW-0019-2",
+  "employee_id": "EMP-HW-0019",
+  "course": "B2B 마케팅 데이터 분석",
+  "completion_date": "2025-07-16",
+  "hours": 16
+ },
+ {
+  "training_id": "TRN-EMP-HW-0019-3",
+  "employee_id": "EMP-HW-0019",
+  "course": "방산 산업 이해",
+  "completion_date": "2026-07-16",
+  "hours": 40
  }
 ]
