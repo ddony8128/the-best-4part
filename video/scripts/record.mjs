@@ -220,8 +220,9 @@ await wait(500);
 result.console = await record('console', async mark => {
   await mark('recent', L('#overview .two'));
   await moveTo(L('#recent .record').first(), { fx: 0.3 }); await wait(2400);
-  await click(L('nav a[href="#people"]'));
-  await mark('people', L('#people .card').first());
+  await click(L('nav a[href="#jobs"]'));
+  await click(L('#jobRows tr').filter({ hasText: 'JD-014' }).getByText('지원자 · 검토'));
+  await mark('people', L('#people'));
   await wait(700);
   await moveTo(L('#peopleRows tr').filter({ hasText: '이한결' }), { fx: 0.25 }); await wait(2400);
 });

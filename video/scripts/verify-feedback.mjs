@@ -40,7 +40,7 @@ await shot('9-jd002-edit', page.locator('#jobModal'));
 await page.keyboard.press('Escape');
 
 // #3 지원자 상세 › 자격·근거
-await page.click('nav a[href="#people"]');
+await page.click('nav a[href="#jobs"]');
 await page.locator('#peopleRows tr', { hasText: '김서윤' }).locator('button').last().click();
 await page.click('#detailTabs button[data-detail="evidence"]');
 await page.waitForTimeout(200);
@@ -70,7 +70,7 @@ const menu = () => page.$$eval('nav a', as => as.map(a => [...a.childNodes].filt
 const m1 = await menu();
 await page.goto(base + '/hr_matching.html?fast');
 const m2 = await menu();
-check('메뉴', JSON.stringify(m1) === JSON.stringify(m2) && m2.includes('검토 · 협의 현황'), `인사 콘솔과 AI 매칭의 메뉴가 같음 (${m2.join(' / ')})`);
+check('메뉴', JSON.stringify(m1) === JSON.stringify(m2) && m2.length === 4 && m2.includes('공고 관리') && !m2.includes('지원자 관리') && !m2.includes('채용 운영 현황'), `인사 콘솔과 AI 매칭의 메뉴가 같음 (${m2.join(' / ')})`);
 
 // #4 AI 매칭 공고 선택
 await page.selectOption('#jdSelect', 'JD-010');

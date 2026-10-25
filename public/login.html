@@ -57,7 +57,7 @@ button:disabled{opacity:.5;cursor:default}
   </form>
 </div>
 <script>
-const next=(()=>{const n=new URLSearchParams(location.search).get('next')||'/hr_matching.html';return n.startsWith('/')&&!n.startsWith('//')?n:'/hr_matching.html'})();
+const next=(()=>{const n=new URLSearchParams(location.search).get('next')||'/talent_hr_admin.html';return n.startsWith('/')&&!n.startsWith('//')?n:'/talent_hr_admin.html'})();
 document.getElementById('f').addEventListener('submit',async e=>{e.preventDefault();const b=document.getElementById('go'),err=document.getElementById('err');b.disabled=true;err.textContent='';
  try{const r=await fetch('/api/login',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({id:document.getElementById('id').value.trim(),password:document.getElementById('pw').value})});const j=await r.json().catch(()=>({}));
   if(r.ok&&j.ok){location.href=next;return}err.textContent=j.error||'로그인하지 못했습니다.'}catch{err.textContent='서버에 연결하지 못했습니다.'}b.disabled=false});
