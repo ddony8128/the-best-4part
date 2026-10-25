@@ -219,7 +219,7 @@ const sleep=ms=>new Promise(r=>setTimeout(r,ms*SPEED));
 const SPEED=new URLSearchParams(location.search).has('fast')?0.25:1;
 const HR_KEY='talent-hr-admin-v1',OFFER_KEY='talent-link-offers';
 const AXES=['직무경험','업무 역량','업무 성과','성장 가능성','커리어 적합성'];
-const COMPANIES=[['한화오션',520],['한화시스템',380],['한화에어로스페이스',348]];
+const COMPANIES=[['한화오션',91],['한화시스템',95],['한화에어로스페이스',60]];
 
 // 임직원 기본 정보
 const PEOPLE={
@@ -371,7 +371,7 @@ function weightState(){}
 function confirmGate(){scan()}
 
 // STEP 3
-async function scan(){show(3);const total=poolSize();const pass1=Math.round(total*.25),pass2=48,top=10;
+async function scan(){show(3);const total=poolSize();const pass1=Math.round(total*.25),pass2=Math.round(total*.12),top=10;
  $('scanCos').innerHTML=COMPANIES.filter(c=>scope.has(c[0])).map(c=>`<span class="co" data-c="${c[0]}">${c[0]}</span>`).join('');
  const N=52*8;$('dots').innerHTML='<i></i>'.repeat(N);const dots=[...$('dots').children];$('scanlog').innerHTML='';['f1','f2','f3','f4'].forEach(f=>$(f).textContent='0');
  const log=t=>{const d=document.createElement('div');d.innerHTML=t;$('scanlog').prepend(d)};

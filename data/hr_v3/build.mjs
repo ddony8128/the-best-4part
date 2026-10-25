@@ -25,7 +25,7 @@ function parseCSV(text) {
   return body.map(r => Object.fromEntries(head.map((h, i) => [h, r[i] ?? ''])));
 }
 const read = f => parseCSV(fs.readFileSync(path.join(DIR, f + '.csv'), 'utf8')).filter(r => !EXCLUDE.has(r.employee_id));
-const T = Object.fromEntries(['employees', 'assignments', 'cdp', 'certifications', 'evidence', 'performance', 'projects', 'skills', 'skill_development', 'training'].map(f => [f, read(f)]));
+const T = Object.fromEntries(['employees', 'applications', 'assignments', 'cdp', 'certifications', 'evidence', 'performance', 'projects', 'skills', 'skill_development', 'training'].map(f => [f, read(f)]));
 const ESSAY = Object.fromEntries(fs.readFileSync(path.join(DIR, 'applicants.jsonl'), 'utf8').split('\n').filter(Boolean).map(l => JSON.parse(l).application).map(a => [a.emp, a.fields]));
 const JOBS = Object.fromEntries(JSON.parse(fs.readFileSync(path.join(DIR, '../jobs.json'), 'utf8')).map(j => [j.id, j]));
 
@@ -170,6 +170,27 @@ db.performance = T.performance.map(p => {
   const x = cache[p.employee_id]; const kpi = x ? x.kpis[(+p.year) % x.kpis.length] : clean(p.kpi_definition).split(' · ')[0];
   return { evaluation_id: p.evaluation_id, employee_id: p.employee_id, year: +p.year, kpi: kpi, kpi_target: +p.kpi_target, kpi_achievement_pct: +p.kpi_achievement_pct, grade: p.evaluation };
 });
+// 인재풀 등록 시 기재한 이동 희망 조건 (원본 지원서 칸에서 옮김). 근무지는 희망 공고 계열사의 사업장 기준
+const ORIG = Object.fromEntries(T.applications.map(a => [a.employee_id, a]));
+for (const e of db.employees) {
+  const a = ORIG[e.employee_id], co = JOBS[e.desired_jd].company, site = (a?.location_condition || '').split(' ')[0];
+  e.pool_available_from = a?.available_from || null;
+  e.pool_participation_pct = a ? +a.participation_percent : null;
+  e.pool_location = SITES[co].includes(site) ? site + ' 근무 가능' : SITES[co][0] + ' 근무 가능';
+  e.org_status = '조직장 협의 전';
+}
+// 공고별 직접 지원자 3~4명: 희망 공고가 같은 사람 → 같은 직무군·같은 계열사 → 같은 계열사 순으로 고른다
+const STAGES = ['미검토', '미검토', '추가 확인 필요', '인터뷰 예정', '검토 완료'];
+const used = new Set();
+db.applications = [];
+for (const jd of Object.keys(JOBS)) {
+  const n = 3 + hash(jd) % 2, co = JOBS[jd].company, fam = JD_FAMILY[jd];
+  const pools = [e => e.desired_jd === jd, e => JD_FAMILY[e.desired_jd] === fam && e.company === co, e => e.company === co, () => true];
+  const pick = [];
+  for (const f of pools) for (const e of db.employees.filter(f).sort((a, b) => hash(jd + a.employee_id) - hash(jd + b.employee_id))) { if (pick.length < n && !used.has(e.employee_id)) { pick.push(e); used.add(e.employee_id) } }
+  pick.forEach((e, i) => db.applications.push({ employee_id: e.employee_id, jd_id: jd, motive: e.interest, available_from: e.pool_available_from, participation_pct: e.pool_participation_pct,
+    location: e.pool_location, org_status: e.org_status, status: STAGES[hash(jd + e.employee_id) % STAGES.length], created_at: `2026-10-${String(12 + hash(e.employee_id) % 12).padStart(2, '0')}T09:00:00+09:00` }));
+}
 db.career_plans = T.cdp.map(c => ({ cdp_id: c.cdp_id, employee_id: c.employee_id, desired_jd: c.desired_jd, desired_role: JOBS[c.desired_jd]?.title || clean(c.desired_role), development_goal: clean(c.development_goal), plan: clean(c.plan), target_date: c.target_date }));
 
 fs.mkdirSync(OUT, { recursive: true });
