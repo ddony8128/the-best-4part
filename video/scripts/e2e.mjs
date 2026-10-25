@@ -15,6 +15,8 @@ const base = `http://127.0.0.1:${server.address().port}`;
 
 const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+// 로컬 정적 서버에는 AI 함수가 없다 → 빈 응답으로 두고 화면의 기본 초안 경로를 쓴다
+await page.route('**/api/draft', r => r.fulfill({ status: 200, contentType: 'application/json', body: '{}' }));
 const errors = [];
 page.on('pageerror', e => errors.push(e.message));
 page.on('console', m => m.type() === 'error' && errors.push(m.text()));
@@ -32,38 +34,31 @@ await page.click('#btnAnalyze');
 await page.waitForSelector('#btnGate:not([disabled])', { timeout: 15000 });
 check(await page.locator('#reqRows tr').count() === 6, 'six requirements generated');
 // Gate: 합계 100%를 넘겨 올릴 수 없고, 모자라면 스캔 버튼이 잠긴다
-await page.locator('#weightsGate input').nth(3).fill('50');
-check((await page.locator('#weightsGate input').nth(3).inputValue()) === '10', 'gate: cannot raise past 100% total');
-await page.locator('#weightsGate input').nth(0).fill('20');
-check(await page.locator('#btnGate').isDisabled(), 'gate: scan blocked when total < 100%');
-check(await page.locator('#weightsGateWarn').isVisible(), 'gate: warning shown when total < 100%');
-await page.locator('#weightsGate input').nth(0).fill('25');
-check(await page.locator('#btnGate').isEnabled(), 'gate: scan enabled again at 100%');
+// Gate: 축마다 4단계 중요도, 비율은 자동 계산 (100%를 맞출 필요 없음)
+check(await page.locator('#weightsGate .lv').count() === 5 && await page.locator('#weightsGate .lv button.on').count() === 5, 'gate: 5 axes with 4-level importance');
+const shareBefore = await page.locator('#weightsGatev3').textContent();
+await page.click('#weightsGate .w:nth-child(4) .lv button:nth-child(1)');
+check((await page.locator('#weightsGatev3').textContent()) !== shareBefore && await page.locator('#btnGate').isEnabled(), 'gate: level change recomputes share, scan stays enabled');
+await page.click('#weightsGate .w:nth-child(4) .lv button:nth-child(4)');
 await page.click('#btnGate');
 await page.waitForSelector('#p4.active', { timeout: 20000 });
 const names = await page.locator('.cand .nm').allTextContents();
 check(names.length === 10, 'top 10 listed: ' + names.slice(0, 3).join(', '));
 check(names[0] === '김서윤', 'default #1 is 김서윤');
 check(await page.locator('.badge-hidden').count() > 0, 'hidden candidates flagged');
-await page.locator('#weightsLive input').nth(4).fill('50');
-check((await page.locator('#weightsLive input').nth(4).inputValue()) === '15', 'live: cannot raise past 100% total');
-await page.locator('#weightsLive input').nth(0).fill('15');
-check(await page.locator('#detail .docbtn').first().isDisabled(), 'live: report/offer blocked when total < 100%');
-await page.locator('#weightsLive input').nth(0).fill('25');
-// 성장 가능성·커리어 적합성 가중치를 올리면 이한결이 1위
-for (const [i, v] of [[0, 15], [1, 20], [2, 15], [3, 25], [4, 25]]) {
-  await page.locator('#weightsLive input').nth(i).fill(String(v));
-}
+// 성장 가능성·커리어 적합성을 '매우 중요'로 올리면 이한결이 1위
+await page.click('#weightsLive .w:nth-child(4) .lv button:nth-child(1)');
+await page.click('#weightsLive .w:nth-child(5) .lv button:nth-child(1)');
 await page.waitForTimeout(300);
 check((await page.locator('.cand .nm').first().textContent()) === '이한결', 'reweight moves 이한결 to #1');
 await page.locator('.cand', { hasText: '이한결' }).click();
 await page.click('text=추천서 작성 →');
 await page.waitForSelector('#btnSend:not([disabled])', { timeout: 20000 });
-check((await page.locator('#docBody').textContent()).includes('[추천서]'), 'report generated');
+check((await page.locator('#docBody').textContent()).includes('인재 추천 보고서') && !(await page.locator('#docBody').textContent()).includes('EV-'), 'report generated');
 await page.click('#btnSend');
 await page.click('#docTabs button[data-doc=offer]');
 await page.waitForSelector('#btnSend:not([disabled])', { timeout: 20000 });
-check((await page.locator('#docBody').textContent()).includes('자리를 제안드립니다'), 'offer generated');
+check((await page.locator('#docBody').textContent()).includes('참여 제안서') && (await page.locator('#docAttach').textContent()).includes('Job_Offer_Letter'), 'offer generated with offer letter attached');
 await page.click('#btnSend');
 
 await page.goto(base + '/employee.html');

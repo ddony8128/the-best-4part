@@ -23,7 +23,7 @@ if (!jobs.length || jobs.some(j => !j.id || !j.title || !j.company || !j.tasks.l
 fs.writeFileSync(path.join(DIR, 'jobs.json'), JSON.stringify(jobs, null, 2) + '\n');
 
 // 화면별 형태로 바꿔 표시된 구간(/*JOBS:BEGIN*/ … /*JOBS:END*/)에 넣는다
-const console_ = jobs.map(j => ({ id: j.id, title: j.title, company: j.company, org: j.org, status: j.status, tasks: j.tasks.join('\n'), required: j.required.join('\n'), preferred: j.preferred.join('\n'), conditions: j.conditions, deadline: j.deadline, source: `직무.docx · ${j.note || '공고 원문'}` }));
+const console_ = jobs.map(j => ({ id: j.id, title: j.title, company: j.company, org: j.org, status: j.status, tasks: j.tasks.join('\n'), required: j.required.join('\n'), preferred: j.preferred.join('\n'), conditions: j.conditions, deadline: j.deadline, source: `사내 Job Posting · ${j.note || '공고 원문'}` }));
 const blocks = {
   'talent_hr_admin.html': `const INITIAL_JOBS=${JSON.stringify(console_)};`,
   'employee.html': `const FALLBACK_JOBS=${JSON.stringify(console_)};`,

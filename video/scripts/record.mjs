@@ -43,6 +43,8 @@ const VW = 1600, VH = 2000, DSF = 1.2;
 const ctx = await browser.newContext({ viewport: { width: VW, height: VH }, deviceScaleFactor: DSF });
 await ctx.addInitScript(CURSOR);
 const page = await ctx.newPage();
+// 로컬 정적 서버에는 AI 함수가 없다 → 빈 응답으로 두고 화면의 기본 초안 경로를 쓴다
+await page.route('**/api/draft', r => r.fulfill({ status: 200, contentType: 'application/json', body: '{}' }));
 const wait = ms => page.waitForTimeout(ms);
 let mouse = [800, 450];
 
@@ -56,20 +58,8 @@ async function moveTo(loc, opts = {}) {
 async function click(loc, opts) { await moveTo(loc, opts); await wait(220); await page.mouse.down(); await wait(70); await page.mouse.up(); await wait(150); }
 // 페이지는 스크롤하지 않는다. 화면 이동은 영상 카메라가 맡는다.
 async function smoothScroll(_y, ms = 900) { await wait(Math.min(ms, 600)); }
-async function slide(i, to) {
-  const inp = page.locator('#weightsLive input').nth(i);
-  const b = await inp.boundingBox();
-  const from = +(await inp.inputValue());
-  const dir = to > from ? 5 : -5;
-  await page.mouse.move(b.x + b.width * (from / 50), b.y + b.height / 2, { steps: 20 });
-  await page.mouse.down();
-  for (let v = from + dir; dir > 0 ? v <= to : v >= to; v += dir) {
-    await page.mouse.move(b.x + b.width * (v / 50), b.y + b.height / 2, { steps: 6 });
-    await inp.fill(String(v));
-    await wait(260);
-  }
-  await page.mouse.up();
-}
+// 축 i의 중요도를 k단계(0 매우 중요 · 1 중요 · 2 보통 · 3 덜 중요)로 바꾼다
+async function level(i, k) { await click(L(`#weightsLive .w:nth-child(${i + 1}) .lv button:nth-child(${k + 1})`)); await wait(900); }
 
 async function record(name, fn) {
   const cdp = await ctx.newCDPSession(page);
@@ -149,11 +139,8 @@ result.hr = await record('hr', async mark => {
   await moveTo(L('.cand .badge-hidden').first()); await wait(1300);
   await mark('reweight', L('#p4'));
   // 합계 100%를 넘길 수 없으므로 먼저 줄이고 나서 올린다
-  await slide(0, 15);
-  await slide(1, 20);
-  await slide(2, 15);
-  await slide(3, 25);
-  await slide(4, 25);
+  await level(3, 0);
+  await level(4, 0);
   await wait(1500);
   await click(L('.cand').filter({ hasText: '이한결' }), { fx: 0.3 });
   await mark('detail', L('#detail'));

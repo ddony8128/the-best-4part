@@ -15,6 +15,8 @@ const server = http.createServer((q, r) => {
 const base = `http://127.0.0.1:${server.address().port}`;
 const b = await chromium.launch();
 const page = await b.newPage({ viewport: { width: 1440, height: 900 } });
+// 로컬 정적 서버에는 AI 함수가 없다 → 빈 응답으로 두고 화면의 기본 초안 경로를 쓴다
+await page.route('**/api/draft', r => r.fulfill({ status: 200, contentType: 'application/json', body: '{}' }));
 const errors = []; page.on('pageerror', e => errors.push(e.message));
 const results = [];
 const check = (n, ok, msg) => { results.push(`${ok ? 'PASS' : 'FAIL'} #${n} ${msg}`); };
@@ -85,22 +87,19 @@ await shot('4-jd003', page.locator('#p1 .form-grid'));
 await page.selectOption('#jdSelect', 'JD-014');
 await page.click('#btnAnalyze');
 await page.waitForSelector('#btnGate:not([disabled])', { timeout: 15000 });
-await page.locator('#weightsGate input').nth(1).fill('50');
-check(1, (await page.locator('#weightsGate input').nth(1).inputValue()) === '30', '합계 100% 넘게 올릴 수 없음');
-await page.locator('#weightsGate input').nth(0).fill('10');
-check(1, await page.locator('#btnGate').isDisabled() && (await page.locator('#weightsGateWarn').textContent()).includes('100%를 채워야'), '100% 미만이면 경고 + 스캔 불가');
-await shot('1-gate-warning', page.locator('#weightCard'));
-await page.locator('#weightsGate input').nth(0).fill('25');
+check(1, (await page.locator('#weightsGate .lv button.on').allTextContents()).join() === '중요,매우 중요,중요,덜 중요,보통', '중요도 4단계로 제안 (JD-014)');
+await page.click('#weightsGate .w:nth-child(1) .lv button:nth-child(3)');
+check(1, (await page.locator('#weightsGatev0').textContent()) === '16.7%' && await page.locator('#btnGate').isEnabled(), '단계를 바꾸면 비율 자동 계산 · 합계 맞출 필요 없음');
+await shot('1-gate-levels', page.locator('#weightCard'));
+await page.click('#weightsGate .w:nth-child(1) .lv button:nth-child(2)');
 await page.click('#btnGate');
 await page.waitForSelector('#p4.active', { timeout: 20000 });
 // #2 후보 단계 가중치
-await page.locator('#weightsLive input').nth(2).fill('50');
-check(2, (await page.locator('#weightsLive input').nth(2).inputValue()) === '20', '합계 100% 넘게 올릴 수 없음');
-await page.locator('#weightsLive input').nth(2).fill('10');
-check(2, await page.locator('#detail .docbtn').first().isDisabled() && await page.locator('#weightsLiveWarn').isVisible(), '100% 미만이면 경고 + 추천서·제안서 불가');
-await page.click('.step[data-s="5"]');
-check(2, await page.locator('#p4').isVisible(), '100% 미만이면 STEP 5로도 못 넘어감');
-await shot('2-live-warning', page.locator('#p4 .card').first());
+await page.click('#weightsLive .w:nth-child(4) .lv button:nth-child(1)');
+await page.click('#weightsLive .w:nth-child(5) .lv button:nth-child(1)');
+await page.waitForTimeout(300);
+check(2, (await page.locator('.cand .nm').first().textContent()) === '이한결', '같은 단계는 같은 비중 · 단계 변경으로 순위 재계산');
+await shot('2-live-levels', page.locator('#p4 .card').first());
 check('회사명', !(await page.content()).includes('가온'), 'AI 매칭 화면에 가상 회사명 없음');
 
 // #7 로그인 경로
