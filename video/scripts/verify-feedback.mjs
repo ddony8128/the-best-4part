@@ -119,6 +119,10 @@ check(3, !prof.includes('시연용'), '임직원 프로필 근거 문서 문구�
 await shot('8-profile', page.locator('#profileGrid'));
 check('회사명', prof.includes('한화에어로스페이스') && !/가온|한화(갤러리아|에너지|생명|솔루션|투자증권|엔진)|㈜한화/.test(await page.content()), '임직원 화면 회사명 한화에어로스페이스 · 3개 계열사만');
 await page.goto(base + '/employee.html#diagnose');
+// 진단은 직접 실행해야 결과가 나온다 → 실행 후 '지원' 단계로
+check('진단', (await page.locator('#diagBody .empty-state').count()) === 1, '메뉴에 들어가자마자 결과가 나오지 않음');
+await page.click('#btnDiag');
+await page.click('#diagBody .seg button[data-t="2"]');
 await page.fill('#applyMotive', '테스트 지원');
 await page.click('text=지원하기 →');
 await page.click('nav a[href="#applications"]');
@@ -128,6 +132,7 @@ await page.click('#appList button.cancel');
 await page.waitForTimeout(200);
 check(5, await page.locator('#appList .empty').count() === 1, '지원 취소 → 미지원 상태');
 await page.click('nav a[href="#diagnose"]');
+await page.click('#diagBody .seg button[data-t="2"]');
 check(5, await page.locator('text=지원하기 →').isEnabled(), '취소 후 다시 지원 가능');
 
 check('오류', errors.length === 0, 'page errors: ' + (errors.join(' | ') || '없음'));

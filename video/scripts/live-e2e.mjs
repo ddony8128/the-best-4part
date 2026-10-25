@@ -57,6 +57,8 @@ const before = names.join();
 for (const i of [0, 1, 2]) await page.click(`#weightsLive .w:nth-child(${i + 1}) .lv button:nth-child(4)`);
 await page.waitForTimeout(500);
 check((await page.locator('#candList .cand .nm').allTextContents()).join() !== before, 'reweight changes ranking');
+await page.locator('#candList .cand').first().click();
+await page.waitForSelector('#detail.open');
 const detail = await page.locator('#detail').textContent();
 check(/요건별 비교/.test(detail) && /— /.test(detail), 'detail shows requirement evidence');
 
@@ -97,6 +99,7 @@ console.log(t(), 'self diagnosis (live Claude if not cached)');
 await emp.waitForSelector('#diagBody .score-big', { timeout: 90000 });
 check(await emp.locator('#diagBody tbody tr').count() >= 6, 'diagnosis: requirement rows ' + await emp.locator('#diagBody .score-big').textContent());
 {
+  await emp.click('#diagBody .seg button[data-t="2"]');
   await emp.fill('#applyMotive', '캠페인 성과 분석 경험을 제품전략 커뮤니케이션에 적용하고 싶습니다.');
   await emp.click('#diagBody button.primary');
   await emp.waitForFunction(() => /지원 완료/.test(document.querySelector('#diagBody .pill')?.textContent || ''), null, { timeout: 20000 });

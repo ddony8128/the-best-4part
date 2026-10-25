@@ -67,6 +67,8 @@ await page.goto(base + '/employee.html');
 check(await page.locator('#offerBox .card').count() === 1, 'employee sees received offer');
 await page.click('#offerBox button.primary');
 check(await page.locator('#diag table tbody tr, #diagBody table tbody tr').count() >= 3, 'requirement table on diagnosis');
+check(await page.locator('#diagBody .seg button').count() === 3, 'diagnosis split into 요약 · 요건 · 지원');
+await page.click('#diagBody .seg button[data-t="2"]');
 await page.fill('#applyMotive', '데이터 표준 통일 경험을 그룹 지표 통일에 쓰고 싶습니다.');
 await page.click('text=지원하기 →');
 await page.waitForTimeout(300);

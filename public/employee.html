@@ -51,7 +51,11 @@ button.cancel{color:#b0442a;border-color:#efc9bf}button.cancel:hover{border-colo
 .toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%);background:#333d4b;color:#fff;padding:12px 22px;border-radius:7px;z-index:99;font-size:14px;max-width:90vw}.hidden{display:none!important}
 @media(max-width:1100px){aside{width:185px;padding:26px 14px}main{margin-left:185px}.content{padding:28px 25px}header{padding:0 25px}.two,.three{grid-template-columns:1fr}}
 @media(max-width:700px){aside{position:sticky;top:0;width:100%;height:auto;padding:12px 16px;display:block;border-right:0;border-bottom:1px solid #d1d6db}.brand-sub,.nav-label,.aside-bottom{display:none}nav{display:flex;overflow:auto;margin-top:9px;gap:5px}nav a{font-size:13px;padding:7px 10px;margin:0;white-space:nowrap}nav a span{display:none}main{margin-left:0}header{height:54px;padding:0 18px}.head-actions .pill{display:none}.content{padding:25px 17px}h1{font-size:26px}.hero{grid-template-columns:1fr}.hero-side{display:none}.stats{grid-template-columns:1fr 1fr}.detail-grid{grid-template-columns:1fr}.full{grid-column:auto}.bar-row{grid-template-columns:90px 1fr 40px}}
-.spin{display:inline-block;vertical-align:-2px;width:12px;height:12px;border:2px solid #f7d9c9;border-top-color:#c8401a;border-radius:50%;animation:sp .8s linear infinite;margin-right:6px}@keyframes sp{to{transform:rotate(360deg)}}</style>
+.spin{display:inline-block;vertical-align:-2px;width:12px;height:12px;border:2px solid #f7d9c9;border-top-color:#c8401a;border-radius:50%;animation:sp .8s linear infinite;margin-right:6px}@keyframes sp{to{transform:rotate(360deg)}}.diag-pick{display:flex;gap:10px}.diag-pick select{flex:1}
+.empty-state{text-align:center;padding:48px 28px}.empty-state h2{margin-bottom:10px}.empty-state p{max-width:520px;margin:0 auto}
+.seg{display:flex;gap:4px;background:#f2f4f6;border-radius:14px;padding:4px;margin-bottom:18px}.seg button{flex:1;background:transparent;color:#6b7684;border-radius:10px;padding:12px}.seg button:hover{background:#e5e8eb}.seg button.on{background:#fff;color:#191f28;box-shadow:0 1px 3px rgba(0,23,51,.08)}
+.pane-next{display:flex;justify-content:flex-end;margin-top:4px}
+</style>
 <!--tl-ds--><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"><link rel="stylesheet" href="./tl-ds.css"></head>
 <body>
 <aside>
@@ -90,18 +94,18 @@ button.cancel{color:#b0442a;border-color:#efc9bf}button.cancel:hover{border-colo
 
   <section id="jobs" class="section">
     <div class="title-row"><div><div class="eyebrow">OPEN POSITIONS</div><h1>열린 직무</h1><p class="muted">인사 담당자가 등록한 공고입니다. 적합도를 보고 지원할 수 있습니다.</p></div></div>
-    <div class="card"><div id="jobList"></div><p class="tiny" style="margin-top:14px">출처: 인사 담당자 화면의 공고 목록(같은 브라우저 저장소). 공고가 수정되면 여기에도 반영됩니다.</p></div>
+    <div class="card"><div id="jobList"></div></div>
   </section>
 
   <section id="diagnose" class="section">
     <div class="title-row"><div><div class="eyebrow">FIT DIAGNOSIS</div><h1>적합도 진단</h1><p class="muted">직무를 고르면 내 프로필과 JD를 5개 축으로 대조합니다.</p></div></div>
-    <div class="card"><label for="diagJob">진단할 직무</label><select id="diagJob"></select></div>
+    <div class="card"><label for="diagJob">진단할 직무</label><div class="diag-pick"><select id="diagJob"></select><button class="primary" id="btnDiag" onclick="runDiag()">진단하기</button></div></div>
     <div id="diagBody"></div>
   </section>
 
   <section id="profile" class="section">
     <div class="title-row"><div><div class="eyebrow">MY PROFILE</div><h1>내 프로필</h1><p class="muted">인사 담당자의 스캐닝과 적합도 진단에 사용되는 정보입니다.</p></div></div>
-    <div class="notice">실제 서비스에서는 인사 시스템의 경력·평가·교육 데이터가 연동되고, 본인이 희망 직무와 커리어 목표를 직접 갱신합니다. 근속·평가 등급·KPI 같은 정량 평가 데이터는 인사 담당자만 열람합니다. 성별·나이 등은 평가에 쓰지 않습니다.</div>
+    <div class="notice">근속·평가 등급·KPI 같은 정량 평가 데이터는 인사 담당자만 열람합니다. 성별·나이 등은 평가에 쓰지 않습니다.</div>
     <div class="card"><div class="detail-grid" id="profileGrid"></div></div>
   </section>
 
@@ -207,8 +211,20 @@ function renderHome(){renderOffers();const js=jobs(),ranked=js.map(j=>({j,s:scor
 function renderJobs(){$('jobList').innerHTML=jobs().map(j=>{const s=scores(j.id);return`<div class="job"><div><strong>${esc(j.title)}</strong> ${statusPill(j)}<p><span class="tag">${esc(j.id)}</span>요청 조직 ${esc(j.org||'확인 중')} · 마감 ${esc(j.deadline||'미정')} · ${s.total!=null?'내 적합도 '+s.total+'점':'진단 전'}</p></div><div style="display:flex;gap:6px">${applied(j.id)?'<span class="status ok">지원 완료</span>':''}<button onclick="diagnose('${esc(j.id)}')">진단 · 지원</button></div></div>`}).join('')||'<div class="empty">등록된 직무가 없습니다.</div>'}
 
 function renderDiagSelect(){const sel=$('diagJob'),cur=sel.value;sel.innerHTML=jobs().map(j=>`<option value="${esc(j.id)}">${esc(j.id)} · ${esc(j.title)}</option>`).join('');if(cur&&[...sel.options].some(o=>o.value===cur))sel.value=cur}
-function diagnose(jobId){go('diagnose');$('diagJob').value=jobId;renderDiag()}
-function renderDiag(){const j=jobs().find(x=>x.id===$('diagJob').value);if(!j){$('diagBody').innerHTML='';return}if(LIVE)return renderDiagLive(j);const s=scores(j.id);const order=AXES.map((a,i)=>({a,v:s.per[i]})).sort((x,y)=>y.v-x.v);const strong=order.slice(0,2),weak=order.slice(-2).reverse();const done=applied(j.id);
+let DIAG_ON=null,diagTab=0;
+function diagnose(jobId){go('diagnose');$('diagJob').value=jobId;runDiag()}
+function runDiag(){DIAG_ON=$('diagJob').value;diagTab=0;renderDiag()}
+const diagEmpty=()=>`<div class="card empty-state"><h2>직무를 고르고 진단하기를 눌러 주세요</h2><p class="muted">AI가 내 경력 기록(프로젝트·수행확인서·자격·교육·평가)과 그 직무의 요건을 하나씩 대조합니다. 결과는 요약 → 요건별 근거 → 지원하기 순서로 보여 드려요.</p></div>`;
+// 진단 결과를 세 단계(요약 · 요건별 근거 · 지원하기)로 나눠 한 번에 하나씩 보여 준다
+function tabify(){const b=$('diagBody'),three=b.querySelector(':scope > .three');if(!three)return;
+ const req=[...b.children].find(x=>x.classList.contains('card')&&/요건별 비교/.test(x.textContent)),two=b.querySelector(':scope > .two'),[str,app]=two?[...two.children]:[];
+ const names=['요약','요건별 근거','지원'],panes=[[three,str],[req],[app]];
+ const seg=document.createElement('div');seg.className='seg';seg.innerHTML=names.map((n,i)=>`<button type="button" data-t="${i}">${i+1}. ${n}</button>`).join('');
+ const ps=panes.map((els,i)=>{const d=document.createElement('div');d.className='pane';d.dataset.p=i;els.filter(Boolean).forEach(e=>d.appendChild(e));
+  if(i<2){const n=document.createElement('div');n.className='pane-next';n.innerHTML=`<button type="button" class="accent" onclick="setDiagTab(${i+1},true)">다음: ${names[i+1]} →</button>`;d.appendChild(n)}return d});
+ b.innerHTML='';b.appendChild(seg);ps.forEach(x=>b.appendChild(x));seg.querySelectorAll('button').forEach(x=>x.onclick=()=>setDiagTab(+x.dataset.t,true));setDiagTab(diagTab)}
+function setDiagTab(i,scroll){diagTab=i;document.querySelectorAll('#diagBody .pane').forEach(p=>p.hidden=+p.dataset.p!==i);document.querySelectorAll('#diagBody .seg button').forEach(x=>x.classList.toggle('on',+x.dataset.t===i));if(scroll)window.scrollTo({top:$('diagBody').offsetTop-90,behavior:'smooth'})}
+function renderDiag(){const j=jobs().find(x=>x.id===$('diagJob').value);if(!j){$('diagBody').innerHTML='';return}if(DIAG_ON!==j.id){$('diagBody').innerHTML=diagEmpty();return}if(LIVE)return renderDiagLive(j);const s=scores(j.id);const order=AXES.map((a,i)=>({a,v:s.per[i]})).sort((x,y)=>y.v-x.v);const strong=order.slice(0,2),weak=order.slice(-2).reverse();const done=applied(j.id);
  $('diagBody').innerHTML=`
  <div class="three">
   <div class="card"><div class="eyebrow">OVERALL FIT</div><div class="score-big" style="margin:12px 0 6px">${s.total}<small>/ 100</small></div><p class="muted" style="font-size:14px">${esc(j.title)} · 참고 점수</p><p class="tiny">직무별 비교를 위한 참고 지표입니다. 성공 확률이나 전사 역량 순위가 아니며, 아래 요건별 근거를 함께 보세요.</p></div>
@@ -226,7 +242,7 @@ function renderDiag(){const j=jobs().find(x=>x.id===$('diagJob').value);if(!j){$
    <label for="applyAvail" style="margin-top:14px">참여 가능 조건</label><p class="tiny" style="margin:-4px 0 8px">적합한 경험이 있다는 판단과 실제 이동할 수 있다는 판단은 따로 확인합니다. 소속 조직 협의는 지원 후 진행됩니다.</p><select id="applyAvail" ${done?'disabled':''}><option>2026-12-01부터 / 최대 100% / 서울 출근 가능</option><option>2027-01-01부터 / 최대 50% 겸임 / 원격 희망</option><option>조직장 협의 후 결정</option></select>
    <div class="form-foot"><span class="tiny">지원하면 인사 담당자 화면의 지원자 목록·운영 기록에 바로 표시됩니다.</span><button class="primary" ${done?'disabled':''} onclick="apply('${esc(j.id)}')">${done?'이미 지원함':'지원하기 →'}</button></div>
   </div>
- </div>`}
+ </div>`;tabify()}
 function renderDiagLive(j){const d=DIAG[j.id];
  if(!d||!d.analysis){$('diagBody').innerHTML=`<div class="card"><div class="card-head"><h2>${esc(j.title)} · 적합도 진단</h2><span class="tiny">${esc(j.id)}</span></div><p class="muted"><span class="spin"></span> AI가 내 경력 기록(프로젝트·수행확인서·자격·교육·평가)과 이 직무의 요건을 하나씩 대조하고 있습니다. 약 15초 걸립니다.</p></div>`;loadDiag(j.id);return}
  const c=d.candidate,an=d.analysis,total=liveTotal(d),order=AXES.map((a,i)=>({a,v:c.ax[i]})).sort((x,y)=>y.v-x.v),done=applied(j.id);
@@ -249,7 +265,7 @@ function renderDiagLive(j){const d=DIAG[j.id];
    <label for="applyAvail" style="margin-top:14px">참여 가능 조건</label><p class="tiny" style="margin:-4px 0 8px">인재풀 등록 때 적은 조건: ${esc(ME.availability||'-')}</p><select id="applyAvail" ${done?'disabled':''}><option value="2026-12-01|${esc(ME.availability?.split(' / ')[1]?.split(' · ')[0]||'근무지 협의')}">2026-12-01부터 / ${esc(ME.availability?.split(' / ')[1]?.split(' · ')[0]||'근무지 협의')}</option><option value="2027-01-01|근무지 협의">2027-01-01부터 / 근무지 협의</option><option value="|조직장 협의 후 결정">시점은 조직장 협의 후 결정</option></select>
    <div class="form-foot"><span class="tiny">지원하면 인사 담당자 화면의 지원자 목록·운영 기록에 바로 표시됩니다.</span><button class="primary" ${done?'disabled':''} onclick="apply('${esc(j.id)}')">${done?'이미 지원함':'지원하기 →'}</button></div>
   </div>
- </div>`}
+ </div>`;tabify()}
 $('diagJob').addEventListener('change',renderDiag);
 
 async function apply(jobId){const j=jobs().find(x=>x.id===jobId);if(!j||applied(jobId))return;
