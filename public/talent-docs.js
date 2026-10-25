@@ -89,7 +89,7 @@ ${items(m.questions).length ? `<h3>면담 시 확인 질문</h3>${list(m.questio
   // AI 초안: /api/draft 가 같은 형식(JSON)을 돌려주면 그것을, 실패하면 규칙 기반 초안을 쓴다
   async function draft(type, input, fallback) {
     try {
-      const ctl = new AbortController(); const t = setTimeout(() => ctl.abort(), 15000);
+      const ctl = new AbortController(); const t = setTimeout(() => ctl.abort(), 25000);
       const r = await fetch('/api/draft', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ type, input }), signal: ctl.signal });
       clearTimeout(t);
       const j = r.ok ? await r.json() : null;
