@@ -117,3 +117,14 @@ header{background:rgba(255,255,255,.9);backdrop-filter:saturate(180%) blur(12px)
 .lv button{background:#fff;border:1px solid var(--grey200);color:var(--grey700);border-radius:var(--r-sm);font-size:var(--t7)}
 .lv button.on{background:var(--orange500);border-color:var(--orange500);color:#fff}
 .w{background:var(--grey50);border-radius:var(--r-lg)}
+
+/* 정보량 줄이기: 영어 장식 라벨·중복 설명은 숨기고, 화면마다 제목 하나와 핵심 행동 하나만 남긴다 */
+main .eyebrow,.nav-label,.brand-sub,.hero-side,.legend-row{display:none}
+.brand{margin-bottom:36px}
+.breadcrumb b{font-size:var(--t5)}
+.title-row p,.page-head p{color:var(--grey600)}
+/* 숫자 카드는 라벨과 숫자만, 카드 머리의 보조 문구는 숨긴다(필요한 것은 id가 있는 동적 문구와 정량 조건 안내뿐) */
+.stat strong ~ small{display:none}
+.card-head > span.tiny:not([id]){display:none}
+#hardCard .card-head > span.tiny{display:inline}
+header .breadcrumb{font-size:var(--t5);font-weight:700;color:var(--grey900)}

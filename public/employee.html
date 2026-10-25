@@ -67,12 +67,11 @@ button.cancel{color:#b0442a;border-color:#efc9bf}button.cancel:hover{border-colo
   </nav>
   <div class="aside-bottom">
     <div class="person"><div class="avatar" id="meInitial">ME</div><div style="font-size:13px"><span id="meName"></span><br><span class="muted" id="meOrg"></span></div></div>
-    <p class="tiny" style="margin-top:18px"><span class="dot"></span>인사 담당자 화면과 연결됨</p>
   </div>
 </aside>
 <main>
   <header>
-    <div class="breadcrumb">임직원 워크스페이스 &nbsp; / &nbsp; <b id="crumb">내 기회 현황</b></div>
+    <div class="breadcrumb"><b id="crumb">내 기회 현황</b></div>
     <div class="head-actions"><div class="avatar" id="meInitial2">ME</div></div>
   </header>
   <div class="content">
@@ -84,7 +83,7 @@ button.cancel{color:#b0442a;border-color:#efc9bf}button.cancel:hover{border-colo
     <div class="stats" id="homeStats"></div>
     <div class="two">
       <div class="card"><div class="card-head"><h2>나와 가까운 직무</h2><button class="text-btn" onclick="go('jobs')">전체 보기 ↗</button></div><div id="homeTop"></div></div>
-      <div class="card"><div class="card-head"><h2>최근 활동</h2><span class="tiny">ACTIVITY</span></div><div id="homeRecent"></div></div>
+      <div class="card"><div class="card-head"><h2>최근 활동</h2></div><div id="homeRecent"></div></div>
     </div>
     <div class="notice">정량 항목은 규칙으로, 정성 항목은 AI가 프로필과 JD를 대조해 산출합니다.</div>
   </section>
@@ -201,7 +200,7 @@ function offers(){if(LIVE)return MY.offers;try{return(JSON.parse(localStorage.ge
 function renderOffers(){const list=offers();$('offerBox').innerHTML=list.map((o,i)=>`<div class="card" style="border-color:var(--accent);box-shadow:0 8px 30px #f6995d22"><div class="card-head"><div><span class="status check">인사팀에서 온 제안</span><h2 style="margin-top:8px">${esc(o.subject)}</h2><span class="tiny">${esc(o.time)} · 공모에 지원하지 않았지만 내 프로필이 이 자리와 맞다고 판단되었습니다</span></div><div style="display:flex;gap:6px;flex-shrink:0"><button onclick="toggleOffer(${i})">내용 보기</button><button class="primary" onclick="diagnose('${esc(o.jd)}')">적합도 확인 →</button></div></div><div id="offerBody${i}" class="fieldbox hidden" style="${o.html?'':'white-space:pre-wrap;'}line-height:1.8">${o.html||esc(o.body)}${o.attachment?`<div class="tiny" style="margin-top:12px">📎 첨부: ${esc(o.attachment)}</div>`:''}</div></div>`).join('')}
 function toggleOffer(i){$('offerBody'+i).classList.toggle('hidden')}
 function renderHome(){renderOffers();const js=jobs(),ranked=js.map(j=>({j,s:scores(j.id)})).sort((a,b)=>LIVE?((b.s.total??-1)-(a.s.total??-1))||((NEAR[b.j.id]||0)-(NEAR[a.j.id]||0)):b.s.total-a.s.total);const open=js.filter(j=>j.status!=='마감').length;
- $('homeStats').innerHTML=[['열린 직무',open,'개 · 인사 담당자 등록'],['지원한 직무',myApps().length,'건'],['가장 가까운 직무',ranked[0]?(ranked[0].s.total!=null?ranked[0].s.total+'점':'진단 전'):'-',ranked[0]?esc(ranked[0].j.title):''],['내 프로필 근거',ME.evidence.length,'건 · 수행확인서 등']].map(([k,v,d])=>`<div class="stat"><small>${k}</small><strong>${v}</strong><small>${d}</small></div>`).join('');
+ $('homeStats').innerHTML=[['열린 직무',open,'개 · 인사 담당자 등록'],['지원한 직무',myApps().length,'건'],[ranked[0]?'가장 가까운 직무 · '+esc(ranked[0].j.title):'가장 가까운 직무',ranked[0]?(ranked[0].s.total!=null?ranked[0].s.total+'점':'진단 전'):'-',''],['내 프로필 근거',ME.evidence.length,'건 · 수행확인서 등']].map(([k,v,d])=>`<div class="stat"><small>${k}</small><strong>${v}</strong><small>${d}</small></div>`).join('');
  $('homeTop').innerHTML=ranked.slice(0,3).map(({j,s})=>`<div class="job"><div><strong>${esc(j.title)}</strong><p><span class="tag">${esc(j.id)}</span>${s.total!=null?'적합도 '+s.total+'점':'경력 기록 기준 가까운 직무 · 진단 전'} · ${esc(j.org)}</p></div><button onclick="diagnose('${esc(j.id)}')">진단 보기</button></div>`).join('');
  const recent=myApps().slice(0,4).map(a=>`<div class="record">${esc(a.title)} 지원 · 검토 단계: ${esc(stageOf(a.id))}<small>${esc(a.time)}</small></div>`).join('');$('homeRecent').innerHTML=recent||'<p class="muted">아직 활동 기록이 없습니다. 적합도 진단부터 시작해 보세요.</p>'}
 
@@ -219,8 +218,8 @@ function renderDiag(){const j=jobs().find(x=>x.id===$('diagJob').value);if(!j){$
   <div style="overflow:auto"><table style="width:100%;border-collapse:collapse;font-size:14px;text-align:left"><thead><tr>${['요건','구분','상태','근거','면담에서 받을 질문'].map(h=>`<th style="color:#6b7684;font-size:13px;font-weight:500;background:#f9fafb;padding:12px;border-bottom:1px solid var(--line);white-space:nowrap">${h}</th>`).join('')}</tr></thead><tbody>${reqsFor(j).map(x=>`<tr>${[`<strong>${esc(x.r)}</strong>`,esc(x.t),`<span class="status ${REQ_CLASS[x.s]}">${esc(x.s)}</span>`,esc(x.e),`<span class="muted">${esc(x.q)}</span>`].map(c=>`<td style="padding:12px;border-bottom:1px solid var(--line);vertical-align:top">${c}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
   <p class="tiny" style="margin-top:12px">필수 요건이 미확인이어도 자동으로 부적합 처리하지 않습니다. ‘확인 필요’ 항목은 근거를 보충하거나 면담에서 확인합니다. 프로필 확인일: ${esc(ME.checked)}</p></div>
  <div class="two">
-  <div class="card"><div class="card-head"><h2>잘 맞는 점</h2><span class="tiny">STRENGTHS</span></div>${strong.map(o=>`<div class="evidence"><strong>${esc(o.a)} · ${o.v}점</strong><br>${esc(STRENGTH[o.a])}</div>`).join('')}
-   <div class="card-head" style="margin-top:26px"><h2>더 적합해지려면</h2><span class="tiny">WHAT TO ADD</span></div><ul class="gap">${weak.map(o=>`<li><span class="k">${esc(o.a)} · ${o.v}점</span><span><span class="act">${esc(GAP[o.a][0])}</span><br><span class="muted">${esc(GAP[o.a][1])}</span></span></li>`).join('')}</ul></div>
+  <div class="card"><div class="card-head"><h2>잘 맞는 점</h2></div>${strong.map(o=>`<div class="evidence"><strong>${esc(o.a)} · ${o.v}점</strong><br>${esc(STRENGTH[o.a])}</div>`).join('')}
+   <div class="card-head" style="margin-top:26px"><h2>더 적합해지려면</h2></div><ul class="gap">${weak.map(o=>`<li><span class="k">${esc(o.a)} · ${o.v}점</span><span><span class="act">${esc(GAP[o.a][0])}</span><br><span class="muted">${esc(GAP[o.a][1])}</span></span></li>`).join('')}</ul></div>
   <div class="card"><div class="card-head"><h2>이 직무에 지원</h2><span class="pill">${done?'지원 완료':'미지원'}</span></div>
    <div class="fieldbox" style="margin-bottom:14px"><strong>JD 요약</strong>${esc(j.tasks||'담당 업무 미입력. 인사 담당자가 공고 관리에서 입력합니다.')}<br><span class="muted">필수: ${esc((j.required||'확인 중').split('\n').join(' / '))}<br>우대: ${esc((j.preferred||'확인 중').split('\n').join(' / '))}</span></div>
    <label for="applyMotive">지원 동기 · JD 요구사항과 연결해 작성</label><textarea id="applyMotive" ${done?'disabled':''} placeholder="예: 월간 리포트 자동화 경험을 ${esc(j.title)} 업무의 지표 표준화에 적용하고 싶습니다.">${done?esc(myApps().find(a=>a.jd===j.id)?.motive||''):''}</textarea>
@@ -241,9 +240,9 @@ function renderDiagLive(j){const d=DIAG[j.id];
   <div style="overflow:auto"><table style="width:100%;border-collapse:collapse;font-size:14px;text-align:left"><thead><tr>${['요건','구분','상태','근거'].map(h=>`<th style="color:#6b7684;font-size:13px;font-weight:500;background:#f9fafb;padding:12px;border-bottom:1px solid var(--line);white-space:nowrap">${h}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div>
   <p class="tiny" style="margin-top:12px">필수 요건이 미확인이어도 자동으로 부적합 처리하지 않습니다. ‘확인 필요’ 항목은 근거를 보충하거나 면담에서 확인합니다. 프로필 확인일: ${esc(ME.checked)}</p></div>
  <div class="two">
-  <div class="card"><div class="card-head"><h2>잘 맞는 점</h2><span class="tiny">STRENGTHS</span></div>${c.strengths.map(x=>`<div class="evidence">${esc(x)}</div>`).join('')}
-   <div class="card-head" style="margin-top:26px"><h2>더 적합해지려면</h2><span class="tiny">WHAT TO ADD</span></div><ul class="gap">${c.concerns.map(x=>`<li><span class="k">보완</span><span>${esc(x)}</span></li>`).join('')}</ul>
-   <div class="card-head" style="margin-top:22px"><h2>면담에서 받을 질문</h2><span class="tiny">PREPARE</span></div>${c.questions.map(x=>`<div class="qa">Q. ${esc(x)}</div>`).join('')}</div>
+  <div class="card"><div class="card-head"><h2>잘 맞는 점</h2></div>${c.strengths.map(x=>`<div class="evidence">${esc(x)}</div>`).join('')}
+   <div class="card-head" style="margin-top:26px"><h2>더 적합해지려면</h2></div><ul class="gap">${c.concerns.map(x=>`<li><span class="k">보완</span><span>${esc(x)}</span></li>`).join('')}</ul>
+   <div class="card-head" style="margin-top:22px"><h2>면담에서 받을 질문</h2></div>${c.questions.map(x=>`<div class="qa">Q. ${esc(x)}</div>`).join('')}</div>
   <div class="card"><div class="card-head"><h2>이 직무에 지원</h2><span class="pill">${done?'지원 완료':'미지원'}</span></div>
    <div class="fieldbox" style="margin-bottom:14px"><strong>JD 요약</strong>${esc(j.tasks)}<br><span class="muted">필수: ${esc((j.required||'').split('\n').join(' / '))}<br>우대: ${esc((j.preferred||'').split('\n').join(' / '))}</span></div>
    <label for="applyMotive">지원 동기 · JD 요구사항과 연결해 작성</label><textarea id="applyMotive" ${done?'disabled':''} placeholder="예: 제 프로젝트 경험을 ${esc(j.title)} 업무에 이렇게 적용하고 싶습니다.">${done?esc(myApps().find(a=>a.jd===j.id)?.motive||''):''}</textarea>
