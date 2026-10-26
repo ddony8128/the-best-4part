@@ -92,6 +92,10 @@ table{width:100%;border-collapse:collapse;font-size:14px;text-align:left}th{colo
 .qa{font-size:14px;padding:8px 0;border-top:1px solid var(--line)}.qa:first-child{border-top:0}
 .doc{background:#fff;border:1px solid var(--line);border-radius:10px;padding:34px 40px;font-size:15px;line-height:1.85;min-height:420px;font-family:'Malgun Gothic',Arial,sans-serif}
 .doc .rv{opacity:0;transform:translateY(6px);transition:opacity .35s,transform .35s}.doc .rv.on{opacity:1;transform:none}.attach .file{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:10px 12px;border:1px dashed #f7b79c;border-radius:9px;background:#fff7f2;font-size:14px}.attach .file b{flex:1}
+.drafting{min-height:380px}.dr-head{display:flex;align-items:center;gap:12px;padding-bottom:18px;border-bottom:1px solid var(--line)}.dr-head .spin{width:22px;height:22px;border-width:3px;flex:none}.dr-head b{font-size:17px;color:#191f28}.dr-sec{margin-left:auto;font-variant-numeric:tabular-nums;color:#4e5968;font-weight:600}
+.dr-steps{list-style:none;padding:0;margin:18px 0 22px;display:grid;gap:10px}.dr-steps li{display:flex;align-items:center;gap:10px;color:#8b95a1;font-size:15px}.dr-steps li::before{content:'';width:18px;height:18px;border-radius:50%;border:2px solid #d1d6db;box-sizing:border-box;flex:none}
+.dr-steps li.now{color:#191f28;font-weight:600}.dr-steps li.now::before{border-color:#f4511e;border-top-color:#fcd9c8;animation:sp .8s linear infinite}.dr-steps li.ok{color:#4e5968}.dr-steps li.ok::before{content:'✓';border:0;background:#f4511e;color:#fff;font-size:11px;display:grid;place-items:center}
+.dr-skel{display:grid;gap:12px}.dr-skel i{display:block;height:14px;border-radius:7px;background:linear-gradient(90deg,#f2f4f6 25%,#e5e8eb 50%,#f2f4f6 75%);background-size:300% 100%;animation:shim 1.4s ease-in-out infinite}.dr-skel i.blk{height:64px;border-radius:12px;margin:6px 0}@keyframes shim{from{background-position:100% 0}to{background-position:0 0}}
 .doc .cursor{display:inline-block;width:7px;height:15px;background:var(--accent);vertical-align:-2px;animation:blink 1s steps(1) infinite}@keyframes blink{50%{opacity:0}}
 .tabs{display:flex;gap:6px;margin-bottom:16px}.tabs button.active{background:#333d4b;color:#fff;border-color:#333d4b}
 .toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%);background:#333d4b;color:#fff;padding:12px 22px;border-radius:7px;z-index:99;font-size:14px;max-width:90vw}.hidden{display:none!important}
@@ -353,7 +357,7 @@ const REQ_CLASS={'확인':'ok','확인 필요':'check','정보 미확인':''};
 
 function notify(m){$('toast').textContent=m;$('toast').classList.remove('hidden');clearTimeout(notify.t);notify.t=setTimeout(()=>$('toast').classList.add('hidden'),3000)}
 let maxStep=1;
-function show(n){maxStep=Math.max(maxStep,n);document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id==='p'+n));document.querySelectorAll('.step').forEach(s=>{const k=+s.dataset.s;s.classList.toggle('on',k===n);s.classList.toggle('done',k<maxStep&&k!==n)});window.scrollTo({top:0,behavior:'smooth'})}
+function show(n){maxStep=Math.max(maxStep,n);document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id==='p'+n));document.querySelectorAll('.step').forEach(s=>{const k=+s.dataset.s;s.classList.toggle('on',k===n);s.classList.toggle('done',k<maxStep&&k!==n)});if(n===5&&cand())setTab(docType);window.scrollTo({top:0,behavior:'smooth'})}
 document.querySelectorAll('.step').forEach(s=>s.addEventListener('click',()=>{const k=+s.dataset.s;if(k<=maxStep&&k!==3)show(k)}));
 
 // STEP 1
@@ -375,8 +379,9 @@ async function paintReqs(state){$('reqRows').innerHTML='';for(const r of REQS){c
 
 // STEP 2
 async function analyze(){if(!scope.size){notify('스캔할 계열사를 하나 이상 고르세요.');return}
+ $('btnAnalyze').disabled=true;await BOOT;$('btnAnalyze').disabled=false; // 서버 연결(LIVE) 확인 전에 누르면 내장 데이터로 흘러가지 않게
  // 고른 공고의 요건·기본 가중치·후보로 바꾼다
- curJD=$('jdSelect').value;ANALYSIS=null;REF=null;REQS=JDS[curJD].reqs.map(r=>({...r}));WL=toLevels(JDS[curJD].w);syncW();C=buildCands(curJD);selected=null;for(const k in docModels)delete docModels[k];show(2);$('reqRows').innerHTML='';reqsReady=false;$('btnGate').disabled=true;$('weightCard').style.opacity=.35;$('aiState').innerHTML='<span class="spin"></span>JD와 참고 자료를 분석하는 중';renderWeights('weightsGate',false);$('refCard').classList.add('hidden');$('hardCard').classList.add('hidden');
+ curJD=$('jdSelect').value;ANALYSIS=null;REF=null;REQS=JDS[curJD].reqs.map(r=>({...r}));WL=toLevels(JDS[curJD].w);syncW();C=buildCands(curJD);selected=null;for(const k in docModels)delete docModels[k];for(const k in docPending)delete docPending[k];show(2);$('reqRows').innerHTML='';reqsReady=false;$('btnGate').disabled=true;$('weightCard').style.opacity=.35;$('aiState').innerHTML='<span class="spin"></span>JD와 참고 자료를 분석하는 중';renderWeights('weightsGate',false);$('refCard').classList.add('hidden');$('hardCard').classList.add('hidden');
  // 이 공고를 분석한 결과가 있으면 그대로 쓰고, 없으면 지금 Claude로 분석한다
  const got=LIVE?await API.data('analysis',{jd:curJD},10000):null;REF=got&&got.reference;HARD=(got&&got.hard)||[];renderHard();renderRef(REF);
  if(got&&got.analysis)applyAnalysis(got.analysis);
@@ -484,19 +489,30 @@ function buildOffer(c){const j=JDS[curJD],sj=srcJob();return{title:`${j.title} �
  availability:{conditions:c.avail,org_status:'소속 조직과의 협의는 인사팀이 함께 진행합니다'},
  reply_request:'관심이 있으시면 TALENT LINK 임직원 화면에서 적합도와 보충할 점을 확인하신 뒤 지원하시거나, 이동 가능한 시점을 회신해 주세요.',
  notice:`본 제안은 배치 확정이나 이동 지시가 아니며, ${c.name} 님의 참여 의사와 소속 조직 여건을 확인한 뒤 협의하기 위한 절차입니다.`}}
-function openDoc(type){if(!cand())return;closeDrawer();show(5);setTab(type)}
+function openDoc(type){if(!cand())return;closeDrawer();docType=type;show(5)}
 document.querySelectorAll('#docTabs button').forEach(b=>b.onclick=()=>setTab(b.dataset.doc));
-const docModels={};
+const docModels={},docPending={};
+// 작성 중 화면: 단계 표시 + 경과 시간 + 문서 뼈대
+const DRAFT_STEPS={report:['요건별 판정 근거 모으기','추천 근거 · 우려되는 점 정리','보고서 문장 작성','근거 대조 · 형식 검토'],offer:['자리 소개 · 제안 이유 정리','참여 조건 · 일정 확인','제안 메일 문장 작성','오퍼 레터 첨부 만들기']};
+let draftTimer=null;
+function paintDrafting(type,c){clearInterval(draftTimer);const t0=Date.now(),steps=DRAFT_STEPS[type];
+ $('docBody').innerHTML=`<div class="drafting"><div class="dr-head"><span class="spin"></span><div><b>AI가 ${type==='report'?'추천서':'제안서'}를 작성하고 있어요</b><div class="tiny">${esc(c.name)} 님의 요건별 근거만 사용합니다 · 보통 10~20초</div></div><span class="dr-sec" id="drSec">0초</span></div>
+ <ol class="dr-steps">${steps.map((x,i)=>`<li data-i="${i}">${esc(x)}</li>`).join('')}</ol>
+ <div class="dr-skel"><i style="width:62%"></i><i style="width:38%;height:10px"></i><i class="blk"></i><i></i><i style="width:92%"></i><i style="width:80%"></i><i></i><i style="width:70%"></i></div></div>`;
+ const tick=()=>{if(!$('drSec')){clearInterval(draftTimer);return}const sec=Math.floor((Date.now()-t0)/1000);$('drSec').textContent=sec+'초';const at=Math.min(steps.length-1,[0,2,5,9].filter(v=>sec>=v).length-1);
+  $('docBody').querySelectorAll('.dr-steps li').forEach(li=>{const i=+li.dataset.i;li.className=i<at?'ok':i===at?'now':''})};
+ tick();draftTimer=setInterval(tick,500)}
 function setTab(type){docType=type;document.querySelectorAll('#docTabs button').forEach(b=>b.classList.toggle('active',b.dataset.doc===type));const c=cand();
  $('docSide').innerHTML=`<div class="tiny" style="margin-bottom:8px">${esc(c.name)} · ${esc(c.company)} ${esc(c.team)}</div>`+REQS.map(r=>{const[st]=c.req[r.id];return`<div class="qa" style="display:flex;justify-content:space-between;gap:8px"><span>${esc(r.r)}</span><span class="status ${REQ_CLASS[st]}">${esc(st)}</span></div>`}).join('')+`<p class="tiny" style="margin-top:12px">근거가 없는 역량은 문서에 쓰지 않습니다.</p>`;
  const me=TD.me();$('docPeople').innerHTML=type==='report'?`작성 ${esc(TD.label(me))} → 보고 ${esc(TD.label(TD.managerOf(me.id)))}`:`발신 ${esc(TD.label(me))} → 수신 ${esc(c.name)} 님`;
  $('sendHint').textContent=type==='report'?'보내기: 상사에게 보고되고 인사 콘솔 운영 기록에 남습니다.':'보내기: 당사자 임직원 화면에 “받은 제안”으로 도착하고 운영 기록에 남습니다.';
  $('btnSend').textContent=type==='report'?'상사에게 보고 →':'당사자에게 제안 보내기 →';
  $('docAttach').innerHTML='';
- const key=type+c.emp;if(docModels[key]){paintDoc(type,docModels[key],false);return}
- clearInterval(typing);$('btnSend').disabled=true;$('docState').innerHTML='<span class="spin"></span>근거를 바탕으로 작성하는 중';$('docBody').innerHTML='';
- const fallback=type==='report'?buildReport(c):buildOffer(c);
- Promise.all([TD.draft(type,docInput(c),fallback),sleep(900)]).then(([r])=>{if(docType!==type||cand()!==c)return;docModels[key]=r.model;paintDoc(type,r.model,true,r.source)})}
+ const key=type+c.emp;clearInterval(typing);clearInterval(draftTimer);if(docModels[key]){paintDoc(type,docModels[key].model,false,docModels[key].source);return}
+ $('btnSend').disabled=true;$('docState').innerHTML='<span class="spin"></span>근거를 바탕으로 작성하는 중';paintDrafting(type,c);
+ if(!docPending[key]){const fallback=type==='report'?buildReport(c):buildOffer(c);
+  const pr=docPending[key]=Promise.all([TD.draft(type,docInput(c),fallback),sleep(900)]).then(([r])=>{if(docPending[key]===pr){docModels[key]={model:r.model,source:r.source};delete docPending[key]}return r})}
+ docPending[key].then(r=>{if(docType!==type||cand()!==c)return;clearInterval(draftTimer);paintDoc(type,r.model,true,r.source)})}
 function paintDoc(type,m,animate,source){$('docBody').innerHTML=type==='report'?TD.renderReport(m):TD.renderOffer(m);
  if(type==='offer'){const f=TD.letterFile(m);$('docAttach').innerHTML=`<div class="file">📎 <b>${esc(f.name)}</b><button onclick="downloadDoc()">내려받기</button></div>`}
  const done=()=>{$('docState').textContent='✓ 작성 완료 · 검토 후 보내세요'+(source==='ai'?' (AI 작성)':'');$('btnSend').disabled=false};
@@ -504,7 +520,7 @@ function paintDoc(type,m,animate,source){$('docBody').innerHTML=type==='report'?
  const parts=[...$('docBody').querySelector('article').children];parts.forEach(el=>el.classList.add('rv'));let i=0;
  typing=setInterval(()=>{if(i<parts.length)parts[i++].classList.add('on');else{clearInterval(typing);done()}},Math.round(110*SPEED))}
 function hrState(){try{const s=JSON.parse(localStorage.getItem(HR_KEY));if(s&&Array.isArray(s.jobs))return s}catch{}return null}
-function sendDoc(){const c=cand();const text=TD.toText($('docBody'));const html=$('docBody').innerHTML,m=docModels[docType+c.emp];const time=new Date().toLocaleString('ko-KR',{timeZone:'Asia/Seoul'});
+function sendDoc(){const c=cand();const text=TD.toText($('docBody'));const html=$('docBody').innerHTML,m=docModels[docType+c.emp]?.model;const time=new Date().toLocaleString('ko-KR',{timeZone:'Asia/Seoul'});
  const entry={time,action:docType==='report'?`AI 인재 매칭 · ${c.name}(${c.emp}) 추천서 상부 보고 — ${JDS[curJD].title}`:`AI 인재 매칭 · ${c.name}(${c.emp})에게 참여 제안 발송 — ${JDS[curJD].title}`};
  // 인사 콘솔 상태가 있으면 바로 기록하고, 없으면 콘솔이 다음에 열릴 때 합친다
  try{const s=hrState();if(s){s.audit=Array.isArray(s.audit)?s.audit:[];s.audit.unshift(entry);localStorage.setItem(HR_KEY,JSON.stringify(s))}else{const pend=JSON.parse(localStorage.getItem('talent-link-audit-pending')||'[]');pend.unshift(entry);localStorage.setItem('talent-link-audit-pending',JSON.stringify(pend))}}catch{}
@@ -512,11 +528,11 @@ function sendDoc(){const c=cand();const text=TD.toText($('docBody'));const html=
  if(LIVE)API.record(docType,docType==='offer'?{employee_id:c.emp,jd_id:curJD,sender:TD.label(me),subject:`[참여 제안] ${J.company} ${J.title} — ${c.name}님`,model:m||null,html,attachment:m?TD.letterFile(m).name:'',actor:me.name,action:entry.action}:{employee_id:c.emp,jd_id:curJD,sender:TD.label(me),recipient:TD.label(TD.managerOf(me.id)),subject:m?.title||`${J.title} 인재 추천 보고서 — ${c.name}`,model:m||null,html,actor:me.name,action:entry.action}).then(r=>{if(!r)notify('서버 저장에 실패했습니다. 이 브라우저에는 저장되었습니다.')});
  if(docType==='offer'){try{const list=JSON.parse(localStorage.getItem(OFFER_KEY)||'[]');list.unshift({emp:c.emp,name:c.name,jd:curJD,title:JDS[curJD].title,subject:`[참여 제안] ${JDS[curJD].company} ${JDS[curJD].title} — ${c.name}님`,body:text,html,attachment:m?TD.letterFile(m).name:'',time});localStorage.setItem(OFFER_KEY,JSON.stringify(list))}catch{}notify(`${c.name} 님에게 제안을 보냈습니다. 임직원 화면에 도착했습니다.`)}
  else notify('추천서를 상부에 보고했습니다. 운영 기록에 남았습니다.')}
-function docFile(){const c=cand(),m=docModels[docType+c.emp];if(!m)return null;return docType==='offer'?TD.letterFile(m):{name:`인재추천보고서_${c.name}.html`,html:`<!doctype html><html lang="ko"><head><meta charset="utf-8"><title>${esc(m.title)}</title><style>body{max-width:800px;margin:40px auto;padding:24px;font-family:'Malgun Gothic',sans-serif}${TD.DOC_CSS}</style></head><body>${$('docBody').innerHTML}</body></html>`}}
+function docFile(){const c=cand(),m=docModels[docType+c.emp]?.model;if(!m)return null;return docType==='offer'?TD.letterFile(m):{name:`인재추천보고서_${c.name}.html`,html:`<!doctype html><html lang="ko"><head><meta charset="utf-8"><title>${esc(m.title)}</title><style>body{max-width:800px;margin:40px auto;padding:24px;font-family:'Malgun Gothic',sans-serif}${TD.DOC_CSS}</style></head><body>${$('docBody').innerHTML}</body></html>`}}
 function downloadDoc(){const f=docFile();if(f)TD.download(f.name,f.html)}
 function printDoc(){const f=docFile();if(f)TD.printFile(f)}
-function resetAll(){curJD='JD-045';ANALYSIS=null;clearTimeout(pollT);WL=toLevels(DEFAULT_W);syncW();REQS=JDS[curJD].reqs.map(r=>({...r}));C=buildCands(curJD);selected=null;for(const k in docModels)delete docModels[k];maxStep=1;scope=new Set(COMPANIES.map(c=>c[0]));initStep1();show(1)}
-C=buildCands(curJD);initStep1();show(1);boot();
+function resetAll(){curJD='JD-045';ANALYSIS=null;clearTimeout(pollT);WL=toLevels(DEFAULT_W);syncW();REQS=JDS[curJD].reqs.map(r=>({...r}));C=buildCands(curJD);selected=null;for(const k in docModels)delete docModels[k];for(const k in docPending)delete docPending[k];maxStep=1;scope=new Set(COMPANIES.map(c=>c[0]));initStep1();show(1)}
+C=buildCands(curJD);initStep1();show(1);const BOOT=boot();
 </script>
 </body>
 </html>
