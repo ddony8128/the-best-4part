@@ -16,8 +16,8 @@ window.drawWires = function (wires) {
     else if (mode === 'vu') { const x1 = a.cx + off, x2 = b.cx + off, y1 = a.t, y2 = b.b + 2, my = (y1 + y2) / 2; d = `M${x1},${y1} L${x1},${my} L${x2},${my} L${x2},${y2}`; lx = x2 + 8; ly = my - 6 }
     else if (mode === 'hv') { const x1 = a.r, y1 = a.cy + off, x2 = b.cx, y2 = b.t - 2; d = `M${x1},${y1} L${x2},${y1} L${x2},${y2}`; lx = (x1 + x2) / 2; ly = y1 - 10 }
     else if (mode === 'vh') { const x1 = a.cx + off, y1 = a.b, x2 = b.l - 2, y2 = b.cy; d = `M${x1},${y1} L${x1},${y2} L${x2},${y2}`; lx = x1 + 10; ly = y2 - 10 }
-    html += `<path d="${d}" fill="none" stroke="${color}" stroke-width="2.4" ${dash ? 'stroke-dasharray="6 6"' : ''} stroke-linejoin="round" marker-end="url(#${id})"/>`;
-    if (label) html += `<text x="${lx}" y="${ly}" text-anchor="${mode === 'v' || mode === 'vu' ? 'start' : 'middle'}" font-size="13" font-weight="700" fill="${color}" font-family="Pretendard">${label}</text>`;
+    html += `<path d="${d}" fill="none" stroke="${color}" stroke-width="3" ${dash ? 'stroke-dasharray="6 6"' : ''} stroke-linejoin="round" marker-end="url(#${id})"/>`;
+    if (label) html += `<text x="${lx}" y="${ly}" text-anchor="${mode === 'v' || mode === 'vu' ? 'start' : 'middle'}" font-size="16" font-weight="800" fill="${color}" font-family="Pretendard">${label}</text>`;
   }
   svg.innerHTML = `<defs>${marks}</defs>${html}`;
   cv.appendChild(svg);

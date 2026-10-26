@@ -4,54 +4,54 @@
 <style>
 .board{display:grid;grid-template-columns:820px 330px 1fr;gap:34px;height:800px}
 .zone{border-radius:24px;padding:20px;display:flex;flex-direction:column;gap:12px}
-.zone > h3{font-size:18px;font-weight:800;display:flex;align-items:center;gap:10px}
-.zone > h3 small{font-size:14px;color:var(--g6);font-weight:600}
+.zone > h3{font-size:20px;font-weight:800;display:flex;align-items:center;gap:10px}
+.zone > h3 small{font-size:16px;color:var(--g7);font-weight:600}
 .z1{background:#f1ecfd99}.z2{background:#e8f3ff99}.z3{background:#fff4ee}.z4{background:#e8f7f099}
 .tb{background:#fff;border-radius:14px;box-shadow:0 1px 3px #0017330a,0 6px 16px #0017330a;padding:13px 15px}
 .tb .h{display:flex;align-items:center;gap:8px}
-.tb code{font-family:Consolas,monospace;font-size:15px;font-weight:700;color:var(--navy)}
-.tb .k{font-size:14px;color:var(--g7);font-weight:600}
-.tb .n{margin-left:auto;font-size:13px;font-weight:800;color:var(--violet);background:var(--violet1);border-radius:7px;padding:3px 8px;font-variant-numeric:tabular-nums}
+.tb code{font-family:Consolas,monospace;font-size:17.5px;font-weight:700;color:var(--navy)}
+.tb .k{font-size:17px;color:var(--ink);font-weight:600}
+.tb .n{margin-left:auto;font-size:15.5px;font-weight:800;color:var(--violet);background:var(--violet1);border-radius:7px;padding:3px 8px;font-variant-numeric:tabular-nums}
 .tb .n.z{color:var(--g6);background:var(--g1)}
-.tb .c{font-size:13px;color:var(--g6);margin-top:6px;line-height:1.5}
-.tb .fk{display:inline-block;font-size:12px;font-weight:700;color:var(--blue);background:var(--blue1);border-radius:6px;padding:1px 6px;margin-right:4px}
+.tb .c{font-size:15.5px;color:var(--g7);margin-top:6px;line-height:1.5}
+.tb .fk{display:inline-block;font-size:14px;font-weight:700;color:var(--blue);background:var(--blue1);border-radius:6px;padding:1px 6px;margin-right:4px}
 .tb.big{padding:16px 18px;box-shadow:inset 0 0 0 2.5px var(--violet),0 6px 16px #0017330a}
-.tb.big code{font-size:18px}
-.kids{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}.kids .tb{padding:16px 16px}.kids .c{font-size:14px}
-.src{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:10px}.src div{background:#fff;border-radius:12px;padding:12px;text-align:center;font-size:15px;font-weight:700}.src small{display:block;font-family:Consolas,monospace;font-size:12px;color:var(--violet);font-weight:700;margin-top:4px}
-.flow{display:flex;flex-direction:column;gap:6px;margin-top:6px}.flow div{background:#fff;border-radius:12px;padding:10px 14px;font-size:14px;color:var(--g7)}.flow code{font-family:Consolas,monospace;font-weight:700;color:var(--navy);font-size:14px}.flow i{font-style:normal;text-align:center;color:var(--g5);font-size:14px}
+.tb.big code{font-size:21px}
+.kids{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}.kids .tb{padding:16px 16px}.kids .c{font-size:16px}
+.src{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:10px}.src div{background:#fff;border-radius:12px;padding:14px 8px;text-align:center;font-size:17px;font-weight:700}.src small{display:block;font-family:Consolas,monospace;font-size:14px;color:var(--violet);font-weight:700;margin-top:4px}
+.flow{display:flex;flex-direction:column;gap:6px;margin-top:6px}.flow div{background:#fff;border-radius:12px;padding:10px 14px;font-size:16px;color:var(--g7)}.flow code{font-family:Consolas,monospace;font-weight:700;color:var(--navy);font-size:16px}.flow i{font-style:normal;text-align:center;color:var(--g5);font-size:14px}
 .stack{display:flex;flex-direction:column;gap:12px}
-.note{margin-top:auto;font-size:14px;color:var(--g7);line-height:1.6}
+.note{margin-top:auto;font-size:16px;color:var(--g7);line-height:1.6}
 </style></head>
 <body><div class="canvas">
-<div class="head"><div><div class="eb">DATABASE</div><h1>Supabase PostgreSQL · 테이블 20개</h1><p>인사 원천 데이터와 공고를 넣으면, AI 결과와 업무 기록이 같은 DB에 쌓입니다 · 모든 테이블 행 단위 보안(RLS), 접근은 서버 API만</p></div><div class="brand"><i>✓</i>TALENT LINK</div></div>
+<div class="head"><div><div class="eb">DATABASE</div><h1>Supabase PostgreSQL · 테이블 20개</h1><p>인사 기록과 공고를 넣으면, AI 결과와 업무 기록이 같은 DB에 쌓입니다 · 행 단위 보안(RLS)</p></div><div class="brand"><i>✓</i>TALENT LINK</div></div>
 
 <div class="board">
  <div class="zone z1">
   <h3><span class="tag t-db">인사 원천 데이터 · 10</span><small>계열사별로 흩어진 인사 기록을 한 형식으로</small></h3>
   <div class="tb big" id="emp"><div class="h"><code>employees</code><span class="k">임직원 프로필</span><span class="n">247</span></div>
-   <div class="c">사번 · 계열사 · 팀 · 직무 · 직무군 · 근속 · 관련 경력(개월) · 근무지 · 인재풀 등록 · 참여 가능 조건 · 희망 공고 <span class="fk">desired_jd → jobs</span></div></div>
+   <div class="c">계열사 · 팀 · 직무군 · 관련 경력(개월) · 근무지 · 인재풀 등록 · 참여 조건</div></div>
   <div class="kids" id="kids">
    <div class="tb"><div class="h"><code>assignments</code><span class="n">638</span></div><div class="c">발령 이력</div></div>
-   <div class="tb"><div class="h"><code>projects</code><span class="n">512</span></div><div class="c">프로젝트 · 본인 기여 · 산출물</div></div>
-   <div class="tb"><div class="h"><code>evidence</code><span class="n">512</span></div><div class="c">근거 문서 (수행확인서 등)</div></div>
+   <div class="tb"><div class="h"><code>projects</code><span class="n">512</span></div><div class="c">본인 기여 · 산출물</div></div>
+   <div class="tb"><div class="h"><code>evidence</code><span class="n">512</span></div><div class="c">수행확인서 등</div></div>
    <div class="tb"><div class="h"><code>skills</code><span class="n">1,281</span></div><div class="c">역량 · 수준 · 근거</div></div>
    <div class="tb"><div class="h"><code>skill_development</code><span class="n">491</span></div><div class="c">역량 향상 이력</div></div>
    <div class="tb"><div class="h"><code>certifications</code><span class="n">357</span></div><div class="c">자격 대장</div></div>
    <div class="tb"><div class="h"><code>training</code><span class="n">482</span></div><div class="c">교육 이수</div></div>
-   <div class="tb"><div class="h"><code>performance</code><span class="n">1,827</span></div><div class="c">연도별 KPI · 평가 등급</div></div>
+   <div class="tb"><div class="h"><code>performance</code><span class="n">1,827</span></div><div class="c">KPI · 평가 등급</div></div>
    <div class="tb"><div class="h"><code>career_plans</code><span class="n">247</span></div><div class="c">희망 직무 · 개발 목표</div></div>
   </div>
-  <div style="margin-top:22px"><h3 style="font-size:16px;font-weight:800">AI 판정의 근거가 되는 기록 <small style="font-size:14px;color:var(--g6);font-weight:600">— 판정 문장 끝에 출처로 표시</small></h3>
+  <div style="margin-top:22px"><h3 style="font-size:19px;font-weight:800">AI 판정의 근거가 되는 기록 <small style="font-size:16px;color:var(--g7);font-weight:600">— 판정 끝에 출처로 표시</small></h3>
    <div class="src"><div>수행확인서<small>evidence</small></div><div>발령 이력<small>assignments</small></div><div>평가 기록<small>performance</small></div><div>자격 대장<small>certifications</small></div><div>본인 기재<small>skills</small></div></div></div>
-  <div class="note">모두 <span class="fk" style="font-size:13px;font-weight:700;color:var(--blue);background:var(--blue1);border-radius:6px;padding:1px 6px">employee_id → employees</span> 로 연결 · 실제 임직원 정보가 아닌 직접 만든 데이터 · 성별 · 나이 항목 없음</div>
+  <div class="note">모두 <span class="fk" style="font-size:15px;font-weight:700;color:var(--blue);background:var(--blue1);border-radius:6px;padding:1px 6px">employee_id → employees</span> 로 연결 · 성별 · 나이 항목 없음</div>
  </div>
 
  <div class="zone z2">
   <h3><span class="tag t-rule">공고 · 참고 자료 · 2</span></h3>
-  <div class="tb" id="jobs" style="box-shadow:inset 0 0 0 2.5px var(--blue),0 6px 16px #0017330a"><div class="h"><code>jobs</code><span class="k">공고</span><span class="n">45</span></div><div class="c">회사 · 요청 조직 · 담당 업무 · 필수/우대 요건 · 근무 조건 · 마감<br><b style="color:var(--blue)">hard</b>: 정량 필수 조건 (자격 · 직무 경력)</div></div>
-  <div class="tb" id="refs" style="margin-top:20px"><div class="h"><code>job_references</code><span class="n">45</span></div><div class="c">전임자 인수인계 · 고성과자 패턴 · 직무 연구 · 연구 근거(논문)<br><span class="fk">jd_id → jobs</span></div></div>
-  <div style="margin-top:18px"><h3 style="font-size:16px;font-weight:800">공고 1건에 쌓이는 순서</h3>
+  <div class="tb" id="jobs" style="box-shadow:inset 0 0 0 2.5px var(--blue),0 6px 16px #0017330a"><div class="h"><code>jobs</code><span class="k">공고</span><span class="n">45</span></div><div class="c">담당 업무 · 필수/우대 요건<br><b style="color:var(--blue)">hard</b> 정량 필수 조건</div></div>
+  <div class="tb" id="refs" style="margin-top:20px"><div class="h"><code>job_references</code><span class="n">45</span></div><div class="c">인수인계 · 고성과자 · 직무 연구(논문)</div></div>
+  <div style="margin-top:18px"><h3 style="font-size:19px;font-weight:800">공고 1건에 쌓이는 순서</h3>
    <div class="flow"><div><code>jobs</code> 공고 등록</div><i>↓</i><div><code>job_analyses</code> AI 공고 분석</div><i>↓</i><div><code>scan_runs</code> 스캔 실행</div><i>↓</i><div><code>scan_results</code> 후보별 판정</div><i>↓</i><div><code>reports</code> · <code>offers</code> 보고 · 제안</div><i>↓</i><div><code>applications</code> 임직원 지원</div></div></div>
   <div class="note">모든 단계는 <code style="font-family:Consolas,monospace;font-weight:700">audit_log</code>에 남습니다</div>
  </div>
@@ -59,17 +59,17 @@
  <div class="stack">
   <div class="zone z3" style="flex:1.25">
    <h3><span class="tag t-ai">AI 결과 · 4</span><small>Claude 결과를 저장해 다시 씀</small></h3>
-   <div class="tb" id="ana"><div class="h"><code>job_analyses</code><span class="k">공고 분석</span><span class="n">46</span></div><div class="c">요건 8개 · 중요도 · 사용 모델 <span class="fk">jd_id → jobs</span></div></div>
-   <div class="tb" id="run" style="margin-top:8px"><div class="h"><code>scan_runs</code><span class="k">스캔 실행</span><span class="n">45</span></div><div class="c">전체 · 정량 통과 · 판정 수 · 배치 ID · 상태 <span class="fk">analysis_id → job_analyses</span></div></div>
-   <div class="tb" id="res" style="margin-top:8px"><div class="h"><code>scan_results</code><span class="k">후보 판정</span><span class="n">1,346</span></div><div class="c">요건별 확인 여부 · 근거 · 우려 · 면담 질문 <span class="fk">run_id</span><span class="fk">employee_id</span></div></div>
-   <div class="tb"><div class="h"><code>self_diagnoses</code><span class="k">셀프 진단</span><span class="n z">이용 시 생성</span></div><div class="c">임직원 본인 진단 결과 <span class="fk">employee_id</span><span class="fk">jd_id</span></div></div>
+   <div class="tb" id="ana"><div class="h"><code>job_analyses</code><span class="k">공고 분석</span><span class="n">46</span></div><div class="c">요건 8개 · 중요도</div></div>
+   <div class="tb" id="run" style="margin-top:8px"><div class="h"><code>scan_runs</code><span class="k">스캔 실행</span><span class="n">45</span></div><div class="c">정량 통과 수 · 배치 · 상태</div></div>
+   <div class="tb" id="res" style="margin-top:8px"><div class="h"><code>scan_results</code><span class="k">후보 판정</span><span class="n">1,346</span></div><div class="c">요건별 판정 · 근거 · 면담 질문</div></div>
+   <div class="tb"><div class="h"><code>self_diagnoses</code><span class="k">셀프 진단</span><span class="n z">이용 시 생성</span></div><div class="c">임직원 본인 진단 결과</div></div>
   </div>
   <div class="zone z4" style="flex:1">
    <h3><span class="tag t-hum">업무 기록 · 4</span></h3>
    <div class="tb"><div class="h"><code>applications</code><span class="k">지원서 · 검토</span><span class="n">158</span></div></div>
-   <div class="tb"><div class="h"><code>offers</code><span class="k">참여 제안 (임직원 화면에 도착)</span><span class="n z">발송 시 생성</span></div></div>
+   <div class="tb"><div class="h"><code>offers</code><span class="k">참여 제안</span><span class="n z">발송 시 생성</span></div></div>
    <div class="tb"><div class="h"><code>reports</code><span class="k">상사 추천 보고</span><span class="n z">보고 시 생성</span></div></div>
-   <div class="tb"><div class="h"><code>audit_log</code><span class="k">운영 기록 (누가 · 언제 · 무엇을)</span><span class="n z">자동 기록</span></div></div>
+   <div class="tb"><div class="h"><code>audit_log</code><span class="k">운영 기록</span><span class="n z">자동 기록</span></div></div>
   </div>
  </div>
 </div>
