@@ -11,7 +11,7 @@ process.env.HR_ID = 'daeheonjjang'; // 로그인 화면 시연 자동 입력값�
 process.env.HR_PASSWORD = 'dh0909';
 const ROOT = path.resolve(import.meta.dirname, '../..');
 const PUB = path.join(ROOT, 'public');
-const TYPES = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png' };
+const TYPES = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp' };
 
 const server = http.createServer(async (req, res) => {
   const url = new URL(req.url, 'http://local');

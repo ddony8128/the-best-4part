@@ -113,8 +113,9 @@ await shot('7-login');
 await page.goto(base + '/employee.html#profile');
 check(6, (await page.locator('header').textContent()).includes('인사 담당자 화면') === false, '상단 인사 담당자 화면 링크 없음');
 const prof = await page.locator('#profileGrid').textContent();
-check(8, (await page.locator('#profileGrid .masked').count()) === 5 && !/KPI|SQLD\(2023\)|근속 4년/.test(prof), '정량 5칸 가림 · 실제 값이 화면에 없음');
-check(8, prof.includes('3개 사업장 데이터 표준'), '정성 칸은 그대로 보임');
+// 2026-10-26 변경: 정량은 보이고 정성을 가린다
+check(8, (await page.locator('#profileGrid .masked').count()) === 5 && !prof.includes('3개 사업장 데이터 표준'), '정성 5칸 가림 · 실제 문장이 화면에 없음');
+check(8, /KPI|SQLD\(2023\)|근속 4년/.test(prof), '정량 칸은 그대로 보임');
 check(3, !prof.includes('시연용'), '임직원 프로필 근거 문서 문구도 정리');
 await shot('8-profile', page.locator('#profileGrid'));
 check('회사명', prof.includes('한화에어로스페이스') && !/가온|한화(갤러리아|에너지|생명|솔루션|투자증권|엔진)|㈜한화/.test(await page.content()), '임직원 화면 회사명 한화에어로스페이스 · 3개 계열사만');

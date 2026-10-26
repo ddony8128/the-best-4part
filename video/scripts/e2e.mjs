@@ -109,7 +109,7 @@ check((await page.locator('#offerPerson').inputValue()) === 'APP-002' && (await 
 await page.goto(base + '/employee.html#profile');
 check(await page.locator('header a[href="./talent_hr_admin.html"]').count() === 0, 'employee: HR link removed');
 const prof = await page.locator('#profileGrid').textContent();
-check(!prof.includes('KPI 달성률') && !prof.includes('SQLD(2023)') && (await page.locator('#profileGrid .masked').count()) === 5, 'employee: quantitative data masked');
+check((await page.locator('#profileGrid .masked').count()) === 5 && (await page.locator('#profileGrid .masked').first().getAttribute('aria-label')).includes('정성'), 'employee: qualitative data masked, quantitative shown');
 page.once('dialog', d => d.accept());
 await page.click('nav a[href="#applications"]');
 await page.click('#appList button.cancel');

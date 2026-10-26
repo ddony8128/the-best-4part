@@ -73,9 +73,10 @@ ${items(m.questions).length ? `<h3>면담 시 확인 질문</h3>${list(m.questio
   const DOC_CSS = `.td-doc{color:#19243b;line-height:1.75;font-size:14px}.td-doc h2{font-size:22px;margin:4px 0 10px;letter-spacing:-.5px;padding-bottom:12px;border-bottom:2px solid #f4511e}.td-doc h3{font-size:15px;margin:22px 0 10px;padding-left:9px;border-left:3px solid #f4511e}.td-eyebrow{font-size:10px;letter-spacing:2px;font-weight:800;color:#f4511e}.td-meta{color:#677386;font-size:12px;line-height:1.7}.td-lead{margin:14px 0 4px;padding:14px 18px;border-left:3px solid #f4511e;background:#fff7f2;border-radius:0 8px 8px 0}.td-lead p{margin:3px 0}.td-card{padding:12px 18px;border:1px solid #e8eaf0;border-radius:10px;background:#fafbfc}.td-row{display:grid;grid-template-columns:110px 1fr;gap:14px;padding:8px 0;border-bottom:1px solid #eef0f4}.td-row:last-child{border-bottom:0}.td-doc dl,.td-doc dd{margin:0}.td-doc dt{font-weight:700}.td-doc ul{margin:0;padding-left:18px}.td-doc li+li{margin-top:3px}.td-sub{font-weight:400;color:#677386;font-size:12px}.td-note{margin-top:20px;padding:12px 16px;background:#f3f5f8;border-radius:8px;font-size:12px;color:#55617a}.td-table{width:100%;border-collapse:collapse;font-size:12px}.td-table th,.td-table td{border-bottom:1px solid #eef0f4;padding:7px 6px;text-align:left;vertical-align:top}.td-table th{color:#677386;font-weight:600}@media(max-width:640px){.td-row{grid-template-columns:1fr;gap:2px}}`;
 
   // 제안서와 함께 보내는 Job Offer Letter (단독 HTML · 인쇄하면 PDF)
-  function letterFile(m) {
-    const html = `<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(m.title)}</title><style>body{max-width:800px;margin:40px auto;padding:24px;font-family:Pretendard,'Noto Sans KR','Malgun Gothic',sans-serif;background:#fff}${DOC_CSS}@media print{body{margin:0;padding:12mm}.td-row{break-inside:avoid}}</style></head><body>${renderOffer(m)}</body></html>`;
-    const name = `Job_Offer_Letter_${clean(m.recipient?.name).replace(/[\\/:*?"<>|]/g, '_') || 'candidate'}.html`;
+  // body: 화면에서 고친 본문(article)이 있으면 그것으로 만든다
+  function letterFile(m, body) {
+    const html = `<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(m.title)}</title><style>body{max-width:800px;margin:40px auto;padding:24px;font-family:Pretendard,'Noto Sans KR','Malgun Gothic',sans-serif;background:#fff}${DOC_CSS}@media print{body{margin:0;padding:12mm}.td-row{break-inside:avoid}}</style></head><body>${body || renderOffer(m)}</body></html>`;
+    const name = `Job_Offer_Letter_${safeName(m.recipient?.name) || 'candidate'}.pdf`;
     return { name, html };
   }
   function download(name, text, type = 'text/html') {
@@ -84,6 +85,53 @@ ${items(m.questions).length ? `<h3>면담 시 확인 질문</h3>${list(m.questio
     a.download = name; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
   }
   function printFile(f) { const w = window.open('', '_blank'); if (!w) return; w.document.write(f.html); w.document.close(); w.focus(); setTimeout(() => w.print(), 300); }
+  const safeName = v => clean(v).replace(/[\/:*?"<>|]/g, '_');
+
+  // PDF 다운로드: 화면과 같은 모양을 A4로 저장한다. 라이브러리는 처음 누를 때만 불러온다(페이지 로딩에 영향 없음)
+  // 줄 · 표 행 · 문단 경계에서만 페이지를 나눠 글자가 잘리지 않게 한다
+  const PDF_LIBS = ['https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js', 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js'];
+  const loadScript = src => new Promise((res, rej) => { const s = document.createElement('script'); s.src = src; s.async = true; s.onload = res; s.onerror = () => rej(new Error(src)); document.head.appendChild(s) });
+  let pdfLib = null;
+  const loadPdf = () => pdfLib || (pdfLib = (window.html2canvas && window.jspdf ? Promise.resolve() : Promise.all(PDF_LIBS.map(loadScript))).catch(e => { pdfLib = null; throw e }));
+  const MM = { w: 210, h: 297, x: 14, y: 16 }, BOX = 760, SCALE = 2;
+  async function pdf(name, html) {
+    await loadPdf();
+    const box = document.createElement('div');
+    box.style.cssText = `position:absolute;left:0;top:0;width:${BOX}px;background:#fff;z-index:-1;pointer-events:none;font-family:Pretendard,'Noto Sans KR','Malgun Gothic',sans-serif`;
+    box.innerHTML = html; document.body.appendChild(box);
+    try {
+      if (document.fonts?.ready) await document.fonts.ready;
+      const top = box.getBoundingClientRect().top, total = box.scrollHeight;
+      // 여기서 자를 수 있다: 각 덩어리의 아래쪽 (제목 h3 바로 아래는 제외 → 제목이 다음 내용과 붙어 다닌다)
+      const cuts = [...box.querySelectorAll('.td-meta,.td-lead,.td-card,.td-row,table,tr,ul,li,p')].map(el => el.getBoundingClientRect().bottom - top).sort((a, b) => a - b);
+      const pageH = BOX * (MM.h - 2 * MM.y) / (MM.w - 2 * MM.x);
+      const pages = []; let start = 0;
+      while (start < total - 1) {
+        let end = start + pageH;
+        if (end >= total) end = total;
+        else { const ok = cuts.filter(c => c > start + pageH * 0.45 && c <= end); if (ok.length) end = ok[ok.length - 1] + 1 }
+        pages.push([start, end]); start = end;
+      }
+      const canvas = await window.html2canvas(box, { scale: SCALE, backgroundColor: '#ffffff', useCORS: true, scrollX: -window.scrollX, scrollY: -window.scrollY });
+      const doc = new window.jspdf.jsPDF({ unit: 'mm', format: 'a4', orientation: 'portrait' });
+      const mmPerPx = (MM.w - 2 * MM.x) / BOX;
+      pages.forEach(([a, b], i) => {
+        const h = Math.ceil((b - a) * SCALE), part = document.createElement('canvas');
+        part.width = canvas.width; part.height = h;
+        const g = part.getContext('2d'); g.fillStyle = '#fff'; g.fillRect(0, 0, part.width, h);
+        g.drawImage(canvas, 0, Math.floor(a * SCALE), canvas.width, h, 0, 0, canvas.width, h);
+        if (i) doc.addPage();
+        doc.addImage(part.toDataURL('image/jpeg', 0.95), 'JPEG', MM.x, MM.y, MM.w - 2 * MM.x, (b - a) * mmPerPx);
+      });
+      doc.save(name);
+    } finally { box.remove() }
+  }
+  // 버튼에 진행 상태를 보여 주며 PDF를 만든다
+  async function pdfButton(btn, name, html) {
+    const label = btn.innerHTML; btn.disabled = true; btn.innerHTML = 'PDF 만드는 중…';
+    try { await pdf(name, html) } catch (e) { alert('PDF를 만들지 못했습니다. 잠시 후 다시 시도해 주세요.') }
+    finally { btn.disabled = false; btn.innerHTML = label }
+  }
   const toText = el => el.innerText.replace(/\n{3,}/g, '\n\n').trim();
 
   // AI 초안: /api/draft 가 같은 형식(JSON)을 돌려주면 그것을, 실패하면 규칙 기반 초안을 쓴다
@@ -104,6 +152,6 @@ ${items(m.questions).length ? `<h3>면담 시 확인 질문</h3>${list(m.questio
     if (onChange) el.onchange = () => onChange(el.value);
   }
 
-  window.TalentDocs = { STAFF, SESSION, staff, me, managerOf, label, esc, clean, items, split, evidenceTitle, renderOffer, renderReport, letterFile, download, printFile, toText, draft, senderPicker, DOC_CSS };
+  window.TalentDocs = { STAFF, SESSION, staff, me, managerOf, label, esc, clean, items, split, evidenceTitle, renderOffer, renderReport, letterFile, download, printFile, pdf, pdfButton, safeName, toText, draft, senderPicker, DOC_CSS };
   const st = document.createElement('style'); st.textContent = DOC_CSS; document.head.appendChild(st);
 })();

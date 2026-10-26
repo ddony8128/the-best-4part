@@ -77,9 +77,11 @@ table{width:100%;border-collapse:collapse;font-size:14px;text-align:left}th{colo
 .cos{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:18px}.co{font-size:13px;border:1px solid #3a3a3a;border-radius:999px;padding:4px 10px;color:#4e5968;transition:all .3s}.co.on{border-color:var(--accent);color:#fff;background:#333d4b}
 /* candidates */
 .two{display:grid;grid-template-columns:1.15fr 1fr;gap:22px;align-items:start}
-.cand{display:grid;grid-template-columns:34px 1fr 130px 58px;gap:14px;align-items:center;padding:14px 12px;border-radius:9px;border:1px solid transparent;cursor:pointer;transition:background .2s,border-color .2s,transform .45s}
+.cand{display:grid;grid-template-columns:34px 44px 1fr 130px 58px;gap:14px;align-items:center;padding:14px 12px;border-radius:9px;border:1px solid transparent;cursor:pointer;transition:background .2s,border-color .2s,transform .45s}
 .cand:hover{background:#f9fafb}.cand.sel{background:var(--soft);border-color:#f7d9c9}
 .rank{font-size:20px;font-weight:500;color:#bbb;text-align:center;font-variant-numeric:tabular-nums}.cand:nth-child(-n+3) .rank{color:var(--ink)}
+.face{position:relative;display:inline-grid;place-items:center;flex:none;border-radius:50%;overflow:hidden;background:#e5e8eb;color:#4e5968;font-weight:700;box-shadow:0 0 0 1px #0000000d inset}.face img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:50%}
+.cand.sel .face{box-shadow:0 0 0 2px #f4511e}
 .cand .nm{font-weight:700}.cand .meta{font-size:13px;color:#6b7684}
 .mini{display:flex;gap:3px;align-items:flex-end;height:26px}.mini span{flex:1;background:#d9dde7;border-radius:2px 2px 0 0;transition:height .4s}.mini span.k{background:var(--accent)}
 .total{font-size:22px;font-weight:500;letter-spacing:-1px;text-align:right;font-variant-numeric:tabular-nums}
@@ -92,6 +94,8 @@ table{width:100%;border-collapse:collapse;font-size:14px;text-align:left}th{colo
 .qa{font-size:14px;padding:8px 0;border-top:1px solid var(--line)}.qa:first-child{border-top:0}
 .doc{background:#fff;border:1px solid var(--line);border-radius:10px;padding:34px 40px;font-size:15px;line-height:1.85;min-height:420px;font-family:'Malgun Gothic',Arial,sans-serif}
 .doc .rv{opacity:0;transform:translateY(6px);transition:opacity .35s,transform .35s}.doc .rv.on{opacity:1;transform:none}.attach .file{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:10px 12px;border:1px dashed #f7b79c;border-radius:9px;background:#fff7f2;font-size:14px}.attach .file b{flex:1}
+.doc.editing{box-shadow:0 0 0 2px #f4511e;background:#fffdfb}.doc.editing article{outline:none;cursor:text}.doc.editing article :is(p,li,td,dd,h2,h3):hover{background:#fff4ee;border-radius:4px}
+.edit-hint{margin:-14px -20px 20px;padding:10px 14px;border-radius:10px;background:#fff4ee;color:#b8390e;font-size:14px;font-weight:600}
 .drafting{min-height:380px}.dr-head{display:flex;align-items:center;gap:12px;padding-bottom:18px;border-bottom:1px solid var(--line)}.dr-head .spin{width:22px;height:22px;border-width:3px;flex:none}.dr-head b{font-size:17px;color:#191f28}.dr-sec{margin-left:auto;font-variant-numeric:tabular-nums;color:#4e5968;font-weight:600}
 .dr-steps{list-style:none;padding:0;margin:18px 0 22px;display:grid;gap:10px}.dr-steps li{display:flex;align-items:center;gap:10px;color:#8b95a1;font-size:15px}.dr-steps li::before{content:'';width:18px;height:18px;border-radius:50%;border:2px solid #d1d6db;box-sizing:border-box;flex:none}
 .dr-steps li.now{color:#191f28;font-weight:600}.dr-steps li.now::before{border-color:#f4511e;border-top-color:#fcd9c8;animation:sp .8s linear infinite}.dr-steps li.ok{color:#4e5968}.dr-steps li.ok::before{content:'✓';border:0;background:#f4511e;color:#fff;font-size:11px;display:grid;place-items:center}
@@ -101,7 +105,7 @@ table{width:100%;border-collapse:collapse;font-size:14px;text-align:left}th{colo
 .toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%);background:#333d4b;color:#fff;padding:12px 22px;border-radius:7px;z-index:99;font-size:14px;max-width:90vw}.hidden{display:none!important}
 .footer{font-size:13px;color:#6b7684;display:flex;justify-content:space-between;gap:16px;margin-top:32px;border-top:1px solid var(--line);padding-top:17px}
 @media(max-width:1100px){.refs{grid-template-columns:1fr}aside{width:185px;padding:26px 14px}main{margin-left:185px}.content{padding:28px 25px}header{padding:0 25px}.two,.form-grid{grid-template-columns:1fr}.weights{grid-template-columns:repeat(3,1fr)}.funnel{grid-template-columns:1fr 1fr}.detail{position:static}}
-@media(max-width:700px){aside{position:sticky;top:0;width:100%;height:auto;padding:12px 16px;display:block;border-right:0;border-bottom:1px solid #d1d6db}.brand-sub,.nav-label,.aside-bottom{display:none}nav{display:flex;overflow:auto;margin-top:9px;gap:5px}nav a{font-size:13px;padding:7px 10px;margin:0;white-space:nowrap}nav a span{display:none}main{margin-left:0}header{height:54px;padding:0 18px}.content{padding:22px 16px}.stepper{grid-template-columns:repeat(5,minmax(90px,1fr));overflow:auto}.weights{grid-template-columns:1fr 1fr}.cand{grid-template-columns:26px 1fr 52px}.cand .mini{display:none}.grid-dots{grid-template-columns:repeat(26,1fr)}.doc{padding:22px}}
+@media(max-width:700px){aside{position:sticky;top:0;width:100%;height:auto;padding:12px 16px;display:block;border-right:0;border-bottom:1px solid #d1d6db}.brand-sub,.nav-label,.aside-bottom{display:none}nav{display:flex;overflow:auto;margin-top:9px;gap:5px}nav a{font-size:13px;padding:7px 10px;margin:0;white-space:nowrap}nav a span{display:none}main{margin-left:0}header{height:54px;padding:0 18px}.content{padding:22px 16px}.stepper{grid-template-columns:repeat(5,minmax(90px,1fr));overflow:auto}.weights{grid-template-columns:1fr 1fr}.cand{grid-template-columns:26px 38px 1fr 52px}.cand .face{width:38px!important;height:38px!important}.cand .mini{display:none}.grid-dots{grid-template-columns:repeat(26,1fr)}.doc{padding:22px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 <!--tl-ds--><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"><link rel="stylesheet" href="./tl-ds.css"></head>
@@ -218,7 +222,7 @@ table{width:100%;border-collapse:collapse;font-size:14px;text-align:left}th{colo
       <div><div class="doc" id="docBody"></div></div>
       <div>
         <div class="card"><div class="card-head"><h2>작성 근거</h2><span class="ai-line" id="docState">대기</span></div><div id="docSide"></div></div>
-        <div class="card"><div class="toolbar" style="display:flex;gap:8px;flex-wrap:wrap"><button class="primary" id="btnSend" onclick="sendDoc()" disabled>보내기</button><button onclick="downloadDoc()">내려받기 ↓</button><button onclick="printDoc()">인쇄 · PDF</button></div><div class="attach" id="docAttach" style="margin-top:12px"></div><div id="docPeople" class="tiny" style="margin-top:10px"></div><p class="tiny" style="margin-top:12px" id="sendHint"></p></div>
+        <div class="card"><div class="toolbar" style="display:flex;gap:8px;flex-wrap:wrap"><button class="primary" id="btnSend" onclick="sendDoc()" disabled>보내기</button><button id="btnEdit" onclick="editDoc()" disabled>수정</button><button id="btnCancel" class="hidden" onclick="cancelEdit()">취소</button><button id="btnDown" onclick="downloadDoc(this)" disabled>다운로드 ↓</button></div><div class="attach" id="docAttach" style="margin-top:12px"></div><div id="docPeople" class="tiny" style="margin-top:10px"></div><p class="tiny" style="margin-top:12px" id="sendHint"></p></div>
       </div>
     </div>
   </section>
@@ -425,7 +429,7 @@ function waitRun(run,prev){clearTimeout(pollT);$('scanTitle').textContent='후�
  const tick=async()=>{const r=await API.get('scan',{run:run.id},60000);if(r&&r.run){paint(r.run);if(r.run.status==='완료'){const s=await API.data('scan',{jd:curJD},15000);if(s&&s.candidates?.length){C=s.candidates;notify(`스캔 #${run.id} 완료 · 후보 ${s.candidates.length}명 판정`);return scanDemo(s.done)}}}pollT=setTimeout(tick,15000)};
  pollT=setTimeout(tick,8000);showPrev=()=>{clearTimeout(pollT);C=prev.candidates;if(prev.analysis)applyAnalysis(prev.analysis);scanDemo(prev.done)}}
 let showPrev=()=>{};
-async function scanDemo(run){show(3);$('asyncBox').classList.add('hidden');const total=run?run.total:poolSize();const pass1=run?run.pass1:Math.round(total*.25),pass2=run?run.pass2:Math.round(total*.12),top=10;
+async function scanDemo(run){show(3);preloadFaces();$('asyncBox').classList.add('hidden');const total=run?run.total:poolSize();const pass1=run?run.pass1:Math.round(total*.25),pass2=run?run.pass2:Math.round(total*.12),top=10;
  $('scanCos').innerHTML=COMPANIES.filter(c=>scope.has(c[0])).map(c=>`<span class="co" data-c="${c[0]}">${c[0]}</span>`).join('');
  const N=52*8;$('dots').innerHTML='<i></i>'.repeat(N);const dots=[...$('dots').children];$('scanlog').innerHTML='';['f1','f2','f3','f4'].forEach(f=>$(f).textContent='0');
  const log=t=>{const d=document.createElement('div');d.innerHTML=t;$('scanlog').prepend(d)};
@@ -443,9 +447,14 @@ async function scanDemo(run){show(3);$('asyncBox').classList.add('hidden');const
 // STEP 4
 const score=c=>Math.round(c.ax.reduce((a,v,i)=>a+v*W[i],0)/Math.max(1,W.reduce((a,b)=>a+b,0))*10)/10;
 const ranked=()=>C.filter(c=>scope.has(c.company)).map(c=>({c,s:score(c)})).sort((a,b)=>b.s-a.s).slice(0,10);
+// 프로필 사진: 112px로 줄인 webp(약 2KB). 사진이 없거나 못 불러오면 이름 첫 글자
+const FACE_OK=/^EMP-HW-\d{4}$/,faceSrc=emp=>`./img/face/${emp}.webp`;
+const face=(emp,name,size)=>`<span class="face" style="width:${size}px;height:${size}px;font-size:${Math.round(size*.4)}px">${esc(String(name||'').slice(0,1))}${FACE_OK.test(emp)?`<img src="${faceSrc(emp)}" alt="" width="${size}" height="${size}" decoding="async" onerror="this.remove()">`:''}</span>`;
+// 스캔 화면이 도는 동안 상위 후보 사진을 미리 받아 둔다 → 목록이 뜰 때 바로 보인다
+function preloadFaces(){ranked().slice(0,10).forEach(({c})=>{if(FACE_OK.test(c.emp)){const im=new Image();im.decoding='async';im.src=faceSrc(c.emp)}})}
 function renderList(animate){const list=ranked();const newRank={};list.forEach((x,i)=>newRank[x.c.emp]=i);const hidden=list.filter(x=>!x.c.applied).length;$('hiddenCount').innerHTML=`숨은 후보 <b style="color:#c8401a">${hidden}명</b> · 공모 지원 ${list.length-hidden}명`;
  const old=animate?Object.fromEntries([...$('candList').children].map(el=>[el.dataset.emp,el.getBoundingClientRect().top])):{};
- $('candList').innerHTML=list.map(({c,s},i)=>{const d=prevRank[c.emp]!==undefined?prevRank[c.emp]-i:0;const best=c.ax.indexOf(Math.max(...c.ax));return`<div class="cand ${selected===c.emp?'sel':''}" data-emp="${c.emp}"><div class="rank">${i+1}</div><div><span class="nm">${esc(c.name)}</span>${c.applied?'<span class="badge-app">공모 지원</span>':'<span class="badge-hidden">숨은 후보</span>'}${d?`<span class="delta ${d>0?'up':'down'}">${d>0?'▲':'▼'}${Math.abs(d)}</span>`:''}<div class="meta">${esc(c.company)} · ${esc(c.team)} · ${esc(c.role)}</div><div class="hint">근거 확인 ${REQS.filter(r=>(c.req[r.id]||[])[0]==='확인').length}/${REQS.length}개 요건${(c.hard||[]).length?' · 정량 조건 충족':''}</div></div><div class="mini">${c.ax.map((v,k)=>`<span class="${k===best?'k':''}" style="height:${Math.max(8,(v-40)*1.6)}%"></span>`).join('')}</div><div class="total">${s.toFixed(1)}</div></div>`}).join('');
+ $('candList').innerHTML=list.map(({c,s},i)=>{const d=prevRank[c.emp]!==undefined?prevRank[c.emp]-i:0;const best=c.ax.indexOf(Math.max(...c.ax));return`<div class="cand ${selected===c.emp?'sel':''}" data-emp="${c.emp}"><div class="rank">${i+1}</div>${face(c.emp,c.name,44)}<div><span class="nm">${esc(c.name)}</span>${c.applied?'<span class="badge-app">공모 지원</span>':'<span class="badge-hidden">숨은 후보</span>'}${d?`<span class="delta ${d>0?'up':'down'}">${d>0?'▲':'▼'}${Math.abs(d)}</span>`:''}<div class="meta">${esc(c.company)} · ${esc(c.team)} · ${esc(c.role)}</div><div class="hint">근거 확인 ${REQS.filter(r=>(c.req[r.id]||[])[0]==='확인').length}/${REQS.length}개 요건${(c.hard||[]).length?' · 정량 조건 충족':''}</div></div><div class="mini">${c.ax.map((v,k)=>`<span class="${k===best?'k':''}" style="height:${Math.max(8,(v-40)*1.6)}%"></span>`).join('')}</div><div class="total">${s.toFixed(1)}</div></div>`}).join('');
  if(animate){[...$('candList').children].forEach(el=>{const o=old[el.dataset.emp];if(o===undefined)return;const dy=o-el.getBoundingClientRect().top;if(dy){el.style.transition='none';el.style.transform=`translateY(${dy}px)`;requestAnimationFrame(()=>{el.style.transition='transform .45s ease';el.style.transform=''})}})}
  [...$('candList').children].forEach(el=>el.onclick=()=>select(el.dataset.emp));
  if(!animate)prevRank=newRank;else{clearTimeout(renderList.t);renderList.t=setTimeout(()=>{prevRank=newRank},1600)}
@@ -456,7 +465,7 @@ function closeDrawer(){$('detail').classList.remove('open');$('drawerBg').classL
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDrawer()});
 function cand(){return C.find(c=>c.emp===selected)}
 function renderDetail(){const c=cand();if(!c)return;const s=score(c);const rk=ranked().findIndex(x=>x.c.emp===c.emp)+1;
- $('detail').innerHTML=`<div class="detail-close"><button onclick="closeDrawer()" aria-label="닫기">닫기 ✕</button></div><div class="card-head" style="margin-bottom:10px"><div><span class="tiny">${esc(c.emp)} · 프로필 확인일 ${esc(c.checked)}</span><h2>${esc(c.name)} ${c.applied?'<span class="badge-app">공모 지원</span>':'<span class="badge-hidden">숨은 후보</span>'}</h2><span class="muted" style="font-size:14px">${esc(c.company)} · ${esc(c.team)} · ${esc(c.role)}</span></div><div style="text-align:right"><div class="total" style="font-size:30px">${s.toFixed(1)}</div><span class="tiny">${rk?rk+'위 · ':''}참고 지표</span></div></div>
+ $('detail').innerHTML=`<div class="detail-close"><button onclick="closeDrawer()" aria-label="닫기">닫기 ✕</button></div><div class="card-head" style="margin-bottom:10px"><div style="display:flex;gap:14px;align-items:center">${face(c.emp,c.name,64)}<div><span class="tiny">${esc(c.emp)} · 프로필 확인일 ${esc(c.checked)}</span><h2>${esc(c.name)} ${c.applied?'<span class="badge-app">공모 지원</span>':'<span class="badge-hidden">숨은 후보</span>'}</h2><span class="muted" style="font-size:14px">${esc(c.company)} · ${esc(c.team)} · ${esc(c.role)}</span></div></div><div style="text-align:right"><div class="total" style="font-size:30px">${s.toFixed(1)}</div><span class="tiny">${rk?rk+'위 · ':''}참고 지표</span></div></div>
  ${AXES.map((a,i)=>`<div class="bar-row"><span>${a}</span><div class="bar-track"><div class="bar-fill" style="width:${c.ax[i]}%"></div></div><b>${c.ax[i]}</b></div>`).join('')}
  ${(c.hard||[]).length?`<h3 style="margin-top:20px">정량 필수 조건</h3><table><tbody>${c.hard.map(h=>`<tr><td style="padding:8px 6px"><strong>${esc(h.label)}</strong><br><span class="tiny">${esc(h.detail)}</span></td><td style="padding:8px 6px;text-align:right"><span class="status ${h.ok?'ok':''}">${h.ok?'충족':'미충족'}</span></td></tr>`).join('')}</tbody></table>`:''}
  <h3 style="margin-top:20px">요건별 비교</h3><table><tbody>${REQS.map(r=>{const [st,ev]=c.req[r.id];return`<tr><td style="padding:8px 6px"><strong>${esc(r.r)}</strong><br><span class="tiny">${esc(r.need)} · ${esc(ev)}</span></td><td style="padding:8px 6px;text-align:right"><span class="status ${REQ_CLASS[st]}">${esc(st)}</span></td></tr>`}).join('')}</tbody></table>
@@ -502,25 +511,45 @@ function paintDrafting(type,c){clearInterval(draftTimer);const t0=Date.now(),ste
  const tick=()=>{if(!$('drSec')){clearInterval(draftTimer);return}const sec=Math.floor((Date.now()-t0)/1000);$('drSec').textContent=sec+'초';const at=Math.min(steps.length-1,[0,2,5,9].filter(v=>sec>=v).length-1);
   $('docBody').querySelectorAll('.dr-steps li').forEach(li=>{const i=+li.dataset.i;li.className=i<at?'ok':i===at?'now':''})};
  tick();draftTimer=setInterval(tick,500)}
-function setTab(type){docType=type;document.querySelectorAll('#docTabs button').forEach(b=>b.classList.toggle('active',b.dataset.doc===type));const c=cand();
+function setTab(type){if(editKey)saveDoc(true);docType=type;document.querySelectorAll('#docTabs button').forEach(b=>b.classList.toggle('active',b.dataset.doc===type));const c=cand();
  $('docSide').innerHTML=`<div class="tiny" style="margin-bottom:8px">${esc(c.name)} · ${esc(c.company)} ${esc(c.team)}</div>`+REQS.map(r=>{const[st]=c.req[r.id];return`<div class="qa" style="display:flex;justify-content:space-between;gap:8px"><span>${esc(r.r)}</span><span class="status ${REQ_CLASS[st]}">${esc(st)}</span></div>`}).join('')+`<p class="tiny" style="margin-top:12px">근거가 없는 역량은 문서에 쓰지 않습니다.</p>`;
  const me=TD.me();$('docPeople').innerHTML=type==='report'?`작성 ${esc(TD.label(me))} → 보고 ${esc(TD.label(TD.managerOf(me.id)))}`:`발신 ${esc(TD.label(me))} → 수신 ${esc(c.name)} 님`;
  $('sendHint').textContent=type==='report'?'보내기: 상사에게 보고되고 인사 콘솔 운영 기록에 남습니다.':'보내기: 당사자 임직원 화면에 “받은 제안”으로 도착하고 운영 기록에 남습니다.';
  $('btnSend').textContent=type==='report'?'상사에게 보고 →':'당사자에게 제안 보내기 →';
  $('docAttach').innerHTML='';
- const key=type+c.emp;clearInterval(typing);clearInterval(draftTimer);if(docModels[key]){paintDoc(type,docModels[key].model,false,docModels[key].source);return}
- $('btnSend').disabled=true;$('docState').innerHTML='<span class="spin"></span>근거를 바탕으로 작성하는 중';paintDrafting(type,c);
+ const key=type+c.emp;clearInterval(typing);clearInterval(draftTimer);
+ if(!docModels[key]){const sv=savedEdit(type,c);if(sv&&sv.model)docModels[key]=sv}
+ if(docModels[key]){paintDoc(type,docModels[key],false);return}
+ docButtons(false);$('docState').innerHTML='<span class="spin"></span>근거를 바탕으로 작성하는 중';paintDrafting(type,c);
  if(!docPending[key]){const fallback=type==='report'?buildReport(c):buildOffer(c);
   const pr=docPending[key]=Promise.all([TD.draft(type,docInput(c),fallback),sleep(900)]).then(([r])=>{if(docPending[key]===pr){docModels[key]={model:r.model,source:r.source};delete docPending[key]}return r})}
- docPending[key].then(r=>{if(docType!==type||cand()!==c)return;clearInterval(draftTimer);paintDoc(type,r.model,true,r.source)})}
-function paintDoc(type,m,animate,source){$('docBody').innerHTML=type==='report'?TD.renderReport(m):TD.renderOffer(m);
- if(type==='offer'){const f=TD.letterFile(m);$('docAttach').innerHTML=`<div class="file">📎 <b>${esc(f.name)}</b><button onclick="downloadDoc()">내려받기</button></div>`}
- const done=()=>{$('docState').textContent='✓ 작성 완료 · 검토 후 보내세요'+(source==='ai'?' (AI 작성)':'');$('btnSend').disabled=false};
+ docPending[key].then(()=>{if(docType!==type||cand()!==c||!docModels[key])return;clearInterval(draftTimer);paintDoc(type,docModels[key],true)})}
+// d = {model, source, html?(사람이 고쳐 저장한 본문), at?}
+function paintDoc(type,d,animate){const m=d.model;$('docBody').classList.remove('editing');$('docBody').innerHTML=d.html||(type==='report'?TD.renderReport(m):TD.renderOffer(m));
+ paintAttach(type,m);
+ const done=()=>{$('docState').textContent=d.html?`✓ 수정본 저장됨 · ${d.at}`:'✓ 작성 완료 · 검토 후 보내세요'+(d.source==='ai'?' (AI 작성)':'');docButtons(true)};
  if(!animate){done();return}
  const parts=[...$('docBody').querySelector('article').children];parts.forEach(el=>el.classList.add('rv'));let i=0;
  typing=setInterval(()=>{if(i<parts.length)parts[i++].classList.add('on');else{clearInterval(typing);done()}},Math.round(110*SPEED))}
+function paintAttach(type,m){$('docAttach').innerHTML=type==='offer'?`<div class="file">📎 <b>${esc(TD.letterFile(m).name)}</b><button onclick="downloadDoc(this)">다운로드</button></div>`:''}
+function docButtons(on){['btnSend','btnEdit','btnDown'].forEach(id=>$(id).disabled=!on)}
+// 사람이 고친 문서: 화면에서 바로 수정 → 저장. 저장본은 이 브라우저에 남아 다시 열어도 그대로 보인다
+const EDIT_KEY='talent-link-doc-edits';let editKey=null;
+const editId=(type,c)=>`${curJD}|${type}|${c.emp}`;
+function savedEdit(type,c){try{return JSON.parse(localStorage.getItem(EDIT_KEY)||'{}')[editId(type,c)]||null}catch{return null}}
+function articleHtml(){const a=$('docBody').querySelector('article');if(!a)return'';const x=a.cloneNode(true);x.removeAttribute('contenteditable');x.querySelectorAll('.rv').forEach(el=>el.classList.remove('rv','on'));return x.outerHTML}
+function editDoc(){if(editKey){saveDoc();return}const c=cand(),a=$('docBody').querySelector('article');if(!c||!a)return;clearInterval(typing);a.querySelectorAll('.rv').forEach(el=>el.classList.add('on'));
+ editKey={key:docType+c.emp,type:docType,c};a.setAttribute('contenteditable','true');a.setAttribute('spellcheck','false');$('docBody').classList.add('editing');
+ $('docBody').insertAdjacentHTML('afterbegin','<div class="edit-hint">✎ 수정 중 — 문서를 눌러 바로 고치세요. 저장하면 보내기 · 다운로드 · 첨부에 반영됩니다.</div>');
+ $('btnEdit').textContent='저장';$('btnEdit').classList.add('accent');$('btnCancel').classList.remove('hidden');$('docState').textContent='수정 중';a.focus()}
+function endEdit(){editKey=null;$('docBody').classList.remove('editing');$('docBody').querySelector('.edit-hint')?.remove();$('docBody').querySelector('article')?.removeAttribute('contenteditable');$('btnEdit').textContent='수정';$('btnEdit').classList.remove('accent');$('btnCancel').classList.add('hidden')}
+function saveDoc(quiet){if(!editKey)return;const {key,type,c}=editKey,d=docModels[key];const html=articleHtml();endEdit();if(!d||!html)return;
+ d.html=html;d.at=new Date().toLocaleString('ko-KR',{timeZone:'Asia/Seoul',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'});
+ try{const all=JSON.parse(localStorage.getItem(EDIT_KEY)||'{}');all[editId(type,c)]={model:d.model,source:d.source,html,at:d.at};localStorage.setItem(EDIT_KEY,JSON.stringify(all))}catch{}
+ if(!quiet){$('docState').textContent=`✓ 수정본 저장됨 · ${d.at}`;notify('수정한 내용을 저장했습니다.')}}
+function cancelEdit(){if(!editKey)return;const {key,type}=editKey;endEdit();if(docModels[key])paintDoc(type,docModels[key],false)}
 function hrState(){try{const s=JSON.parse(localStorage.getItem(HR_KEY));if(s&&Array.isArray(s.jobs))return s}catch{}return null}
-function sendDoc(){const c=cand();const text=TD.toText($('docBody'));const html=$('docBody').innerHTML,m=docModels[docType+c.emp]?.model;const time=new Date().toLocaleString('ko-KR',{timeZone:'Asia/Seoul'});
+function sendDoc(){if(editKey)saveDoc(true);const c=cand();const text=TD.toText($('docBody'));const html=articleHtml(),m=docModels[docType+c.emp]?.model;const time=new Date().toLocaleString('ko-KR',{timeZone:'Asia/Seoul'});
  const entry={time,action:docType==='report'?`AI 인재 매칭 · ${c.name}(${c.emp}) 추천서 상부 보고 — ${JDS[curJD].title}`:`AI 인재 매칭 · ${c.name}(${c.emp})에게 참여 제안 발송 — ${JDS[curJD].title}`};
  // 인사 콘솔 상태가 있으면 바로 기록하고, 없으면 콘솔이 다음에 열릴 때 합친다
  try{const s=hrState();if(s){s.audit=Array.isArray(s.audit)?s.audit:[];s.audit.unshift(entry);localStorage.setItem(HR_KEY,JSON.stringify(s))}else{const pend=JSON.parse(localStorage.getItem('talent-link-audit-pending')||'[]');pend.unshift(entry);localStorage.setItem('talent-link-audit-pending',JSON.stringify(pend))}}catch{}
@@ -528,10 +557,9 @@ function sendDoc(){const c=cand();const text=TD.toText($('docBody'));const html=
  if(LIVE)API.record(docType,docType==='offer'?{employee_id:c.emp,jd_id:curJD,sender:TD.label(me),subject:`[참여 제안] ${J.company} ${J.title} — ${c.name}님`,model:m||null,html,attachment:m?TD.letterFile(m).name:'',actor:me.name,action:entry.action}:{employee_id:c.emp,jd_id:curJD,sender:TD.label(me),recipient:TD.label(TD.managerOf(me.id)),subject:m?.title||`${J.title} 인재 추천 보고서 — ${c.name}`,model:m||null,html,actor:me.name,action:entry.action}).then(r=>{if(!r)notify('서버 저장에 실패했습니다. 이 브라우저에는 저장되었습니다.')});
  if(docType==='offer'){try{const list=JSON.parse(localStorage.getItem(OFFER_KEY)||'[]');list.unshift({emp:c.emp,name:c.name,jd:curJD,title:JDS[curJD].title,subject:`[참여 제안] ${JDS[curJD].company} ${JDS[curJD].title} — ${c.name}님`,body:text,html,attachment:m?TD.letterFile(m).name:'',time});localStorage.setItem(OFFER_KEY,JSON.stringify(list))}catch{}notify(`${c.name} 님에게 제안을 보냈습니다. 임직원 화면에 도착했습니다.`)}
  else notify('추천서를 상부에 보고했습니다. 운영 기록에 남았습니다.')}
-function docFile(){const c=cand(),m=docModels[docType+c.emp]?.model;if(!m)return null;return docType==='offer'?TD.letterFile(m):{name:`인재추천보고서_${c.name}.html`,html:`<!doctype html><html lang="ko"><head><meta charset="utf-8"><title>${esc(m.title)}</title><style>body{max-width:800px;margin:40px auto;padding:24px;font-family:'Malgun Gothic',sans-serif}${TD.DOC_CSS}</style></head><body>${$('docBody').innerHTML}</body></html>`}}
-function downloadDoc(){const f=docFile();if(f)TD.download(f.name,f.html)}
-function printDoc(){const f=docFile();if(f)TD.printFile(f)}
-function resetAll(){curJD='JD-045';ANALYSIS=null;clearTimeout(pollT);WL=toLevels(DEFAULT_W);syncW();REQS=JDS[curJD].reqs.map(r=>({...r}));C=buildCands(curJD);selected=null;for(const k in docModels)delete docModels[k];for(const k in docPending)delete docPending[k];maxStep=1;scope=new Set(COMPANIES.map(c=>c[0]));initStep1();show(1)}
+function downloadDoc(btn){const c=cand(),d=c&&docModels[docType+c.emp];if(!d)return;
+ const name=docType==='offer'?TD.letterFile(d.model).name:`인재추천보고서_${TD.safeName(c.name)}.pdf`;TD.pdfButton(btn,name,articleHtml())}
+function resetAll(){if(editKey)endEdit();try{localStorage.removeItem(EDIT_KEY)}catch{}curJD='JD-045';ANALYSIS=null;clearTimeout(pollT);WL=toLevels(DEFAULT_W);syncW();REQS=JDS[curJD].reqs.map(r=>({...r}));C=buildCands(curJD);selected=null;for(const k in docModels)delete docModels[k];for(const k in docPending)delete docPending[k];maxStep=1;scope=new Set(COMPANIES.map(c=>c[0]));initStep1();show(1)}
 C=buildCands(curJD);initStep1();show(1);const BOOT=boot();
 </script>
 </body>
