@@ -5,6 +5,7 @@
 // - '~click' · '~type' 마커: 효과음 위치
 // - cut(): AI가 작성하는 동안처럼 기다리는 구간을 잘라 낸다 (잘라 낸 길이는 '~cut' 마커에 남겨 화면에 "실제 약 N초"로 표시)
 // 실행: (1) node data/scan/reset-records.mjs  (2) node data/scan/dev-server.mjs  (3) node scripts/record.mjs
+// 일부만 다시 녹화: CLIPS=hr,emp node scripts/record.mjs  (나머지 클립은 기존 녹화·마커를 그대로 둔다)
 import { chromium } from 'playwright';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -99,7 +100,9 @@ async function record(name, fn) {
   return { name, duration: +dur.toFixed(3), width: VW * DSF, height: VH * DSF, markers: markers.map(m => ({ label: m.label, t: +(m.t - shift(m.t) - start).toFixed(3), box: m.box, ...(m.sec ? { sec: m.sec } : {}) })) };
 }
 
-const result = {};
+const CLIPS = (process.env.CLIPS || 'hr,emp,console').split(',');
+const REC = path.resolve(import.meta.dirname, '../src/recordings.json');
+const result = fs.existsSync(REC) ? JSON.parse(fs.readFileSync(REC, 'utf8')) : {};
 
 // 준비: 인사 담당자 로그인 (녹화 안 함)
 await page.goto(BASE + '/login.html');
@@ -108,6 +111,7 @@ await Promise.all([page.waitForURL(/talent_hr_admin/), page.click('#go')]);
 await page.evaluate(() => localStorage.clear());
 
 // ───────── 인사 담당자: AI 인재 매칭 ─────────
+if (CLIPS.includes('hr')) {
 await page.goto(BASE + '/hr_matching.html');
 await page.waitForFunction(() => /2\d\d명/.test(document.getElementById('scopeCount').textContent));
 await page.selectOption('#jdSelect', 'JD-045');
@@ -178,8 +182,10 @@ result.hr = await record('hr', async (mark, cut) => {
   await wait(2200);
 });
 console.log('hr', result.hr.duration);
+}
 
 // ───────── 임직원(임광현): 로그인 → 받은 제안 → 셀프 진단 → 지원 ─────────
+if (CLIPS.includes('emp')) {
 await page.goto(BASE + '/login.html?role=emp&next=/employee.html');
 await page.mouse.move(...mouse);
 await wait(500);
@@ -222,8 +228,10 @@ result.emp = await record('emp', async (mark, cut) => {
   await wait(2200);
 });
 console.log('emp', result.emp.duration);
+}
 
 // ───────── 인사 콘솔: 보고 · 제안 · 지원이 도착한 모습 ─────────
+if (CLIPS.includes('console')) {
 await page.goto(BASE + '/talent_hr_admin.html#overview');
 await page.waitForFunction(() => typeof LIVE !== 'undefined' && LIVE, null, { timeout: 20000 });
 await page.mouse.move(...mouse);
@@ -242,6 +250,7 @@ result.console = await record('console', async mark => {
   await moveTo(L('#peopleRows tr').filter({ hasText: '임광현' }), { fx: 0.25 }); await wait(2600);
 });
 console.log('console', result.console.duration);
+}
 
-fs.writeFileSync(path.resolve(import.meta.dirname, '../src/recordings.json'), JSON.stringify(result, null, 2));
+fs.writeFileSync(REC, JSON.stringify(result, null, 2));
 await browser.close();
