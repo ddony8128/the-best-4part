@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><title>서비스 플로우</title>
+<link rel="stylesheet" href="base.css">
+<style>
+.canvas{--w:2400px;--h:1130px}
+.lanes{position:relative;display:grid;grid-template-columns:140px repeat(12,1fr);grid-template-rows:repeat(3,262px);column-gap:18px;row-gap:16px}
+.lane-bg{position:absolute;left:0;right:0;border-radius:22px}
+.ln{display:flex;flex-direction:column;justify-content:center;gap:8px;padding-left:18px;z-index:1}
+.ln .av{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font-size:26px}
+.ln b{font-size:19px;font-weight:800}.ln span{font-size:14px;color:var(--g6)}
+.st{z-index:1;align-self:center;background:#fff;border-radius:16px;padding:16px 14px;box-shadow:0 1px 3px #0017330a,0 8px 20px #0017330d;min-height:176px;display:flex;flex-direction:column;gap:7px}
+.st .no{font-size:14px;font-weight:800;color:var(--g5)}
+.st b{font-size:19px;line-height:1.35;letter-spacing:-.3px}
+.st span{font-size:15px;color:var(--g7);line-height:1.45}
+.st .tag{align-self:flex-start;margin-top:auto}
+.st.hum{box-shadow:inset 0 0 0 2.5px var(--green),0 8px 20px #0017330d}
+.st.ai{box-shadow:inset 0 0 0 2.5px var(--or),0 8px 20px #0017330d}
+.st.rule{box-shadow:inset 0 0 0 2.5px var(--blue),0 8px 20px #0017330d}
+.legend{display:flex;gap:10px;align-items:center;margin-top:22px;font-size:16px;color:var(--g7)}
+.legend .sw{width:18px;height:18px;border-radius:5px;display:inline-block;margin-right:6px;vertical-align:-3px}
+.phase{position:absolute;top:-34px;font-size:15px;font-weight:800;color:var(--g6)}
+</style></head>
+<body><div class="canvas">
+<div class="head"><div><div class="eb">SERVICE FLOW</div><h1>공고 하나가 임직원의 지원으로 이어지기까지 — 하나로 연결된 흐름</h1><p>AI가 찾고 쓰는 단계 사이마다 사람이 확인하는 지점을 두었습니다 · 모든 단계는 운영 기록에 남습니다</p></div><div class="brand"><i>✓</i>TALENT LINK</div></div>
+
+<div class="lanes" id="lanes">
+ <div class="lane-bg" style="top:0;height:262px;background:#fff4ee80"></div>
+ <div class="lane-bg" style="top:278px;height:262px;background:#e5e8eb80"></div>
+ <div class="lane-bg" style="top:556px;height:262px;background:#e8f3ff80"></div>
+
+ <div class="ln" style="grid-row:1;grid-column:1"><div class="av" style="background:var(--or1)">🧑‍💼</div><b>인사 담당자</b><span>매칭 · 인사 콘솔</span></div>
+ <div class="ln" style="grid-row:2;grid-column:1"><div class="av" style="background:#fff">⚙️</div><b>TALENT LINK</b><span>규칙 · AI · DB</span></div>
+ <div class="ln" style="grid-row:3;grid-column:1"><div class="av" style="background:var(--blue1)">🙋</div><b>임직원</b><span>임직원 화면</span></div>
+
+ <div class="st" id="s1" style="grid-row:3;grid-column:2"><div class="no">0</div><b>인재풀 등록</b><span>정보 제공 동의 · 경력이 인재풀에 올라감</span></div>
+ <div class="st" id="s2" style="grid-row:1;grid-column:3"><div class="no">1</div><b>공고 선택</b><span>분석 요청 · 스캔 범위 3개 계열사</span></div>
+ <div class="st ai" id="s3" style="grid-row:2;grid-column:4"><div class="no">2</div><b>공고 분석</b><span>JD + 인수인계 · 고성과자 · 직무 연구 → 요건 8개 · 중요도</span><span class="tag t-ai">AI</span></div>
+ <div class="st hum" id="s4" style="grid-row:1;grid-column:5"><div class="no">3</div><b>요건 확정</b><span>필수/우대 · 4단계 중요도를 담당자가 정함</span><span class="tag t-hum">사람 확인 1</span></div>
+ <div class="st rule" id="s5" style="grid-row:2;grid-column:6"><div class="no">4</div><b>전수 스캔</b><span>정량 조건 Yes/No → 통과자 전원 요건별 근거 판정 → 점수</span><span class="tag t-rule">규칙 + AI</span></div>
+ <div class="st hum" id="s6" style="grid-row:1;grid-column:7"><div class="no">5</div><b>후보 검토</b><span>상위 10명 · 근거 · 우려 · 면담 질문 · 중요도 바꿔 재정렬</span><span class="tag t-hum">사람 확인 2</span></div>
+ <div class="st ai" id="s7" style="grid-row:2;grid-column:8"><div class="no">6</div><b>추천서 · 제안서 초안</b><span>근거만 사용 · 오퍼 레터 첨부</span><span class="tag t-ai">AI</span></div>
+ <div class="st hum" id="s8" style="grid-row:1;grid-column:9"><div class="no">7</div><b>수정 · 발송</b><span>화면에서 고쳐 저장 → 상사 보고 · 당사자에게 제안</span><span class="tag t-hum">사람 확인 3</span></div>
+ <div class="st" id="s9" style="grid-row:3;grid-column:10"><div class="no">8</div><b>받은 제안 확인</b><span>지원한 적 없는 계열사에서 온 제안 · 제안 이유</span></div>
+ <div class="st ai" id="s10" style="grid-row:2;grid-column:11"><div class="no">9</div><b>셀프 진단</b><span>같은 요건 · 같은 기준으로 내 적합도</span><span class="tag t-ai">AI</span></div>
+ <div class="st" id="s11" style="grid-row:3;grid-column:12"><div class="no">10</div><b>바로 지원</b><span>지원 동기 · 이동 가능 시점</span></div>
+ <div class="st" id="s12" style="grid-row:1;grid-column:13"><div class="no">11</div><b>인사 콘솔 도착</b><span>지원자 검토 · 조직 협의 · 운영 기록</span></div>
+</div>
+
+<div class="legend"><span><i class="sw" style="background:var(--or)"></i>AI (Claude)</span><span style="margin-left:18px"><i class="sw" style="background:var(--blue)"></i>규칙 · 자동 계산</span><span style="margin-left:18px"><i class="sw" style="background:var(--green)"></i>사람 확인 — AI는 찾고, 결정은 사람이 합니다</span></div>
+<div class="foot"><span>TALENT LINK · 서비스 플로우</span><span>시연: 한화시스템 임광현 과장 → 한화에어로스페이스 마케팅 및 글로벌 브랜드 전략</span></div>
+</div>
+<script src="wires.js"></script>
+<script>document.fonts.ready.then(()=>{const W=[];for(let i=1;i<12;i++)W.push(['s'+i,'s'+(i+1),'h',i===8||i===10?'#3182f6':'#8b95a1']);drawWires(W);document.body.dataset.ready=1})</script>
+</body></html>

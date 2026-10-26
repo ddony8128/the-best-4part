@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><title>시스템 아키텍처</title>
+<link rel="stylesheet" href="base.css">
+<style>
+.cols{display:flex;gap:58px;align-items:stretch;height:760px}
+.col{display:flex;flex-direction:column;gap:14px}
+.col > .lab{font-size:14px;font-weight:800;color:var(--g6);letter-spacing:.5px;height:22px}
+.zone{border:2px dashed var(--g3);border-radius:24px;padding:18px;display:flex;flex-direction:column;gap:12px;flex:1;background:#ffffff80}
+.zone h4{font-size:15px;font-weight:800;color:var(--g7);display:flex;align-items:center;gap:8px}
+.user{display:flex;flex-direction:column;align-items:center;gap:10px;padding:22px 10px}
+.user .av{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-size:30px}
+.user b{font-size:18px}.user span{font-size:14px;color:var(--g6);text-align:center}
+.page{padding:16px 18px}.page b{font-size:17px;display:block}.page span{font-size:14px;color:var(--g6);display:block;margin-top:4px;line-height:1.45}
+.api{padding:12px 16px;display:grid;grid-template-columns:140px 1fr auto;align-items:center;gap:10px;border-radius:14px}
+.api code{font-family:Consolas,monospace;font-size:15px;font-weight:700;color:var(--navy)}
+.api span{font-size:14px;color:var(--g7);line-height:1.35}
+.api.ai{box-shadow:inset 0 0 0 2px var(--or2),0 1px 3px #0017330a}
+.ext{padding:22px 24px}
+.ext .t{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.ext .ic{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font-size:22px;color:#fff;font-weight:900}
+.ext h3{font-size:20px;font-weight:800}.ext .sub{font-size:14px;color:var(--g6)}
+.ext ul{list-style:none;padding:0;display:grid;gap:7px;font-size:15px;color:var(--g7)}
+.ext li::before{content:'·';margin-right:6px;font-weight:900}
+.grp{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:4px}
+.grp div{background:var(--g0);border-radius:10px;padding:9px 12px;font-size:13px;color:var(--g7)}.grp b{display:block;font-size:14px;color:var(--ink)}
+.mw{padding:20px 18px;text-align:center}.mw b{font-size:17px;display:block;margin:6px 0}.mw span{font-size:14px;color:var(--g6);line-height:1.5;display:block}
+.legend{position:absolute;right:64px;top:60px;display:flex;gap:8px}
+.strip{position:absolute;left:64px;right:64px;bottom:62px;display:flex;gap:12px;align-items:center;font-size:15px;color:var(--g7)}
+.strip .card{padding:12px 18px;border-radius:14px;display:flex;gap:10px;align-items:center}
+</style></head>
+<body><div class="canvas">
+<div class="head"><div><div class="eb">SYSTEM ARCHITECTURE</div><h1>실제 DB와 AI가 연결된 웹 서비스</h1><p>화면 → 서버 API → 데이터베이스 · Claude API, 모든 AI 호출과 데이터 접근은 서버에서만 이뤄집니다</p></div><div class="brand"><i>✓</i>TALENT LINK</div></div>
+
+<div class="cols">
+  <div class="col" style="width:150px"><div class="lab">사용자</div>
+    <div class="card user" id="uHR"><div class="av" style="background:var(--or1)">🧑‍💼</div><b>인사 담당자</b><span>그룹 인사팀</span></div>
+    <div class="card user" id="uEMP" style="margin-top:auto"><div class="av" style="background:var(--blue1)">🙋</div><b>임직원</b><span>인재풀 등록자</span></div>
+  </div>
+
+  <div class="col" style="width:300px"><div class="lab">화면 · 웹 (Vercel 배포)</div>
+    <div class="zone" style="justify-content:space-around">
+      <div class="card page" id="pLogin"><b>로그인</b><span>사내 계정(클레버스) · 역할별 진입</span></div>
+      <div class="card page" id="pMatch"><b>AI 인재 매칭</b><span>공고 분석 → 요건 확정 → 전수 스캔 → 후보 추천 → 추천서·제안서</span></div>
+      <div class="card page" id="pAdmin"><b>인사 콘솔</b><span>공고 관리 · 지원자 검토 · 참여 제안 · 상사 보고 · 운영 기록</span></div>
+      <div class="card page" id="pEmp"><b>임직원 화면</b><span>받은 제안 · 셀프 진단 · 지원 · 내 프로필</span></div>
+    </div>
+  </div>
+
+  <div class="col" style="width:190px;justify-content:center"><div class="lab"></div>
+    <div class="card mw" id="mw"><span class="tag t-g">Routing Middleware</span><b>🔒 로그인 확인</b><span>서명된 쿠키로<br>인사 · 임직원 권한 분리<br>로그인 없으면 차단</span></div>
+  </div>
+
+  <div class="col" style="width:520px"><div class="lab">서버 API · Vercel Functions (서울 리전)</div>
+    <div class="zone" id="apiZone" style="justify-content:space-between">
+      <div class="card api"><code>/api/login</code><span>사내 계정 확인 · 세션 발급</span><span class="tag t-g">인증</span></div>
+      <div class="card api" id="aData"><code>/api/data</code><span>공고 · 인재풀 · 분석 · 스캔 결과 조회</span><span class="tag t-db">DB</span></div>
+      <div class="card api"><code>/api/records</code><span>지원 · 검토 · 제안 · 보고 · 운영 기록 저장</span><span class="tag t-db">DB</span></div>
+      <div class="card api ai" id="aAnalyze"><code>/api/analyze-jd</code><span>공고 + 참고 자료 → 요건 8개 · 중요도</span><span class="tag t-ai">Claude</span></div>
+      <div class="card api ai" id="aScan"><code>/api/scan</code><span>정량 조건 필터 → 전원 근거 판정 (Batch)</span><span class="tag t-ai">Claude</span></div>
+      <div class="card api ai" id="aDraft"><code>/api/draft</code><span>추천서 · 제안서 · 오퍼 레터 초안</span><span class="tag t-ai">Claude</span></div>
+      <div class="card api ai" id="aDiag"><code>/api/diagnose</code><span>임직원 셀프 진단 (저장본 재사용)</span><span class="tag t-ai">Claude</span></div>
+      <div class="card api"><code>/api/logout</code><span>세션 종료</span><span class="tag t-g">인증</span></div>
+    </div>
+  </div>
+
+  <div class="col" style="flex:1"><div class="lab">데이터 · AI</div>
+    <div class="card ext" id="db">
+      <div class="t"><div class="ic" style="background:#3ecf8e">DB</div><div><h3>Supabase PostgreSQL</h3><div class="sub">서울 리전 · 테이블 20개 · 행 단위 보안(RLS)</div></div></div>
+      <div class="grp">
+        <div><b>인사 원천 데이터 10</b>임직원 247 · 경력 · 프로젝트 · 근거 문서 · 성과 · 자격</div>
+        <div><b>공고 · 참고 자료 2</b>공고 45 · 인수인계 · 고성과자 · 직무 연구</div>
+        <div><b>AI 결과 4</b>공고 분석 · 스캔 실행 · 판정 1,346 · 셀프 진단</div>
+        <div><b>업무 기록 4</b>지원 · 제안 · 보고 · 운영 기록</div>
+      </div>
+    </div>
+    <div class="card ext" id="claude" style="margin-top:auto">
+      <div class="t"><div class="ic" style="background:#d97757">AI</div><div><h3>Anthropic Claude API</h3><div class="sub">Sonnet 모델</div></div></div>
+      <ul><li>정해진 형식(JSON 스키마)으로만 답하게 해 화면에 바로 표시</li><li>대량 판정은 Message Batches API → 비용 50%</li><li>판정 결과는 DB에 저장해 다시 쓰고, 없을 때만 새로 호출</li></ul>
+    </div>
+  </div>
+</div>
+
+<div class="strip"><span class="tag t-g">개발 · 검증</span>
+  <div class="card">Claude Code로 구현</div><div class="card">GitHub → Vercel 자동 배포</div><div class="card">Playwright 자동 브라우저 테스트 (전체 흐름)</div><div class="card">키는 서버 환경변수에만 보관</div>
+</div>
+<div class="foot"><span>TALENT LINK · 시스템 아키텍처</span><span>talent-link-seven.vercel.app</span></div>
+</div>
+<script src="wires.js"></script>
+<script>document.fonts.ready.then(()=>{drawWires([
+ ['uHR','pLogin','h','#8b95a1'],['uHR','pMatch','h','#8b95a1'],['uHR','pAdmin','h','#8b95a1'],['uEMP','pEmp','h','#8b95a1'],
+ ['pMatch','mw','h','#4e5968'],['pAdmin','mw','h','#4e5968'],['pEmp','mw','h','#4e5968'],
+ ['mw','apiZone','h','#4e5968','HTTPS'],
+ ['aData','db','h','#7048e8','조회 · 저장'],
+ ['aScan','claude','h','#f4511e','분석 · 판정 · 작성'],
+]);document.body.dataset.ready=1})</script>
+</body></html>

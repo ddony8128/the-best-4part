@@ -1,0 +1,19 @@
+/* 제출용 다이어그램 공통 스타일 — 서비스(TL-DS)와 같은 색·글꼴 */
+@font-face{font-family:Pretendard;src:url(../../video/public/fonts/PretendardVariable.woff2) format('woff2');font-weight:100 900}
+:root{--ink:#191f28;--g7:#4e5968;--g6:#6b7684;--g5:#8b95a1;--g3:#d1d6db;--g2:#e5e8eb;--g1:#f2f4f6;--g0:#f9fafb;
+--or:#f4511e;--or7:#c8401a;--or1:#fff4ee;--or2:#ffd9c7;--navy:#19243b;--navy2:#2a3a5c;--green:#029359;--green1:#e8f7f0;--blue:#3182f6;--blue1:#e8f3ff;--violet:#7048e8;--violet1:#f1ecfd}
+*{box-sizing:border-box;margin:0}
+body{font-family:Pretendard,'Malgun Gothic',sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased}
+.canvas{position:relative;width:var(--w,1920px);height:var(--h,1080px);padding:56px 64px;background:var(--g1);overflow:hidden}
+.head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:36px}
+.head .eb{font-size:15px;font-weight:800;letter-spacing:2px;color:var(--or)}
+.head h1{font-size:40px;font-weight:800;letter-spacing:-1.2px;margin-top:8px}
+.head p{font-size:18px;color:var(--g6);margin-top:8px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:20px;letter-spacing:-.5px}
+.brand i{width:30px;height:30px;border-radius:8px;background:var(--or);display:grid;place-items:center;color:#fff;font-style:normal;font-size:17px}
+.card{background:#fff;border-radius:20px;box-shadow:0 1px 3px #0017330a,0 8px 24px #00173308;padding:22px 24px}
+.tag{display:inline-block;font-size:13px;font-weight:700;padding:4px 10px;border-radius:8px;white-space:nowrap}
+.t-ai{background:var(--or1);color:var(--or7)}.t-rule{background:var(--blue1);color:#1b64da}.t-hum{background:var(--green1);color:var(--green)}.t-db{background:var(--violet1);color:var(--violet)}.t-g{background:var(--g1);color:var(--g7)}
+.muted{color:var(--g6)}.small{font-size:14px}
+svg.wires{position:absolute;inset:0;pointer-events:none;overflow:visible}
+.foot{position:absolute;left:64px;right:64px;bottom:30px;display:flex;justify-content:space-between;font-size:14px;color:var(--g5)}

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><title>AI 판정 예시</title>
+<link rel="stylesheet" href="base.css">
+<style>
+.board{display:grid;grid-template-columns:540px 340px 1fr;gap:52px;height:830px}
+.lab{font-size:15px;font-weight:800;color:var(--g6);margin-bottom:12px;letter-spacing:.5px}
+.req{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:13px 0;border-bottom:1px solid var(--g2);font-size:16px}
+.req:last-child{border:0}
+.req .id{font-family:Consolas,monospace;font-weight:700;color:var(--g5);font-size:13px}
+.need{font-size:12px;font-weight:800;border-radius:6px;padding:2px 7px;margin-right:6px}.need.m{background:var(--navy);color:#fff}.need.o{background:var(--g1);color:var(--g7)}
+.src{display:flex;gap:4px}.src i{font-style:normal;font-size:11.5px;font-weight:700;color:var(--g7);background:var(--g1);border-radius:5px;padding:2px 6px}
+.recs{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}.recs span{background:var(--violet1);color:var(--violet);font-size:15px;font-weight:700;border-radius:9px;padding:7px 11px}
+.ai{display:flex;flex-direction:column;gap:14px;justify-content:center}
+.ai .card{padding:24px}
+.ai .t{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.ai .ic{width:48px;height:48px;border-radius:13px;background:#d97757;color:#fff;font-weight:900;display:grid;place-items:center;font-size:20px}
+.ai h3{font-size:20px;font-weight:800}
+.rule{font-size:15px;color:var(--g7);line-height:1.55;padding:13px 0;border-top:1px solid var(--g2)}
+.rule b{color:var(--ink);display:block;font-size:16.5px}
+.out .head2{display:flex;align-items:center;gap:16px;margin-bottom:14px}
+.out .head2 img{width:72px;height:72px;border-radius:50%}
+.out .head2 h3{font-size:22px;font-weight:800}.out .head2 span{font-size:14px;color:var(--g6)}
+.out .score{margin-left:auto;text-align:right}.out .score b{font-size:40px;font-weight:800;letter-spacing:-1px}.out .score span{display:block}
+.row{display:grid;grid-template-columns:34px 96px 1fr;gap:10px;align-items:center;padding:11px 0;border-bottom:1px solid var(--g2);font-size:15.5px}
+.row:last-child{border:0}
+.row .id{font-family:Consolas,monospace;font-weight:700;color:var(--g5);font-size:13px}
+.st{font-size:13px;font-weight:800;border-radius:7px;padding:4px 8px;text-align:center}
+.st.ok{background:var(--green1);color:var(--green)}.st.ck{background:var(--or1);color:var(--or7)}.st.na{background:var(--g1);color:var(--g7)}
+.row .ev em{font-style:normal;color:var(--violet);font-weight:700}
+.hard{display:flex;gap:8px;margin-bottom:10px}.hard span{font-size:13.5px;background:var(--green1);color:var(--green);font-weight:700;border-radius:9px;padding:6px 10px}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.three div{background:var(--g0);border-radius:12px;padding:14px;font-size:14.5px;color:var(--g7);line-height:1.5}.three b{display:block;color:var(--ink);font-size:14px;margin-bottom:4px}
+</style></head>
+<body><div class="canvas">
+<div class="head"><div><div class="eb">AI JUDGEMENT · 실제 판정 1건</div><h1>점수가 아니라, 요건마다 근거와 출처를 쓰게 했습니다</h1><p>Claude가 판정한 결과를 그대로 옮겼습니다 · 시연 공고 JD-045 × 한화시스템 임광현 과장</p></div><div class="brand"><i>✓</i>TALENT LINK</div></div>
+
+<div class="board">
+ <div>
+  <div class="lab">입력 1 · 공고 요건 8개 (AI 공고 분석 → 담당자 확정)</div>
+  <div class="card" id="in1" style="padding:12px 20px">
+   <div class="req"><span class="id">r1</span><span><span class="need m">필수</span>B2B·글로벌 마케팅 기획 경험</span><span class="src"><i>JD</i><i>고성과자</i><i>연구</i></span></div>
+   <div class="req"><span class="id">r2</span><span><span class="need m">필수</span>시장 세분화·브랜드 커뮤니케이션 역량</span><span class="src"><i>JD</i><i>연구</i><i>전임자</i></span></div>
+   <div class="req"><span class="id">r3</span><span><span class="need o">우대</span>항공우주·방산 산업 마케팅 경험</span><span class="src"><i>JD</i><i>전임자</i></span></div>
+   <div class="req"><span class="id">r4</span><span><span class="need o">우대</span>영문 콘텐츠·전시회·CRM 경험</span><span class="src"><i>JD</i><i>고성과자</i></span></div>
+   <div class="req"><span class="id">r5</span><span><span class="need o">우대</span>승인 절차를 지킨 대외 콘텐츠 운영</span><span class="src"><i>전임자</i><i>연구</i></span></div>
+   <div class="req"><span class="id">r6</span><span><span class="need o">우대</span>새 시장·형식 습득, 직무 전환 적응</span><span class="src"><i>연구</i></span></div>
+   <div class="req"><span class="id">r7</span><span><span class="need o">우대</span>주도적 대외 협의·과제 리딩</span><span class="src"><i>연구</i><i>고성과자</i></span></div>
+   <div class="req"><span class="id">r8</span><span><span class="need o">우대</span>목표 달성 안정성·기한 준수</span><span class="src"><i>연구</i></span></div>
+  </div>
+  <div class="lab" style="margin-top:22px">입력 2 · 후보의 인사 기록 (DB)</div>
+  <div class="card" id="in2" style="padding:16px 20px"><div class="recs"><span>수행확인서 2건</span><span>발령 이력</span><span>평가 기록 4년</span><span>자격 대장</span><span>역량 · 본인 기재</span><span>커리어 계획</span></div></div>
+ </div>
+
+ <div class="ai">
+  <div class="card" id="cl">
+   <div class="t"><div class="ic">AI</div><div><h3>Claude Sonnet</h3><span class="muted small">정해진 형식(JSON 스키마)으로만 응답</span></div></div>
+   <div class="rule"><b>판정은 세 가지 중 하나</b>확인 · 확인 필요 · 정보 미확인</div>
+   <div class="rule"><b>근거는 "사실 — 출처"</b>기록에 있는 사실만, 어느 문서인지 끝에 표시</div>
+   <div class="rule"><b>정보 미확인 ≠ 역량 부족</b>기록이 없으면 탈락이 아니라 면담에서 확인</div>
+   <div class="rule"><b>직무와 무관한 정보 금지</b>성별 · 나이 · 학교 · 가족 등은 쓰지 않음</div>
+   <div class="rule"><b>대량 판정은 Batch API</b>비용 50% · 결과는 DB에 저장해 재사용</div>
+  </div>
+ </div>
+
+ <div class="out">
+  <div class="lab">출력 · 후보 판정 결과 (scan_results)</div>
+  <div class="card" id="out" style="padding:20px 24px">
+   <div class="head2"><img src="../../public/img/face/EMP-HW-0019.webp" alt=""><div><h3>임광현 <span class="tag t-ai" style="font-size:13px;vertical-align:3px">숨은 후보</span></h3><span>한화시스템 · 해외사업팀 · 방산 수출 사업지원 책임</span></div><div class="score"><b>85.0</b><span class="muted small">1위 · 요건 판정 65% + 인사 기록 35%</span></div></div>
+   <div class="hard"><span>✓ 마케팅·영업·해외사업 경력 3년 이상 — 영업 7년 4개월 (발령 이력)</span><span>✓ 영어 성적 — OPIc IH (자격 대장)</span></div>
+   <div class="row"><span class="id">r1</span><span class="st ok">확인</span><span class="ev">방산전자·ICT 기술 가치제안, 해외 전시회 통합 캠페인 주도 — <em>수행확인서</em></span></div>
+   <div class="row"><span class="id">r2</span><span class="st ck">확인 필요</span><span class="ev">B2B 마케팅 Lv3 · 가치제안 Lv4 기재, 현지화 일관성 사례 없음 — <em>본인 기재</em></span></div>
+   <div class="row"><span class="id">r3</span><span class="st ok">확인</span><span class="ev">방산전자 해외 전시회 바이어 대응·캠페인 수행(2024.02~11) — <em>수행확인서</em></span></div>
+   <div class="row"><span class="id">r4</span><span class="st ok">확인</span><span class="ev">영문 세일즈키트 제작, CRM 대시보드·리드 분석 리포트 운영 — <em>수행확인서</em></span></div>
+   <div class="row"><span class="id">r5</span><span class="st ck">확인 필요</span><span class="ev">콘텐츠 KPI 검토·개선 조율 기재, 공개·승인 절차 언급 없음 — <em>수행확인서</em></span></div>
+   <div class="row"><span class="id">r6</span><span class="st ok">확인</span><span class="ev">2021년 해외사업팀 직무 전환, B2B 마케팅 데이터 분석 이수 — <em>발령 이력</em></span></div>
+   <div class="row"><span class="id">r7</span><span class="st na">정보 미확인</span><span class="ev">관련 기록 없음 — <em>면담 확인</em></span></div>
+   <div class="row"><span class="id">r8</span><span class="st ok">확인</span><span class="ev">2023~2026 KPI 96~124% 달성 — <em>평가 기록</em></span></div>
+   <div class="three">
+    <div><b>잘 맞는 점</b>해외 전시회 캠페인 · 영문 세일즈키트를 직접 수행</div>
+    <div><b>우려되는 점</b>공모 미지원 → 이동 의사 직접 확인 필요</div>
+    <div><b>면담 질문</b>지역별 메시지를 어떻게 일관되게 유지했나요?</div>
+   </div>
+  </div>
+ </div>
+</div>
+<div class="foot"><span>TALENT LINK · AI 판정 예시 (실제 DB 저장 결과)</span><span>담당자는 이 근거를 보고 추천서 · 제안서로 이어갑니다</span></div>
+</div>
+<script src="wires.js"></script>
+<script>document.fonts.ready.then(()=>{drawWires([
+ ['in1','cl','h','#8b95a1'],['in2','cl','h','#8b95a1'],['cl','out','h','#f4511e','판정'],
+]);document.body.dataset.ready=1})</script>
+</body></html>
