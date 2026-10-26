@@ -113,6 +113,9 @@ header{background:rgba(255,255,255,.9);backdrop-filter:saturate(180%) blur(12px)
 .stat{border:0;border-radius:var(--r-xl);box-shadow:var(--shadow-sm);padding:24px}
 .stat strong{font-size:var(--t1);font-weight:700;letter-spacing:-.03em;color:var(--grey900)}
 .stat small{font-size:var(--t7);color:var(--grey600)}
+/* 카드 라벨은 크고 진하게, 숫자 옆에 단위 */
+.stat > small:first-child,.stat button > .tiny{display:block;font-size:var(--t5);font-weight:700;color:var(--grey900);letter-spacing:-.02em}
+.stat strong{margin-top:26px}.stat strong em{font-style:normal;font-size:var(--t6);font-weight:500;color:var(--grey600);margin-left:4px;letter-spacing:0}
 .stat button{background:none;padding:0;text-align:left;width:100%}.stat button:hover{background:none}
 .lv button{background:#fff;border:1px solid var(--grey200);color:var(--grey700);border-radius:var(--r-sm);font-size:var(--t7)}
 .lv button.on{background:var(--orange500);border-color:var(--orange500);color:#fff}
